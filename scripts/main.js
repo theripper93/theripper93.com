@@ -1,4 +1,4 @@
-local = {
+const local = {
     "en-US": {
         modules:{
             "Levels": {
