@@ -214,7 +214,7 @@ const local = {
                 name: "Config Presets",
                 icon: "fas fa-boxes",
                 desc: "Save presets for lights/walls/drawings and more, keeps relevant module information and you can apply the presets to existing objects. The ultimate map making tool!",
-                status: "paid",
+                status: "paidea",
                 media: "https://www.reddit.com/r/FoundryVTT/comments/pkyui5/config_presets_create_presets_for/",
                 link: "",
               },
@@ -222,7 +222,7 @@ const local = {
                 name: "Lightswitch",
                 icon: "fas fa-lightbulb",
                 desc: "Simply enable a toggle in the light configuration and now your players will be able to switch on an off the light with a simple click on an icon on the map that is also restricted by sight! No other configuration required.",
-                status: "paid",
+                status: "paidea",
                 media: "https://www.reddit.com/r/FoundryVTT/comments/pmu4z0/lightswitch_a_user_frendly_way_to_present/",
                 link: "",
               },
@@ -230,13 +230,22 @@ const local = {
                 name: "Journal Drop",
                 icon: "fas fa-book-open",
                 desc: "Click a button to place multiple pins of the same journal on the canvas. Each copy will be labeled according to the section of the journal. This will NOT create new journals but use the single existing one ! The splitting is done automagically, in case your journal is not using h1\3 for it's sections you can specify a custom one. Also adds the ability to show journals as tooltips on hover.",
-                status: "paid",
+                status: "paidea",
                 media: "https://streamable.com/lstt4w",
+                link: "",
+              },
+              "Filepicker+": {
+                name: "Filepicker+",
+                icon: "fas fa-file",
+                desc: "Expand the default Filepicker to add favourite folders, image and video preview tooltips, audio tooltips and a new layout",
+                status: "paidea",
+                media: "https://streamable.com/ql2x55",
                 link: "",
               },
         },
         free : "Free",
         paid : "Patreon Only",
+        paidea : "Patreon Only (EA)",
     },
 
 };
@@ -256,7 +265,7 @@ let sortedMods = [];
 let paidMods = [];
 let freeMods = [];
 for (let [k, v] of Object.entries(modules)) {
-  if (v.status == "paid") {
+  if (v.status == "paid" || v.status == "paidea") {
     paidMods.push(k);
   } else {
     freeMods.push(k);
@@ -270,6 +279,12 @@ for (let mod of sortedMods) {
 }
 
 function generateLi(data) {
+  const status = data.status
+  let statusText = "";
+  if (status == "paid") statusText = currentLocal.paid
+  else if (status == "free") statusText = currentLocal.free
+  else if (status == "paidea") statusText = currentLocal.paidea
+
   const $li = $(`<li class="module-item" data-status="${data.status}">
     <i class="${data.icon} mod-icon"></i>
     <div class="module-info">
@@ -280,7 +295,7 @@ function generateLi(data) {
     <div class="info-links">
         <span>Status: <a href="https://www.patreon.com/theripper93" target="_blank" rel="noopener noreferrer" class="${
           data.status
-        }">${data.status == "free" ? currentLocal.free : currentLocal.paid}</a></span>
+        }">${statusText}</a></span>
         <a href="${
           data.media
         }" target="_blank" rel="noopener noreferrer"><i class="fas fa-play"></i></a>
