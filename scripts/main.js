@@ -274,8 +274,8 @@ const local = {
                 media: "https://www.reddit.com/r/FoundryVTT/comments/pzj3dk/image_context_a_convenient_way_to_show_images_to/",
                 link: "",
               },
-              "Inactivee Tokens": {
-                name: "Inactivee Tokens",
+              "Inactive Tokens": {
+                name: "Inactive Tokens",
                 icon: "fas fa-user-slash",
                 desc: "Set token as inactive to make them non interactable, effectively making them indistinguishable from tiles by players. Also, exclude inactive tokens from drag selection and optionally automatically set a token as inactive when defeated.",
                 status: "paidea",
