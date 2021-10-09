@@ -325,7 +325,7 @@ const local = {
             "Argon Combat HUD": {
               name: "Argon Combat HUD（戦闘画面）",
               icon: "fas fa-shield-alt",
-              desc: "（D&D5版用）キャラクターが使用できるアクション、ボーナスアクション、技能などの自分のキャラクターができることをわかりやすいUIで表示するためのモッドです。これがあれば戦闘中にキャラクターシートを開く必要はなくなります。",
+              desc: "（翻訳済み）（D&D5版用）キャラクターが使用できるアクション、ボーナスアクション、技能などの自分のキャラクターができることをわかりやすいUIで表示するためのモッドです。これがあれば戦闘中にキャラクターシートを開く必要はなくなります。",
               status: "free",
               media: "https://streamable.com/ujfxfu",
               link: "https://github.com/theripper93/enhancedcombathud",
@@ -333,7 +333,7 @@ const local = {
             "Automated Evocations": {
               name: "Automated Evocations（召喚モッド）",
               icon: "fas fa-magic",
-              desc: "アクターに別のアクターを紐付けて、アニメーションと共に場に出すことができます。召喚魔法や、他の仲間を召喚するキャラに使えます。",
+              desc: "アクターに別のアクターを紐付けて、アニメーションと共に場に出すことができます。召喚魔法や、他の仲間を召喚するキャラに使えます。（翻訳済み）",
               status: "free",
               media:
                 "https://www.reddit.com/r/FoundryVTT/comments/pax0zn/automated_evocations_companion_manager/",
@@ -450,7 +450,7 @@ const local = {
             "Smart Target": {
               name: "Smart Target（スマート・ターゲット）",
               icon: "fas fa-bullseye",
-              desc: "Alt+クリックでターゲットを可能とし、ターゲットしたコマのアイコンを表示させます。大きさやターゲットの方法等はすべて設定できます。ターゲットマーカーの形も設定可能です。",
+              desc: "Alt+クリックでターゲットを可能とし、ターゲットしたコマのアイコンを表示させます。大きさやターゲットの方法等はすべて設定できます。ターゲットマーカーの形も設定可能です。（翻訳済み）",
               status: "free",
               media: "",
               link: "https://github.com/theripper93/Smart-Target",
@@ -604,9 +604,9 @@ const local = {
               link: "",
             },
       },
-      free : "Free",
-      paid : "Patreon Only",
-      paidea : "Patreon Only (EA)",
+      free : "無料",
+      paid : "Patreonのみ",
+      paidea : "Patreonのみ (ベータ)",
   },
 
 };
