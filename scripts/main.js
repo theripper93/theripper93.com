@@ -304,7 +304,7 @@ const local = {
         paidea : "Patreon Only (EA)",
     },
 
-    "ja-JP": {
+    "ja": {
       modules:{
           "Levels": {
               name: "Levels（階層モッド）",
