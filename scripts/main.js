@@ -298,6 +298,22 @@ const local = {
                 media: "https://www.reddit.com/r/FoundryVTT/comments/q3bqzv/visual_novel_choices_create_vn_style_multiple/",
                 link: "",
               },
+              "Maxwell's Manual of Malicious Maladies":{
+                name: "Maxwell's Manual of Malicious Maladies",
+                icon: "fas fa-viruses",
+                desc: "A module for all your lingering injuries needs (dnd5e).208 lingering injuries all with different severities, durations, and consequences, based on the 13 different damage types. Includes application automation, durations and item creation to keep track of injuries!. Available only on the discord channel! (for free)",
+                status: "free",
+                media: "https://www.reddit.com/r/FoundryVTT/comments/q7gc5h/free_maxwells_manual_of_malicious_maladies_a/",
+                link: "",
+              },
+              "Socket Macros": {
+                name: "Socket Macros",
+                icon: "fas fa-plug",
+                desc: "A very simple module to execute macros on all clients - simply check the checkbox in the macro configuration and the macro will be fired on all clients!",
+                status: "paidea",
+                media: "https://www.reddit.com/r/FoundryVTT/comments/q9bwbj/socket_macros_run_macros_on_all_clients/",
+                link: "",
+              }
         },
         free : "Free",
         paid : "Patreon Only",
