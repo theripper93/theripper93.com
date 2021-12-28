@@ -604,9 +604,9 @@ const local = {
               link: "",
             },
             "Levels - 3D Preview": {
-              name: "Levels - 3D Preview（階層3Dプレビュー）",
+              name: "Levels - 3D Preview（3D化）",
               icon: "fas fa-cube",
-              desc: "現在のシーンの階層を3Dで表示するための戻っです。3次元にカメラを動かすための操作も内包しています。",
+              desc: "現在のシーンの階層を3Dで表示するためのモッドです。3次元にカメラを動かすための操作も内包しています。",
               status: "paidea",
               media: "https://www.reddit.com/r/FoundryVTT/comments/q2k0en/levels_3d_preview_create_a_3d_view_of_you_levels/",
               link: "",
