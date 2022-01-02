@@ -294,7 +294,7 @@ const local = {
                 name: "Visual Novel Choices",
                 icon: "fas fa-book-reader",
                 desc: "Create a visual novel style choice menu with a list of choices and a title. Make democratic or non votes, customize colors and background image and trigger scene changes or macros when a choice is resolved.",
-                status: "paidea",
+                status: "paid",
                 media: "https://www.reddit.com/r/FoundryVTT/comments/q3bqzv/visual_novel_choices_create_vn_style_multiple/",
                 link: "",
               },
@@ -310,7 +310,7 @@ const local = {
                 name: "Socket Macros",
                 icon: "fas fa-plug",
                 desc: "A very simple module to execute macros on all clients - simply check the checkbox in the macro configuration and the macro will be fired on all clients!",
-                status: "paidea",
+                status: "paid",
                 media: "https://www.reddit.com/r/FoundryVTT/comments/q9bwbj/socket_macros_run_macros_on_all_clients/",
                 link: "",
               }
