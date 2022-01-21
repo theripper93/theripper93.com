@@ -313,6 +313,14 @@ const local = {
                 status: "paid",
                 media: "https://www.reddit.com/r/FoundryVTT/comments/q9bwbj/socket_macros_run_macros_on_all_clients/",
                 link: "",
+              },
+              "Token Flip": {
+                name: "Token Flip",
+                icon: "fas fa-exchange-alt",
+                desc: "Assign multiple token images and actors to the same token and flip between them with ease and a nice animation!",
+                status: "paidea",
+                media: "https://youtu.be/W-2EVLscFLM",
+                link: "https://youtu.be/W-2EVLscFLM",
               }
         },
         free : "Free",
