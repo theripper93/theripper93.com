@@ -7,10 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
-import Navlinks from './Components/NavLinks';
-import ModuleCard from './Components/ModuleCard';
-import SkillCard from './Components/SkillCard';
-import Searchbar from './Components/SearchBar';
+import NavLinks from './components/NavLinks';
+import ModuleCard from './components/ModuleCard';
+import SkillCard from './components/SkillCard';
+import Searchbar from './components/Searchbar';
 
 library.add(fab);
 
@@ -21,19 +21,19 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Navlinks></Navlinks>
+        <NavLinks></NavLinks>
         <div className="website">
-          <FontAwesomeIcon icon={["fab", "discord"]} size="xl" fixedWidth />
-          <FontAwesomeIcon icon={["fab", "github"]} size="xl" fixedWidth />
-          <FontAwesomeIcon icon={["fab", "patreon"]} size="xl" fixedWidth />
+          <a href="https://discord.com/invite/F53gBjR97G"><FontAwesomeIcon icon={["fab", "discord"]} size="xl" fixedWidth /></a>
+          <a href="https://github.com/theripper93"><FontAwesomeIcon icon={["fab", "github"]} size="xl" fixedWidth /></a>
+          <a href="https://www.patreon.com/theripper93"><FontAwesomeIcon icon={["fab", "patreon"]} size="xl" fixedWidth /></a>
         </div>
       </nav>
       <section className="hero">
         <video autoPlay muted loop id="video-bg">
-          <source src="./src/cat.mp4" type="video/mp4" />
+          <source src="./src/assets/cat.mp4" type="video/mp4" />
         </video>
         <h1>Heyo, I make Foundry VTT Modules</h1>
-        <FontAwesomeIcon icon={faArrowDown} size="5x" fixedWidth />
+        <FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth />
       </section>
       <section className="module-list">
         <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} buttonState={buttonState} setButtonState={setButtonState}></Searchbar>
@@ -53,22 +53,32 @@ function App() {
       </section>
       <section className="call-to-action">
         <div className='patreon'>
-          <h3>Patreon</h3>
-          <h4>Access the collection</h4>
-          <ul>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-          </ul>
+          <summary>
+            <header>
+              <h2>Patreon</h2>
+              <h4>Access the collection</h4>
+            </header>
+            <ul>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+            </ul>
+          </summary>
+          <button>Learn more</button>
         </div>
         <div className='discord'>
-          <h3>Discord</h3>
-          <h4>Join the community</h4>
-          <ul>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-          </ul>
+          <summary>
+            <header>
+              <h2>Discord</h2>
+              <h4>Join the community</h4>
+            </header>
+            <ul>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+            </ul>
+          </summary>
+          <button>Join now</button>
         </div>
       </section>
       <footer>
@@ -77,7 +87,7 @@ function App() {
           <h4>I'm open to do paid projects for Foundry VTT</h4>
         </main>
         <main>
-          <h2>My skills are in</h2>
+          <h3>My skills are in</h3>
           <figure>
             <SkillCard name="Javascript"></SkillCard>
             <SkillCard name="ThreeJS"></SkillCard>
@@ -86,10 +96,10 @@ function App() {
           </figure>
         </main>
         <main>
-          <h2>You can reach me via</h2>
+          <h3>You can reach me via</h3>
           <main className="links">
-            <FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth />
-            <FontAwesomeIcon icon={faEnvelope} size="5x" fixedWidth />
+            <a href="https://discord.com/invite/F53gBjR97G"><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
+            <a href="mailto:tsplab@gmail.com"><FontAwesomeIcon icon="fa-solid fa-envelope" size="5x" fixedWidth /></a>
           </main>
         </main>
         <br></br>

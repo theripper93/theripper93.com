@@ -1,11 +1,11 @@
 const NavLinks = () => {
   return (
     <div className='links'>
-    <p>Home</p>
-    <a> / </a>
-    <p>Modules</p>
-    <a> / </a>
-    <p>Installation</p>
+      <a>Home</a>
+      <p> / </p>
+      <a>Modules</a>
+      <p> / </p>
+      <a>Installation</a>
     </div>
   )
 }
