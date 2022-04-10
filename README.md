@@ -8,5 +8,5 @@ A repo for my [site](https://theripper93.com/) which contains information for al
 ![image](https://user-images.githubusercontent.com/95392008/162636302-06a34acc-e469-454b-bbf4-f0bae9114ee9.png)
 
 ## Credits
-Made with love by @CasanovaSekova
-Modules by me
+Modules and contents by me
+Site designed and made with love by [Casanova](https://github.com/CasanovaSekova)
