@@ -67,7 +67,7 @@ function App() {
               <h4>Every update in one place</h4>
             </header>
             <ul>
-              <li>Automatically for premium module updates in one place</li>
+              <li>Premium module updates in one place</li>
               <li>Be notified directly in Foundry</li>
               <li>Download and update without leaving your client</li>
             </ul>

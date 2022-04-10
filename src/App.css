@@ -318,7 +318,7 @@ footer svg:active {
 
 /* Section / Middle Content */
 section {
-  min-height: 50vh;
+  min-height: 60vh;
   padding: 25px 15px 175px 15px;
   background: var(--500);
 }
@@ -773,6 +773,21 @@ section.call-to-action .hub button:active {
 
   footer {
     background: var(--000);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  /* Align call to action cards correctly for smaller screens */
+  section.call-to-action {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 9.5rem;
+    background-image: url('/src/assets/wave.svg');
+    background-size: cover;
+    align-content: center;
   }
 }
 
