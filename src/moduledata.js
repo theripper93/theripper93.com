@@ -4,7 +4,8 @@ const local = {
       "Levels": {
         name: "Levels",
         icon: "fas fa-layer-group",
-        desc: "Create maps with multiple vertical levels on the same scene with seamless exploration and combat. Included 3D sight and more.",
+        desc: "Create maps with multiple vertical levels.",
+        fulldesc: "Create maps with multiple vertical levels on the same scene with seamless exploration and combat. Included 3D sight and more.",
         status: "free",
         media: "https://youtu.be/ELlweNunn4g",
         link: "https://github.com/theripper93/Levels",
@@ -12,7 +13,8 @@ const local = {
       "Animated Walls": {
         name: "Animated Walls",
         icon: "fas fa-university",
-        desc: "Animate your walls with rotation and movement animations. Chain together animations with macros and hook macros on door opening.",
+        desc: "Animate your walls with rotation and movement animations.",
+        fulldesc: "Animate your walls with rotation and movement animations. Chain together animations with macros and hook macros on door opening.",
         status: "free",
         media: "https://streamable.com/wj3ecv",
         link: "https://github.com/theripper93/animated-walls",
@@ -20,7 +22,8 @@ const local = {
       "Argon Combat HUD": {
         name: "Argon Combat HUD",
         icon: "fas fa-shield-alt",
-        desc: "Show a Solasta inspired combat hud for easy accessibility of actions and bonus actions etc.. Repelaces a lot of the character sheet functionality during combat so that you don't need to open it. Basically, token action HUD on steroids.",
+        desc: "A combat hud for easy access to actions.",
+        fulldesc: "Show a Solasta inspired combat hud for easy accessibility of actions and bonus actions etc. Replaces a lot of the character sheet functionality during combat so that you don't need to open it. Basically, token action HUD on steroids.",
         status: "free",
         media: "https://streamable.com/ujfxfu",
         link: "https://github.com/theripper93/enhancedcombathud",
@@ -28,7 +31,8 @@ const local = {
       "Automated Evocations": {
         name: "Automated Evocations",
         icon: "fas fa-magic",
-        desc: "A user interface to manage companions with summoning animations and automated summoning for spells.",
+        desc: "A UI for companion management.",
+        fulldesc: "A user interface to manage companions with summoning animations and automated summoning for spells.",
         status: "free",
         media:
           "https://www.reddit.com/r/FoundryVTT/comments/pax0zn/automated_evocations_companion_manager/",
@@ -37,7 +41,8 @@ const local = {
       "Better Roofs": {
         name: "Better Roofs",
         icon: "fas fa-building",
-        desc: "Improve overhead tiles by adding funtionality to show them through the fog of war and even masking them based on vision to allow 'peeking' into windows/doors.",
+        desc: "Overhead tile improvements with improved functionality and masking.",
+        fulldesc: "Improve overhead tiles by adding functionality to show them through the fog of war and even masking them based on vision to allow 'peeking' into windows/doors.",
         status: "free",
         media: "https://youtu.be/ELlweNunn4g",
         link: "https://github.com/theripper93/Better-Roofs",
@@ -45,7 +50,8 @@ const local = {
       "Boss Bar": {
         name: "Boss Bar",
         icon: "fas fa-skull-crossbones",
-        desc: "Create a Dark Souls Like boss healthbar on top of the screen or in other locations. Customize texture, color and more.",
+        desc: "A Dark Souls-like boss healthbar. Customize texture, color and more.",
+        fulldesc: "Create a Dark Souls-like boss healthbar on top of the screen or in other locations. Customize texture, color and more.",
         status: "free",
         media:
           "https://www.reddit.com/r/FoundryVTT/comments/oirzdz/boss_bar_add_soulslike_boss_healthbars_to_your/",
@@ -54,7 +60,8 @@ const local = {
       "Changelogs": {
         name: "Changelogs",
         icon: "fas fa-book-open",
-        desc: "Allow devs who opt into the system to display important messages to users after breaking updates, the user can chose which level of warning they wish to recive.",
+        desc: "Allows devs to display important messages to users after important updates.",
+        fulldesc: "Allow devs who opt into the system to display important messages to users after breaking updates, the user can chose which level of warning they wish to receive.",
         status: "free",
         media: "",
         link: "https://github.com/theripper93/libChangelogs",
@@ -62,7 +69,8 @@ const local = {
       "Combat Booster": {
         name: "Combat Booster",
         icon: "fas fa-bolt",
-        desc: "Speed up your combat with Recent actions, Turn Marker and other smaller tweaks like Pan to combatant, body pile, mark defeated and more. (note that the recent action feature is only dnd5e compatible)",
+        desc: "Speed up your combat with recent actions, turn marker and other tweaks.",
+        fulldesc: "Speed up your combat with Recent actions, Turn Marker and other smaller tweaks like Pan to combatant, body pile, mark defeated and more. (note that the recent action feature is only dnd5e compatible)",
         status: "free",
         media:
           "https://www.reddit.com/r/FoundryVTT/comments/ot0ek0/combat_booster_speed_up_your_combat/",
@@ -71,7 +79,8 @@ const local = {
       "Dig Down": {
         name: "Dig Down - Advanced Search",
         icon: "fas fa-dungeon",
-        desc: "Search inside folders in the file picker, use special search terms to filter your sidebars and many other advanced search filters. Use the excavate functionality to automatically find images for tokens.",
+        desc: "Search inside folders, filter searches, and many other advanced search features.",
+        fulldesc: "Search inside folders in the file picker, use special search terms to filter your sidebars and many other advanced search filters. Use the excavate functionality to automatically find images for tokens.",
         status: "free",
         media: "",
         link: "https://github.com/theripper93/fuzzy-foundry",
@@ -79,7 +88,8 @@ const local = {
       "Go To Player": {
         name: "Go To Player",
         icon: "fas fa-arrow-alt-circle-up",
-        desc: "A simple module to get the GM to a specific player (go to it's viewed scene and pan the camera to their token). Simply click the new button in the player list context menu!",
+        desc: "A simple module for GMs pan to players easily.",
+        fulldesc: "A simple module to get the GM to a specific player (go to it's viewed scene and pan the camera to their token). Simply click the new button in the player list context menu!",
         status: "free",
         media: "",
         link: "https://github.com/theripper93/go-to-player",
@@ -87,7 +97,8 @@ const local = {
       "Hover Distance": {
         name: "Hover Distance",
         icon: "fas fa-arrows-alt-h",
-        desc: "Show distance to a token on hover without the need to use the ruler. Optionally supports inclusion of vertical distance",
+        desc: "Shows the distance to a token on hover.",
+        fulldesc: "Show distance to a token on hover without the need to use the ruler. Optionally supports inclusion of vertical distance.",
         status: "paid",
         media: "https://streamable.com/2z5ijl",
         link: "",
@@ -95,7 +106,8 @@ const local = {
       "Hurry Up": {
         name: "Hurry Up",
         icon: "fas fa-hourglass-half",
-        desc: "A simple timer to hurry up your players in combat! Tired of those pesky players taking forever to then just swing a longsword after a 10 minute wait? Well, i have the solution for you!",
+        desc: "A simple timer to hurry up your players in combat!",
+        fulldesc: "A simple timer to hurry up your players in combat! Tired of those pesky players taking forever to then just swing a longsword after a 10 minute wait? Well, I have the solution for you!",
         status: "free",
         media: "",
         link: "https://github.com/theripper93/hurry-up",
@@ -103,7 +115,8 @@ const local = {
       "IP Shield": {
         name: "IP Shield",
         icon: "fas fa-shield-alt",
-        desc: "Simple module to hide the ip fields in the invite links dialog.",
+        desc: "A simple module for hiding ip fields in the invite menus.",
+        fulldesc: "Simple module to hide the ip fields in the invite links dialog.",
         status: "free",
         media: "",
         link: "https://github.com/theripper93/ip-protect",
@@ -111,7 +124,8 @@ const local = {
       "Levels - Automatic Cover Calculator": {
         name: "Levels - Automatic Cover Calculator",
         icon: "fas fa-crosshairs",
-        desc: "Calculates a precise cover % that can be used on any system do display a custom message above a token (eg, if only 30% visible display the obscured text). Include options to consider defeated enemies as cover but at a reduced height and more. Preconfigured for dnd5e but works with all systems (Active Effects dnd5e only). Also adds the ability to duck!",
+        desc: "Calculates the precise cover percentage of tokens. Also adds the ability to duck!",
+        fulldesc: "Calculates a precise cover % that can be used on any system do display a custom message above a token (eg, if only 30% visible display the obscured text). Include options to consider defeated enemies as cover but at a reduced height and more. Preconfigured for dnd5e but works with all systems (Active Effects dnd5e only). Also adds the ability to duck!",
         status: "paid",
         media: "https://streamable.com/0hr591",
         link: "",
@@ -119,7 +133,8 @@ const local = {
       "Levels - Volumetric Templates": {
         name: "Levels - Volumetric Templates",
         icon: "fas fa-ruler-combined",
-        desc: "Compute Templates in 3D with autotargeting. Automatic mode to dynamically switch between 2d and 3d depending on the information provided. Works with all systems, MIDI QOL compatible.",
+        desc: "Compute templates in 3D with autotargeting.",
+        fulldesc: "Compute templates in 3D with autotargeting. Automatic mode to dynamically switch between 2d and 3d depending on the information provided. Works with all systems, MIDI QOL compatible.",
         status: "paid",
         media: "https://streamable.com/xxt7qf",
         link: "",
@@ -127,7 +142,8 @@ const local = {
       "Patrol": {
         name: "Patrol",
         icon: "fas fa-walking",
-        desc: "Automatic or Fixed Patrol Routes for NPCs with the ability to spot player characters. Have your npc wander around to make your city map breath life, have guards on patrol, this module has you covered! (Works very well in conjunction with Auto-Rotate).",
+        desc: "Patrol routes for NPCs with the option to spot player characters.",
+        fulldesc: "Automatic or Fixed Patrol Routes for NPCs with the ability to spot player characters. Have your npc wander around to make your city map breath life, have guards on patrol, this module has you covered! (Works very well in conjunction with Auto-Rotate).",
         status: "free",
         media:
           "https://www.reddit.com/r/FoundryVTT/comments/noai9v/patrol_update_the_chase_is_on_free/",
@@ -136,7 +152,8 @@ const local = {
       "RPG Damage Numbers": {
         name: "RPG Damage Numbers",
         icon: "fas fa-dice-d20",
-        desc: "Show cascading damage numbers in the style of classic RPGs (for modern reference imagine Borderlands damage). Compatible only with dnd5e, requires midi-qol",
+        desc: "Show cascading damage numbers in the style of classic RPGs.",
+        fulldesc: "Show cascading damage numbers in the style of classic RPGs (for modern reference imagine Borderlands damage). Compatible only with dnd5e, requires midi-qol",
         status: "paid",
         media:
           "https://www.reddit.com/r/FoundryVTT/comments/p1c2jq/rpg_damage_numbers_add_some_style_to_your_combat/",
@@ -145,7 +162,8 @@ const local = {
       "Smart Target": {
         name: "Smart Target",
         icon: "fas fa-bullseye",
-        desc: "Target with Alt+Click, For players, target by just left clicking a non-owned token, Show portraits instead of colored pips to indicate targets, positioning/offset and size of the icons can be configured in the module settings, Customize color/shape of the targeting reticule.",
+        desc: "Quality of life improvements for targeting.",
+        fulldesc: "Target with Alt+Click, For players, target by just left clicking a non-owned token, Show portraits instead of colored pips to indicate targets, fulldesc/offset and size of the icons can be configured in the module settings, Customize color/shape of the targeting reticule.",
         status: "free",
         media: "",
         link: "https://github.com/theripper93/Smart-Target",
@@ -153,7 +171,8 @@ const local = {
       "Splatter": {
         name: "Splatter",
         icon: "fas fa-tint",
-        desc: "Add blood and gore to your games, Give that extra touch to your game. Featuring splats, bloodtrails, custom colors and more. Compatible with most game systems (minor configuration required).",
+        desc: "Add blood and gore to your games. Give them that extra touch.",
+        fulldesc: "Add blood and gore to your games, Give that extra touch to your game. Featuring splats, blood trails, custom colors and more. Compatible with most game systems (minor configuration required).",
         status: "free",
         media:
           "https://www.reddit.com/r/FoundryVTT/comments/onpf3k/splatter_blood_up_your_games_free_based_on/",
@@ -162,7 +181,8 @@ const local = {
       "Stochastic, Fantastic!": {
         name: "Stochastic, Fantastic!",
         icon: "fas fa-dice-d20",
-        desc: "A random encounter generator with automatic creature importing (from your own compendiums) and spwaning plus loot generator (with automatic LootSheet creation). dnd5e only.",
+        desc: "A random encounter generator with automatic creature importing and loot generation.",
+        fulldesc: "A random encounter generator with automatic creature importing (from your own compendiums) and spawning plus loot generator (with automatic LootSheet creation). dnd5e only.",
         status: "free",
         media:
           "https://www.reddit.com/r/FoundryVTT/comments/p6ydy8/stochastic_fantastic_dnd5e_random_encounter/",
@@ -171,7 +191,8 @@ const local = {
       "Tile Sort": {
         name: "Tile Sort",
         icon: "fas fa-sort-alpha-down",
-        desc: "An easy to use tool to sort the z-index of tiles, includes also a toggle to hide one or more tiles (so you can work on tiles under them) and highlight to tiles on hover (so you can see a tile if it got lost under something). Avaieble for free in the discord channel only.",
+        desc: "A quality of life module for tiles. Includes z-index sorting, vision toggle, and tile highlighting.",
+        fulldesc: "An easy to use tool to sort the z-index of tiles, includes also a toggle to hide one or more tiles (so you can work on tiles under them) and highlight to tiles on hover (so you can see a tile if it got lost under something). Available for free only in the discord channel.",
         status: "free",
         media: "https://streamable.com/6f9ied",
         link: "",
@@ -179,7 +200,8 @@ const local = {
       "Token Z": {
         name: "Token Z",
         icon: "fas fa-sort-amount-up",
-        desc: "Easly manage the Z-Index of tokens. The automatic sorting will keep larger tokens on the back and smaller on the front.",
+        desc: "Automatic sorting for the z-index of tokens.",
+        fulldesc: "Easily manage the Z-Index of tokens. The automatic sorting will keep larger tokens in the back and smaller ones in the front.",
         status: "free",
         media: "",
         link: "https://github.com/theripper93/token-z",
@@ -187,7 +209,8 @@ const local = {
       "Weather Blocker": {
         name: "Weather Blocker",
         icon: "fas fa-cloud-sun",
-        desc: "A simple module to block weather effects on a map using drawings. Includes Better Roofs/Levels integration. Works with all systems.",
+        desc: "A simple module for blocking weather effects on an area of a map.",
+        fulldesc: "A simple module to block weather effects on a map using drawings. Includes Better Roofs/Levels integration. Works with all systems.",
         status: "free",
         media:
           "https://www.reddit.com/r/FoundryVTT/comments/npixnk/free_weather_blocker_block_weather_through/",
@@ -196,7 +219,8 @@ const local = {
       "Taskbar": {
         name: "Taskbar",
         icon: "fas fa-tasks",
-        desc: "A fully functional Windows style taskbar for foundry, manage your stuff, the Easy way! Include Start style menu and utility icons.",
+        desc: "A Windows-style taskbar for Foundry. Include Start style menu and utility icons.",
+        fulldesc: "A fully functional Windows-style taskbar for Foundry. Manage your stuff the easy way! Includes a Windows-like Start menu and utility icons.",
         status: "paid",
         media:
           "https://www.reddit.com/r/FoundryVTT/comments/pi0d9i/taskbar_a_windows_style_taskbar_for_foundry/",
@@ -205,7 +229,8 @@ const local = {
       "Quickdraw": {
         name: "Quickdraw",
         icon: "fas fa-pencil-alt",
-        desc: "A rapid drawing tool to make quick drawings in-game by holding a hotkey (default q) with live preview for all clients. No more going to the drawing tools, and then deleting stuff! After a set timeout they will automatically fade out.",
+        desc: "Make temporary drawings quickly and easily.",
+        fulldesc: "A rapid drawing tool to make quick drawings in-game by holding a hotkey (default q) with live preview for all clients. No more going to the drawing tools, and then deleting stuff! After a set timeout they will automatically fade out.",
         status: "paid",
         media: "https://streamable.com/gq5rkn",
         link: "",
@@ -213,7 +238,8 @@ const local = {
       "Config Presets": {
         name: "Config Presets",
         icon: "fas fa-boxes",
-        desc: "Save presets for lights/walls/drawings and more, keeps relevant module information and you can apply the presets to existing objects. The ultimate map making tool!",
+        desc: "Save and apply presets for lights, walls, drawings, and more. The ultimate map making tool!",
+        fulldesc: "Save presets for lights/walls/drawings and more, keeps relevant module information and you can apply the presets to existing objects. The ultimate map making tool!",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/pkyui5/config_presets_create_presets_for/",
         link: "",
@@ -221,7 +247,8 @@ const local = {
       "Lightswitch": {
         name: "Lightswitch",
         icon: "fas fa-lightbulb",
-        desc: "Simply enable a toggle in the light configuration and now your players will be able to switch on an off the light with a simple click on an icon on the map that is also restricted by sight! No other configuration required.",
+        desc: "Allow your players to switch chosen lights on and off with a click.",
+        fulldesc: "Simply enable a toggle in the light configuration and now your players will be able to switch on and off the light with a simple click on an icon on the map that is also restricted by sight! No other configuration required.",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/pmu4z0/lightswitch_a_user_frendly_way_to_present/",
         link: "",
@@ -229,7 +256,8 @@ const local = {
       "Journal Drop": {
         name: "Journal Drop",
         icon: "fas fa-book-open",
-        desc: "Click a button to place multiple pins of the same journal on the canvas. Each copy will be labeled according to the section of the journal. This will NOT create new journals but use the single existing one ! The splitting is done automagically, in case your journal is not using h1 or h3 for it's sections you can specify a custom one. Also adds the ability to show journals as tooltips on hover.",
+        desc: "Place multiple pins of the same journal on the canvas.",
+        fulldesc: "Click a button to place multiple pins of the same journal on the canvas. Each copy will be labeled according to the section of the journal. This will NOT create new journals but use the single existing one ! The splitting is done automagically, in case your journal is not using h1 or h3 for it's sections you can specify a custom one. Also adds the ability to show journals as tooltips on hover.",
         status: "paid",
         media: "https://streamable.com/lstt4w",
         link: "",
@@ -237,7 +265,8 @@ const local = {
       "Filepicker+": {
         name: "Filepicker+",
         icon: "fas fa-file",
-        desc: "Expand the default Filepicker to add favourite folders, image and video preview tooltips, audio tooltips and a new layout",
+        desc: "An alternative to the default filepicker with a fresh UI. Adds favourites, image and video previews, and audio tooltips.",
+        fulldesc: "Expands the default filepicker to add favourite folders, image and video preview tooltips, audio tooltips and a new layout",
         status: "paid",
         media: "https://streamable.com/ql2x55",
         link: "",
@@ -245,7 +274,8 @@ const local = {
       "Progress Tracker": {
         name: "Progress Tracker",
         icon: "fas fa-sliders-h",
-        desc: "Create bars with custom background, sliders and waypoints to track many things like Travel, Chases and more. All changes are synced to players!",
+        desc: "Create bars with backgrounds, sliders and waypoints to track progress for your players.",
+        fulldesc: "Create bars with custom backgrounds, sliders and waypoints to track many things like Travel, Chases and more. All changes are synced to players!",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/pp3iy2/progress_tracker_create_custom_sliders_to_track/",
         link: "",
@@ -253,7 +283,8 @@ const local = {
       "Situational Shortcuts": {
         name: "Situational Shortcuts",
         icon: "fas fa-link",
-        desc: "Whatever you use is, sometimes applying active effects slows down the game. This modules adds quick custom button near the 'Situational Bonus' field. This is perfect for low atutomation users and for those things that are to annoying to automate with active effects! (currently dnd5e only - more systems coming on request)",
+        desc: "Adds a quick custom button near the 'Situational Bonus' field. Perfect for low automation users.",
+        fulldesc: "Whatever you use is, sometimes applying active effects slows down the game. This modules adds quick custom button near the 'Situational Bonus' field. This is perfect for low automation users and for those things that are to annoying to automate with active effects! (currently dnd5e only - more systems coming on request)",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/ppoqll/situational_shortcuts_create_quick_buttons_for/",
         link: "",
@@ -261,7 +292,8 @@ const local = {
       "Quick Doors": {
         name: "Quick Doors",
         icon: "fas fa-door-open",
-        desc: "Very simple, enable the tool, now clicking near a wall will create a door (on the wall itself) while splitting the original wall appropriatelly, you can also snap to grid to auto allign everything nicely. Includes hotkeys to swap between grid/nogrid/secret/window",
+        desc: "Create doors with a click on existing walls.",
+        fulldesc: "Very simple, enable the tool, now clicking near a wall will create a door (on the wall itself) while splitting the original wall appropriatelly, you can also snap to grid to auto align everything nicely. Includes hotkeys to swap between grid/nogrid/secret/window",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/pqujmq/quick_doors_create_doorswindows_with_1_click/",
         link: "",
@@ -269,7 +301,8 @@ const local = {
       "Image Context": {
         name: "Image Context",
         icon: "fas fa-image",
-        desc: "Add a context menu when you right click on any image in foundry. From this menu, show a popout of the image or send it to chat with the ability to wisper it only to some players and more.",
+        desc: "Creates a context menu for images. Display a pop-out of the image, send it to chat, whisper it to specific players, and more.",
+        fulldesc: "Add a context menu when you right click on any image in foundry. From this menu, show a popout of the image or send it to chat with the ability to wisper it only to some players and more.",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/pzj3dk/image_context_a_convenient_way_to_show_images_to/",
         link: "",
@@ -277,7 +310,8 @@ const local = {
       "Inactive Tokens": {
         name: "Inactive Tokens",
         icon: "fas fa-user-slash",
-        desc: "Set token as inactive to make them non interactable, effectively making them indistinguishable from tiles by players. Also, exclude inactive tokens from drag selection and optionally automatically set a token as inactive when defeated.",
+        desc: "Set tokens as inactive to make them non-interactable and indistinguishable from tiles.",
+        fulldesc: "Set token as inactive to make them non-interactable, effectively making them indistinguishable from tiles by players. Also, exclude inactive tokens from drag selection and optionally automatically set a token as inactive when defeated.",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/q1h0kv/inactive_tokens_lock_down_tokens_easly_and_make/",
         link: "",
@@ -285,7 +319,8 @@ const local = {
       "3D Canvas": {
         name: "3D Canvas",
         icon: "fas fa-cube",
-        desc: "Turn your maps into true 3D, load in 3d models, and play your battles in the glorious third dimension. Also support lighting and animated models. If you don't have 3d models don't worry! 3D canvas will turn your 2d tokens into Stand up figures in the 3d mode.",
+        desc: "Turn your maps into true 3D! Play your games in the glorious third dimension.",
+        fulldesc: "Turn your maps into true 3D, load in 3d models, and play your games in the glorious third dimension. Also support lighting and animated models. If you don't have 3d models don't worry! 3D canvas will turn your 2d tokens into Stand up figures in the 3d mode.",
         status: "paidea",
         media: "https://www.reddit.com/r/FoundryVTT/comments/q2k0en/levels_3d_preview_create_a_3d_view_of_you_levels/",
         link: "",
@@ -293,7 +328,8 @@ const local = {
       "Visual Novel Choices": {
         name: "Visual Novel Choices",
         icon: "fas fa-book-reader",
-        desc: "Create a visual novel style choice menu with a list of choices and a title. Make democratic or non votes, customize colors and background image and trigger scene changes or macros when a choice is resolved.",
+        desc: "Create a visual novel-style choice menu. Includes player voting, visual customization, scene changes, and macro execution.",
+        fulldesc: "Create a visual novel style choice menu with a list of choices and a title. Make democratic or non votes, customize colors and background image, and trigger scene changes or macros when a choice is resolved.",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/q3bqzv/visual_novel_choices_create_vn_style_multiple/",
         link: "",
@@ -301,7 +337,8 @@ const local = {
       "Maxwell's Manual of Malicious Maladies": {
         name: "Maxwell's Manual of Malicious Maladies",
         icon: "fas fa-viruses",
-        desc: "A module for all your lingering injuries needs (dnd5e).208 lingering injuries all with different severities, durations, and consequences, based on the 13 different damage types. Includes application automation, durations and item creation to keep track of injuries!. Available only on the discord channel! (for free)",
+        desc: "A module for all your lingering injuries needs.",
+        fulldesc: "A module for all your lingering injuries needs (dnd5e). 208 lingering injuries all with different severities, durations, and consequences, based on the 13 different damage types. Includes application automation, durations and item creation to keep track of injuries!. Available only on the discord channel! (for free)",
         status: "free",
         media: "https://www.reddit.com/r/FoundryVTT/comments/q7gc5h/free_maxwells_manual_of_malicious_maladies_a/",
         link: "",
@@ -309,7 +346,8 @@ const local = {
       "Socket Macros": {
         name: "Socket Macros",
         icon: "fas fa-plug",
-        desc: "A very simple module to execute macros on all clients - simply check the checkbox in the macro configuration and the macro will be fired on all clients!",
+        desc: "Execute macros on all clients!",
+        fulldesc: "A very simple module to execute macros on all clients - simply check the checkbox in the macro configuration and the macro will be fired on all clients!",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/q9bwbj/socket_macros_run_macros_on_all_clients/",
         link: "",
@@ -318,6 +356,7 @@ const local = {
         name: "Token Flip",
         icon: "fas fa-exchange-alt",
         desc: "Assign multiple token images and actors to the same token and flip between them with ease and a nice animation!",
+        fulldesc: "Assign multiple token images and actors to the same token and flip between them with ease and a nice animation!",
         status: "paid",
         media: "https://youtu.be/W-2EVLscFLM",
         link: "https://youtu.be/W-2EVLscFLM",
@@ -325,7 +364,8 @@ const local = {
       "Token Notes": {
         name: "Token Notes",
         icon: "fas fa-sticky-note",
-        desc: "With this simple yet effective module you can take quick notes on tokens. The module is system agnostic and excels at tracking effects durations during combat, especially if you are not using automation!",
+        desc: "Take quick notes on tokens. Great for tracking effects and values during combat, especially if you are not using automation!",
+        fulldesc: "With this simple yet effective module you can take quick notes on tokens. The module is system agnostic and excels at tracking effects durations during combat, especially if you are not using automation!",
         status: "paidea",
         media: "https://youtu.be/bb6IS7kt490",
         link: "",

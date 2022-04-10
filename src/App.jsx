@@ -5,7 +5,6 @@ import { moduleData } from './moduledata.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 import NavLinks from './components/NavLinks';
 import ModuleCard from './components/ModuleCard';
@@ -20,14 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
         <NavLinks></NavLinks>
-        <div className="website">
-          <a href="https://discord.com/invite/F53gBjR97G"><FontAwesomeIcon icon={["fab", "discord"]} size="xl" fixedWidth /></a>
-          <a href="https://github.com/theripper93"><FontAwesomeIcon icon={["fab", "github"]} size="xl" fixedWidth /></a>
-          <a href="https://www.patreon.com/theripper93"><FontAwesomeIcon icon={["fab", "patreon"]} size="xl" fixedWidth /></a>
-        </div>
-      </nav>
       <section className="hero">
         <video autoPlay muted loop id="video-bg">
           <source src="./src/assets/cat.mp4" type="video/mp4" />
@@ -36,6 +28,7 @@ function App() {
         <FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth />
       </section>
       <section className="module-list">
+        <h1>Modules</h1>
         <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} buttonState={buttonState} setButtonState={setButtonState}></Searchbar>
         <main className='module-grid'>
           {moduleData.filter((module) => {
@@ -64,7 +57,21 @@ function App() {
               <li>Lorem ipsum</li>
             </ul>
           </summary>
-          <button>Learn more</button>
+          <button>Learn</button>
+        </div>
+        <div className="hub">
+          <summary>
+            <header>
+              <h2>Module Hub</h2>
+              <h4>Every update in one place</h4>
+            </header>
+            <ul>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+              <li>Lorem ipsum</li>
+            </ul>
+          </summary>
+          <button>Download</button>
         </div>
         <div className='discord'>
           <summary>
@@ -78,7 +85,7 @@ function App() {
               <li>Lorem ipsum</li>
             </ul>
           </summary>
-          <button>Join now</button>
+          <button>Join</button>
         </div>
       </section>
       <footer>
@@ -98,7 +105,7 @@ function App() {
         <main>
           <h3>You can reach me via</h3>
           <main className="links">
-            <a href="https://discord.com/invite/F53gBjR97G"><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
+            <a href="https://discordapp.com/users/195152093563191296"><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
             <a href="mailto:tsplab@gmail.com"><FontAwesomeIcon icon="fa-solid fa-envelope" size="5x" fixedWidth /></a>
           </main>
         </main>
