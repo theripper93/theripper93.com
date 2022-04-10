@@ -8,9 +8,13 @@ body {
   --300: #6f6557;
   --400: #4b4237;
   --500: #2d2925;
+
+  --accent: #f5a017;
   --discord: #7c86ff;
   --patreon: #ff8970;
   --free: #74ffb9;
+
+  scroll-behavior: smooth;
 
   font-family: 'Neue Montreal', 'Roboto', 'Helvetica', sans-serif;
   color: var(--150);
@@ -45,31 +49,26 @@ button:active {
 }
 
 /* Scrollbar */
-/* width */
 ::-webkit-scrollbar {
   width: 0.3125rem;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: var(--500);
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--200);
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--000);
+  background: var(--accent);
 }
 
 /** Text Styles **/
 h1 {
   font-size: 4rem;
   font-weight: 700;
-  color: var(--100);
 }
 
 h2 {
@@ -100,7 +99,7 @@ p {
 }
 
 a:hover {
-  color: var(--000);
+  color: var(var(--accent));
 }
 
 a:-webkit-any-link {
@@ -109,7 +108,7 @@ a:-webkit-any-link {
 
 nav .website svg:hover,
 footer svg:hover {
-  color: var(--000);
+  color: var(--accent);
 }
 
 nav .website svg:active,
@@ -122,6 +121,7 @@ footer svg:active {
 nav {
   position: fixed;
   z-index: 3;
+  mix-blend-mode: difference;
 
   display: flex;
   flex-direction: row;
@@ -148,7 +148,7 @@ nav .website {
 }
 
 nav .website svg {
-  color: var(--100);
+  color: var(--200);
   padding: 0.125rem;
 }
 
@@ -163,21 +163,21 @@ nav .website svg {
 
   padding-left: 1rem;
 
-  color: var(--200);
+  color: var(--300);
   font-weight: 500;
 }
 
 .links a {
-  color: var(--100);
+  color: var(--200);
 }
 
 .links a:hover {
-  color: var(--000);
+  color: var(--accent);
   cursor: pointer;
 }
 
 .links a:active {
-  color: var(--000);
+  color: var(--accent);
   cursor: pointer;
   transform: translateY(1px);
 }
@@ -201,12 +201,13 @@ footer {
 
 /* Header */
 section.hero {
-  background: rgba(20, 20, 20, 0.33);
+  background: rgba(20, 20, 20, 0.5);
   padding: 0;
 }
 
 section.hero h1 {
-  color: var(--150);
+  color: var(--100);
+  text-align: center;
   padding-top: 30vh;
 }
 
@@ -214,6 +215,10 @@ section.hero svg {
   color: var(--150);
   margin-top: 30vh;
   animation: slide 3s ease-in-out infinite;
+}
+
+section.hero svg:hover {
+  color: var(--accent);
 }
 
 #video-bg {
@@ -313,9 +318,9 @@ footer svg:active {
 
 /* Section / Middle Content */
 section {
+  min-height: 50vh;
+  padding: 25px 15px 175px 15px;
   background: var(--500);
-  min-height: 100vh;
-  padding: 80px;
 }
 
 /* Modulelist Section */
@@ -446,7 +451,7 @@ section.module-list {
 }
 
 .module-card .paidea {
-  color: var(--000);
+  color: var(--accent);
 }
 
 .module-card .paid {
@@ -492,16 +497,22 @@ section.call-to-action .hub {
 section.call-to-action .patreon:hover {
   cursor: default;
   border: 2px solid var(--patreon);
+  box-shadow: 0 0 3px var(--patreon), 7px 7px var(--500),
+    7px 7px 0 2px var(--400);
 }
 
 section.call-to-action .hub:hover {
   cursor: default;
-  border: 2px solid var(--000);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 3px var(--accent), 7px 7px var(--500),
+    7px 7px 0 2px var(--400);
 }
 
 section.call-to-action .discord:hover {
   cursor: default;
   border: 2px solid var(--discord);
+  box-shadow: 0 0 3px var(--discord), 7px 7px var(--500),
+    7px 7px 0 2px var(--400);
 }
 
 section.call-to-action summary {
@@ -543,7 +554,7 @@ section.call-to-action .discord h2 {
 }
 
 section.call-to-action .hub h2 {
-  color: var(--000);
+  color: var(--accent);
 }
 
 section.call-to-action h4 {
@@ -602,19 +613,167 @@ section.call-to-action .patreon button:active {
 }
 
 section.call-to-action .hub button {
-  border: 2px solid var(--000);
+  border: 2px solid var(--accent);
 }
 
 section.call-to-action .hub button:hover {
   color: var(--500);
-  background: var(--000);
+  background: var(--accent);
 }
 
 section.call-to-action .hub button:active {
   color: var(--500);
-  background: var(--000);
+  background: var(--accent);
   filter: brightness(1.2);
   transform: translateY(2px);
+}
+
+/* Media Queries */
+/** Light Mode **/
+@media (prefers-color-scheme: light) {
+  /* Global */
+  html,
+  body {
+    --accent: #d1a428;
+    --discord: #4e5d94;
+    --patreon: #dc664c;
+    --free: #26ad69;
+    color: var(--400);
+  }
+
+  svg,
+  .module-card svg {
+    color: var(--400);
+  }
+  .module-card h4 {
+    color: var(--400);
+  }
+
+  button:hover {
+    filter: contrast(1.2);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar-track {
+    background: var(--200);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--400);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--500);
+  }
+
+  /** Navigation **/
+  nav {
+    mix-blend-mode: exclusion;
+  }
+
+  nav .links,
+  nav .website {
+    color: var(--500);
+  }
+
+  section,
+  section.call-to-action {
+    background: var(--100);
+  }
+
+  /* Module List */
+  .module-list .searchbar button svg {
+    color: var(--400);
+  }
+
+  /* Cards */
+  .module-card,
+  section.call-to-action .patreon,
+  section.call-to-action .discord,
+  section.call-to-action .hub {
+    background: var(--100);
+    box-shadow: 7px 7px var(--100), 7px 7px 0 2px var(--200);
+  }
+
+  /* Call to Action */
+  section.call-to-action {
+    background-image: url('./assets/wave-light.svg');
+    background-size: cover;
+  }
+
+  section.call-to-action .patreon:hover {
+    box-shadow: 0 0 0px var(--patreon), 7px 7px var(--100),
+      7px 7px 0 2px var(--200);
+  }
+
+  section.call-to-action .discord:hover {
+    box-shadow: 0 0 0px var(--discord), 7px 7px var(--100),
+      7px 7px 0 2px var(--200);
+  }
+
+  section.call-to-action .hub:hover {
+    background: var(--100);
+    box-shadow: 0 0 0px var(--accent), 7px 7px var(--100),
+      7px 7px 0 2px var(--200);
+  }
+
+  /* Call to Action Buttons */
+  section.call-to-action button {
+    background: var(--100);
+    color: var(--400);
+  }
+
+  section.call-to-action .patreon button {
+    box-shadow: 2px 2px 0 var(--patreon);
+  }
+
+  section.call-to-action .discord button {
+    box-shadow: 2px 2px 0 var(--discord);
+  }
+
+  section.call-to-action .hub button {
+    box-shadow: 2px 2px 0 var(--accent);
+  }
+
+  section.call-to-action .patreon button:hover {
+    background-color: transparent;
+    filter: contrast(1.2);
+    box-shadow: 1px 1px 0 var(--patreon);
+  }
+
+  section.call-to-action .discord button:hover {
+    background-color: transparent;
+    filter: brightness(1);
+    box-shadow: 1px 1px 0 var(--discord);
+  }
+
+  section.call-to-action .hub button:hover {
+    background-color: transparent;
+    filter: brightness(1);
+    box-shadow: 1px 1px 0 var(--accent);
+  }
+
+  section.call-to-action .patreon button:active {
+    background-color: transparent;
+    filter: brightness(1);
+    box-shadow: 1px 1px 0 var(--patreon) inset;
+  }
+
+  section.call-to-action .discord button:active {
+    background-color: transparent;
+    filter: brightness(1);
+    box-shadow: 1px 1px 0 var(--discord) inset;
+  }
+
+  section.call-to-action .hub button:active {
+    background-color: transparent;
+    filter: brightness(1);
+    box-shadow: 1px 1px 0 var(--accent) inset;
+  }
+
+  footer {
+    background: var(--000);
+  }
 }
 
 /* Animation */
