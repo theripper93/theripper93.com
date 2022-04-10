@@ -9,4 +9,6 @@ A repo for my [site](https://theripper93.com/) which contains information for al
 
 ## Credits
 Modules and contents by me
+
+
 Site designed and made with love by [Casanova](https://github.com/CasanovaSekova)
