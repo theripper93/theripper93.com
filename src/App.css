@@ -121,7 +121,7 @@ footer svg:active {
 nav {
   position: fixed;
   z-index: 3;
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
 
   display: flex;
   flex-direction: row;
@@ -318,7 +318,7 @@ footer svg:active {
 
 /* Section / Middle Content */
 section {
-  min-height: 60vh;
+  min-height: 70vh;
   padding: 25px 15px 175px 15px;
   background: var(--500);
 }
@@ -668,7 +668,7 @@ section.call-to-action .hub button:active {
 
   /** Navigation **/
   nav {
-    mix-blend-mode: exclusion;
+    mix-blend-mode: difference;
   }
 
   nav .links,
