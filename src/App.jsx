@@ -19,15 +19,15 @@ function App() {
 
   return (
     <div className="App">
-        <NavLinks></NavLinks>
-      <section className="hero">
+      <NavLinks></NavLinks>
+      <section className="hero" id="homepage">
         <video autoPlay muted loop id="video-bg">
           <source src="./src/assets/cat.mp4" type="video/mp4" />
         </video>
         <h1>Heyo, I make Foundry VTT Modules</h1>
-        <FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth />
+        <a href='#modulespage'><FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth /></a>
       </section>
-      <section className="module-list">
+      <section className="module-list" id="modulespage">
         <h1>Modules</h1>
         <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} buttonState={buttonState} setButtonState={setButtonState}></Searchbar>
         <main className='module-grid'>
@@ -52,12 +52,13 @@ function App() {
               <h4>Access the collection</h4>
             </header>
             <ul>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
+              <li>Download and use my premium modules</li>
+              <li>Join the <span style={{color: "var(--patreon)", fontWeight: "500"}}>Early Access</span> tier for 3D canvas and other early access modules</li>
+              <li>Access priority support for questions and troubleshooting</li>
+              <li>Support the development of my free modules</li>
             </ul>
           </summary>
-          <button>Learn</button>
+          <a href="https://www.patreon.com/theripper93" target="_blank"><button>Learn</button></a>
         </div>
         <div className="hub">
           <summary>
@@ -66,12 +67,12 @@ function App() {
               <h4>Every update in one place</h4>
             </header>
             <ul>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
+              <li>Automatically for premium module updates in one place</li>
+              <li>Be notified directly in Foundry</li>
+              <li>Download and update without leaving your client</li>
             </ul>
           </summary>
-          <button>Download</button>
+          <a href="" target="_blank"><button>Download</button></a>
         </div>
         <div className='discord'>
           <summary>
@@ -80,12 +81,13 @@ function App() {
               <h4>Join the community</h4>
             </header>
             <ul>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
-              <li>Lorem ipsum</li>
+              <li>Get news and updates on my modules</li>
+              <li>Find guides and resources from myself and others</li>
+              <li>Updates on releases from partnered creators</li>
+              <li>Join an active community of other users</li>
             </ul>
           </summary>
-          <button>Join</button>
+          <a href="https://discord.com/invite/F53gBjR97G" target="_blank"><button>Join</button></a>
         </div>
       </section>
       <footer>
@@ -105,8 +107,8 @@ function App() {
         <main>
           <h3>You can reach me via</h3>
           <main className="links">
-            <a href="https://discordapp.com/users/195152093563191296"><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
-            <a href="mailto:tsplab@gmail.com"><FontAwesomeIcon icon="fa-solid fa-envelope" size="5x" fixedWidth /></a>
+            <a href="https://discordapp.com/users/195152093563191296" target="_blank"><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
+            <a href="mailto:tsplab@gmail.com" target="_blank"><FontAwesomeIcon icon="fa-solid fa-envelope" size="5x" fixedWidth /></a>
           </main>
         </main>
         <br></br>

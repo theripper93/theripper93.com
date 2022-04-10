@@ -103,6 +103,10 @@ a:hover {
   color: var(--000);
 }
 
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
 nav .website svg:hover,
 footer svg:hover {
   color: var(--000);
@@ -132,6 +136,7 @@ nav {
   backdrop-filter: blur(0.2938rem);
 }
 
+/* Navigation links for the site itself */
 nav .website {
   position: relative;
   display: flex;
@@ -147,6 +152,7 @@ nav .website svg {
   padding: 0.125rem;
 }
 
+/* Links to social media */
 .links {
   display: flex;
   flex-direction: row;
@@ -275,6 +281,7 @@ footer figure .skill-card {
 footer figure .skill-card:hover {
   border-color: var(--400);
   color: var(--400);
+  cursor: default;
 }
 
 footer figure .skill-card h4 {
@@ -460,7 +467,7 @@ section.call-to-action {
   justify-content: center;
   gap: 9.5rem;
 
-  background-image: url('./assets/wave-haikei.svg');
+  background-image: url('./assets/wave.svg');
   background-size: cover;
 }
 
@@ -482,6 +489,21 @@ section.call-to-action .hub {
   box-shadow: 7px 7px var(--500), 7px 7px 0 2px var(--400);
 }
 
+section.call-to-action .patreon:hover {
+  cursor: default;
+  border: 2px solid var(--patreon);
+}
+
+section.call-to-action .hub:hover {
+  cursor: default;
+  border: 2px solid var(--000);
+}
+
+section.call-to-action .discord:hover {
+  cursor: default;
+  border: 2px solid var(--discord);
+}
+
 section.call-to-action summary {
   display: flex;
   flex-wrap: wrap;
@@ -492,9 +514,14 @@ section.call-to-action summary {
 }
 
 section.call-to-action summary ul {
+  max-width: fit-content;
   align-self: flex-start;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 400;
+}
+
+section.call-to-action summary li {
+  margin: 0.1rem 0 1.1rem 0;
 }
 
 section.call-to-action h2 {
