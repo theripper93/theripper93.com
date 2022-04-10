@@ -2,16 +2,14 @@ import { useState } from 'react';
 import './App.css';
 import { moduleData } from './moduledata.js';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
+/* Misc Libraries */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab } from '@fortawesome/free-brands-svg-icons';
 
+/* Components */
 import NavLinks from './components/NavLinks';
 import ModuleCard from './components/ModuleCard';
 import SkillCard from './components/SkillCard';
 import Searchbar from './components/Searchbar';
-
-library.add(fab);
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
