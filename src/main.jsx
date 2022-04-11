@@ -8,7 +8,7 @@ import {
 import './index.css';
 import App from './App';
 import Installation from './routes/installation';
-import ModuleCard from './components/ModuleCard';
+import ModuleSubpage from './routes/moduleSubpage';
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -16,11 +16,15 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="installation" element={<Installation />} />
-      <Route path="module" element={< ModuleCard />} />
+      <Route path="module" element={< ModuleSubpage />} >
+        <Route path=":moduleId" element={< ModuleSubpage />} />
+      </Route>
       <Route
         path="*"
         element={
-          <p>Nothing here</p>
+          <section className='golden no-match'>
+            <h1>Nothing here</h1>
+          </section>
         }></Route>
     </Routes>
   </BrowserRouter >,

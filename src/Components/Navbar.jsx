@@ -1,18 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Outlet } from "react-router-dom";
-import { HashLink as Link } from 'react-router-hash-link';
+import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 const NavLinks = () => {
   return (
     <nav>
       <div className='links'>
         <div className='landing'>
-          <Link to='/'>Home</Link>
+          <HashLink smooth to='/#'>Home</HashLink>
           <p> / </p>
-          <Link to='/#modules'>Modules</Link>
+          <HashLink smooth to='/#modules'>Modules</HashLink>
           <p> / </p>
-          <Link to='/#contact'>Contact</Link>
-          <p>//</p>
+          <HashLink smooth to='/#contact'>Contact</HashLink>
+          <p>/</p>
           <Link to='/installation'>Installation</Link>
         </div>
       </div>

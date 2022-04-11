@@ -14,9 +14,9 @@ const ModuleCard = (props) => {
       </div>
       <div className="card-contents">
         <Link
-          to={`module/${props.module.name}`}
-          key={props.module.name}>
-          <h4>{props.module.name}</h4>
+          to={`module/${props.module.id}`}
+          key={props.module.id}>
+            <h4>{props.module.name}</h4>
         </Link>
         <article>
           <p>{props.module.desc}</p>

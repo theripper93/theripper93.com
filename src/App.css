@@ -102,10 +102,10 @@ p {
 }
 
 a:hover {
-  color: var(var(--accent));
+  color: varvar(--accent);
 }
 
-a:-webkit-any-link {
+*:-webkit-any-link {
   text-decoration: none;
 }
 
@@ -124,7 +124,6 @@ footer svg:active {
 nav {
   position: fixed;
   z-index: 3;
-  mix-blend-mode: exclusion;
 
   display: flex;
   flex-direction: row;
@@ -134,7 +133,7 @@ nav {
   min-height: 5%;
   width: 100%;
 
-  background: transparent;
+  background: #2c292577;
   color: var(--300);
   box-shadow: 0 4px 5px rgba(24, 20, 20, 0.1);
   backdrop-filter: blur(1px);
@@ -151,22 +150,22 @@ nav .links {
 }
 
 nav a {
-  color: var(--300);
-  font-weight: 500;
+  color: var(--100);
+  font-weight: 400;
 }
 
 nav .links .landing a,
 nav .links .socials svg {
-  color: var(--200);
+  color: var(--100);
 }
 
 nav .links .landing a:hover {
-  color: var(--accent);
   cursor: pointer;
+  color: var(--000);
 }
 
 nav .links .landing a:active {
-  color: var(--accent);
+  color: var(--000);
   cursor: pointer;
   transform: translateY(0.0625rem);
 }
@@ -195,7 +194,7 @@ nav .socials {
 }
 
 nav .socials svg {
-  color: var(--200);
+  color: var(--100);
   padding: 2px;
 }
 
@@ -210,10 +209,12 @@ nav .socials svg:active {
 
 /** Header and Footer Sections **/
 header.hero,
-footer {
+footer,
+section.no-match {
   display: flex;
   position: relative;
   overflow: hidden;
+  scroll-snap-type: y proximity;
 
   min-height: 100vh;
 
@@ -256,8 +257,8 @@ header.hero svg:hover {
   z-index: -5;
 }
 
-/* Contact Footer */
-footer {
+/* Golden Pages */
+.golden {
   color: var(--500);
   background: var(--000);
 }
@@ -347,6 +348,7 @@ section {
   min-height: 70vh;
   padding: 1.5625rem 0.9375rem 10.9375rem 0.9375rem;
   background: var(--500);
+  scroll-snap-type: y proximity;
 }
 
 /* Modulelist Section */
@@ -507,9 +509,7 @@ section.call-to-action {
   background-size: cover;
 }
 
-section.call-to-action .patreon,
-section.call-to-action .discord,
-section.call-to-action .hub {
+section.call-to-action .card {
   display: flex;
   padding: 0.75rem 1.625rem;
   min-height: 60vh;
@@ -718,13 +718,14 @@ section.call-to-action .hub button:active {
   }
 
   /** Navigation **/
-  nav {
-    mix-blend-mode: difference;
-  }
-
   nav .landing a,
   nav .socials svg {
-    color: var(--200);
+    color: var(--100);
+  }
+
+  nav .landing a:hover,
+  nav .socials svg:hover {
+    color: var(--000);
   }
 
   section,
@@ -739,9 +740,7 @@ section.call-to-action .hub button:active {
 
   /* Cards */
   .module-card,
-  section.call-to-action .patreon,
-  section.call-to-action .discord,
-  section.call-to-action .hub {
+  section.call-to-action .card {
     background: var(--100);
     box-shadow: 0.4375rem 0.4375rem var(--100),
       0.4375rem 0.4375rem 0 0.125rem var(--200);
@@ -749,7 +748,7 @@ section.call-to-action .hub button:active {
 
   /* Call to Action */
   section.call-to-action {
-    background-image: url('./assets/wave-light.svg');
+    background-image: url('./assets/wave.svg');
     background-size: cover;
   }
 
@@ -770,22 +769,12 @@ section.call-to-action .hub button:active {
   }
 
   /* Call to Action Buttons */
-  section.call-to-action button {
+  section.call-to-action .card button {
     background: var(--100);
     color: var(--400);
   }
 
-  section.call-to-action .patreon button {
-    border-color: var(--400);
-    box-shadow: 0.125rem 0.125rem 0 var(--400);
-  }
-
-  section.call-to-action .discord button {
-    border-color: var(--400);
-    box-shadow: 0.125rem 0.125rem 0 var(--400);
-  }
-
-  section.call-to-action .hub button {
+  section.call-to-action .card button {
     border-color: var(--400);
     box-shadow: 0.125rem 0.125rem 0 var(--400);
   }

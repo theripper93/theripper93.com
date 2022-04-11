@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import './App.css';
 
 /* Misc Libraries */
@@ -18,12 +18,12 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-      <header className="hero" id="start">
+      <header className="hero" id="">
         <video autoPlay muted loop id="video-bg">
           <source src="./src/assets/cat.mp4" type="video/mp4" />
         </video>
         <h1>Heyo, I make Foundry VTT Modules</h1>
-        <a href='#modulespage'><FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth /></a>
+        <HashLink smooth to='/#modules'><FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth /></HashLink>
       </header>
       <section className="module-list" id="modules">
         <h1>Modules</h1>
@@ -31,7 +31,7 @@ function App() {
         <ModuleGrid buttonState={buttonState} searchTerm={searchTerm}></ModuleGrid>
       </section>
       <section className="call-to-action">
-        <div className='patreon'>
+        <div className='card patreon'>
           <summary>
             <header>
               <h2>Patreon</h2>
@@ -46,7 +46,7 @@ function App() {
           </summary>
           <a href="https://www.patreon.com/theripper93" target="_blank"><button>Learn</button></a>
         </div>
-        <div className="hub">
+        <div className="card hub">
           <summary>
             <header>
               <h2>Module Hub</h2>
@@ -60,7 +60,7 @@ function App() {
           </summary>
           <a href="" target="_blank"><button>Download</button></a>
         </div>
-        <div className='discord'>
+        <div className='card discord'>
           <summary>
             <header>
               <h2>Discord</h2>
@@ -76,7 +76,7 @@ function App() {
           <a href="https://discord.com/invite/F53gBjR97G" target="_blank"><button>Join</button></a>
         </div>
       </section>
-      <footer id="contact">
+      <footer className="golden" id="contact">
         <main className='header-wrapper'>
           <h1>Need to contact me?</h1>
           <h4>I'm open to do paid projects for Foundry VTT</h4>
