@@ -8,23 +8,27 @@ library.add(faDiscord, faPatreon, faGithub, fas);
 
 const ModuleCard = (props) => {
   return (
-    <div className="module-card">
-      <div className="side-contents">
-        <FontAwesomeIcon icon={props.module.icon.split(" ")} size='5x' />
-      </div>
-      <div className="card-contents">
-        <Link
-          to={`module/${props.module.id}`}
-          key={props.module.id}>
+    <div className="card-wrapper">
+      <Link
+        to={`module/${props.module.id}`}
+        key={props.module.id}>
+        <div className="module-card">
+          <div className="side-contents">
+            <FontAwesomeIcon icon={props.module.icon.split(" ")} size='5x' />
+          </div>
+          <div className="card-contents">
+
             <h4>{props.module.name}</h4>
-        </Link>
-        <article>
-          <p>{props.module.desc}</p>
-        </article>
-        <p className={props.module.status}>{props.module.statusText}</p>
-      </div>
+            <article>
+              <p>{props.module.desc}</p>
+            </article>
+            <p className={props.module.status}>{props.module.statusText}</p>
+          </div>
+        </div>
+      </Link>
       <Outlet />
-    </div>
+    </div >
+
   )
 }
 

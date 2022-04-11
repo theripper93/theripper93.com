@@ -741,3 +741,28 @@ export const moduleData = sortedMods.map((name) => {
   module.id = key;
   return currentLocal.modules[key]; 
 });
+
+export const detectSource = (url) => {
+  if(url.includes("youtu")) {
+    const videoId = url.split("/").pop();
+    return {
+      source: "youtube",
+      src: `https://www.youtube.com/embed/${videoId}`
+    };
+  } else if(url.includes("streamable")) {
+    const videoId = url.split("/").pop();
+    return {
+      source: "streamable",
+      src: `https://streamable.com/e/${videoId}`
+    };
+  } else if(url.includes("reddit")) {
+    const videoId = url.split("/").pop();
+    return {
+      source: "reddit",
+      src: `https://www.redditmedia.com/r/FoundryVTT/comments/pax0zn/automated_evocations_companion_manager/?ref_source=embed&amp;ref=share&amp;embed=true`
+    };
+  }
+  return null;
+};
+
+"https://www.reddit.com/r/FoundryVTT/comments/pax0zn/automated_evocations_companion_manager/"

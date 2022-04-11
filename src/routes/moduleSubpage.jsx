@@ -2,6 +2,7 @@ import { moduleData, premiumMods, getGitReadme } from '../moduledata.js';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import App from '../App';
+import Video from '../components/Video.jsx';
 
 const Subpage = (props) => {
 
@@ -25,11 +26,14 @@ const Subpage = (props) => {
             <p>{data.fulldesc}</p>
           </article>
           <aside>
-            <h2>Media content</h2>
+            <Video></Video>
             <p>{JSON.stringify(premiumData)}</p>
             <p>{JSON.stringify(data)}</p>
           </aside>
         </header>
+        <section>
+          <h2>Guides</h2>
+        </section>
       </section>
     </div>
   )

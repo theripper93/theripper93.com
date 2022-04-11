@@ -30,7 +30,7 @@ function App() {
         <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} buttonState={buttonState} setButtonState={setButtonState}></Searchbar>
         <ModuleGrid buttonState={buttonState} searchTerm={searchTerm}></ModuleGrid>
       </section>
-      <section className="call-to-action">
+      <section className="call-to-action" id="hub">
         <div className='card patreon'>
           <summary>
             <header>
@@ -44,21 +44,23 @@ function App() {
               <li>Support the development of my free modules</li>
             </ul>
           </summary>
-          <a href="https://www.patreon.com/theripper93" target="_blank"><button>Learn</button></a>
+          <a href="https://www.patreon.com/theripper93" target="_blank"><button>View</button></a>
         </div>
         <div className="card hub">
           <summary>
             <header>
-              <h2>Module Hub</h2>
-              <h4>Every update in one place</h4>
+              <h2>Hub</h2>
+              <h4>Everything in one place</h4>
             </header>
             <ul>
+              <li>Be alerted of critical updates for both free and premium modules</li>
+              <li>Notifications directly in Foundry</li>
               <li>Premium module updates in one place</li>
-              <li>Be notified directly in Foundry</li>
-              <li>Download and update without leaving your client</li>
+              <li>Works automagically between updates</li>
+              <li id="free-hub">It's free </li>
             </ul>
           </summary>
-          <a href="" target="_blank"><button>Download</button></a>
+          <a href="https://github.com/theripper93/theripper-premium-hub" target="_blank"><button>Download</button></a>
         </div>
         <div className='card discord'>
           <summary>
@@ -76,29 +78,36 @@ function App() {
           <a href="https://discord.com/invite/F53gBjR97G" target="_blank"><button>Join</button></a>
         </div>
       </section>
-      <footer className="golden" id="contact">
-        <main className='header-wrapper'>
-          <h1>Need to contact me?</h1>
-          <h4>I'm open to do paid projects for Foundry VTT</h4>
-        </main>
-        <main>
-          <h3>My skills are in</h3>
-          <figure>
-            <SkillCard name="Javascript"></SkillCard>
-            <SkillCard name="ThreeJS"></SkillCard>
-            <SkillCard name="Foundry API"></SkillCard>
-            <SkillCard name="HTML/CSS"></SkillCard>
-          </figure>
-        </main>
-        <main>
-          <h3>You can reach me via</h3>
-          <main className="links">
-            <a href="https://discordapp.com/users/195152093563191296" target="_blank"><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
-            <a href="mailto:tsplab@gmail.com" target="_blank"><FontAwesomeIcon icon="fa-solid fa-envelope" size="5x" fixedWidth /></a>
+      <footer className="golden contact" id="contact">
+        <summary>
+          <main className='header-wrapper'>
+            <h1>Need to contact me?</h1>
+            <h4>I'm open to do paid projects for Foundry VTT</h4>
           </main>
-        </main>
-        <br></br>
-        <p>For non-business related inquiries, please write a message on my discord server instead.</p>
+          <main className='skillset'>
+            <h3>My skills are in</h3>
+            <figure>
+              <SkillCard name="Javascript"></SkillCard>
+              <SkillCard name="ThreeJS"></SkillCard>
+              <SkillCard name="Foundry API"></SkillCard>
+              <SkillCard name="HTML/CSS"></SkillCard>
+            </figure>
+          </main>
+          <main className='contact-info'>
+            <h3>You can reach me via</h3>
+            <main className="links">
+              <a href="https://discordapp.com/users/195152093563191296" target="_blank"><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
+              <a href="mailto:tsplab@gmail.com" target="_blank"><FontAwesomeIcon icon="fa-solid fa-envelope" size="5x" fixedWidth /></a>
+            </main>
+          <br></br>
+          <p>For non-business related inquiries, please write a message on my discord server instead.</p>
+          </main>
+        </summary>
+        <aside>
+          <p id="credit">Site designed and developed with love by <a href="https://www.github.com/casanovasekova" target="_blank">
+          April Tao </a>
+          </p>
+        </aside>
       </footer>
     </div>
   )
