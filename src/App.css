@@ -29,6 +29,7 @@ input[type='text' i] {
   border: 2px solid var(--300);
   width: 78vw;
   height: 2.25rem;
+  transition: all 0.3s ease-in-out;
 }
 
 input:focus-visible {
@@ -106,6 +107,7 @@ a:-webkit-any-link {
 
 a:hover {
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 nav .socials svg:hover,
@@ -163,6 +165,7 @@ nav .links .socials svg {
 nav .links .landing a:hover {
   cursor: pointer;
   color: var(--000);
+  transition: all 0.3s ease-in-out;
 }
 
 nav .links .landing a:active {
@@ -296,6 +299,7 @@ header.hero svg:hover {
 
 .golden a:hover {
   color: var(--300);
+  transition: all 0.3s ease-in-out;
 }
 
 #contact main {
@@ -564,6 +568,7 @@ section.call-to-action .card {
   border: 0.125rem solid var(--300);
   box-shadow: 0.4375rem 0.4375rem var(--500),
     0.4375rem 0.4375rem 0 0.125rem var(--400);
+  transition: all 0.3s ease-in-out;
 }
 
 section.call-to-action .patreon:hover {
@@ -601,6 +606,8 @@ section.call-to-action summary ul {
   align-self: flex-start;
   font-size: 20px;
   font-weight: 400;
+  content: '-';
+  padding-right: 10px;
 }
 
 section.call-to-action summary li {
@@ -617,15 +624,18 @@ section.call-to-action h2 {
   font-size: 48px;
 }
 
-section.call-to-action .patreon h2 {
+section.call-to-action .patreon h2,
+section.call-to-action .patreon summary li::marker {
   color: var(--patreon);
 }
 
-section.call-to-action .discord h2 {
+section.call-to-action .discord h2,
+section.call-to-action .discord summary li::marker {
   color: var(--discord);
 }
 
-section.call-to-action .hub h2 {
+section.call-to-action .hub h2,
+section.call-to-action .hub summary li::marker {
   color: var(--accent);
 }
 
@@ -650,6 +660,8 @@ section.call-to-action button {
   width: 7.8125rem;
   height: 2.5rem;
   margin-bottom: 16px;
+
+  transition: all 0.3s ease-in-out;
 }
 
 section.call-to-action .discord button {
@@ -701,7 +713,7 @@ section.call-to-action .hub button:active {
 }
 
 #free-hub {
-  background: -webkit-linear-gradient(15deg, var(--accent), #ff930f);
+  background: -webkit-linear-gradient(25deg, #f4762d, #ffd78a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -718,30 +730,123 @@ section.module {
   align-items: flex-start;
 }
 
-section.module header {
+section.module main {
   display: flex;
   flex-direction: row;
-  align-content: flex-start;
-  justify-content: space-between;
+  align-content: center;
+  justify-content: center;
   align-items: flex-start;
+  width: 100%;
+
+  flex-wrap: wrap;
+  gap: 8rem;
 }
 
-section.module header h1 {
+section.module main h1 {
   margin-block-end: 0;
   margin-block-start: 0;
 }
 
-section.module header p {
-  max-width: fit-content;
+section.module main p {
+  max-width: 66%;
 }
 
 section.module article {
   display: flex;
-  flex-wrap: wrap;
+  border-right: 0.125rem solid var(--300);
+  border-bottom: 0.125rem solid var(--300);
+  border-left: 0.125rem solid var(--300);
+  transition: all 0.3s ease-in-out;
   flex-direction: column;
-  align-content: flex-start;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+section.module article h1 {
+  width: 100%;
+  text-align: center;
+  padding: 2px;
+
+  color: var(--500);
+  background: var(--000);
+}
+
+section.module article p {
+  width: auto;
+  text-align: justify;
+  padding: 2rem;
+}
+
+section.module article button {
+  color: var(--100);
+  background: var(--500);
+  border: 1px solid transparent;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  width: 7.8125rem;
+  height: 2.5rem;
+  margin: 0.5rem;
+
+  color: var(--500);
+  background: var(--000);
+  transition: all 0.3s ease-in-out;
+}
+
+header.module {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+
+  max-width: 25vw;
+}
+
+.badge {
+  display: flex;
+  background: transparent;
+  align-self: end;
+  padding: 0.5rem;
+}
+/* Right-side Content of Module Subpages */
+section.module aside {
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+section.module aside iframe {
+  border: 2px solid transparent;
+}
+
+section.module #download {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+}
+
+footer.module-badge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
 }
 
 /* Installation */
@@ -806,17 +911,19 @@ section.module article {
   nav {
     background: hsla(0, 0%, 0%, 0.65);
   }
-  
+
   nav .links .landing a,
   nav .links .subpage a,
   nav .links .socials svg {
     color: var(--100);
+    transition: all 0.3s ease-in-out;
   }
 
   nav .links .landing a:hover,
   nav .links .subpage a:hover,
   nav .links .socials svg:hover {
     color: var(--200);
+    transition: all 0.3s ease-in-out;
   }
 
   section,
@@ -835,6 +942,7 @@ section.module article {
     background: var(--100);
     box-shadow: 0.4375rem 0.4375rem var(--100),
       0.4375rem 0.4375rem 0 0.125rem var(--200);
+    transition: all 0.3s ease-in-out;
   }
 
   .module-card .free,
@@ -927,6 +1035,13 @@ section.module article {
     box-shadow: 0.0625rem 0.0625rem 0 var(--accent) inset;
   }
 
+  #free-hub {
+    background: -webkit-linear-gradient(25deg, #f28367, #ff5282);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+
   footer {
     background: var(--000);
   }
@@ -944,6 +1059,11 @@ section.module article {
     gap: 152px;
     background-size: cover;
     align-content: center;
+  }
+  /* Subpages */
+  header.module {
+    max-width: 50vw;
+    min-height:
   }
 }
 

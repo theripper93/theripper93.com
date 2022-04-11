@@ -58,7 +58,7 @@ function App() {
                 <li>Notifications directly in Foundry</li>
                 <li>Premium module updates in one place</li>
                 <li>Works automagically between updates</li>
-                <li id="free-hub">It's free </li>
+                <li>It's <span id="free-hub">free</span> </li>
               </ul>
             </summary>
             <a href="https://github.com/theripper93/theripper-premium-hub" target="_blank"><button>Download</button></a>

@@ -26,6 +26,7 @@
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.16.7",
     "@vitejs/plugin-react": "^1.0.7",
     "vite": "^2.9.0"
   }
