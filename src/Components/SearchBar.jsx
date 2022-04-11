@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Searchbar = (props) => {
-  const { searchTerm, buttonState, setSearchTerm, setButtonState } = props;
+  const { buttonState, setSearchTerm, setButtonState } = props;
 
   function getColor(state) {
     if (state === 0) {
@@ -16,10 +15,11 @@ const Searchbar = (props) => {
 
   return (
     <div className='searchbar'>
-      <input type="text" onChange={(event) => {
+      <input type="text" label="Searchbar" placeholder="Search for a module" onChange={(event) => {
         setSearchTerm(event.target.value);
       }}></input>
-      <button className={getColor(buttonState)} onClick={
+
+      <button label="Module Filter" className={getColor(buttonState)} onClick={
         (event) => {
           setButtonState((buttonState + 1) % 3);
           console.log(buttonState);

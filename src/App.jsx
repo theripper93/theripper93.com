@@ -1,15 +1,15 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import './App.css';
-import { moduleData } from './moduledata.js';
 
 /* Misc Libraries */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* Components */
-import NavLinks from './components/NavLinks';
-import ModuleCard from './components/ModuleCard';
+import Navbar from './components/Navbar';
 import SkillCard from './components/SkillCard';
 import Searchbar from './components/Searchbar';
+import ModuleGrid from './components/ModuleGrid';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,30 +17,18 @@ function App() {
 
   return (
     <div className="App">
-      <NavLinks></NavLinks>
-      <section className="hero" id="homepage">
+      <Navbar></Navbar>
+      <header className="hero" id="start">
         <video autoPlay muted loop id="video-bg">
           <source src="./src/assets/cat.mp4" type="video/mp4" />
         </video>
         <h1>Heyo, I make Foundry VTT Modules</h1>
         <a href='#modulespage'><FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth /></a>
-      </section>
-      <section className="module-list" id="modulespage">
+      </header>
+      <section className="module-list" id="modules">
         <h1>Modules</h1>
         <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} buttonState={buttonState} setButtonState={setButtonState}></Searchbar>
-        <main className='module-grid'>
-          {moduleData.filter((module) => {
-            return module.name.toLowerCase().includes(searchTerm.toLowerCase());
-          }).filter((module) => {
-            if (buttonState === 0) {
-              return true;
-            } else if (buttonState === 1) {
-              return module.status === 'paid' || module.status === 'paidea';
-            } else if (buttonState === 2) {
-              return module.status === 'free';
-            }
-          }).map((module, index) => <ModuleCard module={module} key={index}></ModuleCard>)}
-        </main>
+        <ModuleGrid buttonState={buttonState} searchTerm={searchTerm}></ModuleGrid>
       </section>
       <section className="call-to-action">
         <div className='patreon'>
@@ -51,7 +39,7 @@ function App() {
             </header>
             <ul>
               <li>Download and use my premium modules</li>
-              <li>Join the <span style={{color: "var(--patreon)", fontWeight: "500"}}>Early Access</span> tier for 3D canvas and other early access modules</li>
+              <li>Join the <strong style={{ color: "var(--patreon)", fontWeight: "500" }}>Early Access</strong> tier for 3D canvas and other early access modules</li>
               <li>Access priority support for questions and troubleshooting</li>
               <li>Support the development of my free modules</li>
             </ul>
@@ -88,7 +76,7 @@ function App() {
           <a href="https://discord.com/invite/F53gBjR97G" target="_blank"><button>Join</button></a>
         </div>
       </section>
-      <footer>
+      <footer id="contact">
         <main className='header-wrapper'>
           <h1>Need to contact me?</h1>
           <h4>I'm open to do paid projects for Foundry VTT</h4>

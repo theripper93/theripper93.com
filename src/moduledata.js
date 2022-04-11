@@ -162,7 +162,7 @@ const local = {
       "Smart Target": {
         name: "Smart Target",
         icon: "fas fa-bullseye",
-        desc: "Quality of life improvements for targeting.",
+        desc: "Quality of life improvements for targeting. Coloured pips or portrait indicators for targetted tokens, a targeting hotkey, and more.",
         fulldesc: "Target with Alt+Click, For players, target by just left clicking a non-owned token, Show portraits instead of colored pips to indicate targets, fulldesc/offset and size of the icons can be configured in the module settings, Customize color/shape of the targeting reticule.",
         status: "free",
         media: "",
@@ -200,7 +200,7 @@ const local = {
       "Token Z": {
         name: "Token Z",
         icon: "fas fa-sort-amount-up",
-        desc: "Automatic sorting for the z-index of tokens.",
+        desc: "Automatic sorting for the z-index of tokens by size and elevation.",
         fulldesc: "Easily manage the Z-Index of tokens. The automatic sorting will keep larger tokens in the back and smaller ones in the front.",
         status: "free",
         media: "",
@@ -209,7 +209,7 @@ const local = {
       "Weather Blocker": {
         name: "Weather Blocker",
         icon: "fas fa-cloud-sun",
-        desc: "A simple module for blocking weather effects on an area of a map.",
+        desc: "A simple module for blocking weather effects on an area of a map. Includes Better Roofs and Levels integration.",
         fulldesc: "A simple module to block weather effects on a map using drawings. Includes Better Roofs/Levels integration. Works with all systems.",
         status: "free",
         media:
@@ -256,7 +256,7 @@ const local = {
       "Journal Drop": {
         name: "Journal Drop",
         icon: "fas fa-book-open",
-        desc: "Place multiple pins of the same journal on the canvas.",
+        desc: "Place multiple pins of the same journal on the canvas, automagically split by subtitles",
         fulldesc: "Click a button to place multiple pins of the same journal on the canvas. Each copy will be labeled according to the section of the journal. This will NOT create new journals but use the single existing one ! The splitting is done automagically, in case your journal is not using h1 or h3 for it's sections you can specify a custom one. Also adds the ability to show journals as tooltips on hover.",
         status: "paid",
         media: "https://streamable.com/lstt4w",
@@ -292,7 +292,7 @@ const local = {
       "Quick Doors": {
         name: "Quick Doors",
         icon: "fas fa-door-open",
-        desc: "Create doors with a click on existing walls.",
+        desc: "Create and delete walls, doors, and windows with a single click on existing walls.",
         fulldesc: "Very simple, enable the tool, now clicking near a wall will create a door (on the wall itself) while splitting the original wall appropriatelly, you can also snap to grid to auto align everything nicely. Includes hotkeys to swap between grid/nogrid/secret/window",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/pqujmq/quick_doors_create_doorswindows_with_1_click/",
@@ -346,7 +346,7 @@ const local = {
       "Socket Macros": {
         name: "Socket Macros",
         icon: "fas fa-plug",
-        desc: "Execute macros on all clients!",
+        desc: "Execute macros on all clients with a tick of a checkbox.",
         fulldesc: "A very simple module to execute macros on all clients - simply check the checkbox in the macro configuration and the macro will be fired on all clients!",
         status: "paid",
         media: "https://www.reddit.com/r/FoundryVTT/comments/q9bwbj/socket_macros_run_macros_on_all_clients/",

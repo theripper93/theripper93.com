@@ -1,5 +1,4 @@
 /** Global Styles **/
-html,
 body {
   --000: #ffcb77;
   --100: #ede7d9;
@@ -18,6 +17,7 @@ body {
 
   font-family: 'Neue Montreal', 'Roboto', 'Helvetica', sans-serif;
   color: var(--150);
+  background: var(--500);
 }
 
 svg {
@@ -27,15 +27,19 @@ svg {
 input[type='text' i] {
   background: transparent;
   color: var(--150);
-
-  border: 0.125rem solid var(--300);
+  padding: 0px 5px 0 10px;
+  border: 2px solid var(--300);
   width: 78vw;
-  height: 36px;
+  height: 2.25rem;
 }
 
 input:focus-visible {
   outline-style: none;
   border-color: var(--100);
+}
+
+input::placeholder {
+  color: var(--200);
 }
 
 button:hover,
@@ -45,16 +49,16 @@ button:active {
 }
 
 button:active {
-  transform: translateY(1px);
+  transform: translateY(0.0625rem);
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 0.3125rem;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--500);
+  background: var(--400);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -67,35 +71,34 @@ button:active {
 
 /** Text Styles **/
 h1 {
-  font-size: 4rem;
+  font-size: 64px;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 700;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 700;
 }
 
 h5 {
-  font-size: 1.25rem;
-
+  font-size: 20px;
   font-weight: 700;
 }
 
 p {
-  font-size: 1.125rem;
-  margin-block-start: 0.1rem;
-  margin-block-end: 0.1rem;
+  font-size: 18px;
+  margin-block-start: 1.6px;
+  margin-block-end: 1.6px;
 }
 
 a:hover {
@@ -106,15 +109,15 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
-nav .website svg:hover,
+nav .socials svg:hover,
 footer svg:hover {
   color: var(--accent);
 }
 
-nav .website svg:active,
+nav .socials svg:active,
 footer svg:active {
   filter: brightness(1.2);
-  transform: translateY(1px);
+  transform: translateY(0.0625rem);
 }
 
 /** Navbar **/
@@ -132,28 +135,44 @@ nav {
   width: 100%;
 
   background: transparent;
-  box-shadow: 0 0.25rem 0.3125rem rgba(24, 20, 20, 0.1);
-  backdrop-filter: blur(0.2938rem);
+  color: var(--300);
+  box-shadow: 0 4px 5px rgba(24, 20, 20, 0.1);
+  backdrop-filter: blur(1px);
 }
 
-/* Navigation links for the site itself */
-nav .website {
-  position: relative;
+/* Navigation links for the site */
+nav .links {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
   align-items: center;
-
-  padding-right: 1rem;
 }
 
-nav .website svg {
+nav a {
+  color: var(--300);
+  font-weight: 500;
+}
+
+nav .links .landing a,
+nav .links .socials svg {
   color: var(--200);
-  padding: 0.125rem;
 }
 
-/* Links to social media */
-.links {
+nav .links .landing a:hover {
+  color: var(--accent);
+  cursor: pointer;
+}
+
+nav .links .landing a:active {
+  color: var(--accent);
+  cursor: pointer;
+  transform: translateY(0.0625rem);
+}
+
+/* Links for the home page */
+nav .links .landing {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -161,29 +180,36 @@ nav .website svg {
   justify-content: center;
   align-items: center;
 
-  padding-left: 1rem;
-
-  color: var(--300);
-  font-weight: 500;
+  padding-left: 16px;
 }
 
-.links a {
+/* Links to social media */
+nav .socials {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-right: 16px;
+}
+
+nav .socials svg {
   color: var(--200);
+  padding: 2px;
 }
 
-.links a:hover {
-  color: var(--accent);
-  cursor: pointer;
+nav .socials svg:hover {
+  color: var(--000);
 }
 
-.links a:active {
-  color: var(--accent);
-  cursor: pointer;
-  transform: translateY(1px);
+nav .socials svg:active {
+  color: var(--000);
+  transform: translateY(0.0625rem);
 }
 
 /** Header and Footer Sections **/
-section.hero,
+header.hero,
 footer {
   display: flex;
   position: relative;
@@ -200,24 +226,24 @@ footer {
 }
 
 /* Header */
-section.hero {
+header.hero {
   background: rgba(20, 20, 20, 0.5);
   padding: 0;
 }
 
-section.hero h1 {
+header.hero h1 {
   color: var(--100);
   text-align: center;
   padding-top: 30vh;
 }
 
-section.hero svg {
+header.hero svg {
   color: var(--150);
   margin-top: 30vh;
   animation: slide 3s ease-in-out infinite;
 }
 
-section.hero svg:hover {
+header.hero svg:hover {
   color: var(--accent);
 }
 
@@ -253,7 +279,7 @@ footer figure {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  gap: 1.25rem;
+  gap: 20px;
 }
 
 footer h1 {
@@ -270,8 +296,8 @@ footer main.header-wrapper h4 {
 }
 
 footer figure .skill-card {
-  width: 11.1875rem;
-  height: 3.25rem;
+  width: 179px;
+  height: 52px;
 
   display: inline-flex;
   flex-direction: column;
@@ -280,7 +306,7 @@ footer figure .skill-card {
   text-align: center;
   align-content: stretch;
 
-  border: 0.1875rem solid var(--500);
+  border: 3px solid var(--500);
 }
 
 footer figure .skill-card:hover {
@@ -304,7 +330,7 @@ footer main.links {
   align-content: space-between;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
 footer svg {
@@ -319,7 +345,7 @@ footer svg:active {
 /* Section / Middle Content */
 section {
   min-height: 70vh;
-  padding: 25px 15px 175px 15px;
+  padding: 1.5625rem 0.9375rem 10.9375rem 0.9375rem;
   background: var(--500);
 }
 
@@ -340,14 +366,14 @@ section.module-list {
 
 .module-list .searchbar button {
   position: absolute;
-  right: 1rem;
+  right: 8px;
   height: 100%;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   background: transparent;
 }
 
 .module-list .searchbar button:active {
-  transform: translateY(1px);
+  transform: translateY(0.0625rem);
 }
 
 .module-list .searchbar button svg {
@@ -366,9 +392,9 @@ section.module-list {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 16px;
-  gap: 30px;
-  padding-top: 48px;
+  padding: 1rem;
+  gap: 1.875rem;
+  padding-top: 3rem;
   align-content: space-between;
   justify-content: center;
   align-items: center;
@@ -379,9 +405,9 @@ section.module-list {
 /* Divs for the cards */
 .module-card {
   position: relative;
-  width: 30rem;
-  height: 11rem;
-  max-height: 11rem;
+  width: 480px;
+  height: 176px;
+  max-height: 176px;
 
   display: flex;
   justify-content: flex-start;
@@ -390,9 +416,14 @@ section.module-list {
   flex-direction: row;
   flex-wrap: nowrap;
 
-  gap: 12px;
-  border: 2px solid var(--300);
-  box-shadow: 7px 7px var(--500), 7px 7px 0 2px var(--400);
+  gap: 0.75rem;
+  border: 0.125rem solid var(--300);
+  box-shadow: 0.4375rem 0.4375rem var(--500),
+    0.4375rem 0.4375rem 0 0.125rem var(--400);
+}
+
+.module-card:hover {
+  border-color: var(--200);
 }
 
 .module-card .side-contents {
@@ -405,7 +436,7 @@ section.module-list {
 }
 
 .module-card svg {
-  padding: 1.875rem;
+  padding: 30px;
   align-self: center;
   color: var(--100);
 }
@@ -421,13 +452,13 @@ section.module-list {
   margin-inline-start: 0;
   margin-inline-end: 0;
 
-  padding-top: 1.25rem;
+  padding-top: 20px;
 
   color: var(--100);
 }
 
 .module-card article {
-  max-height: 5rem;
+  height: fit-content;
   padding-right: 1rem;
   overflow: hidden;
 }
@@ -437,8 +468,8 @@ section.module-list {
 .module-card .free {
   position: absolute;
   align-self: flex-end;
-  bottom: 0.5rem;
-  right: 0.65rem;
+  bottom: 8px;
+  right: 10.4px;
   width: 100%;
 
   margin-block-end: 0;
@@ -446,7 +477,7 @@ section.module-list {
   padding: 0;
 
   text-align: right;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -470,7 +501,7 @@ section.call-to-action {
   align-content: space-between;
   align-items: stretch;
   justify-content: center;
-  gap: 9.5rem;
+  gap: 152px;
 
   background-image: url('./assets/wave.svg');
   background-size: cover;
@@ -480,7 +511,7 @@ section.call-to-action .patreon,
 section.call-to-action .discord,
 section.call-to-action .hub {
   display: flex;
-  padding: 12px 26px;
+  padding: 0.75rem 1.625rem;
   min-height: 60vh;
   min-width: 20%;
   flex-direction: column;
@@ -490,29 +521,30 @@ section.call-to-action .hub {
   align-items: center;
 
   background: var(--500);
-  border: 2px solid var(--300);
-  box-shadow: 7px 7px var(--500), 7px 7px 0 2px var(--400);
+  border: 0.125rem solid var(--300);
+  box-shadow: 0.4375rem 0.4375rem var(--500),
+    0.4375rem 0.4375rem 0 0.125rem var(--400);
 }
 
 section.call-to-action .patreon:hover {
   cursor: default;
-  border: 2px solid var(--patreon);
-  box-shadow: 0 0 3px var(--patreon), 7px 7px var(--500),
-    7px 7px 0 2px var(--400);
+  border: 0.125rem solid var(--patreon);
+  box-shadow: 0 0 0.1875rem var(--patreon), 0.4375rem 0.4375rem var(--500),
+    0.4375rem 0.4375rem 0 0.125rem var(--400);
 }
 
 section.call-to-action .hub:hover {
   cursor: default;
-  border: 2px solid var(--accent);
-  box-shadow: 0 0 3px var(--accent), 7px 7px var(--500),
-    7px 7px 0 2px var(--400);
+  border: 0.125rem solid var(--accent);
+  box-shadow: 0 0 0.1875rem var(--accent), 0.4375rem 0.4375rem var(--500),
+    0.4375rem 0.4375rem 0 0.125rem var(--400);
 }
 
 section.call-to-action .discord:hover {
   cursor: default;
-  border: 2px solid var(--discord);
-  box-shadow: 0 0 3px var(--discord), 7px 7px var(--500),
-    7px 7px 0 2px var(--400);
+  border: 0.125rem solid var(--discord);
+  box-shadow: 0 0 0.1875rem var(--discord), 0.4375rem 0.4375rem var(--500),
+    0.4375rem 0.4375rem 0 0.125rem var(--400);
 }
 
 section.call-to-action summary {
@@ -527,12 +559,12 @@ section.call-to-action summary {
 section.call-to-action summary ul {
   max-width: fit-content;
   align-self: flex-start;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 400;
 }
 
 section.call-to-action summary li {
-  margin: 0.1rem 0 1.1rem 0;
+  margin: 1.6px 0 17.6px 0;
 }
 
 section.call-to-action h2 {
@@ -542,7 +574,7 @@ section.call-to-action h2 {
   margin-inline-end: 0;
   font-weight: bold;
   text-align: center;
-  font-size: 3rem;
+  font-size: 48px;
 }
 
 section.call-to-action .patreon h2 {
@@ -569,19 +601,19 @@ section.call-to-action h4 {
 section.call-to-action button {
   color: var(--100);
   background: var(--500);
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
 
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
-  border-radius: 1px;
+  border-radius: 0.0625rem;
 
-  width: 125px;
-  height: 40px;
-  margin-bottom: 1rem;
+  width: 7.8125rem;
+  height: 2.5rem;
+  margin-bottom: 16px;
 }
 
 section.call-to-action .discord button {
-  border: 2px solid var(--discord);
+  border: 0.125rem solid var(--discord);
 }
 
 section.call-to-action .discord button:hover {
@@ -593,11 +625,11 @@ section.call-to-action .discord button:active {
   color: var(--500);
   background: var(--discord);
   filter: brightness(1.2);
-  transform: translateY(2px);
+  transform: translateY(0.125rem);
 }
 
 section.call-to-action .patreon button {
-  border: 2px solid var(--patreon);
+  border: 0.125rem solid var(--patreon);
 }
 
 section.call-to-action .patreon button:hover {
@@ -609,11 +641,11 @@ section.call-to-action .patreon button:active {
   color: var(--500);
   background: var(--patreon);
   filter: brightness(1.2);
-  transform: translateY(2px);
+  transform: translateY(0.125rem);
 }
 
 section.call-to-action .hub button {
-  border: 2px solid var(--accent);
+  border: 0.125rem solid var(--accent);
 }
 
 section.call-to-action .hub button:hover {
@@ -625,26 +657,45 @@ section.call-to-action .hub button:active {
   color: var(--500);
   background: var(--accent);
   filter: brightness(1.2);
-  transform: translateY(2px);
+  transform: translateY(0.125rem);
+}
+
+/** Subpages **/
+.installation header.install-intro {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.installation header.install-intro h3 {
+  margin-block-end: 0;
+}
+
+.installation header.install-intro h4 {
+  margin-block-start: 0;
 }
 
 /* Media Queries */
 /** Light Mode **/
 @media (prefers-color-scheme: light) {
   /* Global */
-  html,
   body {
     --accent: #d1a428;
     --discord: #4e5d94;
     --patreon: #dc664c;
     --free: #26ad69;
     color: var(--400);
+    background: var(--100);
   }
 
   svg,
   .module-card svg {
     color: var(--400);
   }
+
   .module-card h4 {
     color: var(--400);
   }
@@ -671,9 +722,9 @@ section.call-to-action .hub button:active {
     mix-blend-mode: difference;
   }
 
-  nav .links,
-  nav .website {
-    color: var(--500);
+  nav .landing a,
+  nav .socials svg {
+    color: var(--200);
   }
 
   section,
@@ -692,7 +743,8 @@ section.call-to-action .hub button:active {
   section.call-to-action .discord,
   section.call-to-action .hub {
     background: var(--100);
-    box-shadow: 7px 7px var(--100), 7px 7px 0 2px var(--200);
+    box-shadow: 0.4375rem 0.4375rem var(--100),
+      0.4375rem 0.4375rem 0 0.125rem var(--200);
   }
 
   /* Call to Action */
@@ -702,19 +754,19 @@ section.call-to-action .hub button:active {
   }
 
   section.call-to-action .patreon:hover {
-    box-shadow: 0 0 0px var(--patreon), 7px 7px var(--100),
-      7px 7px 0 2px var(--200);
+    box-shadow: 0 0 0rem var(--patreon), 0.4375rem 0.4375rem var(--100),
+      0.4375rem 0.4375rem 0 0.125rem var(--200);
   }
 
   section.call-to-action .discord:hover {
-    box-shadow: 0 0 0px var(--discord), 7px 7px var(--100),
-      7px 7px 0 2px var(--200);
+    box-shadow: 0 0 0rem var(--discord), 0.4375rem 0.4375rem var(--100),
+      0.4375rem 0.4375rem 0 0.125rem var(--200);
   }
 
   section.call-to-action .hub:hover {
     background: var(--100);
-    box-shadow: 0 0 0px var(--accent), 7px 7px var(--100),
-      7px 7px 0 2px var(--200);
+    box-shadow: 0 0 0rem var(--accent), 0.4375rem 0.4375rem var(--100),
+      0.4375rem 0.4375rem 0 0.125rem var(--200);
   }
 
   /* Call to Action Buttons */
@@ -724,51 +776,57 @@ section.call-to-action .hub button:active {
   }
 
   section.call-to-action .patreon button {
-    box-shadow: 2px 2px 0 var(--patreon);
+    border-color: var(--400);
+    box-shadow: 0.125rem 0.125rem 0 var(--400);
   }
 
   section.call-to-action .discord button {
-    box-shadow: 2px 2px 0 var(--discord);
+    border-color: var(--400);
+    box-shadow: 0.125rem 0.125rem 0 var(--400);
   }
 
   section.call-to-action .hub button {
-    box-shadow: 2px 2px 0 var(--accent);
+    border-color: var(--400);
+    box-shadow: 0.125rem 0.125rem 0 var(--400);
   }
 
   section.call-to-action .patreon button:hover {
     background-color: transparent;
     filter: contrast(1.2);
-    box-shadow: 1px 1px 0 var(--patreon);
+    border-color: var(--patreon);
+    box-shadow: 0.125rem 0.125rem 0 var(--patreon);
   }
 
   section.call-to-action .discord button:hover {
     background-color: transparent;
     filter: brightness(1);
-    box-shadow: 1px 1px 0 var(--discord);
+    border-color: var(--discord);
+    box-shadow: 0.125rem 0.125rem 0 var(--discord);
   }
 
   section.call-to-action .hub button:hover {
     background-color: transparent;
     filter: brightness(1);
-    box-shadow: 1px 1px 0 var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0.125rem 0.125rem 0 var(--accent);
   }
 
   section.call-to-action .patreon button:active {
     background-color: transparent;
     filter: brightness(1);
-    box-shadow: 1px 1px 0 var(--patreon) inset;
+    box-shadow: 0.0625rem 0.0625rem 0 var(--patreon) inset;
   }
 
   section.call-to-action .discord button:active {
     background-color: transparent;
     filter: brightness(1);
-    box-shadow: 1px 1px 0 var(--discord) inset;
+    box-shadow: 0.0625rem 0.0625rem 0 var(--discord) inset;
   }
 
   section.call-to-action .hub button:active {
     background-color: transparent;
     filter: brightness(1);
-    box-shadow: 1px 1px 0 var(--accent) inset;
+    box-shadow: 0.0625rem 0.0625rem 0 var(--accent) inset;
   }
 
   footer {
@@ -776,7 +834,8 @@ section.call-to-action .hub button:active {
   }
 }
 
-@media screen and (max-width: 1000px) {
+/* Screen Sizing */
+@media screen and (max-width: 62.5rem) {
   /* Align call to action cards correctly for smaller screens */
   section.call-to-action {
     display: flex;
@@ -784,8 +843,7 @@ section.call-to-action .hub button:active {
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-start;
-    gap: 9.5rem;
-    background-image: url('/src/assets/wave.svg');
+    gap: 152px;
     background-size: cover;
     align-content: center;
   }
@@ -799,6 +857,6 @@ section.call-to-action .hub button:active {
   }
 
   50% {
-    transform: translate(0, 0.625rem);
+    transform: translate(0, 10px);
   }
 }
