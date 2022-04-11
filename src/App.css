@@ -101,12 +101,11 @@ p {
 
 *:-webkit-any-link,
 a:-webkit-any-link {
-  color: var(--100);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--accent);
+  cursor: pointer;
 }
 
 nav .socials svg:hover,
@@ -219,7 +218,6 @@ header.hero {
   display: flex;
   position: relative;
   overflow: hidden;
-  scroll-snap-type: y proximity;
 
   min-height: 100vh;
 
@@ -235,7 +233,6 @@ section.missing {
   display: flex;
   position: relative;
   overflow: hidden;
-  scroll-snap-type: y proximity;
 
   min-height: inherit;
 
@@ -249,7 +246,7 @@ section.missing {
 
 /* Header */
 header.hero {
-  background: rgba(20, 20, 20, 0.5);
+  background: rgba(19, 18, 18, 0.75);
   padding: 0;
 }
 
@@ -390,7 +387,6 @@ section {
   min-height: 70vh;
   padding: 10rem 0.9375rem 1rem 1rem;
   background: var(--500);
-  scroll-snap-type: y proximity;
 }
 
 /* Modulelist Section */
@@ -469,11 +465,8 @@ section.module-list {
 
 .module-card:hover {
   border-color: var(--200);
+  cursor: pointer;
 }
-
- .module-card p:hover {
-    color: var(--100);
-  }
 
 .module-card .side-contents {
   display: flex;
@@ -733,6 +726,24 @@ section.module header {
   align-items: flex-start;
 }
 
+section.module header h1 {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+section.module header p {
+  max-width: fit-content;
+}
+
+section.module article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 /* Installation */
 .installation header.install-intro {
   display: flex;
@@ -764,23 +775,12 @@ section.module header {
     background: var(--100);
   }
 
-  *:-webkit-any-link,
-  a:-webkit-any-link {
-    color: var(--400);
-    text-decoration: none;
-  }
-
   svg,
   .module-card svg {
     color: var(--400);
   }
 
-  .module-card a, 
   .module-card h4 {
-    color: var(--400);
-  }
-
-  .module-card p:hover {
     color: var(--400);
   }
 
@@ -801,15 +801,22 @@ section.module header {
     background: var(--500);
   }
 
+  /* Hero Banner */
   /** Navigation **/
-  nav .landing a,
-  nav .socials svg {
+  nav {
+    background: hsla(0, 0%, 0%, 0.65);
+  }
+  
+  nav .links .landing a,
+  nav .links .subpage a,
+  nav .links .socials svg {
     color: var(--100);
   }
 
-  nav .landing a:hover,
-  nav .socials svg:hover {
-    color: var(--000);
+  nav .links .landing a:hover,
+  nav .links .subpage a:hover,
+  nav .links .socials svg:hover {
+    color: var(--200);
   }
 
   section,
@@ -830,10 +837,28 @@ section.module header {
       0.4375rem 0.4375rem 0 0.125rem var(--200);
   }
 
+  .module-card .free,
+  .module-card .paid,
+  .module-card .paidea {
+    text-shadow: 1px 1px 2px #dfdecf;
+  }
+
   /* Call to Action */
   section.call-to-action {
     background-image: url('./assets/wave.svg');
     background-size: cover;
+  }
+
+  section.call-to-action .patreon h2 {
+    filter: drop-shadow(2px 2px 0px #eeafa1);
+  }
+
+  section.call-to-action .hub h2 {
+    filter: drop-shadow(2px 2px 0px #e9c359);
+  }
+
+  section.call-to-action .discord h2 {
+    filter: drop-shadow(2px 2px 0px #a1a9ee);
   }
 
   section.call-to-action .patreon:hover {

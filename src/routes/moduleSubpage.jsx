@@ -26,13 +26,13 @@ const Subpage = (props) => {
             <p>{data.fulldesc}</p>
           </article>
           <aside>
-            <Video></Video>
-            <p>{JSON.stringify(premiumData)}</p>
-            <p>{JSON.stringify(data)}</p>
+            {data.media && <Video module={data}></Video>}
           </aside>
         </header>
         <section>
           <h2>Guides</h2>
+          <p>{JSON.stringify(premiumData)}</p>
+          <p>{JSON.stringify(data)}</p>
         </section>
       </section>
     </div>

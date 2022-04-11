@@ -323,7 +323,7 @@ const local = {
         desc: "Turn your maps into true 3D! Play your games in the glorious third dimension.",
         fulldesc: "Turn your maps into true 3D, load in 3d models, and play your games in the glorious third dimension. Also support lighting and animated models. If you don't have 3d models don't worry! 3D canvas will turn your 2d tokens into Stand up figures in the 3d mode.",
         status: "paidea",
-        media: "https://www.reddit.com/r/FoundryVTT/comments/q2k0en/levels_3d_preview_create_a_3d_view_of_you_levels/",
+        media: "https://youtu.be/hC1QGZFUhcU",
         link: "",
       },
       "choices": {
@@ -756,13 +756,11 @@ export const detectSource = (url) => {
       src: `https://streamable.com/e/${videoId}`
     };
   } else if(url.includes("reddit")) {
-    const videoId = url.split("/").pop();
+    const videoId = url.split("/r/").pop();
     return {
       source: "reddit",
-      src: `https://www.redditmedia.com/r/FoundryVTT/comments/pax0zn/automated_evocations_companion_manager/?ref_source=embed&amp;ref=share&amp;embed=true`
+      src: `https://www.redditmedia.com/r/${videoId}?ref_source=embed&amp;ref=share&amp;embed=true`
     };
   }
   return null;
 };
-
-"https://www.reddit.com/r/FoundryVTT/comments/pax0zn/automated_evocations_companion_manager/"
