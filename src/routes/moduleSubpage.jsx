@@ -18,19 +18,6 @@ const Subpage = (props) => {
     }
   });
 
-  function getColor(status) {
-    if (status === "free") {
-      return 'var(--free)';
-    } else if (status === "paid") {
-      return 'var(--patreon)';
-    } else if (status === 'paidea') {
-      return 'var(--accent)';
-    }
-  }
-
-  let status = data.status;
-  const color = getColor(status);
-
   return (
     <div className='wrapper'>
       <Navbar></Navbar>
@@ -41,10 +28,10 @@ const Subpage = (props) => {
               <h1>{data.name}</h1>
               <p>{data.fulldesc}</p>
             </header>
-            <button>Download</button>
+            <a href={premiumData?.downloadURL ?? data.link}><button>Download</button></a>
             <footer class="badge">
-              <div className='status badge' style={{color: {color}}}>
-                {data.status}
+              <div className={data.status}>
+                {data.statusText}
               </div>
             </footer>
           </article>

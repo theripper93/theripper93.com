@@ -527,15 +527,15 @@ section.module-list {
   font-weight: 500;
 }
 
-.module-card .paidea {
+.paidea {
   color: var(--accent);
 }
 
-.module-card .paid {
+.paid {
   color: var(--patreon);
 }
 
-.module-card .free {
+.free {
   color: var(--free);
 }
 
@@ -713,7 +713,7 @@ section.call-to-action .hub button:active {
 }
 
 #free-hub {
-  background: -webkit-linear-gradient(25deg, #f4762d, #ffd78a);
+  background: -webkit-linear-gradient(0deg, #ffd78a, #ff9659);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -749,6 +749,8 @@ section.module main h1 {
 
 section.module main p {
   max-width: 66%;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 section.module article {
@@ -779,23 +781,6 @@ section.module article p {
   padding: 2rem;
 }
 
-section.module article button {
-  color: var(--100);
-  background: var(--500);
-  border: 1px solid transparent;
-
-  font-size: 1rem;
-  font-weight: bold;
-
-  width: 7.8125rem;
-  height: 2.5rem;
-  margin: 0.5rem;
-
-  color: var(--500);
-  background: var(--000);
-  transition: all 0.3s ease-in-out;
-}
-
 header.module {
   display: flex;
   flex-direction: column;
@@ -804,6 +789,7 @@ header.module {
   justify-content: flex-start;
   align-items: center;
 
+  height: 510px;
   max-width: 25vw;
 }
 
@@ -812,6 +798,16 @@ header.module {
   background: transparent;
   align-self: end;
   padding: 0.5rem;
+}
+
+footer.module-badge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
 }
 /* Right-side Content of Module Subpages */
 section.module aside {
@@ -827,26 +823,23 @@ section.module aside {
 
 section.module aside iframe {
   border: 2px solid transparent;
+  width: 800px;
+  height: 600px;
 }
 
-section.module #download {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-self: center;
-  align-content: center;
-  align-items: center;
-}
+section.module article button {
+  color: var(--500);
+  background: var(--000);
+  border: 1px solid transparent;
 
-footer.module-badge {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
+  font-size: 1rem;
+  font-weight: bold;
+
+  width: 7.8125rem;
+  height: 2.5rem;
+  margin: 0.5rem;
+
+  transition: all 0.3s ease-in-out;
 }
 
 /* Installation */
@@ -945,12 +938,6 @@ footer.module-badge {
     transition: all 0.3s ease-in-out;
   }
 
-  .module-card .free,
-  .module-card .paid,
-  .module-card .paidea {
-    text-shadow: 1px 1px 2px #dfdecf;
-  }
-
   /* Call to Action */
   section.call-to-action {
     background-image: url('./assets/wave.svg');
@@ -1045,10 +1032,21 @@ footer.module-badge {
   footer {
     background: var(--000);
   }
+
+  /* Subpages */
+  /* Module Pages */
+  section.module article {
+    border-color: var(--500);
+    color: var(--500);
+  }
+  section.module article h1 {
+    background-color: var(--500);
+    color: var(--100);
+  }
 }
 
 /* Screen Sizing */
-@media screen and (max-width: 62.5rem) {
+@media screen and (max-width: 1232px) {
   /* Align call to action cards correctly for smaller screens */
   section.call-to-action {
     display: flex;
@@ -1063,7 +1061,12 @@ footer.module-badge {
   /* Subpages */
   header.module {
     max-width: 50vw;
-    min-height:
+  }
+
+  section.module aside iframe {
+    border: 2px solid transparent;
+    width: 560px;
+    height: 315px;
   }
 }
 
