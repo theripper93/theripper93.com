@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 
-const NavLinks = () => {
+const Navbar = () => {
   return (
     <nav>
       <div className='links'>
@@ -23,9 +23,8 @@ const NavLinks = () => {
         <a href="https://github.com/theripper93" target="_blank"><FontAwesomeIcon icon={["fab", "github"]} size="xl" fixedWidth /></a>
         <a href="https://www.patreon.com/theripper93" target="_blank"><FontAwesomeIcon icon={["fab", "patreon"]} size="xl" fixedWidth /></a>
       </div>
-      <Outlet />
     </nav>
   )
 }
 
-export default NavLinks
+export default Navbar

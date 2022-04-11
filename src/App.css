@@ -661,6 +661,26 @@ section.call-to-action .hub button:active {
 }
 
 /** Subpages **/
+/* Individual Modules */
+section.module {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section.module header {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+/* Installation */
 .installation header.install-intro {
   display: flex;
   flex-direction: column;
