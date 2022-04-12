@@ -21,14 +21,14 @@ const Subpage = (props) => {
   return (
     <div className='wrapper'>
       <Navbar></Navbar>
-      <section className='module'>
+      <section className='module-page'>
         <main>
           <article>
-            <header className='module'>
+            <header className={`module-page ${data.status}-background`}>
               <h1>{data.name}</h1>
               <p>{data.fulldesc}</p>
             </header>
-            <a href={premiumData?.downloadURL ?? data.link}><button>Download</button></a>
+            <a href={premiumData?.downloadURL ?? data.link} target="_blank"><button className={`${data.status} background`}>Download</button></a>
             <footer class="badge">
               <div className={data.status}>
                 {data.statusText}

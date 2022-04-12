@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
@@ -12,17 +12,24 @@ import App from './App';
 
 /* Pages */
 import ModuleSubpage from './routes/moduleSubpage';
+import Faq from './routes/faq';
 import Installation from './routes/installation';
+import Troubleshooting from './routes/troubleshooting';
+import BugReport from './routes/bugreport';
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <BrowserRouter>
+  <Router>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="module" element={< ModuleSubpage />} >
         <Route path=":moduleId" element={< ModuleSubpage />} />
       </Route>
-      <Route path="installation" element={<Installation />} />
+      <Route path="faq" element={<Faq/>} >
+        <Route path="troubleshooting" element={<Troubleshooting/>} />
+        <Route path="installation" element={<Installation />} />
+        <Route path="bugreport" element={<BugReport />} />
+      </Route>
       <Route
         path="*"
         element={
@@ -31,6 +38,6 @@ ReactDOM.render(
           </section>
         }></Route>
     </Routes>
-  </BrowserRouter >,
+  </Router>,
   rootElement
 )

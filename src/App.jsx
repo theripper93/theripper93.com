@@ -18,7 +18,6 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-      <div className='page wrapper'>
         <header className="hero" id="">
           <video autoPlay muted loop id="video-bg">
             <source src="./src/assets/videobanner.mp4" type="video/mp4" />
@@ -26,13 +25,13 @@ function App() {
           <h1>Heyo, I make Foundry VTT Modules</h1>
           <HashLink smooth to='/#modules'><FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth /></HashLink>
         </header>
-        <section className="module-list" id="modules">
+        <section className="module list" id="modules">
           <h1>Modules</h1>
           <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} buttonState={buttonState} setButtonState={setButtonState}></Searchbar>
           <ModuleGrid buttonState={buttonState} searchTerm={searchTerm}></ModuleGrid>
         </section>
-        <section className="call-to-action" id="hub">
-          <div className='card patreon'>
+        <section className="cta" id="hub">
+          <div className='card status patreon'>
             <summary>
               <header>
                 <h2>Patreon</h2>
@@ -47,7 +46,7 @@ function App() {
             </summary>
             <a href="https://www.patreon.com/theripper93" target="_blank"><button>View</button></a>
           </div>
-          <div className="card hub">
+        <div className="card status hub">
             <summary>
               <header>
                 <h2>Hub</h2>
@@ -63,7 +62,7 @@ function App() {
             </summary>
             <a href="https://github.com/theripper93/theripper-premium-hub" target="_blank"><button>Download</button></a>
           </div>
-          <div className='card discord'>
+        <div className='card status discord'>
             <summary>
               <header>
                 <h2>Discord</h2>
@@ -79,7 +78,7 @@ function App() {
             <a href="https://discord.com/invite/F53gBjR97G" target="_blank"><button>Join</button></a>
           </div>
         </section>
-        <footer className="golden contact" id="contact">
+        <footer className="golden" id="contact">
           <summary>
             <main className='header-wrapper'>
               <h1>Need to contact me?</h1>
@@ -111,7 +110,6 @@ function App() {
           </aside>
         </footer>
       </div>
-    </div>
   )
 }
 

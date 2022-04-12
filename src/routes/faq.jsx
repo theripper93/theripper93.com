@@ -19,7 +19,7 @@ export default function Info() {
     <div className='wrapper'>
       <Navbar></Navbar>
       <Outlet />
-      {location?.endsWith('faq') && faqCards()}
+      {location.endsWith('faq') && faqCards()}
     </div>
   )
 }

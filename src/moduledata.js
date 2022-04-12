@@ -764,3 +764,12 @@ export const detectSource = (url) => {
   }
   return null;
 };
+
+export const detectNavType = () => {
+
+  const location = window.location.pathname;
+  const path = location.split("/");
+  const navType = path[1];
+  return navType;
+
+};

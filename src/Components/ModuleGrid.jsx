@@ -3,9 +3,8 @@ import ModuleCard from './ModuleCard';
 
 const ModuleGrid = (props) => {
   const { buttonState, searchTerm } = props;
-
   return (
-    <main className='module-grid'>
+    <main className='module grid'>
       {moduleData.filter((module) => {
         return module.name.toLowerCase().includes(searchTerm.toLowerCase());
       }).filter((module) => {

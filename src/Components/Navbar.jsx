@@ -1,23 +1,49 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
+import { detectNavType } from '../moduledata';
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+  let location = useLocation();
+
+  const homeButtons = () => {
+    return (
+      <div className='home-buttons'>
+        <p> / </p>
+        <HashLink smooth to='/#modules'>Modules</HashLink>
+        <p> / </p>
+        <HashLink smooth to='/#hub'>Hub</HashLink>
+        <p> / </p>
+        <HashLink smooth to='/#contact'>Contact</HashLink>
+      </div>
+    );
+  };
+
+  const faqButtons = () => {
+    return (
+      <div className='home-buttons'>
+        <p> / </p>
+        <HashLink smooth to='./installation'>Installation</HashLink>
+        <p> / </p>
+        <HashLink smooth to='./troubleshooting'>Troubleshooting</HashLink>
+        <p> / </p>
+        <HashLink smooth to='./bugreport'>Bug Reports</HashLink>
+      </div>
+    );
+  };
+  
   return (
     <nav>
       <div className='links'>
         <div className='landing'>
           <HashLink smooth to='/#'>Home</HashLink>
-          <p> / </p>
-          <HashLink smooth to='/#modules'>Modules</HashLink>
-          <p> / </p>
-          <HashLink smooth to='/#hub'>Hub</HashLink>
-          <p> / </p>
-          <HashLink smooth to='/#contact'>Contact</HashLink>
+          {detectNavType(location) == "" && homeButtons()}
         </div>
           <p className="space">•</p>
           <div className="subpage">
-            <Link to='/installation'>Installation</Link>
+            <Link to='/faq'>FAQ</Link>
+            {detectNavType(location) == "faq" && faqButtons()}
         </div>
       </div>
 
