@@ -1,0 +1,66 @@
+.card-solid {
+  display: flex;
+  border-right: 0.125rem solid var(--300);
+  border-bottom: 0.125rem solid var(--300);
+  border-left: 0.125rem solid var(--300);
+  transition: all 0.3s ease-in-out;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-solid h1,
+.card-solid h2,
+.card-solid h3 {
+  width: 100%;
+  text-align: center;
+  padding: 2px;
+  color: var(--500);
+}
+
+.card-solid p {
+  width: auto;
+  text-align: justify;
+  padding: 2rem;
+}
+
+.card-solid button {
+  border: 1px solid transparent;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  width: 7.8125rem;
+  height: 2.5rem;
+  margin: 0.5rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+@media (prefers-color-scheme: light) {
+  .card-solid {
+    border-color: var(--500);
+    color: var(--500);
+  }
+  .card-solid h1 {
+    background-color: var(--500);
+    color: var(--100);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-solid {
+    height: auto;
+  }
+
+  .card-solid h1 {
+    max-width: 100%;
+  }
+
+  .card-solid p {
+    max-width: max-content;
+    padding: 0.5rem;
+  }
+}

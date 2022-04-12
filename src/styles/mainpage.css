@@ -1,0 +1,178 @@
+/** Header and Footer Sections **/
+/* Hero Banner */
+header.hero {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  min-height: 100vh;
+  padding: 0;
+
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+
+  background: hsla(30, 10%, 16%, 0.75);
+}
+
+header.hero h1 {
+  color: var(--100);
+  text-align: center;
+  padding-top: 30vh;
+}
+
+header.hero svg {
+  color: var(--150);
+  margin-top: 30vh;
+  animation: slide 3s ease-in-out infinite;
+}
+
+header.hero svg:hover {
+  color: var(--accent);
+}
+
+#video-bg {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -5;
+}
+
+/* Contact Footer */
+#contact main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact figure {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+#contact h1 {
+  color: var(--500);
+}
+
+#contact main.header-wrapper,
+#contact main.header-wrapper h1,
+#contact main.header-wrapper h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+#contact figure .skill-card {
+  width: 179px;
+  height: 52px;
+
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-content: stretch;
+
+  border: 3px solid var(--500);
+}
+
+#contact figure .skill-card:hover {
+  border-color: var(--400);
+  color: var(--400);
+  cursor: default;
+}
+
+#contact figure .skill-card h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+}
+
+#contact main.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.875rem;
+}
+
+#contact svg {
+  color: var(--500);
+}
+
+#contact svg:hover,
+#contact svg:active {
+  color: var(--400);
+}
+
+#credit {
+  font-size: 0.9rem;
+}
+
+/** Main Content **/
+section {
+  min-height: 70vh;
+  padding: 10rem 0.9375rem 1rem 1rem;
+  background: var(--500);
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  /* Hero Banner (Light) */
+  header.hero {
+    background: linear-gradient(
+      180deg,
+      hsla(42, 36%, 89%, 0.25) 50%,
+      hsla(42, 36%, 89%, 0.5) 100%
+    );
+  }
+
+  header.hero h1 {
+    color: var(--100);
+    text-shadow: 2px 2px 20px var(--300);
+  }
+
+  #contact {
+    transform: translateY(-1px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #hub,
+  #contact {
+    margin: -2px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header.hero {
+    margin-block-start: 0;
+  }
+
+  header.hero h1 {
+    padding-top: 0;
+  }
+
+  header.hero svg {
+    padding-top: 0;
+  }
+}

@@ -1,6 +1,8 @@
+import '../styles/items/button-hollow.css';
+
 const SkillCard =  (props) => {
   return(
-    <div className="skill-card">
+    <div className="button-hollow">
         <h4>{props.name}</h4>
     </div>
   )

@@ -1,5 +1,6 @@
 import { moduleData } from '../moduledata';
 import ModuleCard from './ModuleCard';
+import '../styles/modulegrid.css';
 
 const ModuleGrid = (props) => {
   const { buttonState, searchTerm } = props;

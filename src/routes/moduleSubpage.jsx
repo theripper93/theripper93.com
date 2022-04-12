@@ -2,9 +2,11 @@ import { moduleData, premiumMods, getGitReadme } from '../moduledata.js';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Navbar from '../components/Navbar';
-import App from '../App';
+import '../styles/subpage/modulepage.css';
+import '../styles/items/card-solid.css';
 import Video from '../components/Video.jsx';
+import Navbar from '../components/Navbar';
+
 
 const Subpage = (props) => {
 
@@ -23,7 +25,7 @@ const Subpage = (props) => {
       <Navbar></Navbar>
       <section className='module-page'>
         <main>
-          <article className='card descriptive'>
+          <article className='card-solid'>
             <header className='module-page'>
               <h1 className={`${data.status}-background`}>{data.name}</h1>
               <p>{data.fulldesc}</p>

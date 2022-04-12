@@ -1,9 +1,17 @@
+
+/* React Router */
 import { Link, Outlet, useNavigate } from "react-router-dom";
+import { detectNavType } from '../moduledata';
+
+/* Font Awesome*/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faPatreon, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { detectNavType } from '../moduledata';
+
+/* CSS */
+import '../styles/items/card-hollow.css';
+
 
 library.add(faDiscord, faPatreon, faGithub, fas);
 
@@ -15,7 +23,7 @@ const ModuleCard = (props) => {
   };
   return (
     <div className="wrapper" onClick={changeRoute}>
-      <div className="module card">
+      <div className="card-hollow">
         <figure className="icon-wrapper">
           <FontAwesomeIcon icon={props.module.icon.split(" ")} size='5x' />
         </figure>

@@ -1,11 +1,5 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { faDiscord, faPatreon, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { detectNavType } from '../moduledata';
-
-library.add(faDiscord, faPatreon, faGithub, fas);
 
 const FaqCard = (props) => {
 
@@ -14,18 +8,23 @@ const FaqCard = (props) => {
     navigate(`module/${props.module.id}`);
     window.scrollTo(0, 0);
   };
+
   return (
     <div className="wrapper" onClick={changeRoute}>
-      <div className="module card">
-        <figure className="icon-wrapper">
-          <FontAwesomeIcon icon={props.module.icon.split(" ")} size='5x' />
-        </figure>
+      <div className="card-solid">
         <div className="info-wrapper">
-            <h4>{props.module.name}</h4>
+          <header>
+            <h3>FAQ Header</h3>
+          </header>
           <article>
-            <p>{props.module.desc}</p>
+            <ul>
+              <li>Question</li>
+              <li>Answer</li>
+            </ul>
           </article>
-          <p className={`status ${props.module.status}`}>{props.module.statusText}</p>
+          <aside>
+            <Link>Link to page</Link>
+          </aside>
         </div>
       </div>
       <Outlet />

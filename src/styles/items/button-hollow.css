@@ -1,0 +1,27 @@
+.button-hollow {
+  width: 179px;
+  height: 52px;
+
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-content: stretch;
+
+  border: 3px solid var(--500);
+}
+
+.button-hollow:hover {
+  border-color: var(--400);
+  color: var(--400);
+  cursor: default;
+}
+
+.button-hollow h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+}

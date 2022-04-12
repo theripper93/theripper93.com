@@ -1,0 +1,201 @@
+nav {
+  position: fixed;
+  z-index: 3;
+  min-height: 5%;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  align-items: center;
+
+  background: hsla(34, 9%, 16%, 0.25);
+  color: var(--300);
+  box-shadow: 0 5px 5px hsla(34, 11%, 12%, 0.25);
+  backdrop-filter: blur(1px);
+}
+/** Links **/
+/** Navigation links for the site **/
+nav .links,
+nav .links .landing,
+nav .links .subpage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: var(--100);
+  font-weight: 400;
+}
+
+nav .links .landing a,
+nav .links .socials svg {
+  color: var(--100);
+}
+
+nav .links .landing a:hover {
+  cursor: pointer;
+  color: var(--000);
+  transition: all 0.3s ease-in-out;
+}
+
+nav .links .landing a:active {
+  color: var(--000);
+  cursor: pointer;
+  transform: translateY(0.0625rem);
+}
+
+/* Links for the home page */
+nav .links .landing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 16px;
+}
+
+/* Links to social media */
+nav .socials {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 100%;
+  padding-right: 16px;
+}
+
+nav .socials svg {
+  color: var(--100);
+  padding: 2px;
+}
+
+nav .socials svg:hover {
+  color: var(--000);
+}
+
+nav .socials svg:active {
+  color: var(--000);
+  transform: translateY(0.0625rem);
+}
+
+/** Hamburger Menu **/
+.home-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  position: relative;
+  z-index: 1000;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 12vh;
+  background: linear-gradient(
+    90deg,
+    hsla(30, 10%, 16%, 1) 0%,
+    hsla(30, 10%, 16%, 0.75) 75%,
+    hsla(30, 10%, 16%, 0.5) 100%
+  );
+  backdrop-filter: blur(1px);
+}
+
+.hamburger-menu .links {
+  padding-top: 1rem;
+}
+
+.hamburger-menu .links .landing {
+  padding-left: 0;
+}
+
+.hamburger-menu .links,
+.hamburger-menu .links .landing,
+.hamburger-menu .links .subpage,
+.hamburger-menu .links .landing .home-buttons,
+.hamburger-menu .links .subpage .home-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding-left: 0.66rem;
+
+  font-size: 2rem;
+  animation: fadeInAnimation ease 0.5s;
+}
+
+.hamburger-menu .links .landing .home-buttons,
+.hamburger-menu .links .subpage .home-buttons {
+  padding-left: 1.5rem;
+}
+
+.hamburger-menu.hidden {
+  display: none;
+}
+
+.hamburger p {
+  display: none;
+}
+
+.hamburger-toggle {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-toggle svg {
+  color: inherit;
+}
+
+.hamburger-toggle svg:hover {
+  color: var(--200);
+}
+
+.hamburger-toggle svg:active {
+  color: var(--000);
+  transform: translateY(1px);
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  nav {
+    background: hsla(30, 10%, 16%, 0.66);
+  }
+
+  nav .links p {
+    color: var(--200);
+  }
+
+  nav .links .landing a,
+  nav .links .subpage a,
+  nav .links .socials svg {
+    color: var(--100);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav .links .landing a:hover,
+  nav .links .subpage a:hover,
+  nav .links .socials svg:hover {
+    color: var(--200);
+    transition: all 0.3s ease-in-out;
+  }
+}

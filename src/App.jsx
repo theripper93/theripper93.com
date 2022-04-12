@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import './App.css';
-
+import './styles/mainpage.css';
+import './styles/cta.css';
 /* Misc Libraries */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -31,7 +32,7 @@ function App() {
           <ModuleGrid buttonState={buttonState} searchTerm={searchTerm}></ModuleGrid>
         </section>
         <section className="cta" id="hub">
-          <div className='card status patreon'>
+          <div className='card-cta status patreon'>
             <summary>
               <header>
                 <h2>Patreon</h2>
@@ -46,7 +47,7 @@ function App() {
             </summary>
             <a href="https://www.patreon.com/theripper93" target="_blank"><button>View</button></a>
           </div>
-        <div className="card status hub">
+        <div className="card-cta status hub">
             <summary>
               <header>
                 <h2>Hub</h2>
@@ -62,7 +63,7 @@ function App() {
             </summary>
             <a href="https://github.com/theripper93/theripper-premium-hub" target="_blank"><button>Download</button></a>
           </div>
-        <div className='card status discord'>
+        <div className='card-cta status discord'>
             <summary>
               <header>
                 <h2>Discord</h2>
