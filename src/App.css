@@ -101,6 +101,7 @@ p {
   margin-block-end: 1.6px;
 }
 
+/* Links and Buttons */
 *:-webkit-any-link,
 a:-webkit-any-link {
   text-decoration: none;
@@ -111,14 +112,15 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
-nav .socials svg:hover,
+nav svg:hover,
+nav a:hover,
 footer svg:hover {
   color: var(--accent);
 }
 
-nav .socials svg:active,
-footer svg:active {
-  filter: brightness(1.1);
+nav svg:active,
+footer svg:active,
+nav a:active {
   transform: translateY(0.0625rem);
 }
 
@@ -126,19 +128,102 @@ footer svg:active {
 nav {
   position: fixed;
   z-index: 3;
+  min-height: 5%;
+  width: 100vw;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  overflow: hidden;
-
-  min-height: 5%;
-  width: 100%;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  align-items: center;
 
   background: hsla(34, 9%, 16%, 0.25);
   color: var(--300);
   box-shadow: 0 5px 5px hsla(34, 11%, 12%, 0.25);
   backdrop-filter: blur(1px);
+}
+
+/* Hamburger Menu */
+
+.home-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  position: relative;
+  z-index: 1000;
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: -10vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 12vh;
+    background: linear-gradient(
+      90deg,
+      hsla(30, 10%, 16%, 1) 0%,
+      hsla(30, 10%, 16%, 0.9) 75%,
+      hsla(30, 10%, 16%, 0) 100%
+    );
+    backdrop-filter: blur(1px);
+}
+
+.hamburger-menu .links .landing {
+  padding-left: 0;
+}
+.hamburger-menu .links,
+.hamburger-menu .links .landing,
+.hamburger-menu .links .subpage,
+.hamburger-menu .links .landing .home-buttons,
+.hamburger-menu .links .subpage .home-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding-left: 0.66rem;
+
+  font-size: 3rem;
+  animation: fadeInAnimation ease 0.5s;
+}
+
+.hamburger-menu .links .landing .home-buttons,
+.hamburger-menu .links .subpage .home-buttons {
+  padding-left: 1.5rem;
+}
+
+.hamburger-menu.hidden {
+  display: none;
+}
+
+.hamburger p {
+  display: none;
+}
+
+.hamburger-toggle {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  left: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-toggle svg {
+  color: inherit;
+}
+
+.hamburger-toggle svg:hover {
+  color: var(--200);
+}
+
+.hamburger-toggle svg:active {
+  color: var(--000);
+  transform: translateY(1px);
 }
 
 /* Navigation links for the site */
@@ -175,11 +260,6 @@ nav .links .landing a:active {
   transform: translateY(0.0625rem);
 }
 
-/* A separator */
-nav .space {
-  margin: 0.5rem;
-}
-
 /* Links for the home page */
 nav .links .landing {
   display: flex;
@@ -200,6 +280,7 @@ nav .socials {
   justify-content: flex-end;
   align-items: center;
 
+  width: 100%;
   padding-right: 16px;
 }
 
@@ -230,16 +311,20 @@ nav .socials svg:active {
   color: var(--free);
 }
 
-.paidea .background {
-  color: var(--accent);
+.paidea-background {
+  background: var(--accent);
 }
 
-.paid .background {
-  color: var(--patreon);
+.paid-background {
+  background: var(--patreon);
 }
 
-.free .background {
-  color: var(--free);
+.free-background {
+  background: var(--free);
+}
+
+.github-background {
+  background: var(--discord);
 }
 
 /** Header and Footer Sections **/
@@ -273,7 +358,7 @@ header.hero {
 
 /* Header */
 header.hero {
-  background: rgba(19, 18, 18, 0.75);
+  background: hsla(30, 10%, 16%, 0.75);
   padding: 0;
 }
 
@@ -427,11 +512,13 @@ section#modules {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background: var(--500);
   background: linear-gradient(
     180deg,
-    rgba(19, 18, 18, 0.75) 0%,
-    #2d2925 10%,
-    var(--500) 25%
+    hsla(30, 10%, 16%, 0.75) 0%,
+    hsla(30, 10%, 16%, 0.8) 3%,
+    hsla(30, 10%, 16%, 0.9) 5.5%,
+    var(--500) 10%
   );
 }
 
@@ -508,8 +595,8 @@ section#modules {
   position: relative;
   flex-direction: column;
   justify-content: center;
-  min-width: 25%;
-  max-width: 25%;
+  min-width: 5%;
+  max-width: 15%;
 }
 
 .module .card svg {
@@ -762,6 +849,7 @@ section.module-page main {
 section.module-page main h1 {
   margin-block-end: 0;
   margin-block-start: 0;
+  font-size: 3.5rem;
 }
 
 section.module-page main p {
@@ -770,7 +858,7 @@ section.module-page main p {
   line-height: 1.5;
 }
 
-section.module-page article {
+.card.descriptive {
   display: flex;
   border-right: 0.125rem solid var(--300);
   border-bottom: 0.125rem solid var(--300);
@@ -783,16 +871,15 @@ section.module-page article {
   align-items: center;
 }
 
-section.module-page article h1 {
+.card.descriptive h1 {
   width: 100%;
   text-align: center;
   padding: 2px;
 
   color: var(--500);
-  background: var(--000);
 }
 
-section.module-page article p {
+.card.descriptive p {
   width: auto;
   text-align: justify;
   padding: 2rem;
@@ -808,6 +895,20 @@ header.module-page {
 
   height: 510px;
   max-width: 25vw;
+}
+
+
+.card.descriptive button {
+  border: 1px solid transparent;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  width: 7.8125rem;
+  height: 2.5rem;
+  margin: 0.5rem;
+
+  transition: all 0.3s ease-in-out;
 }
 
 .badge {
@@ -826,6 +927,7 @@ footer.module-page-badge {
   align-items: center;
   align-self: center;
 }
+
 /* Right-side Content of Module Subpages */
 section.module-page aside {
   position: relative;
@@ -844,23 +946,8 @@ section.module-page aside iframe {
   height: 600px;
 }
 
-section.module-page article button {
-  color: var(--500);
-  background: var(--000);
-  border: 1px solid transparent;
-
-  font-size: 1rem;
-  font-weight: bold;
-
-  width: 7.8125rem;
-  height: 2.5rem;
-  margin: 0.5rem;
-
-  transition: all 0.3s ease-in-out;
-}
-
 /* Installation */
-.installation header.install-intro {
+.install header {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -876,6 +963,8 @@ section.module-page article button {
 .installation header.install-intro h4 {
   margin-block-start: 0;
 }
+
+/* FAQs */
 
 /* Media Queries */
 /** Light Mode **/
@@ -916,10 +1005,13 @@ section.module-page article button {
     background: var(--500);
   }
 
-  /* Hero Banner */
   /** Navigation **/
   nav {
-    background: hsla(0, 0%, 0%, 0.65);
+    background: hsla(30, 10%, 16%, 0.66);
+  }
+
+  nav .links p {
+    color: var(--200);
   }
 
   nav .links .landing a,
@@ -936,12 +1028,60 @@ section.module-page article button {
     transition: all 0.3s ease-in-out;
   }
 
+  /* Sections */
   section,
   section.cta {
     background: var(--100);
   }
 
+  #contact {
+    transform: translateY(-1px);
+  }
+
+  /* Hero Banner (Light) */
+  header.hero {
+    background: linear-gradient(
+      180deg,
+      hsla(42, 36%, 89%, 0.25) 50%,
+      hsla(42, 36%, 89%, 0.5) 100%
+    );
+  }
+
+  header.hero h1 {
+    color: var(--100);
+    text-shadow: 2px 2px 20px var(--300);
+  }
+
   /* Module List */
+  section#modules {
+    background: var(--100);
+    background: linear-gradient(
+      180deg,
+      hsla(42, 36%, 89%, 0.5) 0%,
+      hsla(42, 36%, 89%, 0.75) 3%,
+      hsla(42, 36%, 89%, 0.9) 5.5%,
+      var(--100) 10%
+    );
+  }
+
+  input[type='text' i] {
+    background: transparent;
+    color: var(--400);
+    border: 2px solid var(--300);
+    width: 78vw;
+    height: 2.25rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  input:focus-visible {
+    outline-style: none;
+    border-color: var(--500);
+  }
+
+  input::placeholder {
+    color: var(--400);
+  }
+
   .searchbar button svg {
     color: var(--400);
   }
@@ -1052,11 +1192,11 @@ section.module-page article button {
 
   /* Subpages */
   /* Module Pages */
-  section.module-page article {
+  .card.descriptive {
     border-color: var(--500);
     color: var(--500);
   }
-  section.module-page article h1 {
+  .card.descriptive h1 {
     background-color: var(--500);
     color: var(--100);
   }
@@ -1064,7 +1204,7 @@ section.module-page article button {
 
 /** Screen Sizing **/
 /* Small Desktops and Tablets */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1200px) {
   /* Cards */
   section.cta {
     display: flex;
@@ -1079,29 +1219,19 @@ section.module-page article button {
 
   .module .card {
     position: relative;
-    width: 650px;
+    width: 550px;
     height: auto;
     max-height: 176px;
     padding: 10px;
 
     gap: 0.75rem;
-    border: 0.125rem solid var(--300);
-    box-shadow: 0.4375rem 0.4375rem var(--500),
-      0.4375rem 0.4375rem 0 0.125rem var(--400);
   }
 
   /* Sections */
   /* Mysterious Line Fix */
-  .module .grid {
-    margin-bottom: 0;
-  }
-
-  .cta {
-    transform: translateY(-1px);
-  }
-
-  .golden {
-    transform: translateY(-1px);
+  #hub,
+  #contact {
+    margin: -2px;
   }
 
   /* Subpages */
@@ -1109,10 +1239,129 @@ section.module-page article button {
     max-width: 50vw;
   }
 
+  section#hub .card {
+    gap: 0;
+    width: 50%;
+    min-height: 25%;
+  }
+
+  header.module-page {
+    max-width: 25vw;
+  }
+
+  section.module-page {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+
+  section.module-page main {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: flex-start;
+  }
+
   section.module-page aside iframe {
     border: 2px solid transparent;
     width: 560px;
     height: 315px;
+  }
+}
+
+/* 451 to 1000 px */
+@media screen and (max-width: 999px) {
+  /* Cards */
+  .module .card {
+    position: relative;
+    width: 700px;
+    height: auto;
+    max-height: 176px;
+    padding: 10px;
+    margin: 0 15px 0 15px;
+
+    gap: 0.75rem;
+  }
+
+  .module .card .icon-wrapper {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .module .card .icon-wrapper .fa-5x {
+    font-size: 4rem;
+  }
+
+  .module .card h4 {
+    font-size: 1.25rem;
+    padding-top: 0;
+  }
+
+  .module .card article {
+    padding-right: 0.5rem;
+  }
+
+  .module .card p {
+    font-size: 0.9rem;
+  }
+
+  .module .card .status {
+    font-size: 0.9rem;
+    bottom: 0;
+    right: 0;
+  }
+
+  /** Subpage Screen Query **/
+  /* Modules */
+  section.module-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 1rem 1rem 1rem;
+  }
+
+  section.module-page main {
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header.module-page {
+    max-width: 75vw;
+    height: auto;
+  }
+
+  .card.descriptive {
+    height: auto;
+  }
+
+  .card.descriptive h1 {
+    max-width: 100%;
+  }
+
+  .card.descriptive p {
+    max-width: max-content;
+    padding: 0.5rem;
+  }
+
+  section.module-page aside iframe {
+    height: 345px;
+    width: 800px;
+  }
+
+  /* Mysterious Line Fix */
+  .golden {
+    transform: translateY(-3px);
   }
 }
 
@@ -1139,15 +1388,20 @@ section.module-page article button {
   /* Cards */
   .module .card {
     position: relative;
-    width: fit-content;
+    width: auto;
     height: auto;
     max-height: 176px;
     padding: 10px;
+    margin: 0 15px 0 15px;
 
     gap: 0.75rem;
-    border: 0.125rem solid var(--300);
-    box-shadow: 0.4375rem 0.4375rem var(--500),
-      0.4375rem 0.4375rem 0 0.125rem var(--400);
+  }
+
+  .module .card .icon-wrapper {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 10px;
   }
 
   .module .card .icon-wrapper .fa-5x {
@@ -1155,7 +1409,7 @@ section.module-page article button {
   }
 
   .module .card h4 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding-top: 0;
   }
 
@@ -1167,22 +1421,44 @@ section.module-page article button {
     font-size: 0.9rem;
   }
 
-  .module .card .status free {
-    font-size: 0.8rem;
+  .module .card .status {
+    font-size: 0.9rem;
     bottom: 0;
     right: 0;
   }
 
-  .module .card .status paid {
-    font-size: 0.8rem;
-    bottom: 0;
-    right: 0;
+  /** Subpage Screen Query **/
+  /* Modules */
+
+  section.module-page {
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
   }
 
-  .module .card .status paidea {
-    font-size: 0.8rem;
-    bottom: 0;
-    right: 0;
+  section.module-page main {
+    gap: 4rem;
+  }
+
+  header.module-page {
+    max-width: unset;
+    height: auto;
+  }
+
+  .card.descriptive {
+    height: auto;
+  }
+
+  .card.descriptive h1 {
+    max-width: 100%;
+  }
+
+  .card.descriptive p {
+    max-width: max-content;
+    padding: 0.5rem;
+  }
+
+  section.module-page aside iframe {
+    height: 200px;
+    width: 341px;
   }
 
   /* Mysterious Line Fix */
@@ -1203,7 +1479,11 @@ section.module-page article button {
   }
 }
 
-.home-buttons {
-  display: flex;
-  align-items: center;
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }

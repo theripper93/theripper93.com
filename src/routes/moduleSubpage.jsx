@@ -23,12 +23,12 @@ const Subpage = (props) => {
       <Navbar></Navbar>
       <section className='module-page'>
         <main>
-          <article>
-            <header className={`module-page ${data.status}-background`}>
-              <h1>{data.name}</h1>
+          <article className='card descriptive'>
+            <header className='module-page'>
+              <h1 className={`${data.status}-background`}>{data.name}</h1>
               <p>{data.fulldesc}</p>
             </header>
-            <a href={premiumData?.downloadURL ?? data.link} target="_blank"><button className={`${data.status} background`}>Download</button></a>
+            <a href={premiumData?.downloadURL ?? `https://www.foundryvtt-hub.com/package/${moduleId}/`} target="_blank"><button className={`${data.status}-background`}>Download</button></a> 
             <footer class="badge">
               <div className={data.status}>
                 {data.statusText}
@@ -39,11 +39,13 @@ const Subpage = (props) => {
             {data.media && <Video module={data}></Video>}
           </aside>
         </main>
+{/*
      <section>
           <h2>Guides</h2>
           <p>{JSON.stringify(premiumData)}</p>
           <p>{JSON.stringify(data)}</p>
         </section> 
+*/}
       </section>
     </div>
   )

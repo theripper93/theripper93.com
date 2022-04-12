@@ -15,7 +15,7 @@ import ModuleSubpage from './routes/moduleSubpage';
 import Faq from './routes/faq';
 import Installation from './routes/installation';
 import Troubleshooting from './routes/troubleshooting';
-import BugReport from './routes/bugreport';
+import Issues from './routes/issues';
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -28,7 +28,7 @@ ReactDOM.render(
       <Route path="faq" element={<Faq/>} >
         <Route path="troubleshooting" element={<Troubleshooting/>} />
         <Route path="installation" element={<Installation />} />
-        <Route path="bugreport" element={<BugReport />} />
+        <Route path="issues" element={<Issues />} />
       </Route>
       <Route
         path="*"

@@ -2,6 +2,7 @@ import { Outlet } from 'react-router';
 import App from '../App';
 import Navbar from '../components/Navbar';
 import { useLocation } from "react-router-dom";
+import FaqCard from '../components/FaqCard';
 
 export default function Info() {
 
@@ -9,9 +10,9 @@ export default function Info() {
 
   const faqCards = () => {
     return (
-      <section className="info">
-      <h1>Hello World</h1>
-    </section>
+      <div className="wrapper">
+        {faqData.map((faq, index) => <FaqCard key={index} faq={faq} />)}
+      </div>
     )
   };
 
@@ -19,7 +20,14 @@ export default function Info() {
     <div className='wrapper'>
       <Navbar></Navbar>
       <Outlet />
-      {location.endsWith('faq') && faqCards()}
+      {location.pathname.endsWith('faq') && faqCards()}
     </div>
   )
 }
+
+const faqData = [
+  {
+    question: 'What is the purpose of this website?',
+    answer: 'who knows',
+  }
+];

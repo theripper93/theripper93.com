@@ -7,7 +7,8 @@ import { detectNavType } from '../moduledata';
 
 library.add(faDiscord, faPatreon, faGithub, fas);
 
-const ModuleCard = (props) => {
+const FaqCard = (props) => {
+
   const navigate = useNavigate();
   const changeRoute = () => {
     navigate(`module/${props.module.id}`);
@@ -34,4 +35,4 @@ const ModuleCard = (props) => {
 }
 
 
-export default ModuleCard
+export default FaqCard
