@@ -45,12 +45,25 @@ svg.svg-inline--fa.fa-arrow-down.connection.free {
   align-self: center;
 }
 
-svg.svg-inline--fa.fa-arrow-down.connection.inactive {
-  color: transparent;
+svg{
+  opacity: 1;
 }
 
-.troubleshooting-wrapper div:lastchild{
+svg.svg-inline--fa.fa-arrow-down.connection.inactive {
+  opacity: 0;
+}
+
+.troubleshooting-wrapper .wrapper:last-child .connection{
   display: none;
+  height:0;
+}
+
+.paid-background, .free-background, .paid-border, .free-border{
+  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+*{
+  transition: opacity 0.7s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {

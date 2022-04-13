@@ -13,7 +13,7 @@ export default function Installation() {
           <div className='card-wrapper'>
             <article className='card-solid free-border'>
               <details>
-                <summary className='free-background'>Foundry
+                <summary className='free-background noselect'>Foundry
                 </summary>
                 <ol>
                   <li>Select the "Add-on Modules" tab</li>
@@ -25,7 +25,7 @@ export default function Installation() {
             </article>
             <article className='card-solid free-border'>
               <details>
-              <summary className='free-background'>Manifest URL</summary>
+              <summary className='free-background noselect'>Manifest URL</summary>
                 <ol>
                   <li>Select the "Add-on Modules" tab</li>
                   <li>Click the "Install Module" button</li>
@@ -42,7 +42,7 @@ export default function Installation() {
           <div className='card-wrapper'>
             <article className='card-solid paid-border'>
               <details>
-              <summary className='paid-background'> Local </summary>
+                <summary className='paid-background noselect'> Local </summary>
                 <ol>
                   <li>Download the ZIP file from the corresponding Patreon post</li>
                   <li>Unzip the file and locate the folder without the module version in it's name</li>
@@ -59,7 +59,7 @@ export default function Installation() {
             </article>
             <article className='card-solid paid-border'>
               <details >
-              <summary className='paid-background'>
+                <summary className='paid-background noselect'>
                 Forge
               </summary>
                 <ol>

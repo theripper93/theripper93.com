@@ -2,7 +2,7 @@ nav {
   position: fixed;
   z-index: 3;
   min-height: 5%;
-  width: 100vw;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
@@ -173,6 +173,17 @@ nav .socials svg:active {
 .hamburger-toggle svg:active {
   color: var(--000);
   transform: translateY(1px);
+}
+
+
+@media screen and (max-width: 543) {
+  nav .socials {
+    padding-right: 0.25rem;
+  }
+
+  .hamburger-toggle {
+    padding-left: 0.25rem;
+  }
 }
 
 /* Light Mode */
