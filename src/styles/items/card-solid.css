@@ -12,12 +12,10 @@
   border-bottom: 0.125rem solid var(--300);
   border-left: 0.125rem solid var(--300);
   transition: all 0.3s ease-in-out;
-  
 }
 
 .card-solid header {
   width: 100%;
-  border: 0.125rem;
 }
 
 .card-solid h1,
@@ -29,6 +27,7 @@
 
   text-align: center;
   color: var(--500);
+  border: 0.05rem solid transparent;
 }
 
 .card-solid p {
@@ -60,8 +59,6 @@
     color: var(--100);
   }
 }
-
-
 
 @media screen and (max-width: 600px) {
   .card-solid {

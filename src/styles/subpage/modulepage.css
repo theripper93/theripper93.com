@@ -147,8 +147,8 @@ section.module-page aside iframe {
   }
 
   section.module-page aside iframe {
-    max-width: auto;
-    height: auto;
+    max-width: fit-content;
+    min-height: 425px;
   }
 }
 

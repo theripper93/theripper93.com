@@ -19,7 +19,7 @@ function MergeRecursive(obj1, obj2) {
   return obj1;
 }
 
-const currentLocal = navigator.language === MergeRecursive(locDefault, navLocal);
+const currentLocal = MergeRecursive(locDefault, navLocal);
 
 let sortedMods = [];
 let paidMods = [];

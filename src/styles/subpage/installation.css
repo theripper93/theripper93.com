@@ -1,8 +1,28 @@
+/* Page-wide and sections */
 .install {
   display: flex;
   flex-direction: column;
 }
 
+.install section {
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Page-specific Card Styles */
+.install .card-solid {
+  border-color: var(--000);
+}
+
+.install .card-solid h2 {
+  background: var(--000);
+}
+
+/* Page Header */
 .install .intro {
   display: flex;
   flex-direction: column;
@@ -20,19 +40,7 @@
   margin-block-start: 0;
 }
 
-.install section {
-  padding-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.install .card-solid {
-  border-color: var(--000);
-}
-
+/* Subsections */
 .install .free-installation,
 .install .patreon-installation {
   display: flex;
