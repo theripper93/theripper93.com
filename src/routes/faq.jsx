@@ -1,7 +1,13 @@
+/* Libraries */
+import React from 'react';
 import { Outlet } from 'react-router';
-import App from '../App';
-import Navbar from '../components/Navbar';
 import { useLocation } from "react-router-dom";
+
+/* CSS */
+import App from '../App';
+
+/* Components */
+import Navbar from '../components/Navbar';
 import FaqCard from '../components/FaqCard';
 
 export default function Info() {
@@ -29,5 +35,6 @@ const faqData = [
   {
     question: 'What is the purpose of this website?',
     answer: 'who knows',
+    link: undefined,
   }
 ];

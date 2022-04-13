@@ -1,16 +1,9 @@
-import { Link, Outlet, useNavigate } from "react-router-dom";
-import { detectNavType } from '../moduledata';
+import { Link, Outlet } from "react-router-dom";
 
 const FaqCard = (props) => {
 
-  const navigate = useNavigate();
-  const changeRoute = () => {
-    navigate(`module/${props.module.id}`);
-    window.scrollTo(0, 0);
-  };
-
   return (
-    <div className="wrapper" onClick={changeRoute}>
+    <div className="wrapper">
       <div className="card-solid">
         <div className="info-wrapper">
           <header>
@@ -23,13 +16,12 @@ const FaqCard = (props) => {
             </ul>
           </article>
           <aside>
-            <Link>Link to page</Link>
+            {props.link && <Link>Link to page</Link>}
           </aside>
         </div>
       </div>
       <Outlet />
     </div >
-
   )
 }
 

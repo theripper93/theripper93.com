@@ -231,7 +231,7 @@
     font-weight: bold;
   }
 
-  /* Buttons (LIght) */
+  /* Buttons (Light) */
   .cta .card-cta button {
     background: var(--100);
     color: var(--400);
@@ -293,5 +293,22 @@
     gap: 152px;
     background-size: cover;
     align-content: center;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .cta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 5rem;
+    background-size: cover;
+    align-content: center;
+  }
+
+  .card-cta {
+    min-width: 50%;
   }
 }

@@ -134,8 +134,8 @@
   }
 
   .card-hollow h4 {
-    font-size: 1.25rem;
-    padding-top: 0;
+    font-size: 1.75rem;
+    padding-top: 0.5rem;
   }
 
   .card-hollow article {
@@ -143,11 +143,11 @@
   }
 
   .card-hollow p {
-    font-size: 0.9rem;
+    font-size: 1.25rem;
   }
 
   .card-hollow .status {
-    font-size: 0.9rem;
+    font-size: 1rem;
     bottom: 0;
     right: 0;
   }

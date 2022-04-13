@@ -16,8 +16,8 @@ section.module-page main {
   align-items: flex-start;
   width: 100%;
 
-  flex-wrap: wrap;
-  gap: 8rem;
+  flex-wrap: nowrap;
+  gap: 2rem;
 }
 
 section.module-page main h1 {
@@ -35,7 +35,7 @@ section.module-page main p {
 header.module-page {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-content: center;
   justify-content: flex-start;
   align-items: center;
@@ -75,13 +75,13 @@ section.module-page aside {
 
 section.module-page aside iframe {
   border: 2px solid transparent;
-  width: 800px;
-  height: 600px;
+  max-width: 640px;
+  max-height: 400px;
 }
 
 /** Media Queries **/
 /* Screen Sizing */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   header.module-page {
     max-width: 25vw;
   }
@@ -104,8 +104,8 @@ section.module-page aside iframe {
 
   section.module-page aside iframe {
     border: 2px solid transparent;
-    width: 560px;
-    height: 315px;
+    max-width: 560px;
+    height: auto;
   }
 }
 
@@ -147,18 +147,19 @@ section.module-page aside iframe {
   }
 
   section.module-page aside iframe {
-    height: 345px;
-    width: 800px;
+    max-width: auto;
+    height: auto;
   }
 }
 
 @media screen and (max-width: 600px) {
   section.module-page {
-    padding: 2rem 0.5rem 0.5rem 0.5rem;
+    padding: 3rem 0.5rem 0.5rem 0.5rem;
   }
 
   section.module-page main {
     gap: 4rem;
+    flex-wrap: wrap;
   }
 
   section.module-page aside iframe {
@@ -167,7 +168,7 @@ section.module-page aside iframe {
   }
 
   header.module-page {
-    max-width: unset;
+    max-width: auto;
     height: auto;
   }
 }

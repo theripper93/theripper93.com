@@ -1,22 +1,33 @@
 .card-solid {
   display: flex;
-  border-right: 0.125rem solid var(--300);
-  border-bottom: 0.125rem solid var(--300);
-  border-left: 0.125rem solid var(--300);
-  transition: all 0.3s ease-in-out;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
   align-items: center;
+
+  max-width: 50vw;
+
+  border-right: 0.125rem solid var(--300);
+  border-bottom: 0.125rem solid var(--300);
+  border-left: 0.125rem solid var(--300);
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.card-solid header {
+  width: 100%;
+  border: 0.125rem;
 }
 
 .card-solid h1,
 .card-solid h2,
 .card-solid h3 {
   width: 100%;
+  padding: 0;
+  margin: 0;
+
   text-align: center;
-  padding: 2px;
   color: var(--500);
 }
 
@@ -50,9 +61,12 @@
   }
 }
 
+
+
 @media screen and (max-width: 600px) {
   .card-solid {
     height: auto;
+    max-width: max-content;
   }
 
   .card-solid h1 {

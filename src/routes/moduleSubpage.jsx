@@ -1,4 +1,4 @@
-import { moduleData, premiumMods, getGitReadme } from '../moduledata.js';
+import { moduleData, premiumMods } from '../moduledata.js';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -31,7 +31,7 @@ const Subpage = (props) => {
               <p>{data.fulldesc}</p>
             </header>
             <a href={premiumData?.downloadURL ?? `https://www.foundryvtt-hub.com/package/${moduleId}/`} target="_blank"><button className={`${data.status}-background`}>Download</button></a> 
-            <footer class="badge">
+            <footer className="badge">
               <div className={data.status}>
                 {data.statusText}
               </div>
