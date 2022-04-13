@@ -10,6 +10,37 @@ const local = {
         media: "https://youtu.be/ELlweNunn4g",
         link: "https://github.com/theripper93/Levels",
         branch: "v9",
+        troubleshooting: [
+          {
+            title: "I have an issue with the levels module",
+            desc: "Before anything else, if something does not look right, close the Levels UI and look from the perspective of a token."
+          },
+          {
+            title: "Tokens are showing on levels they are not supposed to",
+            desc: "The polygon for one or more of your floors is fucked, enable advanced mode in the Better Roofs settings and open a tile config to see it's preview, for techincal details see the polygon video below"
+          },
+          {
+            title: "Unexplored floors are revealed in the FoW",
+            desc: "Try enabling the advanced fog of war in Levels module settings",
+          },
+          {
+            title: "My Hole is not working",
+            desc: "When setting the height range of a hole, imagine beeing inside it, now look down and look up, those 2 elevations are the ones you are looking for. This is also true when manually setting ranges for tiles.",
+          },
+          {
+            title: "Tokens not showing in holes",
+            desc: "When you use Holes, keep in mind that you need transparency on the tile image itself where the hole is. Export it with transparency or cut a hole in it on photoshop or similar software",
+          },
+          {
+            title: "I can't see the Polygon",
+            desc: "Enable Advanced Mode in the Better Roofs settings",
+          },
+          {
+            title: "One or more of my tokens view the wrong floor when at that floor's elevation",
+            desc: "Odds are you are using metric"
+          },
+        ],
+        guides: [],
       },
       "animated-walls": {
         name: "Animated Walls",
@@ -47,6 +78,20 @@ const local = {
         status: "free",
         media: "https://youtu.be/ELlweNunn4g",
         link: "https://github.com/theripper93/Better-Roofs",
+        troubleshooting: [
+          {
+            title: "A roof is not showing or hiding proprely",
+            desc: "The polygon for one or more of your floors is fucked, enable advanced mode in the Better Roofs settings and open a tile config to see it's preview, for techincal details see the polygon video below",
+          },
+          {
+            title: "Mask mode is not working",
+            desc: "Be sure you walled of the edges of your map",
+          },
+          {
+            title: "Vision is getting blocked while it shouldnt",
+            desc: 'Be sure that your overhead tiles are not set to "Roof" occlusion mode.',
+          },
+        ]
       },
       "bossbar": {
         name: "Boss Bar",
@@ -379,6 +424,12 @@ const local = {
         status: "free",
         media: "",
         link: "https://github.com/theripper93/wall-height",
+        troubleshooting: [
+          {
+            title: "Movement is getting blocked while it shouldnt",
+            desc: "Be sure that you don't have walls under walls set to wrong elevation."
+          }
+        ],
       }
 
     },
