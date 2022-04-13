@@ -37,7 +37,7 @@ const local = {
           },
           {
             title: "One or more of my tokens view the wrong floor when at that floor's elevation",
-            desc: "Odds are you are using metrics or that your token is 2x2 or larger. This is "
+            desc: "Odds are you are using metrics or that your token is 2x2 or larger. This is due to the token height."
           },
         ],
         guides: [],
