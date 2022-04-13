@@ -20,19 +20,19 @@
         },
         {
             "title": "Unexplored floors are revealed in the FoW",
-            "desc": "Try enabling the advanced fog of war in Levels module settings",
+            "desc": "Try enabling the advanced fog of war in Levels module settings"
         },
         {
             "title": "My Hole is not working",
-            "desc": "When setting the height range of a hole, imagine being inside it, now look down and look up, those 2 elevations are the ones you are looking for. This is also true when manually setting ranges for tiles.",
+            "desc": "When setting the height range of a hole, imagine being inside it, now look down and look up, those 2 elevations are the ones you are looking for. This is also true when manually setting ranges for tiles."
         },
         {
             "title": "Tokens not showing in holes",
-            "desc": "When you use Holes, keep in mind that you need transparency on the tile image itself where the hole is. Export it with transparency or cut a hole in it on photoshop or similar software",
+            "desc": "When you use Holes, keep in mind that you need transparency on the tile image itself where the hole is. Export it with transparency or cut a hole in it on photoshop or similar software"
         },
         {
             "title": "I can't see the Polygon",
-            "desc": "Enable Advanced Mode in the Better Roofs settings",
+            "desc": "Enable Advanced Mode in the Better Roofs settings"
         },
         {
             "title": "One or more of my tokens view the wrong floor when at that floor's elevation",
@@ -40,15 +40,7 @@
         },
         {
             "title": "How does fog of war works in Levels?",
-            "desc": 'Fog in foundry is monodimensional, the system itself is not build to handle multiple layers of fog, for that reason, by default, if you explored any elevation, all areas in that zone (indipendent of elevation) will also be explored. For example if a player explored a first floor of a building then went to the second floor, it would be already fully explored.
-
-            Since the only way to make it work correctly would be to completely rewrite the fog exploration system and even then there would be issues of storing multiple fogs (as it would take up load time on startup). Outside of this problem there would be even more issues because "fog layers" could not be completely separate as exploring an area open to the sky would make it dark once you changed elevation.
-            
-            Due to all this issues that currently have no solution levels implements what's called "Advanced Fog Exploration".
-            What this does is simple, when a player is in the elevation range of a tile, levels imposes a black shape of that tile onto the fog layer which basically means that it disables fog exploration for that tile only.
-            Unfortunately there is no solution currently to solve this problem, unless i missed something. 
-            
-            This is enabled by default, but you can globally disable it or even toggle it per tile.`
+            "desc": "Fog in foundry is monodimensional, the system itself is not build to handle multiple layers of fog, for that reason, by default, if you explored any elevation, all areas in that zone (independent of elevation) will also be explored. For example if a player explored a first floor of a building then went to the second floor, it would be already fully explored.<br>Since the only way to make it work correctly would be to completely rewrite the fog exploration system and even then there would be issues of storing multiple fogs (as it would take up load time on startup). Outside of this problem there would be even more issues because 'fog layers' could not be completely separate as exploring an area open to the sky would make it dark once you changed elevation.<br>Due to all this issues that currently have no solution levels implements what's called 'Advanced Fog Exploration'.<br>What this does is simple, when a player is in the elevation range of a tile, levels imposes a black shape of that tile onto the fog layer which basically means that it disables fog exploration for that tile only.<br>Unfortunately there is no solution currently to solve this problem, unless i missed something.<br>This is enabled by default, but you can globally disable it or even toggle it per tile."
         }
       ],
         "guides": [
@@ -66,21 +58,21 @@
         },
         {
             "title": "Levels - The Polygon",
-            "url": "https://youtu.be/HD4CXRmG5ss",
+            "url": "https://youtu.be/HD4CXRmG5ss"
         },
         {
             "title": "Levels - On Is Basement, Show even when below, Don't hide in the fog",
-            "url": "https://youtu.be/2u3QpTa0Ld8",
+            "url": "https://youtu.be/2u3QpTa0Ld8"
         },
         {
             "title": "Levels - On token Height (or LOS Height)",
-            "url": "https://youtu.be/ToUmTStUER8",
+            "url": "https://youtu.be/ToUmTStUER8"
         },
         {
             "title": "Levels - On the new UI",
-            "url": "https://youtu.be/NUmSFhhQjAI",
+            "url": "https://youtu.be/NUmSFhhQjAI"
         }
-      ],
+      ]
     },
     "animated-walls": {
         "name": "Animated Walls",
@@ -89,7 +81,7 @@
         "fulldesc": "Animate your walls with rotation and movement animations. Chain together animations with macros and hook macros on door opening.",
         "status": "free",
         "media": "https://streamable.com/wj3ecv",
-        "link": "https://github.com/theripper93/animated-walls",
+        "link": "https://github.com/theripper93/animated-walls"
     },
     "enhancedcombathud": {
         "name": "Argon Combat HUD",
@@ -98,7 +90,7 @@
         "fulldesc": "Show a Solasta inspired combat hud for easy accessibility of actions and bonus actions etc. Replaces a lot of the character sheet functionality during combat so that you don't need to open it. Basically, token action HUD on steroids.",
         "status": "free",
         "media": "https://youtu.be/ODKi0AuDNA8",
-        "link": "https://github.com/theripper93/enhancedcombathud",
+        "link": "https://github.com/theripper93/enhancedcombathud"
     },
     "automated-evocations": {
         "name": "Automated Evocations",
@@ -107,7 +99,7 @@
         "fulldesc": "A user interface to manage companions with summoning animations and automated summoning for spells.",
         "status": "free",
         "media": "https://youtu.be/lVTvbBXKiSg",
-        "link": "https://github.com/theripper93/automated-evocations",
+        "link": "https://github.com/theripper93/automated-evocations"
     },
     "betterroofs": {
         "name": "Better Roofs",
@@ -119,17 +111,17 @@
         "link": "https://github.com/theripper93/Better-Roofs",
         "troubleshooting": [
         {
-            "title": "A roof is not showing or hiding proprely",
-            "desc": "The polygon for one or more of your floors is fucked, enable advanced mode in the Better Roofs settings and open a tile config to see it's preview, for techincal details see the polygon video below",
+            "title": "A roof is not showing or hiding properly",
+            "desc": "The polygon for one or more of your floors is fucked, enable advanced mode in the Better Roofs settings and open a tile config to see it's preview, for technical details see the polygon video below"
         },
         {
             "title": "Mask mode is not working",
-            "desc": "Be sure you walled of the edges of your map",
+            "desc": "Be sure you walled of the edges of your map"
         },
         {
-            "title": "Vision is getting blocked while it shouldnt",
-            "desc": 'Be sure that your overhead tiles are not set to "Roof" occlusion mode.',
-        },
+            "title": "Vision is getting blocked while it shouldn't",
+            "desc": "Be sure that your overhead tiles are not set to 'Roof' occlusion mode."
+        }
       ]
     },
     "bossbar": {
@@ -139,7 +131,7 @@
         "fulldesc": "Create a Dark Souls-like boss healthbar on top of the screen or in other locations. Customize texture, color and more.",
         "status": "free",
         "media": "https://youtu.be/o6FdsXB4Sqo",
-        "link": "https://github.com/theripper93/Boss-Bar",
+        "link": "https://github.com/theripper93/Boss-Bar"
     },
     "lib-changelogs": {
         "name": "Changelogs",
@@ -148,7 +140,7 @@
         "fulldesc": "Allow devs who opt into the system to display important messages to users after breaking updates, the user can chose which level of warning they wish to receive.",
         "status": "free",
         "media": "",
-        "link": "https://github.com/theripper93/libChangelogs",
+        "link": "https://github.com/theripper93/libChangelogs"
     },
     "combatbooster": {
         "name": "Combat Booster",
@@ -157,7 +149,7 @@
         "fulldesc": "Speed up your combat with Recent actions, Turn Marker and other smaller tweaks like Pan to combatant, body pile, mark defeated and more. (note that the recent action feature is only dnd5e compatible)",
         "status": "free",
         "media": "https://youtu.be/84UlBAnbFz4",
-        "link": "https://github.com/theripper93/Combat-Booster",
+        "link": "https://github.com/theripper93/Combat-Booster"
     },
     "fuzzy-foundry": {
         "name": "Dig Down - Advanced Search",
@@ -166,7 +158,7 @@
         "fulldesc": "Search inside folders in the file picker, use special search terms to filter your sidebars and many other advanced search filters. Use the excavate functionality to automatically find images for tokens.",
         "status": "free",
         "media": "",
-        "link": "https://github.com/theripper93/fuzzy-foundry",
+        "link": "https://github.com/theripper93/fuzzy-foundry"
     },
     "go-to-player": {
         "name": "Go To Player",
@@ -175,7 +167,7 @@
         "fulldesc": "A simple module to get the GM to a specific player (go to it's viewed scene and pan the camera to their token). Simply click the new button in the player list context menu!",
         "status": "free",
         "media": "",
-        "link": "https://github.com/theripper93/go-to-player",
+        "link": "https://github.com/theripper93/go-to-player"
     },
     "hover-distance": {
         "name": "Hover Distance",
@@ -184,7 +176,7 @@
         "fulldesc": "Show distance to a token on hover without the need to use the ruler. Optionally supports inclusion of vertical distance.",
         "status": "paid",
         "media": "https://youtu.be/0K0S8l_dEXw",
-        "link": "",
+        "link": ""
     },
     "hurry-up": {
         "name": "Hurry Up",
@@ -193,7 +185,7 @@
         "fulldesc": "A simple timer to hurry up your players in combat! Tired of those pesky players taking forever to then just swing a longsword after a 10 minute wait? Well, I have the solution for you!",
         "status": "free",
         "media": "",
-        "link": "https://github.com/theripper93/hurry-up",
+        "link": "https://github.com/theripper93/hurry-up"
     },
     "ip-protect": {
         "name": "IP Shield",
@@ -202,7 +194,7 @@
         "fulldesc": "Simple module to hide the ip fields in the invite links dialog.",
         "status": "free",
         "media": "",
-        "link": "https://github.com/theripper93/ip-protect",
+        "link": "https://github.com/theripper93/ip-protect"
     },
     "levelsautocover": {
         "name": "Levels - Automatic Cover Calculator",
@@ -211,7 +203,7 @@
         "fulldesc": "Calculates a precise cover % that can be used on any system do display a custom message above a token (eg, if only 30% visible display the obscured text). Include options to consider defeated enemies as cover but at a reduced height and more. Preconfigured for dnd5e but works with all systems (Active Effects dnd5e only). Also adds the ability to duck!",
         "status": "paid",
         "media": "https://youtu.be/W4Fn5E7fsVA",
-        "link": "",
+        "link": ""
     },
     "levelsvolumetrictemplates": {
         "name": "Levels - Volumetric Templates",
@@ -220,7 +212,7 @@
         "fulldesc": "Compute templates in 3D with autotargeting. Automatic mode to dynamically switch between 2d and 3d depending on the information provided. Works with all systems, MIDI QOL compatible.",
         "status": "paid",
         "media": "https://youtu.be/UsD7XMk8TM8",
-        "link": "",
+        "link": ""
     },
     "patrol": {
         "name": "Patrol",
@@ -229,7 +221,7 @@
         "fulldesc": "Automatic or Fixed Patrol Routes for NPCs with the ability to spot player characters. Have your npc wander around to make your city map breath life, have guards on patrol, this module has you covered! (Works very well in conjunction with Auto-Rotate).",
         "status": "free",
         "media": "https://youtu.be/iX2FlqmIJ1g",
-        "link": "https://github.com/theripper93/Patrol",
+        "link": "https://github.com/theripper93/Patrol"
     },
     "damage-numbers": {
         "name": "RPG Damage Numbers",
@@ -238,7 +230,7 @@
         "fulldesc": "Show cascading damage numbers in the style of classic RPGs (for modern reference imagine Borderlands damage). Compatible only with dnd5e, requires midi-qol",
         "status": "paid",
         "media": "https://youtu.be/BTfQKNCP_HM",
-        "link": "",
+        "link": ""
     },
     "smarttarget": {
         "name": "Smart Target",
@@ -247,7 +239,7 @@
         "fulldesc": "Target with Alt+Click, For players, target by just left clicking a non-owned token, Show portraits instead of colored pips to indicate targets, fulldesc/offset and size of the icons can be configured in the module settings, Customize color/shape of the targeting reticule.",
         "status": "free",
         "media": "",
-        "link": "https://github.com/theripper93/Smart-Target",
+        "link": "https://github.com/theripper93/Smart-Target"
     },
     "splatter": {
         "name": "Splatter",
@@ -256,7 +248,7 @@
         "fulldesc": "Add blood and gore to your games, Give that extra touch to your game. Featuring splats, blood trails, custom colors and more. Compatible with most game systems (minor configuration required).",
         "status": "free",
         "media": "https://youtu.be/jTqZv0OI5p4",
-        "link": "https://github.com/theripper93/Splatter",
+        "link": "https://github.com/theripper93/Splatter"
     },
     "dnd-randomizer": {
         "name": "Stochastic, Fantastic!",
@@ -265,7 +257,7 @@
         "fulldesc": "A random encounter generator with automatic creature importing (from your own compendiums) and spawning plus loot generator (with automatic LootSheet creation). dnd5e only.",
         "status": "free",
         "media": "https://youtu.be/2RKL0uEvRF0",
-        "link": "https://github.com/theripper93/dnd-randomizer",
+        "link": "https://github.com/theripper93/dnd-randomizer"
     },
     "tile-sort": {
         "name": "Tile Sort",
@@ -274,7 +266,7 @@
         "fulldesc": "An easy to use tool to sort the z-index of tiles, includes also a toggle to hide one or more tiles (so you can work on tiles under them) and highlight to tiles on hover (so you can see a tile if it got lost under something). Available for free only in the discord channel.",
         "status": "free",
         "media": "https://youtu.be/xQycTn1rZ1g",
-        "link": "https://github.com/theripper93/tile-sort",
+        "link": "https://github.com/theripper93/tile-sort"
     },
     "token-z": {
         "name": "Token Z",
@@ -283,7 +275,7 @@
         "fulldesc": "Easily manage the Z-Index of tokens. The automatic sorting will keep larger tokens in the back and smaller ones in the front.",
         "status": "free",
         "media": "",
-        "link": "https://github.com/theripper93/token-z",
+        "link": "https://github.com/theripper93/token-z"
     },
     "weatherblock": {
         "name": "Weather Blocker",
@@ -292,7 +284,7 @@
         "fulldesc": "A simple module to block weather effects on a map using drawings. Includes Better Roofs/Levels integration. Works with all systems.",
         "status": "free",
         "media": "https://www.reddit.com/r/FoundryVTT/comments/npixnk/free_weather_blocker_block_weather_through/",
-        "link": "https://github.com/theripper93/Weather-Blocker",
+        "link": "https://github.com/theripper93/Weather-Blocker"
     },
     "Taskbar": {
         "name": "Taskbar",
@@ -301,7 +293,7 @@
         "fulldesc": "A fully functional Windows-style taskbar for Foundry. Manage your stuff the easy way! Includes a Windows-like Start menu and utility icons.",
         "status": "paid",
         "media": "https://youtu.be/d8AEZSPOiWo",
-        "link": "",
+        "link": ""
     },
     "quickdraw": {
         "name": "Quickdraw",
@@ -310,7 +302,7 @@
         "fulldesc": "A rapid drawing tool to make quick drawings in-game by holding a hotkey (default q) with live preview for all clients. No more going to the drawing tools, and then deleting stuff! After a set timeout they will automatically fade out.",
         "status": "paid",
         "media": "https://youtu.be/lt5E3cHQ6uc",
-        "link": "",
+        "link": ""
     },
     "config-presets": {
         "name": "Config Presets",
@@ -319,7 +311,7 @@
         "fulldesc": "Save presets for lights/walls/drawings and more, keeps relevant module information and you can apply the presets to existing objects. The ultimate map making tool!",
         "status": "paid",
         "media": "https://youtu.be/A4qgviF_mqM",
-        "link": "",
+        "link": ""
     },
     "light-switch": {
         "name": "Lightswitch",
@@ -328,7 +320,7 @@
         "fulldesc": "Simply enable a toggle in the light configuration and now your players will be able to switch on and off the light with a simple click on an icon on the map that is also restricted by sight! No other configuration required.",
         "status": "paid",
         "media": "https://youtu.be/qa_Xd8M1vhg",
-        "link": "",
+        "link": ""
     },
     "journal-drop": {
         "name": "Journal Drop",
@@ -337,7 +329,7 @@
         "fulldesc": "Click a button to place multiple pins of the same journal on the canvas. Each copy will be labeled according to the section of the journal. This will NOT create new journals but use the single existing one ! The splitting is done automagically, in case your journal is not using h1 or h3 for it's sections you can specify a custom one. Also adds the ability to show journals as tooltips on hover.",
         "status": "paid",
         "media": "https://youtu.be/WgN106xJdvI",
-        "link": "",
+        "link": ""
     },
     "filepicker-plus": {
         "name": "Filepicker+",
@@ -346,7 +338,7 @@
         "fulldesc": "Expands the default filepicker to add favourite folders, image and video preview tooltips, audio tooltips and a new layout",
         "status": "paid",
         "media": "https://youtu.be/kCZvri65OvU",
-        "link": "",
+        "link": ""
     },
     "progress-tracker": {
         "name": "Progress Tracker",
@@ -355,7 +347,7 @@
         "fulldesc": "Create bars with custom backgrounds, sliders and waypoints to track many things like Travel, Chases and more. All changes are synced to players!",
         "status": "paid",
         "media": "https://youtu.be/C9KdHW0yeDk",
-        "link": "",
+        "link": ""
     },
     "situational-shortcuts": {
         "name": "Situational Shortcuts",
@@ -364,7 +356,7 @@
         "fulldesc": "Whatever you use is, sometimes applying active effects slows down the game. This modules adds quick custom button near the 'Situational Bonus' field. This is perfect for low automation users and for those things that are to annoying to automate with active effects! (currently dnd5e only - more systems coming on request)",
         "status": "paid",
         "media": "https://youtu.be/RgkLjIo17kQ",
-        "link": "",
+        "link": ""
     },
     "quick-doors": {
         "name": "Quick Doors",
@@ -373,16 +365,16 @@
         "fulldesc": "Very simple, enable the tool, now clicking near a wall will create a door (on the wall itself) while splitting the original wall appropriatelly, you can also snap to grid to auto align everything nicely. Includes hotkeys to swap between grid/nogrid/secret/window",
         "status": "paid",
         "media": "https://youtu.be/iWkTeQFGs3U",
-        "link": "",
+        "link": ""
     },
     "image-context": {
         "name": "Image Context",
         "icon": "fas fa-image",
         "desc": "Creates a context menu for images. Display a pop-out of the image, send it to chat, whisper it to specific players, and more.",
-        "fulldesc": "Add a context menu when you right click on any image in foundry. From this menu, show a popout of the image or send it to chat with the ability to wisper it only to some players and more.",
+        "fulldesc": "Add a context menu when you right click on any image in foundry. From this menu, show a pop-out of the image or send it to chat with the ability to whisper it only to some players and more.",
         "status": "paid",
         "media": "https://youtu.be/C64JxiTFeyg",
-        "link": "",
+        "link": ""
     },
     "inactive-tokens-lmao": {
         "name": "Inactive Tokens",
@@ -391,7 +383,7 @@
         "fulldesc": "Set token as inactive to make them non-interactable, effectively making them indistinguishable from tiles by players. Also, exclude inactive tokens from drag selection and optionally automatically set a token as inactive when defeated.",
         "status": "paid",
         "media": "https://youtu.be/HCGMk4QN8q4",
-        "link": "",
+        "link": ""
     },
     "levels-3d-preview": {
         "name": "3D Canvas",
@@ -419,14 +411,14 @@
             "url": "https://youtu.be/j8sZ-VM0FoI"
         },
         {
-            "title": "3D Canvas - How to 3dify 2D battlemaps with Blender",
+            "title": "3D Canvas - How to 3d-ify 2D battlemaps with Blender",
             "url": "https://youtu.be/n6FVHp3wr0I"
         },
         {
             "title": "3D Canvas - Easy 3D Dungeons with Blender and the Dungeon Pack",
             "url": "https://youtu.be/wvd7Wm7WvHQ"
-        },
-      ],
+        }
+      ]
     },
     "choices": {
         "name": "Visual Novel Choices",
@@ -435,7 +427,7 @@
         "fulldesc": "Create a visual novel style choice menu with a list of choices and a title. Make democratic or non votes, customize colors and background image, and trigger scene changes or macros when a choice is resolved.",
         "status": "paid",
         "media": "https://youtu.be/l_e-I_B3j18",
-        "link": "",
+        "link": ""
     },
     "mmm": {
         "name": "Maxwell's Manual of Malicious Maladies",
@@ -444,7 +436,7 @@
         "fulldesc": "A module for all your lingering injuries needs (dnd5e). 208 lingering injuries all with different severities, durations, and consequences, based on the 13 different damage types. Includes application automation, durations and item creation to keep track of injuries!. Available only on the discord channel! (for free)",
         "status": "free",
         "media": "https://www.reddit.com/r/FoundryVTT/comments/q7gc5h/free_maxwells_manual_of_malicious_maladies_a/",
-        "link": "https://github.com/theripper93/Maxwell-s-Manual-of-Malicious-Maladies",
+        "link": "https://github.com/theripper93/Maxwell-s-Manual-of-Malicious-Maladies"
     },
     "socketmacros": {
         "name": "Socket Macros",
@@ -453,7 +445,7 @@
         "fulldesc": "A very simple module to execute macros on all clients - simply check the checkbox in the macro configuration and the macro will be fired on all clients!",
         "status": "paid",
         "media": "https://youtu.be/FlK2pQPvy0c",
-        "link": "",
+        "link": ""
     },
     "tokenflip": {
         "name": "Token Flip",
@@ -462,7 +454,7 @@
         "fulldesc": "Assign multiple token images and actors to the same token and flip between them with ease and a nice animation!",
         "status": "paid",
         "media": "https://youtu.be/W-2EVLscFLM",
-        "link": "",
+        "link": ""
     },
     "token-notes": {
         "name": "Token Notes",
@@ -471,7 +463,7 @@
         "fulldesc": "With this simple yet effective module you can take quick notes on tokens. The module is system agnostic and excels at tracking effects durations during combat, especially if you are not using automation!",
         "status": "paidea",
         "media": "https://youtu.be/bb6IS7kt490",
-        "link": "",
+        "link": ""
     },
     "wall-height": {
         "name": "Wall Height",
@@ -483,13 +475,13 @@
         "link": "https://github.com/theripper93/wall-height",
         "troubleshooting": [
         {
-            "title": "Movement is getting blocked while it shouldnt",
+            "title": "Movement is getting blocked while it shouldn't",
             "desc": "Be sure that you don't have walls under walls set to wrong elevation."
         }
-      ],
+      ]
     }
   },
-    free: "Free",
-    paid: "Patreon",
-    paidea: "Early Access",
-},
+    "free": "Free",
+    "paid": "Patreon",
+    "paidea": "Early Access"
+}
