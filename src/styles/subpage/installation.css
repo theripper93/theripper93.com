@@ -2,7 +2,6 @@
 .install {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
 }
 
 .install main {
@@ -67,10 +66,9 @@
 }
 
 .install .card-solid summary {
-  font-size: 1.65rem;
+  font-size: 1.25rem;
   color: var(--500);
 }
-
 .install li::marker {
   color: var(--300);
 }

@@ -22,6 +22,16 @@ svg {
   color: var(--150);
 }
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 /* Text Input */
 input[type='text' i] {
   background: transparent;
@@ -73,32 +83,41 @@ button:active {
 h1 {
   font-size: 4rem;
   font-weight: 700;
+  text-align: center;
 }
 
 h2 {
   font-size: 2.5rem;
   font-weight: 700;
+  text-align: center;
 }
 
 h3 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h4 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h5 {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 p {
   font-size: 1.125rem;
   margin-block-start: 0.1rem;
   margin-block-end: 0.1rem;
+}
+
+li {
+  font-size: 1.2rem;
+  margin-block-start: 0.1rem;
+  margin-block-end: 0.1rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Links and Buttons */
@@ -120,6 +139,10 @@ a:hover {
 svg:active,
 a:active {
   transform: translateY(1px);
+}
+
+summary {
+  font-weight: bold;
 }
 
 /** Status Colours **/
@@ -221,6 +244,20 @@ footer.module-page-badge {
   align-self: center;
 }
 
+/* Subpage Globals */
+.subpage-container {
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234b4237' fill-opacity='0.32'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
 /** Light Mode **/
 @media (prefers-color-scheme: light) {
   /* Global */
@@ -257,6 +294,11 @@ footer.module-page-badge {
   footer {
     background: var(--000);
   }
+
+  .subpage-container {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a49694' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
 }
 
 /** Screen Sizing **/
@@ -287,26 +329,4 @@ footer.module-page-badge {
   100% {
     opacity: 1;
   }
-}
-
-
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-
-.subpage-container{
-  text-align: center;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }

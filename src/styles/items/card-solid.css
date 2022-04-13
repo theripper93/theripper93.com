@@ -60,6 +60,13 @@
     color: var(--500);
   }
 
+  .card-solid header.free-background,
+  .card-solid header.paid-background,
+  .card-solid header.paidea-background {
+    border-left: var(--500);
+    border-right: var(--500);
+  }
+
   .card-solid header,
   .card-solid summary {
     background-color: var(--500);
@@ -101,5 +108,4 @@
     border-left: none;
     border-right: none;
   }
-  
 }

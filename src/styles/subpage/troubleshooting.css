@@ -1,3 +1,14 @@
+.subpage-container .troubleshooting {
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .troubleshooting-wrapper {
   display: flex;
   flex-direction: column;

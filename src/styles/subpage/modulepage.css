@@ -123,17 +123,18 @@ footer.module-page-badge {
   .module-page main p {
     color: var(--500);
   }
-
+  
   .module-page .card-solid,
   .module-page .card-solid button {
     border-color: var(--500);
+    border-left: 2px solid var(--500);
+    border-right: 2px solid var(--500);
   }
 
-  .module-page .card-solid header.paidea-background,
-  .module-page .card-solid header.paid-background,
-  .module-page .card-solid header.paidea-background {
-    border-left: var(--500);
-    border-right: var(--500);
+  .badge .paid, 
+  .badge .paidea,
+  .badge .free {
+    color: var(--500);
   }
 }
 
@@ -152,7 +153,6 @@ footer.module-page-badge {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1rem;
   }
 
   .module-page main {
@@ -182,8 +182,8 @@ footer.module-page-badge {
   }
 
   .module-page aside iframe {
-    min-height: 300px;
-    align-self: center;
+    width: 450px;
+    height: 300px;
   }
 }
 

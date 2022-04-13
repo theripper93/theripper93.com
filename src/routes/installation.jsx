@@ -3,9 +3,10 @@ import '../styles/subpage/installation.css';
 
 export default function Installation() {
   return (
-    <div className="install">
+    <div className="subpage-container install">
       <header className='intro'>
         <h1>Module Installation</h1>
+        <h2>Instructions for free and premium modules</h2>
       </header>
       <main>
         <section className='free-installation'>

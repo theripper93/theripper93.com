@@ -1,5 +1,5 @@
 /* Call to Action / Subscribe */
-.cta {
+#hub {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -29,7 +29,6 @@
   border: 0.125rem solid var(--300);
   box-shadow: 0.4375rem 0.4375rem var(--500),
     0.4375rem 0.4375rem 0 0.125rem var(--400);
-  transition: all 0.3s ease-in-out;
 }
 
 .card-cta .patreon:hover {
@@ -185,32 +184,36 @@
 /* Light Mode */
 @media (prefers-color-scheme: light) {
   /* Body (Light) */
-  .cta {
+  #hub {
     background: var(--100);
+    background-image: url('../assets/wave.svg');
+    background-size: cover;
   }
 
   .cta .card-cta {
     background: var(--100);
     box-shadow: 0.4375rem 0.4375rem var(--100),
       0.4375rem 0.4375rem 0 0.125rem var(--200);
-    transition: all 0.3s ease-in-out;
   }
 
   .cta .patreon:hover {
     box-shadow: 0 0 0rem var(--patreon), 0.4375rem 0.4375rem var(--100),
       0.4375rem 0.4375rem 0 0.125rem var(--200);
+      border-color: var(--patreon);
   }
 
   .cta .discord:hover {
     box-shadow: 0 0 0rem var(--discord), 0.4375rem 0.4375rem var(--100),
       0.4375rem 0.4375rem 0 0.125rem var(--200);
-  }
+       border-color: var(--discord);
+ }
 
   .cta .hub:hover {
     background: var(--100);
     box-shadow: 0 0 0rem var(--accent), 0.4375rem 0.4375rem var(--100),
       0.4375rem 0.4375rem 0 0.125rem var(--200);
-  }
+       border-color: var(--accent);
+ }
 
   /* Text (Light) */
   .cta .patreon h2 {
