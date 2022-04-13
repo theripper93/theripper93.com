@@ -18,7 +18,7 @@ header.hero {
   background: hsla(30, 10%, 16%, 0.75);
 }
 
-header.hero h1 {
+header.hero h0 {
   color: var(--100);
   text-align: center;
   padding-top: 30vh;
@@ -44,6 +44,9 @@ header.hero svg:hover {
 }
 
 /* Contact Footer */
+#contact {
+  padding-bottom: 10rem;
+}
 #contact main {
   display: flex;
   flex-direction: column;
@@ -51,6 +54,7 @@ header.hero svg:hover {
   align-content: center;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 #contact figure {
@@ -64,12 +68,12 @@ header.hero svg:hover {
   gap: 20px;
 }
 
-#contact h1 {
+#contact h0 {
   color: var(--500);
 }
 
 #contact main.header-wrapper,
-#contact main.header-wrapper h1,
+#contact main.header-wrapper h0,
 #contact main.header-wrapper h4 {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -125,7 +129,8 @@ header.hero svg:hover {
 }
 
 #credit {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 /** Main Content **/
@@ -151,7 +156,7 @@ section .frontpage {
     );
   }
 
-  header.hero h1 {
+  header.hero h0 {
     color: var(--100);
     text-shadow: 2px 2px 20px var(--300);
   }
@@ -161,10 +166,10 @@ section .frontpage {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   #hub,
   #contact {
-    margin: -2px;
+    margin-bottom: -2px;
   }
 }
 
@@ -173,7 +178,7 @@ section .frontpage {
     margin-block-start: 0;
   }
 
-  header.hero h1 {
+  header.hero h0 {
     padding-top: 0;
   }
 

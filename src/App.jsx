@@ -23,7 +23,7 @@ function App() {
         <video autoPlay muted loop id="video-bg">
           <source src="./src/assets/videobanner.mp4" type="video/mp4" />
         </video>
-        <h1>Heyo, I make Foundry VTT Modules</h1>
+        <h0>Heyo, I make Foundry VTT Modules</h0>
         <HashLink smooth to='/#modules'><FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth /></HashLink>
       </header>
       <section className="module list" id="modules">
@@ -40,7 +40,7 @@ function App() {
             </header>
             <ul>
               <li>Download and use my premium modules</li>
-              <li>Join the <strong style={{ color: "var(--patreon)", fontWeight: "500" }}>Early Access</strong> tier for 3D canvas and other early access modules</li>
+              <li>Join the <strong>Early Access</strong> tier for 3D canvas and other early access modules</li>
               <li>Access priority support for questions and troubleshooting</li>
               <li>Support the development of my free modules</li>
             </ul>
@@ -58,7 +58,7 @@ function App() {
               <li>Notifications directly in Foundry</li>
               <li>Premium module updates in one place</li>
               <li>Works automagically between updates</li>
-              <li>It's <span id="free-hub">free</span> </li>
+              <li>It's <strong>free</strong> </li>
             </ul>
           </summary>
           <a href="https://www.foundryvtt-hub.com/package/theripper-premium-hub/" rel="noreferrer" target="_blank"><button>Download</button></a>
@@ -82,8 +82,8 @@ function App() {
       <footer className="golden" id="contact">
         <summary>
           <main className='header-wrapper'>
-            <h1>Need to contact me?</h1>
-            <h4>I'm open to do paid projects for Foundry VTT</h4>
+            <h0>Need to contact me?</h0>
+            <h2>I'm open to do paid projects for Foundry VTT</h2>
           </main>
           <main className='skillset'>
             <h3>My skills are in</h3>

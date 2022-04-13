@@ -6,11 +6,10 @@ export default function Installation() {
     <div className="subpage-container install">
       <header className='intro'>
         <h1>Module Installation</h1>
-        <h2>Instructions for free and premium modules</h2>
       </header>
       <main>
         <section className='free-installation'>
-          <header><h3>Free</h3></header>
+          <header><h2>Free</h2></header>
           <div className='card-wrapper'>
             <article className='card-solid free-border'>
               <details>
@@ -39,7 +38,7 @@ export default function Installation() {
           </div>
         </section>
         <section className='patreon-installation'>
-          <header><h3>Premium</h3></header>
+          <header><h2>Premium</h2></header>
           <div className='card-wrapper'>
             <article className='card-solid paid-border'>
               <details>

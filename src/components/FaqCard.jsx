@@ -6,9 +6,9 @@ const FaqCard = (props) => {
   return (
     <div className="wrapper">
       <div className="card-solid">
-          <header className={`${status}-background`}>
-            <h3>{question}</h3>
-          </header>
+          <summary className={`${status}-background`}>
+            <h4>{question}</h4>
+          </summary>
           <article>
             <p>{answer}</p>
           </article>

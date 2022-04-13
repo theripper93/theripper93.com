@@ -4,6 +4,7 @@
   align-items: center;
   flex-wrap: nowrap;
 
+  background: hsla(30, 10%, 16%, 0.15);
   backdrop-filter: blur(5px);
 
   border-right: 0.125rem solid var(--300);
@@ -54,17 +55,26 @@
   transition: all 0.3s ease-in-out;
 }
 
+.card-solid svg {
+  color: var(--500);
+}
+
+.card-solid svg:hover {
+  color: var(--400);
+}
+
 @media (prefers-color-scheme: light) {
   .card-solid {
     border-color: var(--500);
     color: var(--500);
+    background: hsla(42, 36%, 89%, 0.15);
   }
 
-  .card-solid header.free-background,
-  .card-solid header.paid-background,
-  .card-solid header.paidea-background {
-    border-left: var(--500);
-    border-right: var(--500);
+  .card-solid .paid-background,
+  .card-solid .paidea-background,
+  .card-solid .free-background {
+    border-left: none;
+    border-right: none;
   }
 
   .card-solid header,
@@ -74,8 +84,23 @@
     border-color: var(--500);
   }
 
+  .card-solid h1,
+  .card-solid h2,
+  .card-solid h3 {
+    color: var(--100);
+  }
+
   .card-solid p {
     color: var(--500);
+    text-shadow: 0 0 20 var(--400);
+  }
+
+  .card-solid svg {
+    color: var(--100);
+  }
+
+  .card-solid svg:hover {
+    color: var(--200);
   }
 
   .card-solid button {
@@ -95,17 +120,8 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
-  .card-solid header,
-  .card-solid summary {
-    color: var (--100);
-    background: var(--500);
-  }
-
-  .card-solid .paid-background,
-  .card-solid .paidea-background,
-  .card-solid .free-background {
-    border-left: none;
-    border-right: none;
+@media screen and (max-width: 800px) {
+  .card-solid {
+    backdrop-filter: none;
   }
 }

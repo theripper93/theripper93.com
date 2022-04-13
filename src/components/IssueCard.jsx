@@ -21,8 +21,8 @@ const IssueCard = (props) => {
   return (
     <div className="wrapper">
       <div className="card-solid">
-          <header className={`paid-background`}>
-            <h3>{title}</h3>
+          <header className={`paidea-background`}>
+            <h4>{title}</h4>
           </header>
           <article>
             {getDescription(description)}

@@ -25,7 +25,7 @@
   left: 1rem;
 }
 
-.troubleshooting-container {
+.troubleshooting-container .checkmark {
   text-align: center;
   padding-top: 5vh;
   padding-bottom: 5vh;
@@ -36,10 +36,39 @@
   gap: 2rem;
 }
 
-.connection {
+svg.svg-inline--fa.fa-arrow-down.connection.free {
   height: 3rem;
   width: 1rem;
   position: absolute;
   top: 100%;
   left: 50%;
+  align-self: center;
+}
+
+svg.svg-inline--fa.fa-arrow-down.connection.inactive {
+  color: transparent;
+}
+
+.troubleshooting-wrapper div:lastchild{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .troubleshooting-wrapper h4{
+    font-size: 1.25rem;
+  }
+
+  .troubleshooting-wrapper .fa-2x {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .troubleshooting h1{
+    font-size: 2rem;
+  }
+
+  .troubleshooting-wrapper .fa-2x {
+    display: none;
+  }
 }

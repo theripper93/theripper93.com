@@ -123,7 +123,7 @@ footer.module-page-badge {
   .module-page main p {
     color: var(--500);
   }
-  
+
   .module-page .card-solid,
   .module-page .card-solid button {
     border-color: var(--500);
@@ -131,7 +131,7 @@ footer.module-page-badge {
     border-right: 2px solid var(--500);
   }
 
-  .badge .paid, 
+  .badge .paid,
   .badge .paidea,
   .badge .free {
     color: var(--500);
@@ -178,7 +178,6 @@ footer.module-page-badge {
 
   .card.descriptive p {
     max-width: max-content;
-    padding: 0.5rem;
   }
 
   .module-page aside iframe {
@@ -188,18 +187,38 @@ footer.module-page-badge {
 }
 
 @media screen and (max-width: 600px) {
-  .module-page {
-    padding: 3rem 0.5rem 0.5rem 0.5rem;
+  .module-page .card-solid {
+    max-width: fit-content;
+    max-height: fit-content;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+    backdrop-filter: none;
+  }
+
+  .module-page .card-solid header {
+    width: auto;
   }
 
   .module-page main {
-    gap: 4rem;
-    flex-wrap: wrap;
+    min-width: max-content;
+  }
+
+  .module-page main p {
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    max-width: fit-content;
+    font-size: 1rem;
+  }
+
+  .module-page aside {
+    height: auto;
   }
 
   .module-page aside iframe {
-    height: 200px;
-    width: 341px;
+    height: 100px;
+    width: 250px;
   }
 
   header.module-page {

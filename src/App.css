@@ -80,35 +80,43 @@ button:active {
 }
 
 /** Text Styles **/
-h1 {
+h0 {
   font-size: 4rem;
   font-weight: 700;
   text-align: center;
 }
 
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 700;
   text-align: center;
 }
 
 h3 {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.25rem;
+  font-weight: 700;
 }
 
 h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+h5 {
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-h5 {
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-
 p {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   margin-block-start: 0.1rem;
   margin-block-end: 0.1rem;
 }
@@ -118,6 +126,13 @@ li {
   margin-block-start: 0.1rem;
   margin-block-end: 0.1rem;
   margin-bottom: 0.75rem;
+}
+
+strong {
+  background: -webkit-linear-gradient(0deg, #ffd78a, #ff9659);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 /* Links and Buttons */
@@ -232,6 +247,7 @@ header.module-page {
   background: transparent;
   align-self: end;
   padding: 8px;
+  text-shadow: 0 0 20px var(--400);
 }
 
 footer.module-page-badge {
@@ -262,16 +278,29 @@ footer.module-page-badge {
 @media (prefers-color-scheme: light) {
   /* Global */
   body {
-    --accent: #d1a428;
-    --discord: #4e5d94;
-    --patreon: #dc664c;
-    --free: #26ad69;
+    --accent: hsl(44, 94%, 44%);
+    --discord: hsl(227, 31%, 44%);
+    --patreon: hsl(11, 67%, 58%);
+    --free: hsl(150, 64%, 41%);
     color: var(--400);
     background: var(--100);
   }
 
+  h1,
+  h2,
+  h3 {
+    color: var(--500);
+  }
+
   svg {
     color: var(--400);
+  }
+
+  strong {
+    background: -webkit-linear-gradient(25deg, #d4572a, #ca9b0c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
   }
 
   button:hover {
@@ -298,15 +327,6 @@ footer.module-page-badge {
   .subpage-container {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a49694' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     background-repeat: repeat;
-  }
-}
-
-/** Screen Sizing **/
-/* Phones */
-@media screen and (max-width: 37.5rem) {
-  /* Globals */
-  h1 {
-    font-size: 48px;
   }
 }
 

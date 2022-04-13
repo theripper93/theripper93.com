@@ -9,8 +9,6 @@ import FaqCard from '../components/FaqCard';
 
 import { faqs } from '../scripts/helpers.js';
 
-import '../styles/subpage/faq.css';
-
 export default function Info() {
 
   let location = useLocation();
@@ -19,7 +17,7 @@ export default function Info() {
   const faqCards = () => {
     return (
       <div className="subpage-container">
-        <h3>FAQs</h3>
+        <h1>FAQs</h1>
         {faqs.map((faq, index) => <FaqCard key={index} faq={faq} />)}
       </div>
     )

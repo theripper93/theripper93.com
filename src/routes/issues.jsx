@@ -5,7 +5,7 @@ import '../styles/subpage/issues.css';
 export default function BugReport() {
   return (
     <div className="subpage-container">
-      <h3>Issues</h3>
+      <h1>Issues</h1>
       {issues.map((issue, index) => <IssueCard key={index} issue={issue} />)}
     </div>
   )

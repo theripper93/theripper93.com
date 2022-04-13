@@ -15,18 +15,18 @@ const TroubleshootingCard = (props) => {
 
   return (
     <div className="wrapper" onClick={toggleState}>
-      <div className={`connection ${state ? "free-background" : ""}`}></div>
+      <FontAwesomeIcon icon="fa-solid fa-arrow-down" className={`connection ${state ? "free" : "inactive"}`}></FontAwesomeIcon>
       <div className={`card-solid${state ? " free-border" : " paid-border"}`}>
-          <header className={`${state ? "free-background" : "paid-background"}`}>
-          <FontAwesomeIcon size="3x" icon={state ? "fas fa-check" : "fas fa-times"} />
-            <h3>{title}</h3>
-          </header>
-          <article>
-            <p>{description}</p>
-          </article>
-          <aside>
-            {link && <Link>Link to page</Link>}
-          </aside>
+        <header className={`${state ? "free-background" : "paid-background"}`}>
+          <FontAwesomeIcon size="2x" className="checkmark" icon={state ? "fas fa-check" : "fas fa-times"} />
+          <h4>{title}</h4>
+        </header>
+        <article>
+          <p>{description}</p>
+        </article>
+        <aside>
+          {link && <Link>Link to page</Link>}
+        </aside>
       </div>
       <Outlet />
     </div >

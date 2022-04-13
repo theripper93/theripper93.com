@@ -30,11 +30,10 @@
   flex-direction: column;
   justify-content: center;
   min-width: 5%;
-  max-width: 15%;
+  max-width: 12%;
 }
 
 .card-hollow svg {
-  padding: 30px;
   align-self: center;
   color: var(--100);
 }
@@ -44,36 +43,30 @@
   width: 100%;
 }
 
-.card-hollow h4 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-
-  padding-top: 20px;
-
-  color: var(--100);
+.card-hollow article {
+  max-width: 95%;
 }
 
-.card-hollow article {
-  height: fit-content;
-  padding-right: 1rem;
-  overflow: hidden;
+.card-hollow h4 {
+  margin-block-start: 0;
+  padding-top: 20px;
+  font-size: 1.5rem;
+  color: var(--100);
 }
 
 .card-hollow .status {
   position: absolute;
   align-self: flex-end;
-  bottom: 8px;
-  right: 10.4px;
   width: 100%;
+  bottom: 0.5rem;
+  right: 0.5rem;
 
   margin-block-end: 0;
   margin-block-start: 0;
   padding: 0;
 
   text-align: right;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -95,7 +88,7 @@
 @media screen and (max-width: 1200px) {
   .card-hollow {
     position: relative;
-    width: 550px;
+    width: 700px;
     height: auto;
     max-height: 176px;
     padding: 10px;
@@ -113,7 +106,7 @@
 @media screen and (max-width: 999px) {
   .card-hollow {
     position: relative;
-    width: 700px;
+    width: 550px;
     height: auto;
     max-height: 176px;
     padding: 10px;
@@ -130,20 +123,16 @@
   }
 
   .card-hollow .icon-wrapper .fa-5x {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .card-hollow h4 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     padding-top: 0.5rem;
   }
 
-  .card-hollow article {
-    padding-right: 0.5rem;
-  }
-
   .card-hollow p {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .card-hollow .status {
@@ -156,7 +145,7 @@
 @media screen and (max-width: 600px) {
   .card-hollow {
     position: relative;
-    width: auto;
+    width: 420px;
     height: auto;
     max-height: 176px;
     padding: 10px;
@@ -193,5 +182,19 @@
     font-size: 0.9rem;
     bottom: 0;
     right: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card-hollow {
+    width: 300px;
+  }
+
+  .card-hollow .icon-wrapper .fa-5x {
+    font-size: 2.5rem;
+  }
+
+  .card-hollow .status {
+    font-size: 0.75rem;
   }
 }

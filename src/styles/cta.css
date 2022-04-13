@@ -173,13 +173,6 @@
   transform: translateY(0.125rem);
 }
 
-#free-hub {
-  background: -webkit-linear-gradient(0deg, #ffd78a, #ff9659);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-}
-
 /** Media Queries **/
 /* Light Mode */
 @media (prefers-color-scheme: light) {
@@ -226,13 +219,6 @@
 
   .cta .discord h2 {
     filter: drop-shadow(2px 2px 0px #a1a9ee);
-  }
-
-  #free-hub {
-    background: -webkit-linear-gradient(25deg, #f28367, #ff5282);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
   }
 
   /* Buttons (Light) */
