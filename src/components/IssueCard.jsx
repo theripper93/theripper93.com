@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+import '../styles/items/card-solid.css';
 
 const IssueCard = (props) => {
   const { title, description, link } = props.issue;
@@ -20,7 +21,7 @@ const IssueCard = (props) => {
   return (
     <div className="wrapper">
       <div className="card-solid">
-          <header>
+          <header className={`paid-background`}>
             <h3>{title}</h3>
           </header>
           <article>

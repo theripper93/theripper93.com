@@ -299,3 +299,14 @@ footer.module-page-badge {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+.subpage-container{
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

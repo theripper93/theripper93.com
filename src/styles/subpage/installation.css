@@ -8,12 +8,10 @@
 .install main {
   position: relative;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
 }
 
 /* Subsections */
@@ -41,55 +39,65 @@
 .install .free-installation,
 .install .patreon-installation {
   display: flex;
-  align-content: space-between;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
   height: auto;
-
-  max-width: 75%;
+  align-items: center;
+  width: 50%;
 }
 
-.install article {
-  width: 45%;
+.install .card-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  gap: 1rem;
 }
-
 /* Card Styling */
 .install .card-solid {
-  height: 100%;
+  border: 4px solid var(--400);
 }
 
-.install .card-solid header {
+.install .card-solid details {
+  width: 100%;
+}
+
+.install .card-solid summary {
+  font-size: 1.65rem;
   color: var(--500);
 }
 
-.install .card-solid header.free-background {
-  border-color: var(--free);
+.install li::marker {
+  color: var(--300);
 }
 
 .install .card-solid.free-border {
   border-color: var(--free);
-  color: var(--150);
 }
 
-.install .card-solid.free li::marker {
-  color: var(--free);
-}
-
-.install .card-solid header.paid-background {
+.install .card-solid.paid-border {
   border-color: var(--patreon);
-}
-
-.install .card-solid.patreon-border {
-  border-color: var(--patreon);
-}
-
-.install .card-solid.patreon li::marker {
-  color: var(--patreon);
 }
 
 @media (prefers-color-scheme: light) {
-  .install .card-solid header {
+  .install header {
+    color: var(--500);
+  }
+  .install .card-solid details {
+    color: var(--500);
+  }
+  .install .card-solid summary {
     color: var(--100);
+  }
+
+  .install .card-solid .free-background,
+  .install .card-solid .paid-background,
+  .install .card-solid.free-border,
+  .install .card-solid.paid-border {
+    border-color: var(--500);
   }
 }

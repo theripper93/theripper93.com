@@ -1,12 +1,13 @@
 import { Link, Outlet } from "react-router-dom";
+import '../styles/items/card-solid.css';
 
 const FaqCard = (props) => {
-  const { question, answer, link } = props.faq;
+  const { question, answer, link, status } = props.faq;
   return (
     <div className="wrapper">
       <div className="card-solid">
-          <header>
-            <h4>{question}</h4>
+          <header className={`${status}-background`}>
+            <h3>{question}</h3>
           </header>
           <article>
             <p>{answer}</p>

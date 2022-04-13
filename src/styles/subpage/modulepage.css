@@ -21,6 +21,7 @@ section.module-page {
   gap: 2rem;
 
   background-repeat: no-repeat;
+  background-position: bottom;
   background-size: cover;
 }
 
