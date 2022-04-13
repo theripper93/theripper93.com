@@ -1,7 +1,7 @@
 
 /* React Router */
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import { detectNavType } from '../moduledata';
+import { detectNavType } from '../scripts/helpers.js';
 
 /* Font Awesome*/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

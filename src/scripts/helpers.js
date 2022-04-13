@@ -1,5 +1,5 @@
-import * as locDefault from './local/en-US.json';
-const navLocal = import(`./local/${navigator.language}.json`) ?? {};
+import * as locDefault from '../local/en-US.json';
+const navLocal = import(`../local/${navigator.language}.json`) ?? {};
 
 function MergeRecursive(obj1, obj2) {
   for (var p in obj2) {
@@ -21,10 +21,13 @@ function MergeRecursive(obj1, obj2) {
 
 const currentLocal = MergeRecursive(locDefault, navLocal);
 
+export const faqs = currentLocal.faqs;
+export const troubleshooting = currentLocal.troubleshooting;
+
 let sortedMods = [];
 let paidMods = [];
 let freeMods = [];
-for (let [k, v] of Object.entries(currentLocal.modules)) {
+for (let v of Object.values(currentLocal.modules)) {
   if (v.status == "paid" || v.status == "paidea") {
     paidMods.push(v.name);
   } else {

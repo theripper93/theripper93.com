@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 
-const FaqCard = (props) => {
-  const { question, answer, link } = props.faq;
+const TroubleshootingCard = (props) => {
+  const { title, description, link } = props.data;
   return (
     <div className="wrapper">
       <div className="card-solid">
@@ -11,8 +11,8 @@ const FaqCard = (props) => {
           </header>
           <article>
             <ul>
-              <li>{question}</li>
-              <li>{answer}</li>
+              <li>{title}</li>
+              <li>{description}</li>
             </ul>
           </article>
           <aside>
@@ -26,4 +26,4 @@ const FaqCard = (props) => {
 }
 
 
-export default FaqCard
+export default TroubleshootingCard

@@ -3,12 +3,11 @@ import React from 'react';
 import { Outlet } from 'react-router';
 import { useLocation } from "react-router-dom";
 
-/* CSS */
-import App from '../App';
-
 /* Components */
 import Navbar from '../components/Navbar';
 import FaqCard from '../components/FaqCard';
+
+import { faqs } from '../scripts/helpers.js';
 
 export default function Info() {
 
@@ -17,7 +16,7 @@ export default function Info() {
   const faqCards = () => {
     return (
       <div className="wrapper">
-        {faqData.map((faq, index) => <FaqCard key={index} faq={faq} />)}
+        {faqs.map((faq, index) => <FaqCard key={index} faq={faq} />)}
       </div>
     )
   };
@@ -30,11 +29,3 @@ export default function Info() {
     </div>
   )
 }
-
-const faqData = [
-  {
-    question: 'What is the purpose of this website?',
-    answer: 'who knows',
-    link: undefined,
-  }
-];

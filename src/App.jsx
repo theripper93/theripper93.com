@@ -45,7 +45,7 @@ function App() {
               <li>Support the development of my free modules</li>
             </ul>
           </summary>
-          <a href="https://www.patreon.com/theripper93" target="_blank"><button>View</button></a>
+          <a href="https://www.patreon.com/theripper93" rel="noreferrer" target="_blank"><button>View</button></a>
         </div>
         <div className="card-cta status hub">
           <summary>
@@ -61,7 +61,7 @@ function App() {
               <li>It's <span id="free-hub">free</span> </li>
             </ul>
           </summary>
-          <a href="https://github.com/theripper93/theripper-premium-hub" target="_blank"><button>Download</button></a>
+          <a href="https://www.foundryvtt-hub.com/package/theripper-premium-hub/" rel="noreferrer" target="_blank"><button>Download</button></a>
         </div>
         <div className='card-cta status discord'>
           <summary>
@@ -76,7 +76,7 @@ function App() {
               <li>Join an active community of other users</li>
             </ul>
           </summary>
-          <a href="https://discord.com/invite/F53gBjR97G" target="_blank"><button>Join</button></a>
+          <a href="https://discord.com/invite/F53gBjR97G" rel="noreferrer" target="_blank"><button>Join</button></a>
         </div>
       </section>
       <footer className="golden" id="contact">
@@ -97,15 +97,15 @@ function App() {
           <main className='contact-info'>
             <h3>You can reach me via</h3>
             <main className="links">
-              <a href="https://discordapp.com/users/195152093563191296" target="_blank"><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
-              <a href="mailto:tsplab@gmail.com" target="_blank"><FontAwesomeIcon icon="fa-solid fa-envelope" size="5x" fixedWidth /></a>
+              <a href="https://discordapp.com/users/195152093563191296" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
+              <a href="mailto:tsplab@gmail.com" rel="noreferrer" target="_blank"><FontAwesomeIcon icon="fa-solid fa-envelope" size="5x" fixedWidth /></a>
             </main>
             <br></br>
             <p>For non-business related inquiries, please write a message on my discord server instead.</p>
           </main>
         </summary>
         <aside>
-          <p id="credit">Site designed and developed with love by <a href="https://www.github.com/casanovasekova" target="_blank">
+          <p id="credit">Site designed and developed with love by <a href="https://www.github.com/casanovasekova" rel="noreferrer" target="_blank">
             April Tao </a></p>
         </aside>
       </footer>

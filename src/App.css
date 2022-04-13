@@ -132,9 +132,12 @@ svg:active,
 }
 
 .free {
-  color: var(--free);
+  border-color: var(--free);
 }
 
+.free-border {
+  border-color: var(--free);
+}
 .paidea-background {
   background: var(--accent);
 }

@@ -1,6 +1,5 @@
-import { moduleData, premiumMods } from '../moduledata.js';
+import { moduleData, premiumMods } from '../scripts/helpers.js';
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import '../styles/subpage/modulepage.css';
 import '../styles/items/card-solid.css';
@@ -8,7 +7,7 @@ import Video from '../components/Video.jsx';
 import Navbar from '../components/Navbar';
 
 
-const Subpage = (props) => {
+const Subpage = () => {
 
   const [premiumData, setPremiumData] = useState(null);
 
@@ -30,7 +29,7 @@ const Subpage = (props) => {
               <h1 className={`${data.status}-background`}>{data.name}</h1>
               <p>{data.fulldesc}</p>
             </header>
-            <a href={premiumData?.downloadURL ?? `https://www.foundryvtt-hub.com/package/${moduleId}/`} target="_blank"><button className={`${data.status}-background`}>Download</button></a> 
+            <a href={premiumData?.downloadURL ?? `https://www.foundryvtt-hub.com/package/${moduleId}/`} rel="noreferrer" target="_blank"><button className={`${data.status}-background`}>Download</button></a> 
             <footer className="badge">
               <div className={data.status}>
                 {data.statusText}

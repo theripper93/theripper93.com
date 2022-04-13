@@ -1,4 +1,4 @@
-import { moduleData } from '../moduledata';
+import { moduleData } from '../scripts/helpers.js';
 import ModuleCard from './ModuleCard';
 import '../styles/modulegrid.css';
 

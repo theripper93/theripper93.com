@@ -1,4 +1,4 @@
-import { detectSource } from '../moduledata';
+import { detectSource } from '../scripts/helpers.js';
 
 const Video = (props) => {
   const source = detectSource(props.module.media);

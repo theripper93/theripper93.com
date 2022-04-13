@@ -1,3 +1,4 @@
+/
 /* Module Subpages */
 section.module-page {
   display: flex;
@@ -6,6 +7,10 @@ section.module-page {
   align-content: flex-start;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.module-page .card-solid {
+  border-color: var(--300);
 }
 
 section.module-page main {
@@ -25,7 +30,6 @@ section.module-page main h1 {
   margin-block-start: 0;
   font-size: 3rem;
 }
-
 section.module-page main p {
   max-width: 66%;
   font-size: 1.25rem;
@@ -41,7 +45,7 @@ header.module-page {
   align-items: center;
 
   height: 510px;
-  max-width: 33vw;
+  max-width: 25vw;
 }
 
 .badge {
@@ -64,13 +68,14 @@ footer.module-page-badge {
 /* Right-side Content of Module Subpages */
 section.module-page aside {
   position: relative;
-  width: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
   align-items: center;
+
+  height: 100%;
 }
 
 section.module-page aside iframe {
@@ -121,7 +126,7 @@ section.module-page aside iframe {
   }
 
   section.module-page main {
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -147,8 +152,7 @@ section.module-page aside iframe {
   }
 
   section.module-page aside iframe {
-    max-width: fit-content;
-    min-height: 425px;
+    min-height: 300px;
   }
 }
 

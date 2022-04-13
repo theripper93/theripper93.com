@@ -129,7 +129,7 @@ header.hero svg:hover {
 }
 
 /** Main Content **/
-section {
+section .frontpage {
   min-height: 70vh;
   padding: 10rem 0.9375rem 1rem 1rem;
   background: var(--500);
@@ -137,6 +137,11 @@ section {
 
 /* Light Mode */
 @media (prefers-color-scheme: light) {
+  /* Globals */
+  section .frontpage {
+    background: var(--100);
+  }
+  
   /* Hero Banner (Light) */
   header.hero {
     background: linear-gradient(
