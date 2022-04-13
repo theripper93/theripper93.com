@@ -6,14 +6,14 @@ export default function Installation() {
     <div className="install">
       <header className='intro'>
         <h1>Installation</h1>
-        <h4>A guide for installing my Foundry modules</h4>
+        <h2>A guide for installing my Foundry modules</h2>
       </header>
       <main>
         <section className='free-installation'>
           <article className='foundry'>
-            <summary className='card-solid free'>
-              <header>
-                <h2 className='free-background'>Free Modules</h2>
+            <summary className='card-solid free-border'>
+              <header className='free-background'>
+                <h3 >Foundry</h3>
               </header>
               <ol>
                 <li>Select the "Add-on Modules" tab</li>
@@ -24,9 +24,9 @@ export default function Installation() {
             </summary>
           </article>
           <article className='manifest'>
-            <summary className='card-solid free'>
-              <header>
-                <h2 className='free-background'>Manifest URL</h2>
+            <summary className='card-solid free-border'>
+              <header className='free-background'>
+                <h3>Manifest URL</h3>
               </header>
               <ol>
                 <li>Select the "Add-on Modules" tab</li>
@@ -40,10 +40,9 @@ export default function Installation() {
         </section>
         <section className='patreon-installation'>
           <article className='local'>
-            <summary className='card-solid patreon'>
-              <header>
-                <h2 className='paid-background'>Local installation</h2>
-
+            <summary className='card-solid patreon-border'>
+              <header className='paid-background'>
+                <h3 >Local</h3>
               </header>
               <ol>
                 <li>Download the ZIP file from the corresponding Patreon post</li>
@@ -60,9 +59,9 @@ export default function Installation() {
             </summary>
           </article>
           <article className='forge'>
-            <summary className='card-solid patreon'>
-              <header>
-                <h2 className='paid-background'>The Forge</h2>
+            <summary className='card-solid patreon-border'>
+              <header className='paid-background'>
+                <h3 >Forge</h3>
               </header>
               <ol>
                 <li>Download the ZIP file from the corresponding Patreon post</li>

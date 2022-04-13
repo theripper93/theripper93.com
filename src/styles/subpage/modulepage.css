@@ -9,28 +9,40 @@ section.module-page {
   align-items: flex-start;
 }
 
-.module-page .card-solid {
-  border-color: var(--300);
-}
-
-section.module-page main {
+.module-page main {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  height: 100vh;
   width: 100%;
-
   flex-wrap: nowrap;
   gap: 2rem;
+
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-section.module-page main h1 {
+main.free {
+  background-image: url('../src/assets/layered-waves-free.svg');
+}
+
+main.paid {
+  background-image: url('../src/assets/layered-waves-patreon.svg');
+}
+
+main.paidea {
+  background-image: url('../src/assets/layered-waves-ea.svg');
+}
+
+.module-page main h1 {
   margin-block-end: 0;
   margin-block-start: 0;
   font-size: 3rem;
 }
-section.module-page main p {
+.module-page main p {
+  color: var(--100);
   max-width: 66%;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -66,7 +78,7 @@ footer.module-page-badge {
 }
 
 /* Right-side Content of Module Subpages */
-section.module-page aside {
+.module-page aside {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -74,58 +86,75 @@ section.module-page aside {
   align-content: center;
   justify-content: center;
   align-items: center;
-
+  align-self: center;
   height: 100%;
 }
 
-section.module-page aside iframe {
+.module-page aside iframe {
   border: 2px solid transparent;
   max-width: 640px;
   max-height: 400px;
 }
 
+/* Card Solid */
+.module-page .card-solid {
+  border-color: var(--300);
+  max-width: 33%;
+  box-shadow: 0px 0px 18px 4px hsl(30, 10%, 16%, 0.2);
+  text-shadow: 0 0 12px hsl(30, 10%, 16%, 0.2);
+}
+
+.card-solid .paidea-background {
+  border-color: var(--accent);
+}
+
+.card-solid .paid-background {
+  border-color: var(--patreon);
+}
+
+.card-solid .free-background {
+  border-color: var(--free);
+}
+
 /** Media Queries **/
-/* Screen Sizing */
-@media screen and (max-width: 1000px) {
-  header.module-page {
-    max-width: 25vw;
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  .module-page main p {
+    color: var(--500);
   }
 
-  section.module-page {
-    padding: 3rem 1rem 1rem 1rem;
+  .module-page .card-solid,
+  .module-page .card-solid button {
+    border-color: var(--500);
   }
 
-  section.module-page main {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: flex-start;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 1rem;
-    justify-content: flex-start;
-  }
-
-  section.module-page aside iframe {
-    border: 2px solid transparent;
-    max-width: 560px;
-    height: auto;
+  .module-page .card-solid header.paidea-background,
+  .module-page .card-solid header.paid-background,
+  .module-page .card-solid header.paidea-background {
+    border-left: var(--500);
+    border-right: var(--500);
   }
 }
 
-@media screen and (max-width: 999px) {
-  section.module-page {
+/* Screen Sizing */
+@media screen and (max-width: 1280px) {
+  .module-page aside iframe {
+    max-width: 550px;
+    min-height: 300px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .module-page {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 4rem 1rem 1rem 1rem;
+    padding: 1rem;
   }
 
-  section.module-page main {
+  .module-page main {
     flex-direction: column;
     align-content: center;
     align-items: center;
@@ -151,22 +180,23 @@ section.module-page aside iframe {
     padding: 0.5rem;
   }
 
-  section.module-page aside iframe {
+  .module-page aside iframe {
     min-height: 300px;
+    align-self: center;
   }
 }
 
 @media screen and (max-width: 600px) {
-  section.module-page {
+  .module-page {
     padding: 3rem 0.5rem 0.5rem 0.5rem;
   }
 
-  section.module-page main {
+  .module-page main {
     gap: 4rem;
     flex-wrap: wrap;
   }
 
-  section.module-page aside iframe {
+  .module-page aside iframe {
     height: 200px;
     width: 341px;
   }

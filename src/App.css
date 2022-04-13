@@ -14,7 +14,7 @@ body {
   --free: #74ffb9;
 
   font-family: 'Neue Montreal', 'Roboto', 'Helvetica', sans-serif;
-  color: var(--150);
+  color: var(--100);
   background: var(--500);
 }
 
@@ -26,10 +26,10 @@ svg {
 input[type='text' i] {
   background: transparent;
   color: var(--150);
-  padding: 0px 5px 0 10px;
-  border: 2px solid var(--300);
+  padding: 0rem 0.3125rem 0 0.625rem;
+  border: 0.125rem solid var(--300);
   width: 78vw;
-  height: 2.25rem;
+  height: 36px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -49,12 +49,12 @@ button:active {
 }
 
 button:active {
-  transform: translateY(0.0625rem);
+  transform: translateY(1px);
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0.3125rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -71,34 +71,34 @@ button:active {
 
 /** Text Styles **/
 h1 {
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
 p {
-  font-size: 18px;
-  margin-block-start: 1.6px;
-  margin-block-end: 1.6px;
+  font-size: 1.125rem;
+  margin-block-start: 0.1rem;
+  margin-block-end: 0.1rem;
 }
 
 /* Links and Buttons */
@@ -118,8 +118,8 @@ a:hover {
 }
 
 svg:active,
- a:active {
-  transform: translateY(0.0625rem);
+a:active {
+  transform: translateY(1px);
 }
 
 /** Status Colours **/
@@ -132,21 +132,34 @@ svg:active,
 }
 
 .free {
-  border-color: var(--free);
+  color: var(--free);
+}
+
+.paidea-border {
+  border-color: var(--accent);
+}
+
+.paid-border {
+  border-color: var(--patreon);
 }
 
 .free-border {
   border-color: var(--free);
 }
+
 .paidea-background {
+  border-color: var(--accent);
   background: var(--accent);
 }
 
 .paid-background {
+  border-color: var(--patreon);
+
   background: var(--patreon);
 }
 
 .free-background {
+  border-color: var(--free);
   background: var(--free);
 }
 
@@ -166,7 +179,7 @@ svg:active,
   align-items: center;
 
   min-height: 75vh;
-  padding: 12rem 1rem 1rem 1rem;
+  padding: 192px 16px 16px 16px;
 }
 
 .golden a {
@@ -187,7 +200,7 @@ header.module-page {
   justify-content: flex-start;
   align-items: center;
 
-  height: 510px;
+  height: 31.875rem;
   max-width: 25vw;
 }
 
@@ -195,7 +208,7 @@ header.module-page {
   display: flex;
   background: transparent;
   align-self: end;
-  padding: 0.5rem;
+  padding: 8px;
 }
 
 footer.module-page-badge {
@@ -248,10 +261,10 @@ footer.module-page-badge {
 
 /** Screen Sizing **/
 /* Phones */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 37.5rem) {
   /* Globals */
   h1 {
-    font-size: 3rem;
+    font-size: 48px;
   }
 }
 
@@ -263,7 +276,7 @@ footer.module-page-badge {
   }
 
   50% {
-    transform: translate(0, 10px);
+    transform: translate(0, 0.625rem);
   }
 }
 
@@ -274,4 +287,15 @@ footer.module-page-badge {
   100% {
     opacity: 1;
   }
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

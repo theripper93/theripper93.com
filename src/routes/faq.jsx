@@ -15,7 +15,7 @@ export default function Info() {
 
   const faqCards = () => {
     return (
-      <div className="wrapper">
+      <div className="card-container-page">
         {faqs.map((faq, index) => <FaqCard key={index} faq={faq} />)}
       </div>
     )

@@ -5,20 +5,15 @@ const FaqCard = (props) => {
   return (
     <div className="wrapper">
       <div className="card-solid">
-        <div className="info-wrapper">
           <header>
-            <h3>FAQ Header</h3>
+            <h4>{question}</h4>
           </header>
           <article>
-            <ul>
-              <li>{question}</li>
-              <li>{answer}</li>
-            </ul>
+            <p>{answer}</p>
           </article>
           <aside>
             {link && <Link>Link to page</Link>}
           </aside>
-        </div>
       </div>
       <Outlet />
     </div >

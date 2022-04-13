@@ -23,6 +23,7 @@ const currentLocal = MergeRecursive(locDefault, navLocal);
 
 export const faqs = currentLocal.faqs;
 export const troubleshooting = currentLocal.troubleshooting;
+export const issues = currentLocal.issues;
 
 let sortedMods = [];
 let paidMods = [];
@@ -75,7 +76,7 @@ export const detectSource = (url) => {
     const videoId = url.split("/").pop();
     return {
       source: "youtube",
-      src: `https://www.youtube.com/embed/${videoId}`
+      src: `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`,
     };
   } else if (url.includes("streamable")) {
     const videoId = url.split("/").pop();

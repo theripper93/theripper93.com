@@ -1,33 +1,38 @@
 .card-solid {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-wrap: nowrap;
+
+  backdrop-filter: blur(5px);
+
+  border-right: 0.125rem solid var(--300);
+  border-bottom: 0.125rem solid var(--300);
+  border-left: 0.125rem solid var(--300);
+}
+
+.card-solid header,
+.card-solid summary {
+  display: flex;
+  width: 100%;
+  text-align: center;
   align-content: center;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
 
-  max-width: fit-content;
-  
-  border-right: 0.125rem solid transparent;
-  border-bottom: 0.125rem solid transparent;
-  border-left: 0.125rem solid transparent;
-  transition: all 0.3s ease-in-out;
-}
+  color: var(--500);
 
-.card-solid header {
-  width: 100%;
+  border-right: 0.125rem solid var(--300);
+  border-bottom: 0.125rem solid var(--300);
+  border-left: 0.125rem solid var(--300);
 }
 
 .card-solid h1,
 .card-solid h2,
 .card-solid h3 {
-  width: 100%;
-  padding: 0;
   margin: 0;
-
-  text-align: center;
-  color: var(--500);
-  border: 0.05rem solid transparent;
+  padding: 0.5rem 0.1rem;
 }
 
 .card-solid p {
@@ -54,24 +59,40 @@
     border-color: var(--500);
     color: var(--500);
   }
-  .card-solid h1 {
+
+  .card-solid header,
+  .card-solid summary {
     background-color: var(--500);
     color: var(--100);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .card-solid {
-    height: auto;
-    max-width: max-content;
-  }
-
-  .card-solid h1 {
-    max-width: 100%;
+    border-color: var(--500);
   }
 
   .card-solid p {
-    max-width: max-content;
-    padding: 0.5rem;
+    color: var(--500);
   }
+
+  .card-solid button {
+    background: transparent;
+    border: 2px solid var(--400);
+    color: var(--500);
+  }
+
+  .card-solid button:hover {
+    background: var(--500);
+    border: 2px solid var(--500);
+    color: var(--100);
+  }
+
+  .card-solid button:active {
+    filter: contrast(0.8);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .card-solid header,
+  .card-solid summary {
+    color: var (--100);
+    background: var(--500);
+  }
+  
 }

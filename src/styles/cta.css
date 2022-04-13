@@ -6,8 +6,10 @@
   align-content: space-between;
   align-items: stretch;
   justify-content: center;
-  gap: 152px;
+  gap: 9.5rem;
+  padding: 10rem 0rem;
 
+  background: var(--500);
   background-image: url('../assets/wave.svg');
   background-size: cover;
 }

@@ -525,10 +525,6 @@
     ],
     "troubleshooting": [
         {
-            "title": "Step 0: Are you a Patreon Supporter?",
-            "description": "If you are a Patreon supported you get the priority help with my modules. Please follow the Steps 1,2 and 3 then get back to me in the Discord channel with the information acquired and i'll assist you in resolving the issue."
-        },
-        {
             "title": "Step 1: Check for updates.",
             "description": "Check for any updates that might be available for the module you are having issues with and all of it's dependencies."
         },
@@ -559,9 +555,30 @@
     ],
     "issues": [
         {
-            "title": "Before Opening an issue:",
-            "description": ""
+            "title": "Help/Troubleshooting",
+            "description": "If you have issues setting up one of my modules or using one or more of it's features check the Troubleshooting page then post in the #troubleshooting discord channel, help/setup request in the github issues will be ignored and closed."
         },
+        {
+            "title": "Feature requests/Enhancements",
+            "description": "Post your feature request on discord, the issue tracker on github is just used to track bugs. If you post a feature request it will be automatically closed. Use the #feature-requests-public channel or the higher priority #feature-requests channel (if you are a Patreon)"
+        },
+        {
+            "title": "Bugs",
+            "description": "You can post bugs in the issues of the repo or on the discord. Generally the discord is preferred since it allows for faster interactions and troubleshooting. Whether you are posting the issue here or on discord follow the bug report template or your issue will be closed. If you have clear steps to reproduce the issue report the bug in the github issues or in the #bug-report channel on discord. If you don't have clear steps to reproduce check the Troubleshooting page then post in the #troubleshooting discord channel instead"
+        },
+        {
+            "title": "Before Reporting",
+            "description": [
+                "Make sure you followed the steps in the Troubleshooting page first.",
+                "Try to isolate the issue as much as possible (try to reproduce it on a new scene with minimal amount of factors).",
+                "Provide a list of steps to take to reproduce the issue.",
+                "Once you have this informations use the Bug Report Template."
+            ]
+        },
+        {
+            "title": "BUG REPORT TEMPLATE",
+            "description": "**ALL OTHER MODULES DISABLED?** (true/false)\n\n**Module:** (name and version)\n\n**Conflicting Module (if applicable)**:\n\n**Foundry and System version**: eg. Foundry 0.8.9 DnD5e 1.5.5\n\n**OS, Hosting, Browser (if applicable)**:\n\n**Short Description of bug**:\n\n**Simple steps to reproduce the bug**:\n\n**Screenshots and/or console errors**:"
+        }
     ],
     "free": "Free",
     "paid": "Patreon",
