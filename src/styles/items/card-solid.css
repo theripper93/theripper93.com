@@ -1,0 +1,127 @@
+.card-solid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  background: hsla(30, 10%, 16%, 0.15);
+  backdrop-filter: blur(5px);
+
+  border-right: 0.125rem solid var(--300);
+  border-bottom: 0.125rem solid var(--300);
+  border-left: 0.125rem solid var(--300);
+}
+
+.card-solid header,
+.card-solid summary {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  color: var(--500);
+
+  border-right: 0.125rem solid var(--300);
+  border-bottom: 0.125rem solid var(--300);
+  border-left: 0.125rem solid var(--300);
+}
+
+.card-solid h1,
+.card-solid h2,
+.card-solid h3 {
+  margin: 0;
+  padding: 0.5rem 0.1rem;
+}
+
+.card-solid p {
+  width: auto;
+  text-align: justify;
+  padding: 2rem;
+}
+
+.card-solid button {
+  border: 1px solid transparent;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  width: 7.8125rem;
+  height: 2.5rem;
+  margin: 0.5rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.card-solid svg {
+  color: var(--500);
+}
+
+.card-solid svg:hover {
+  color: var(--400);
+}
+
+@media (prefers-color-scheme: light) {
+  .card-solid {
+    border-color: var(--500);
+    color: var(--500);
+    background: hsla(42, 36%, 89%, 0.15);
+  }
+
+  .card-solid .paid-background,
+  .card-solid .paidea-background,
+  .card-solid .free-background {
+    border-left: none;
+    border-right: none;
+  }
+
+  .card-solid header,
+  .card-solid summary {
+    background-color: var(--500);
+    color: var(--100);
+    border-color: var(--500);
+  }
+
+  .card-solid h1,
+  .card-solid h2,
+  .card-solid h3 {
+    color: var(--100);
+  }
+
+  .card-solid p {
+    color: var(--500);
+    text-shadow: 0 0 20 var(--400);
+  }
+
+  .card-solid svg {
+    color: var(--100);
+  }
+
+  .card-solid svg:hover {
+    color: var(--200);
+  }
+
+  .card-solid button {
+    background: transparent;
+    border: 2px solid var(--400);
+    color: var(--500);
+  }
+
+  .card-solid button:hover {
+    background: var(--500);
+    border: 2px solid var(--500);
+    color: var(--100);
+  }
+
+  .card-solid button:active {
+    filter: contrast(0.8);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card-solid {
+    backdrop-filter: none;
+  }
+}

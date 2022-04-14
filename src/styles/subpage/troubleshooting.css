@@ -1,0 +1,87 @@
+.subpage-container .troubleshooting {
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.troubleshooting-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.troubleshooting-wrapper .wrapper {
+  cursor: pointer;
+  position: relative;
+}
+
+.troubleshooting-wrapper svg {
+  position: absolute;
+  left: 1rem;
+}
+
+.troubleshooting-container .checkmark {
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+svg.svg-inline--fa.fa-arrow-down.connection.free {
+  height: 3rem;
+  width: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  align-self: center;
+}
+
+svg{
+  opacity: 1;
+}
+
+svg.svg-inline--fa.fa-arrow-down.connection.inactive {
+  opacity: 0;
+}
+
+.troubleshooting-wrapper .wrapper:last-child .connection{
+  display: none;
+  height:0;
+}
+
+.paid-background, .free-background, .paid-border, .free-border{
+  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+*{
+  transition: opacity 0.7s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .troubleshooting-wrapper h4{
+    font-size: 1.25rem;
+  }
+
+  .troubleshooting-wrapper .fa-2x {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .troubleshooting h1{
+    font-size: 2rem;
+  }
+
+  .troubleshooting-wrapper .fa-2x {
+    display: none;
+  }
+}

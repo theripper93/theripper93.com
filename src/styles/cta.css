@@ -1,0 +1,304 @@
+/* Call to Action / Subscribe */
+#hub {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-items: stretch;
+  justify-content: center;
+  gap: 9.5rem;
+  padding: 10rem 0rem;
+
+  background: var(--500);
+  background-image: url('../assets/wave.svg');
+  background-size: cover;
+}
+
+.card-cta {
+  display: flex;
+  padding: 0.75rem 1.625rem;
+  min-height: 60vh;
+  min-width: 20%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--500);
+  border: 0.125rem solid var(--300);
+  box-shadow: 0.4375rem 0.4375rem var(--500),
+    0.4375rem 0.4375rem 0 0.125rem var(--400);
+}
+
+.card-cta .patreon:hover {
+  cursor: default;
+  border: 0.125rem solid var(--patreon);
+  box-shadow: 0 0 0.1875rem var(--patreon), 0.4375rem 0.4375rem var(--500),
+    0.4375rem 0.4375rem 0 0.125rem var(--400);
+}
+
+.card-cta .hub:hover {
+  cursor: default;
+  border: 0.125rem solid var(--accent);
+  box-shadow: 0 0 0.1875rem var(--accent), 0.4375rem 0.4375rem var(--500),
+    0.4375rem 0.4375rem 0 0.125rem var(--400);
+}
+
+.card-cta .discord:hover {
+  cursor: default;
+  border: 0.125rem solid var(--discord);
+  box-shadow: 0 0 0.1875rem var(--discord), 0.4375rem 0.4375rem var(--500),
+    0.4375rem 0.4375rem 0 0.125rem var(--400);
+}
+
+/* Text */
+.cta summary {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.cta summary ul {
+  max-width: fit-content;
+  align-self: flex-start;
+  font-size: 20px;
+  font-weight: 400;
+  padding-right: 10px;
+}
+
+.cta summary li {
+  margin: 1.6px 0 17.6px 0;
+}
+
+.cta h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 48px;
+}
+
+.cta .patreon h2,
+.cta .patreon summary li::marker {
+  color: var(--patreon);
+}
+
+.cta .discord h2,
+.cta .discord summary li::marker {
+  color: var(--discord);
+}
+
+.cta .hub h2,
+.cta .hub summary li::marker {
+  color: var(--accent);
+}
+
+.cta h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: 550;
+  text-align: center;
+}
+
+/* Buttons */
+.cta button {
+  color: var(--100);
+  background: var(--500);
+  border: 0.0625rem solid transparent;
+
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 0.0625rem;
+
+  width: 7.8125rem;
+  height: 2.5rem;
+  margin-bottom: 16px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.cta .discord button {
+  border: 0.125rem solid var(--discord);
+}
+
+.cta .discord button:hover {
+  color: var(--500);
+  background: var(--discord);
+}
+
+.cta .discord button:active {
+  color: var(--500);
+  background: var(--discord);
+  filter: brightness(1.1);
+  transform: translateY(0.125rem);
+}
+
+.cta .patreon button {
+  border: 0.125rem solid var(--patreon);
+}
+
+.cta .patreon button:hover {
+  color: var(--500);
+  background: var(--patreon);
+}
+
+.cta .patreon button:active {
+  color: var(--500);
+  background: var(--patreon);
+  filter: brightness(1.1);
+  transform: translateY(0.125rem);
+}
+
+.cta .hub button {
+  border: 0.125rem solid var(--accent);
+}
+
+.cta .hub button:hover {
+  color: var(--500);
+  background: var(--accent);
+}
+
+.cta .hub button:active {
+  color: var(--500);
+  background: var(--accent);
+  filter: brightness(1.1);
+  transform: translateY(0.125rem);
+}
+
+/** Media Queries **/
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  /* Body (Light) */
+  #hub {
+    background: var(--100);
+    background-image: url('../assets/wave.svg');
+    background-size: cover;
+  }
+
+  .cta .card-cta {
+    background: var(--100);
+    box-shadow: 0.4375rem 0.4375rem var(--100),
+      0.4375rem 0.4375rem 0 0.125rem var(--200);
+  }
+
+  .cta .patreon:hover {
+    box-shadow: 0 0 0rem var(--patreon), 0.4375rem 0.4375rem var(--100),
+      0.4375rem 0.4375rem 0 0.125rem var(--200);
+      border-color: var(--patreon);
+  }
+
+  .cta .discord:hover {
+    box-shadow: 0 0 0rem var(--discord), 0.4375rem 0.4375rem var(--100),
+      0.4375rem 0.4375rem 0 0.125rem var(--200);
+       border-color: var(--discord);
+ }
+
+  .cta .hub:hover {
+    background: var(--100);
+    box-shadow: 0 0 0rem var(--accent), 0.4375rem 0.4375rem var(--100),
+      0.4375rem 0.4375rem 0 0.125rem var(--200);
+       border-color: var(--accent);
+ }
+
+  /* Text (Light) */
+  .cta .patreon h2 {
+    filter: drop-shadow(2px 2px 0px #eeafa1);
+  }
+
+  .cta .hub h2 {
+    filter: drop-shadow(2px 2px 0px #e9c359);
+  }
+
+  .cta .discord h2 {
+    filter: drop-shadow(2px 2px 0px #a1a9ee);
+  }
+
+  /* Buttons (Light) */
+  .cta .card-cta button {
+    background: var(--100);
+    color: var(--400);
+  }
+
+  .cta .card-cta button {
+    border-color: var(--400);
+    box-shadow: 0.125rem 0.125rem 0 var(--400);
+  }
+
+  .cta .patreon button:hover {
+    background-color: transparent;
+    filter: contrast(1.2);
+    border-color: var(--patreon);
+    box-shadow: 0.125rem 0.125rem 0 var(--patreon);
+  }
+
+  .cta .discord button:hover {
+    background-color: transparent;
+    filter: brightness(1);
+    border-color: var(--discord);
+    box-shadow: 0.125rem 0.125rem 0 var(--discord);
+  }
+
+  .cta .hub button:hover {
+    background-color: transparent;
+    filter: brightness(1);
+    border-color: var(--accent);
+    box-shadow: 0.125rem 0.125rem 0 var(--accent);
+  }
+
+  .cta .patreon button:active {
+    background-color: transparent;
+    filter: brightness(1);
+    box-shadow: 0.0625rem 0.0625rem 0 var(--patreon) inset;
+  }
+
+  .cta .discord button:active {
+    background-color: transparent;
+    filter: brightness(1);
+    box-shadow: 0.0625rem 0.0625rem 0 var(--discord) inset;
+  }
+
+  .cta .hub button:active {
+    background-color: transparent;
+    filter: brightness(1);
+    box-shadow: 0.0625rem 0.0625rem 0 var(--accent) inset;
+  }
+}
+
+/** Screen Sizing **/
+@media screen and (max-width: 1200px) {
+  .cta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 152px;
+    background-size: cover;
+    align-content: center;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .cta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 5rem;
+    background-size: cover;
+    align-content: center;
+  }
+
+  .card-cta {
+    min-width: 50%;
+  }
+}

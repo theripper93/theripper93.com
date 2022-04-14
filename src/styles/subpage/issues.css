@@ -1,0 +1,20 @@
+.subpage-container {
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+div {
+  white-space: pre-line;
+  vertical-align: bottom;
+}
+
+article {
+  text-align: left;
+  width: 100%;
+}
