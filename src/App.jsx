@@ -8,9 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* Components */
 import Navbar from './components/Navbar';
-import SkillCard from './components/skillcard';
-import Searchbar from './components/searchbar';
-import ModuleGrid from './components/modulegrid';
+import SkillCard from './components/SkillCard';
+import Searchbar from './components/Searchbar';
+import ModuleGrid from './components/ModuleGrid';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
