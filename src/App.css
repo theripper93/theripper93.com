@@ -246,7 +246,6 @@ header.module-page {
   background: transparent;
   align-self: end;
   padding: 8px;
-  text-shadow: 0 0 20px var(--400);
 }
 
 footer.module-page-badge {
