@@ -49,9 +49,8 @@ svg.svg-inline--fa.fa-arrow-down.connection.free {
   width: 1rem;
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: calc(50% - 0.4rem);
   align-self: center;
-  transform: translateX(-50%);
 }
 
 svg {
