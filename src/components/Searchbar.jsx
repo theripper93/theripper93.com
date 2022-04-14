@@ -21,9 +21,8 @@ const Searchbar = (props) => {
       }}></input>
 
       <button label="Module Filter" className={getColor(buttonState)} onClick={
-        (event) => {
+        () => {
           setButtonState((buttonState + 1) % 3);
-          console.log(buttonState);
         }
       }>
         <FontAwesomeIcon icon="fa-solid fa-filter" size="xl" />

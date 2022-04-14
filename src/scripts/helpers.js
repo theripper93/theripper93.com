@@ -34,7 +34,6 @@ export const getGitReadme = async (url, branch) => {
   const readme = await fetch(readmePath, { cache: "no-cache" })
     .then((response) => response.text())
     .then((data) => data);
-  console.log(readme);
   return readme;
 };
 
@@ -44,7 +43,7 @@ export const locData = async () => {
   try{
     navLocal = await import(`../local/${navigator.language}.json`)
   }catch(e){
-    console.log(e)
+
   }
   const currentLocal = MergeRecursive({...locDefault}, {...navLocal});
 
