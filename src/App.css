@@ -1,5 +1,5 @@
 /** Global Styles **/
-body {
+:root {
   --000: #ffcb77;
   --100: #ede7d9;
   --150: #c8c5bf;
@@ -9,57 +9,20 @@ body {
   --500: #2d2925;
 
   --accent: #ffcb77;
+  --patreon: #ff8870;
+  --free: #75ffba;
   --discord: #7c86ff;
-  --patreon: #ff8970;
-  --free: #74ffb9;
+}
 
+body {
   font-family: 'Neue Montreal', 'Roboto', 'Helvetica', sans-serif;
   color: var(--100);
   background: var(--500);
 }
 
-svg {
-  color: var(--150);
-}
-
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-
-/* Text Input */
-input[type='text' i] {
-  background: transparent;
-  color: var(--150);
-  padding: 0rem 0.3125rem 0 0.625rem;
-  border: 0.125rem solid var(--300);
-  width: 78vw;
-  height: 36px;
-  transition: all 0.3s ease-in-out;
-}
-
-input:focus-visible {
-  outline-style: none;
-  border-color: var(--100);
-}
-
-input::placeholder {
-  color: var(--200);
-}
-
-button:hover,
-button:active {
-  cursor: pointer;
-  filter: brightness(1.1);
-}
-
-button:active {
-  transform: translateY(1px);
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./assets/fonts/PPNeueMontreal-Regular.otf') format('opentype');
 }
 
 /* Scrollbar */
@@ -79,13 +42,42 @@ button:active {
   background: var(--accent);
 }
 
-/** Text Styles **/
-h0 {
-  font-size: 4rem;
-  font-weight: 700;
-  text-align: center;
+/* SVGs and Icons */
+svg {
+  color: var(--150);
 }
 
+/* No Select Class */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  cursor: pointer;
+}
+
+/* Text Input */
+input[type='text' i] {
+  background: transparent;
+  color: var(--150);
+  padding: 0rem 0.3125rem 0 0.625rem;
+  border: 0.125rem solid var(--300);
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus-visible {
+  outline-style: none;
+  border-color: var(--100);
+}
+
+input::placeholder {
+  color: var(--200);
+}
+
+/** Text Styles **/
 h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -123,8 +115,7 @@ p {
 
 li {
   font-size: 1.2rem;
-  margin-block-start: 0.1rem;
-  margin-block-end: 0.1rem;
+  text-align: left;
 }
 
 strong {
@@ -155,6 +146,18 @@ a:active {
   transform: translateY(1px);
 }
 
+/* Buttons */
+button:hover,
+button:active {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Details and Summary Classes*/
 summary {
   font-weight: bold;
 }
@@ -162,26 +165,17 @@ summary {
 /** Status Colours **/
 .paidea {
   color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .paid {
   color: var(--patreon);
+  text-decoration-color: var(--patreon);
 }
 
 .free {
   color: var(--free);
-}
-
-.paidea-border {
-  border-color: var(--accent);
-}
-
-.paid-border {
-  border-color: var(--patreon);
-}
-
-.free-border {
-  border-color: var(--free);
+  text-decoration-color: var(--free);
 }
 
 .paidea-background {
@@ -191,7 +185,6 @@ summary {
 
 .paid-background {
   border-color: var(--patreon);
-
   background: var(--patreon);
 }
 
@@ -241,6 +234,7 @@ header.module-page {
   max-width: 25vw;
 }
 
+/* Module Status Class */
 .badge {
   display: flex;
   background: transparent;
@@ -268,6 +262,7 @@ footer.module-page-badge {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234b4237' fill-opacity='0.32'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-repeat: repeat;
 }
@@ -275,11 +270,14 @@ footer.module-page-badge {
 /** Light Mode **/
 @media (prefers-color-scheme: light) {
   /* Global */
+  :root {
+    --accent: #daa107;
+    --discord: #4d5c93;
+    --patreon: #cc4122;
+    --free: #26ab69;
+  }
+
   body {
-    --accent: hsl(44, 94%, 44%);
-    --discord: hsl(227, 31%, 44%);
-    --patreon: hsl(11, 67%, 58%);
-    --free: hsl(150, 64%, 41%);
     color: var(--400);
     background: var(--100);
   }
@@ -295,7 +293,7 @@ footer.module-page-badge {
   }
 
   strong {
-    background: -webkit-linear-gradient(25deg,#e56f44,#e7c04a);
+    background: -webkit-linear-gradient(25deg, #e56f44, #d96d3b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -303,6 +301,25 @@ footer.module-page-badge {
 
   button:hover {
     filter: contrast(1.2);
+  }
+
+  /* Text Input */
+
+  input[type='text' i] {
+    background: transparent;
+    color: var(--400);
+    border: 2px solid var(--300);
+    height: 2.25rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  input:focus-visible {
+    outline-style: solid;
+    border-color: var(--500);
+  }
+
+  input::placeholder {
+    color: var(--400);
   }
 
   /* Scrollbar */
@@ -329,23 +346,12 @@ footer.module-page-badge {
 }
 
 @media screen and (max-width: 768px) {
-  h0 { 
+  h0 {
     font-size: 2.5rem;
   }
 }
 
 /* Animation */
-@keyframes slide {
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(0, 0.625rem);
-  }
-}
-
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;

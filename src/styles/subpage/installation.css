@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-.subpage-container.install{
+.subpage-container.install {
   padding-left: 10vw;
   padding-right: 10vw;
   padding-top: 0;
@@ -33,10 +33,6 @@
   margin-top: 5vh;
 }
 
-.install .intro h3 {
-  margin-block-start: 4rem;
-  margin-block-end: 0;
-}
 /* Instruction Sections */
 .install .free-installation,
 .install .patreon-installation {
@@ -59,7 +55,6 @@
   text-decoration-color: var(--free);
 }
 
-
 .install .patreon-installation h2 {
   text-decoration-color: var(--patreon);
 }
@@ -74,6 +69,7 @@
   width: 90%;
   gap: 1rem;
 }
+
 /* Card Styling */
 .install .card-solid {
   border: 4px solid var(--400);
@@ -93,8 +89,10 @@
 }
 
 .install li {
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 1.5rem;
+  text-align: left;
 }
+
 .install li::marker {
   color: var(--300);
 }
@@ -122,6 +120,14 @@
   .install .card-solid .paid-background,
   .install .card-solid.free-border,
   .install .card-solid.paid-border {
-    border-color: var(--500);
+    border: 1px solid var(--500);
+  }
+}
+
+/* Screen Sizing */
+@media screen and (max-width: 768px) {
+  .install li {
+    padding: 0.1rem 1.5rem;
+    font-size: 1.25rem;
   }
 }

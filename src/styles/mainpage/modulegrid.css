@@ -18,6 +18,11 @@ section#modules {
   );
 }
 
+.module .grid input[type='text' i] {
+  width: 78vw;
+  height: 36px;
+}
+
 .searchbar {
   position: relative;
 }
@@ -71,24 +76,6 @@ section#modules {
       hsla(42, 36%, 89%, 0.9) 5.5%,
       var(--100) 10%
     );
-  }
-
-  input[type='text' i] {
-    background: transparent;
-    color: var(--400);
-    border: 2px solid var(--300);
-    width: 78vw;
-    height: 2.25rem;
-    transition: all 0.3s ease-in-out;
-  }
-
-  input:focus-visible {
-    outline-style: none;
-    border-color: var(--500);
-  }
-
-  input::placeholder {
-    color: var(--400);
   }
 
   .searchbar button svg {

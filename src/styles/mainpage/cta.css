@@ -10,7 +10,7 @@
   padding: 10rem 0rem;
 
   background: var(--500);
-  background-image: url('../assets/wave.svg');
+  background-image: url('/src/assets/wave.svg');
   background-size: cover;
 }
 
@@ -179,7 +179,7 @@
   /* Body (Light) */
   #hub {
     background: var(--100);
-    background-image: url('../assets/wave.svg');
+    background-image: url('/src/assets/wave.svg');
     background-size: cover;
   }
 

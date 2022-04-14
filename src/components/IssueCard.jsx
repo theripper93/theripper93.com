@@ -24,14 +24,10 @@ const IssueCard = (props) => {
           <header className={`paidea-background`}>
             <h4>{title}</h4>
           </header>
-          <article>
-            {getDescription(description)}
+        <article className="report-form">
+            {props.children ?? getDescription(description)}
           </article>
-          <aside>
-            {link && <Link>Link to page</Link>}
-          </aside>
       </div>
-      <Outlet />
     </div >
   )
 }

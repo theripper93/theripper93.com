@@ -1,17 +1,24 @@
-import { moduleData, premiumMods } from '../scripts/helpers.js';
 import { useState } from 'react';
+import { moduleData, premiumMods } from '../scripts/helpers.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import '../styles/subpage/modulepage.css';
+/* CSS */
 import '../styles/items/card-solid.css';
+import '../styles/modulepage/modulepage.css';
+import '../styles/modulepage/intro.css';
+
+/* Components */
 import Video from '../components/Video.jsx';
 import Navbar from '../components/Navbar';
+import FaqCard from '../components/FaqCard';
+import ModuleGuide from '../components/ModuleGuide.jsx';
 
 
 const Subpage = () => {
 
   const [premiumData, setPremiumData] = useState(null);
 
-  const moduleId = window.location.pathname.replace("/module/", "");
+  const moduleId = window.location.hash.split('/').pop();
   const data = moduleData.find(mod => mod.id === moduleId);
   premiumMods().then((pData) => {
     if (pData[moduleId]) {
@@ -19,17 +26,22 @@ const Subpage = () => {
     }
   });
 
+  const guides = data.guides ?? [];
+  const troubleshooting = data.troubleshooting ?? [];
+
   return (
-    <div className='wrapper'>
+    <div className={`subpage ${data.status}-wrapper`}>
       <Navbar></Navbar>
-      <section className='module-page'>
-        <main className={data.status}>
+      <section className='module-intro'>
+        <main>
           <article className='card-solid'>
-            <header className={`${data.status}-background`}>
-              <h1>{data.name}</h1>
-            </header>
-            <p>{data.fulldesc}</p>
-            <a href={premiumData?.downloadURL ?? `https://www.foundryvtt-hub.com/package/${moduleId}/`} rel="noreferrer" target="_blank"><button className={`${data.status}-background`}>Download</button></a>
+            <div className='content-wrapper'>
+              <header className={`${data.status}-background`}>
+                <h1>{data.name}</h1>
+              </header>
+              <p>{data.fulldesc}</p>
+              <a href={premiumData?.downloadURL ?? `https://www.foundryvtt-hub.com/package/${moduleId}/`} rel="noreferrer" target="_blank"><button className={`${data.status}-background`}>Download</button></a>
+            </div>
             <footer className="badge">
               <div className={data.status}>
                 {data.statusText}
@@ -40,13 +52,22 @@ const Subpage = () => {
             {data.media && <Video module={data}></Video>}
           </aside>
         </main>
-        {/*
-     <section>
+        {(troubleshooting.length > 0 || guides.length > 0) && <FontAwesomeIcon onClick={()=>  document.getElementById("info").scrollIntoView({ behavior: 'smooth', block: 'start' })} icon="fa-solid fa-arrow-down" size="5x" fixedWidth />}
+      </section>
+      <section className='additional content' id="info">
+        {troubleshooting.length > 0 && <section className='module-troubleshooting'>
+          <h2>Troubleshooting</h2>
+          <main>
+            {troubleshooting.map((troub, index) => <FaqCard key={index} faq={{ question: troub.title, answer: troub.desc, status: "basic" }}></FaqCard>)}
+          </main>
+        </section>}
+        {guides.length > 0 && <section className='module-guides'>
           <h2>Guides</h2>
-          <p>{JSON.stringify(premiumData)}</p>
-          <p>{JSON.stringify(data)}</p>
-        </section> 
-*/}
+          <main>
+            {guides.map((guide, index) => <ModuleGuide key={index} title={guide.title} url={guide.url}></ModuleGuide>)}
+          </main>
+        </section>}
+
       </section>
     </div>
   )

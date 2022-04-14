@@ -71,12 +71,12 @@ export const moduleData = sortedMods.map((name) => {
   return currentLocal.modules[key];
 });
 
-export const detectSource = (url) => {
+export const detectSource = (url, autoplay = true) => {
   if (url.includes("youtu")) {
     const videoId = url.split("/").pop();
     return {
       source: "youtube",
-      src: `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`,
+      src: `https://www.youtube.com/embed/${videoId}?autoplay=${autoplay ? 1 : 0}&mute=${autoplay ? 1 : 0}`,
     };
   } else if (url.includes("streamable")) {
     const videoId = url.split("/").pop();
@@ -94,11 +94,6 @@ export const detectSource = (url) => {
   return null;
 };
 
-export const detectNavType = () => {
-
-  const location = window.location.pathname;
-  const path = location.split("/");
-  const navType = path[1];
-  return navType;
-
+export const detectNavType = (location) => {
+  return location.hash ? location.hash : location.pathname;
 };

@@ -1,6 +1,6 @@
 import { moduleData } from '../scripts/helpers.js';
 import ModuleCard from './ModuleCard';
-import '../styles/modulegrid.css';
+import '../styles/mainpage/modulegrid.css';
 
 const ModuleGrid = (props) => {
   const { buttonState, searchTerm } = props;

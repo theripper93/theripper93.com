@@ -45,31 +45,31 @@
       ],
         "guides": [
         {
-            "title": "Levels Tutorial Part 1",
+            "title": "Tutorial Part 1",
             "url": "https://youtu.be/ELlweNunn4g"
         },
         {
-            "title": "Levels Tutorial Part 2",
+            "title": "Tutorial Part 2",
             "url": "https://youtu.be/_nynikU9_ao"
         },
         {
-            "title": "Levels Tutorial Part 3",
+            "title": "Tutorial Part 3",
             "url": "https://youtu.be/NCg6T7lMrRs"
         },
         {
-            "title": "Levels - The Polygon",
+            "title": "The Polygon",
             "url": "https://youtu.be/HD4CXRmG5ss"
         },
         {
-            "title": "Levels - On Is Basement, Show even when below, Don't hide in the fog",
+            "title": "On Is Basement, Show even when below, Don't hide in the fog",
             "url": "https://youtu.be/2u3QpTa0Ld8"
         },
         {
-            "title": "Levels - On token Height (or LOS Height)",
+            "title": "On token Height (or LOS Height)",
             "url": "https://youtu.be/ToUmTStUER8"
         },
         {
-            "title": "Levels - On the new UI",
+            "title": "On the new UI",
             "url": "https://youtu.be/NUmSFhhQjAI"
         }
       ]
@@ -399,23 +399,23 @@
             "url": "https://youtu.be/h_EZ08wD4c4"
         },
         {
-            "title": "3D Canvas - Full feature showcase and tutorial",
+            "title": "Full feature showcase and tutorial",
             "url": "https://youtu.be/C5Fv8uU0tkc"
         },
         {
-            "title": "3D Canvas - Frequently Asked Questions",
+            "title": "Frequently Asked Questions",
             "url": "https://youtu.be/-eu-zTtRnLQ"
         },
         {
-            "title": "3D Canvas - Converting STLs with Blender",
+            "title": "Converting STLs with Blender",
             "url": "https://youtu.be/j8sZ-VM0FoI"
         },
         {
-            "title": "3D Canvas - How to 3d-ify 2D battlemaps with Blender",
+            "title": "How to 3d-ify 2D battlemaps with Blender",
             "url": "https://youtu.be/n6FVHp3wr0I"
         },
         {
-            "title": "3D Canvas - Easy 3D Dungeons with Blender and the Dungeon Pack",
+            "title": "Easy 3D Dungeons with Blender and the Dungeon Pack",
             "url": "https://youtu.be/wvd7Wm7WvHQ"
         }
       ]
@@ -584,8 +584,42 @@
             ]
         },
         {
-            "title": "BUG REPORT TEMPLATE",
-            "description": "**ALL OTHER MODULES DISABLED?** (true/false)\n\n**Module:** (name and version)\n\n**Conflicting Module (if applicable)**:\n\n**Foundry and System version**: eg. Foundry 0.8.9 DnD5e 1.5.5\n\n**OS, Hosting, Browser (if applicable)**:\n\n**Short Description of bug**:\n\n**Simple steps to reproduce the bug**:\n\n**Screenshots and/or console errors**:"
+          "title": "BUG REPORT TEMPLATE",
+          "footer": "Please make sure you completed all the steps and checked the required boxes.",
+          "description": [
+            { 
+                "title": "ALL OTHER MODULES DISABLED?",
+                "placeholder": false
+            },
+            { 
+                "title": "Module(s):",
+                "placeholder": "name and version"
+            },
+            { 
+                "title": "Conflicting Module (if applicable):",
+                "placeholder": "name and version"
+            },
+            {
+                "title": "Foundry and System version:",
+                "placeholder": "eg. Foundry 0.8.9 DnD5e 1.5.5"
+            },
+            { 
+                "title": "OS, Hosting, Browser (if applicable):",
+                "placeholder": "eg. Windows 10, The Forge, Chrome"
+            },
+            { 
+                "title": "Short Description of bug:",
+                "placeholder": "eg. I can't place tiles on the map"
+            },
+            { 
+                "title": "Simple steps to reproduce the bug:",
+                "placeholder": ""
+            },
+            { 
+                "title": "I will include Screenshots and/or console errors when posting the message or issue",
+                "placeholder": false
+            }
+          ]
         }
     ],
     "free": "Free",

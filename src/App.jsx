@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import './App.css';
-import './styles/mainpage.css';
-import './styles/cta.css';
+import './styles/mainpage/mainpage.css';
+import './styles/mainpage/cta.css';
 /* Misc Libraries */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -23,7 +23,7 @@ function App() {
         <video autoPlay muted loop id="video-bg">
           <source src="./src/assets/videobanner.mp4" type="video/mp4" />
         </video>
-        <h0>Heyo, I make Foundry VTT Modules</h0>
+        <h1>Heyo, I make Foundry VTT Modules</h1>
         <HashLink smooth to='/#modules'><FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth /></HashLink>
       </header>
       <section className="module list" id="modules">
@@ -82,7 +82,7 @@ function App() {
       <footer className="golden" id="contact">
         <summary>
           <main className='header-wrapper'>
-            <h0>Need to contact me?</h0>
+            <h1>Need to contact me?</h1>
             <h2>I'm open to do paid projects for Foundry VTT</h2>
           </main>
           <main className='skillset'>

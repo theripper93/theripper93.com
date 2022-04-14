@@ -7,39 +7,37 @@
   background: hsla(30, 10%, 16%, 0.15);
   backdrop-filter: blur(5px);
 
-  border-right: 0.125rem solid var(--300);
-  border-bottom: 0.125rem solid var(--300);
-  border-left: 0.125rem solid var(--300);
+  border: 0.125rem solid var(--300);
 }
 
 .card-solid header,
 .card-solid summary {
-  display: flex;
   width: 100%;
+  display: flex;
   text-align: center;
   align-content: center;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-
-  color: var(--500);
-
-  border-right: 0.125rem solid var(--300);
-  border-bottom: 0.125rem solid var(--300);
-  border-left: 0.125rem solid var(--300);
 }
 
 .card-solid h1,
 .card-solid h2,
-.card-solid h3 {
+.card-solid h3,
+.card-solid h4 {
   margin: 0;
   padding: 0.5rem 0.1rem;
+  color: var(--500);
+}
+
+.card-solid p,
+.card-solid ol {
+  width: auto;
+  text-align: justify;
 }
 
 .card-solid p {
-  width: auto;
-  text-align: justify;
-  padding: 2rem;
+  padding: 0.5rem 1rem;
 }
 
 .card-solid button {
@@ -73,8 +71,7 @@
   .card-solid .paid-background,
   .card-solid .paidea-background,
   .card-solid .free-background {
-    border-left: none;
-    border-right: none;
+    border-color: var(--500) !important;
   }
 
   .card-solid header,
@@ -86,7 +83,8 @@
 
   .card-solid h1,
   .card-solid h2,
-  .card-solid h3 {
+  .card-solid h3,
+  .card-solid h4 {
     color: var(--100);
   }
 
@@ -95,7 +93,8 @@
     text-shadow: 0 0 20 var(--400);
   }
 
-  .card-solid svg {
+  .card-solid svg,
+  .card-solid header svg {
     color: var(--100);
   }
 
