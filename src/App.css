@@ -295,7 +295,7 @@ footer.module-page-badge {
   }
 
   strong {
-    background: -webkit-linear-gradient(25deg, #d4572a, #ca9b0c);
+    background: -webkit-linear-gradient(25deg,#e56f44,#e7c04a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
