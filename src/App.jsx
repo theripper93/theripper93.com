@@ -7,7 +7,6 @@ import './styles/cta.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* Components */
-import Navbar from './components/navbar';
 import SkillCard from './components/skillcard';
 import Searchbar from './components/searchbar';
 import ModuleGrid from './components/modulegrid';
