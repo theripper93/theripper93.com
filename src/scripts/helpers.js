@@ -1,5 +1,10 @@
 import * as locDefault from '../local/en-US.json';
-const navLocal = import(`../local/${navigator.language}.json`) ?? {};
+let navLocal = {};
+try{
+  navLocal = await import(`../local/${navigator.language}.json`)
+}catch(e){
+  console.log(e)
+}
 
 function MergeRecursive(obj1, obj2) {
   for (var p in obj2) {
@@ -19,7 +24,7 @@ function MergeRecursive(obj1, obj2) {
   return obj1;
 }
 
-const currentLocal = MergeRecursive(locDefault, navLocal);
+const currentLocal = MergeRecursive({...locDefault}, {...navLocal});
 
 export const faqs = currentLocal.faqs;
 export const troubleshooting = currentLocal.troubleshooting;

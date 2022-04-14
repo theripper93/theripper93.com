@@ -71,9 +71,6 @@
 }
 
 /* Card Styling */
-.install .card-solid {
-  border: 4px solid var(--400);
-}
 
 .install .card-solid details {
   width: 100%;

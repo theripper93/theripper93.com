@@ -57,6 +57,10 @@
             "url": "https://youtu.be/NCg6T7lMrRs"
         },
         {
+            "title": "Creating and exporting tiles for Levels with Dungeondraft",
+            "url": "https://youtu.be/STkloDe7NXU"
+        },
+        {
             "title": "The Polygon",
             "url": "https://youtu.be/HD4CXRmG5ss"
         },
@@ -90,7 +94,13 @@
         "fulldesc": "Show a Solasta inspired combat hud for easy accessibility of actions and bonus actions etc. Replaces a lot of the character sheet functionality during combat so that you don't need to open it. Basically, token action HUD on steroids.",
         "status": "free",
         "media": "https://youtu.be/ODKi0AuDNA8",
-        "link": "https://github.com/theripper93/enhancedcombathud"
+        "link": "https://github.com/theripper93/enhancedcombathud",
+        "guides": [
+            {
+                "title": "Argon Combat HUD Basic Tutorial",
+                "url": "https://youtu.be/W_nHwdf_3kw"
+            }
+        ]
     },
     "automated-evocations": {
         "name": "Automated Evocations",
@@ -99,7 +109,16 @@
         "fulldesc": "A user interface to manage companions with summoning animations and automated summoning for spells.",
         "status": "free",
         "media": "https://youtu.be/lVTvbBXKiSg",
-        "link": "https://github.com/theripper93/automated-evocations"
+        "link": "https://github.com/theripper93/automated-evocations",
+        "guides": [
+            {
+                "title": "Automated Evocations Basic Tutorial",
+                "url": "https://youtu.be/VcAz8t6-lTY"
+            },{
+                "title": "Automated Evocations Tutorial: Advanced Macros and More",
+                "url": "https://youtu.be/umXF2p0O12Y"
+            }
+        ]
     },
     "betterroofs": {
         "name": "Better Roofs",
@@ -484,7 +503,7 @@
     "faqs": [
         {
             "question": "How do I install your Free or Premium modules?",
-            "answer": "For installation instructions on how to install the modules, please visit the installation page.",
+            "answer": "For installation instructions, please visit the installation subpage.",
             "link": "",
             "status": "free"
         },
@@ -499,6 +518,12 @@
             "answer": "Before reporting a bug, please visit the Bug Report page and follow the instructions to provide me with the most information to quickly resolve the issue.",
             "link": "",
             "status": "free"
+        },
+        {
+            "question": "I'm a Patreon, how do i get access to the modules?",
+            "answer": "You can find Download links to all the premium modules in the respective module page in this website.",
+            "link": "",
+            "status": "paid"
         },
         {
             "question": "How does the Patreon subscription work?",
@@ -586,6 +611,7 @@
         {
           "title": "BUG REPORT TEMPLATE",
           "footer": "Please make sure you completed all the steps and checked the required boxes.",
+          "screenerr": "Screenshots and/or Console Errors",
           "description": [
             { 
                 "title": "ALL OTHER MODULES DISABLED?",

@@ -29,7 +29,8 @@ nav .links .subpage {
   align-items: center;
 }
 
-nav a {
+nav a,
+nav a:visited {
   color: var(--100);
   font-weight: 400;
 }
@@ -176,7 +177,6 @@ nav .socials svg:active {
   transform: translateY(1px);
 }
 
-
 @media screen and (max-width: 543) {
   nav .socials {
     padding-right: 0.25rem;
@@ -199,6 +199,7 @@ nav .socials svg:active {
 
   nav .links .landing a,
   nav .links .subpage a,
+  nav a:visited,
   nav .links .socials svg {
     color: var(--100);
     transition: all 0.3s ease-in-out;

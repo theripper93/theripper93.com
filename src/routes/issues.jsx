@@ -17,14 +17,7 @@ export default function BugReport() {
 
   const copyToClipboard = () => {
     const textArea = document.createElement('textarea');
-    const content = `
-    **${bugReport.description[0].title}: **True
-    \n**${bugReport.description[1].title}: **${issueTemplate.modules}
-    \n**${bugReport.description[2].title}: **${issueTemplate.conflicts}
-    \n**${bugReport.description[3].title}: **${issueTemplate.versions}
-    \n**${bugReport.description[4].title}: **${issueTemplate.platforms}
-    \n**${bugReport.description[5].title}: **${issueTemplate.description}
-    \n**${bugReport.description[6].title}: **${issueTemplate.steps}`;
+    const content = `**${bugReport.description[0].title}: **True\n**${bugReport.description[1].title} **${issueTemplate.modules}\n**${bugReport.description[2].title} **${issueTemplate.conflicts}\n**${bugReport.description[3].title} **${issueTemplate.versions}\n**${bugReport.description[4].title} **${issueTemplate.platforms}\n**${bugReport.description[5].title} **${issueTemplate.description}\n**${bugReport.description[6].title} **\n\n${issueTemplate.steps}\n\n**${bugReport.screenerr}**`;
     textArea.value = content;
     document.body.appendChild(textArea);
     textArea.select();

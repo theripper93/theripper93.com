@@ -30,10 +30,11 @@
   color: var(--500);
 }
 
-.card-solid p,
-.card-solid ol {
-  width: auto;
-  text-align: justify;
+.card-solid .basic-background h1,
+.card-solid .basic-background h2,
+.card-solid .basic-background h3,
+.card-solid .basic-background h4 {
+  color: var(--100);
 }
 
 .card-solid p {

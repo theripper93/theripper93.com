@@ -26,6 +26,14 @@ header.hero h1 {
   padding-top: 20vh;
 }
 
+header.hero a {
+  color: var(--accent);
+}
+
+header.hero a:hover {
+  color: linear-gradient(to right, var(--accent), var(--accent-dark));
+}
+
 header.hero svg {
   color: var(--150);
   margin-top: 30vh;
@@ -139,7 +147,7 @@ section .frontpage {
   section .frontpage {
     background: var(--100);
   }
-  
+
   /* Hero Banner (Light) */
   #contact {
     transform: translateY(-1px);

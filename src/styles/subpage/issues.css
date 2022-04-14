@@ -43,11 +43,13 @@ article {
 }
 
 .report-form textarea {
-  background: transparent;
-  border-color: var(--300);
   min-height: 250px;
   min-width: 92%;
   resize: none;
+
+  background: transparent;
+  border-color: var(--300);
+  color: var(--100);
 }
 
 .report-form input[type='text' i] {
@@ -57,7 +59,7 @@ article {
   color: var(--150);
 }
 
-.report-form input[type="checkbox" i] {
+.report-form input[type='checkbox' i] {
   transform: scale(1.3);
   margin: 0 0.33rem;
 }
@@ -74,7 +76,6 @@ article {
 #submit-bug:disabled:hover {
   cursor: not-allowed;
 }
-
 
 @media (prefers-color-scheme: light) {
   .report-form input[type='text' i] {

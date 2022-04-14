@@ -128,6 +128,7 @@ strong {
 /* Links and Buttons */
 *:-webkit-any-link,
 a:-webkit-any-link {
+  color: inherit;
   text-decoration: none;
 }
 

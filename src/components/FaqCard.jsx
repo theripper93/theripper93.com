@@ -6,7 +6,7 @@ const FaqCard = (props) => {
   return (
     <div>
       <details className="card-solid">
-        <summary className={`${status}-background noselect`}>
+        <summary className={` noselect basic-background`}>
           <h4>{question}</h4>
         </summary>
         <article>

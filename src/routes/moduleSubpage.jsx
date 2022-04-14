@@ -40,7 +40,7 @@ const Subpage = () => {
                 <h1>{data.name}</h1>
               </header>
               <p>{data.fulldesc}</p>
-              <a href={premiumData?.downloadURL ?? `https://www.foundryvtt-hub.com/package/${moduleId}/`} rel="noreferrer" target="_blank"><button className={`${data.status}-background`}>Download</button></a>
+              <a href={premiumData?.downloadURL ?? data.link} rel="noreferrer" target="_blank"><button className={`${data.status}-background`}>{premiumData?.downloadURL ? "Download" : "GitHub"}</button></a>
             </div>
             <footer className="badge">
               <div className={data.status}>
@@ -67,7 +67,6 @@ const Subpage = () => {
             {guides.map((guide, index) => <ModuleGuide key={index} title={guide.title} url={guide.url}></ModuleGuide>)}
           </main>
         </section>}
-
       </section>
     </div>
   )

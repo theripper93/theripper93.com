@@ -41,6 +41,8 @@
 .card-hollow .info-wrapper {
   position: relative;
   width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .card-hollow article {

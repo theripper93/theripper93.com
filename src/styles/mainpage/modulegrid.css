@@ -18,13 +18,13 @@ section#modules {
   );
 }
 
-.module .grid input[type='text' i] {
-  width: 78vw;
-  height: 36px;
-}
-
 .searchbar {
   position: relative;
+}
+
+.searchbar input[type='text' i] {
+  width: 90vw;
+  height: 36px;
 }
 
 .searchbar button {
@@ -55,14 +55,14 @@ section#modules {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
-  gap: 1.875rem;
-  padding-top: 3rem;
   align-content: space-between;
   justify-content: center;
   align-items: center;
   justify-items: center;
   flex-direction: row;
+  padding: 1rem;
+  gap: 1.875rem;
+  padding-top: 3rem;
 }
 
 /* Light Mode */
