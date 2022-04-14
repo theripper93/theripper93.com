@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { moduleData, premiumMods } from '../scripts/helpers.js';
+import { locData, premiumMods } from '../scripts/helpers.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* CSS */
@@ -17,9 +17,11 @@ import ModuleGuide from '../components/ModuleGuide.jsx';
 const Subpage = () => {
 
   const [premiumData, setPremiumData] = useState(null);
+  const [data, setData] = useState({});
 
   const moduleId = window.location.hash.split('/').pop();
-  const data = moduleData.find(mod => mod.id === moduleId);
+
+  locData().then(d => setData(d.modules.find(mod => mod.id === moduleId)))
   premiumMods().then((pData) => {
     if (pData[moduleId]) {
       setPremiumData(pData[moduleId]);

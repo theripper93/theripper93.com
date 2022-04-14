@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import '../styles/items/card-solid.css';
 
 const IssueCard = (props) => {
-  const { title, description, link } = props.issue;
+  const { title, description, link } = props.issue ?? {};
 
   function getDescription(description){
     if(description instanceof Array){

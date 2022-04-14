@@ -71,9 +71,9 @@ const Navbar = () => {
     <nav>
       {useHamburger ? hamburgerButtons() : linkButtons()}
       <div className="socials">
-        <a href="https://discord.com/invite/F53gBjR97G" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "discord"]} size="xl" fixedWidth /></a>
-        <a href="https://github.com/theripper93" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "github"]} size="xl" fixedWidth /></a>
-        <a href="https://www.patreon.com/theripper93" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "patreon"]} size="xl" fixedWidth /></a>
+        <a href="https://discord.com/invite/F53gBjR97G" alt="Discord Server Invite" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "discord"]} size="xl" fixedWidth /></a>
+        <a href="https://github.com/theripper93" alt="GitHub Page" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "github"]} size="xl" fixedWidth /></a>
+        <a href="https://www.patreon.com/theripper93" alt="Patreon" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "patreon"]} size="xl" fixedWidth /></a>
       </div>
     </nav>
   )

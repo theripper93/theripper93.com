@@ -1,9 +1,12 @@
-import { moduleData } from '../scripts/helpers.js';
+import { locData } from '../scripts/helpers.js';
 import ModuleCard from './ModuleCard';
 import '../styles/mainpage/modulegrid.css';
+import { useState } from 'react';
 
 const ModuleGrid = (props) => {
   const { buttonState, searchTerm } = props;
+  const [moduleData, setModuleData] = useState([]);
+  locData().then(data => setModuleData(data.modules))
   return (
     <main className='module grid'>
       {moduleData.filter((module) => {

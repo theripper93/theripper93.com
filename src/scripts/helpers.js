@@ -1,10 +1,4 @@
 import * as locDefault from '../local/en-US.json';
-let navLocal = {};
-try{
-  navLocal = await import(`../local/${navigator.language}.json`)
-}catch(e){
-  console.log(e)
-}
 
 function MergeRecursive(obj1, obj2) {
   for (var p in obj2) {
@@ -23,25 +17,6 @@ function MergeRecursive(obj1, obj2) {
   }
   return obj1;
 }
-
-const currentLocal = MergeRecursive({...locDefault}, {...navLocal});
-
-export const faqs = currentLocal.faqs;
-export const troubleshooting = currentLocal.troubleshooting;
-export const issues = currentLocal.issues;
-
-let sortedMods = [];
-let paidMods = [];
-let freeMods = [];
-for (let v of Object.values(currentLocal.modules)) {
-  if (v.status == "paid" || v.status == "paidea") {
-    paidMods.push(v.name);
-  } else {
-    freeMods.push(v.name);
-  }
-}
-
-sortedMods.push(...paidMods.sort(), ...freeMods.sort());
 
 export const premiumMods = async () => {
   const data = await fetch(
@@ -63,18 +38,47 @@ export const getGitReadme = async (url, branch) => {
   return readme;
 };
 
-export const moduleData = sortedMods.map((name) => {
-  let key;
-  for (let [k, v] of Object.entries(currentLocal.modules)) {
-    if (v.name == name) {
-      key = k;
+export const locData = async () => {
+
+  let navLocal = {};
+  try{
+    navLocal = await import(`../local/${navigator.language}.json`)
+  }catch(e){
+    console.log(e)
+  }
+  const currentLocal = MergeRecursive({...locDefault}, {...navLocal});
+
+  const faqs = currentLocal.faqs;
+  const troubleshooting = currentLocal.troubleshooting;
+  const issues = currentLocal.issues;
+  
+  let sortedMods = [];
+  let paidMods = [];
+  let freeMods = [];
+  for (let v of Object.values(currentLocal.modules)) {
+    if (v.status == "paid" || v.status == "paidea") {
+      paidMods.push(v.name);
+    } else {
+      freeMods.push(v.name);
     }
   }
-  let module = currentLocal.modules[key];
-  module.statusText = currentLocal[module.status];
-  module.id = key;
-  return currentLocal.modules[key];
-});
+  
+  sortedMods.push(...paidMods.sort(), ...freeMods.sort());
+  sortedMods = sortedMods.map((name) => {
+    let key;
+    for (let [k, v] of Object.entries(currentLocal.modules)) {
+      if (v.name == name) {
+        key = k;
+      }
+    }
+    let module = currentLocal.modules[key];
+    module.statusText = currentLocal[module.status];
+    module.id = key;
+    return currentLocal.modules[key];
+  });
+
+  return {modules: sortedMods, faqs, troubleshooting, issues}
+};
 
 export const detectSource = (url, autoplay = true) => {
   if (url.includes("youtu")) {

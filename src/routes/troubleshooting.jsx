@@ -1,4 +1,4 @@
-import { troubleshooting } from '../scripts/helpers.js';
+import { locData } from '../scripts/helpers.js';
 import { useState } from 'react';
 import TroubleshootingCard from '../components/TroubleshootingCard.jsx';
 
@@ -6,7 +6,9 @@ import '../styles/subpage/troubleshooting.css';
 
 export default function Troubleshooting() {
 
-  const [troubleshootingData, setTroubleshootingData] = useState(troubleshooting);
+  const [troubleshootingData, setTroubleshootingData] = useState([]);
+
+  locData().then((d) => setTroubleshootingData(d.troubleshooting))
 
   return (
     <div className="subpage-container troubleshooting">
