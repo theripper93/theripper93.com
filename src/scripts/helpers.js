@@ -18,7 +18,10 @@ function MergeRecursive(obj1, obj2) {
   return obj1;
 }
 
+let _premiumMods = null;
+
 export const premiumMods = async () => {
+  if(_premiumMods) return _premiumMods;
   const data = await fetch(
     `https://raw.githubusercontent.com/theripper93/theripper-premium-hub/master/moduleListing.json`, { cache: "no-cache" }
   )
@@ -26,7 +29,8 @@ export const premiumMods = async () => {
     .then((data) => data);
 
   delete data.announcements;
-  return data;
+  _premiumMods = data;
+  return _premiumMods;
 };
 
 export const getGitReadme = async (url, branch) => {
