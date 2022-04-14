@@ -32,10 +32,6 @@ svg {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-nav{
-  position: fixed !important;
-}
-
 /* Text Input */
 input[type='text' i] {
   background: transparent;
