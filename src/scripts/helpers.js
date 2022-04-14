@@ -37,14 +37,23 @@ export const getGitReadme = async (url, branch) => {
   return readme;
 };
 
-export const locData = async () => {
+let _navLocal = null;
+let _locData = null;
 
+export const locData = async () => {
+  if(_locData) return _locData;
   let navLocal = {};
+  if(!_navLocal) {
   try{
     navLocal = await import(`../local/${navigator.language}.json`)
+    _navLocal = navLocal;
   }catch(e){
-
+    _navLocal = {}
   }
+  }else{
+    navLocal = _navLocal;
+  }
+
   const currentLocal = MergeRecursive({...locDefault}, {...navLocal});
 
   const faqs = currentLocal.faqs;
@@ -75,8 +84,8 @@ export const locData = async () => {
     module.id = key;
     return currentLocal.modules[key];
   });
-
-  return {modules: sortedMods, faqs, troubleshooting, issues}
+  _locData = {modules: sortedMods, faqs, troubleshooting, issues}
+  return _locData
 };
 
 export const detectSource = (url, autoplay = true) => {
