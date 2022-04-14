@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 import Hamburger from './Hamburger';
 
-import '../styles/Navbar.css';
+import '../styles/navbar.css';
 
 const Navbar = (props) => {
 
