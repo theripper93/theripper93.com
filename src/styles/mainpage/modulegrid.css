@@ -65,6 +65,12 @@ section#modules {
   padding-top: 3rem;
 }
 
+@media (max-width: 768px) {
+  .module .grid .wrapper {
+    width: 100%;
+  }
+}
+
 /* Light Mode */
 @media (prefers-color-scheme: light) {
   section#modules {
