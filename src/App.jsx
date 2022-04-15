@@ -107,7 +107,7 @@ function App() {
           </main>
         </summary>
         <aside>
-          <p id="credit">Site designed and developed with love by <a href="https://www.github.com/casanovasekova" rel="noreferrer" target="_blank">
+          <p id="credit">Site designed and developed with love by <a href="https://www.github.com/apriltaoyvr" rel="noreferrer" target="_blank">
             April Tao </a></p>
         </aside>
       </footer>
