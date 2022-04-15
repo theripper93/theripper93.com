@@ -113,6 +113,10 @@
     grid-template-columns: 1fr;
   }
 
+  .module-intro svg {
+    display: none;
+  }
+
   .module-intro .card-solid {
     min-width: 100%;
   }
