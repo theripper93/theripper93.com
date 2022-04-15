@@ -1,14 +1,3 @@
-.subpage-container .troubleshooting {
-  text-align: center;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 .troubleshooting .card-solid {
   border-top: none;
 }
@@ -84,6 +73,13 @@ svg.svg-inline--fa.fa-arrow-down.connection.free {
   height: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+  .step6 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .troubleshooting-wrapper h4 {
     font-size: 1.25rem;
@@ -98,7 +94,6 @@ svg.svg-inline--fa.fa-arrow-down.connection.free {
   .troubleshooting h1 {
     font-size: 2rem;
   }
-
   .troubleshooting-wrapper .fa-2x {
     display: none;
   }

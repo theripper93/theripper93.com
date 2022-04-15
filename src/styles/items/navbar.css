@@ -16,6 +16,7 @@ nav {
   box-shadow: 0 5px 5px hsla(34, 11%, 12%, 0.25);
   backdrop-filter: blur(1px);
 }
+
 /** Links **/
 /** Navigation links for the site **/
 nav .links,
@@ -133,7 +134,7 @@ nav .socials svg:active {
   padding-left: 0.66rem;
 
   text-align: left;
-  font-size: 2.5rem;
+  font-size: 2rem;
   animation: fadeInAnimation ease 0.5s;
 }
 
@@ -200,3 +201,4 @@ nav .socials svg:active {
     transition: all 0.3s ease-in-out;
   }
 }
+

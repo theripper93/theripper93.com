@@ -351,9 +351,14 @@ footer.module-page-badge {
     font-size: 2.5rem;
   }
 
-  h4 {
+  h2 {
+    font-size: 2rem;
+  }
+
+  h4{
     font-size: 1.25rem;
   }
+
 
   p,
   li {
