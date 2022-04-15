@@ -161,11 +161,23 @@
 }
 
 @media screen and (max-width: 450px) {
+  .card-hollow .icon-wrapper {
+    padding: 30px;
+  }
+
   .card-hollow .icon-wrapper .fa-5x {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+  }
+
+  .card-hollow h4 {
+    font-size: 1.33rem;
+  }
+
+  .card-hollow p {
+    font-size: 1rem;
   }
 
   .card-hollow .status {
-    font-size: 0.75rem;
+    font-size: 0.90rem;
   }
 }
