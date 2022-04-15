@@ -33,11 +33,11 @@ header.hero h1 {
 }
 
 header.hero a {
-  color: var(--accent);
+  color: inherit;
 }
 
 header.hero a:hover {
-  color: linear-gradient(to right, var(--accent), var(--accent-dark));
+  color: var(--000);
 }
 
 header.hero svg {
@@ -47,7 +47,7 @@ header.hero svg {
 }
 
 header.hero svg:hover {
-  color: var(--accent);
+  color: var(--000);
 }
 
 #video-bg {

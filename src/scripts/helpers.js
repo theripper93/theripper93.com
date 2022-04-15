@@ -1,5 +1,3 @@
-import * as locDefault from '../local/en-US.json';
-
 function MergeRecursive(obj1, obj2) {
   for (var p in obj2) {
     try {
@@ -43,10 +41,12 @@ export const getGitReadme = async (url, branch) => {
 
 let _navLocal = null;
 let _locData = null;
+let _locDefault = null;
 
 export const locData = async () => {
   if(_locData) return _locData;
   let navLocal = {};
+  let locDefault = {};
   if(!_navLocal) {
   try{
     navLocal = await import(`../local/${navigator.language}.json`)
@@ -57,6 +57,18 @@ export const locData = async () => {
   }else{
     navLocal = _navLocal;
   }
+
+  if(!_locDefault) {
+    try{
+      _locDefault = await import(`../local/en-US.json`)
+      locDefault = _locDefault;
+    }catch(e){
+      _locDefault = {};
+      locDefault = {};
+    }
+    }else{
+      locDefault = _locDefault;
+    }
 
   const currentLocal = MergeRecursive({...locDefault}, {...navLocal});
 

@@ -91,6 +91,15 @@ article {
     color: var(--500);
   }
 
+  .report-form textarea {
+    color: var(--500);
+  }
+
+  .report-form footer {
+    color: var(--patreon);
+    background: transparent;
+  }
+
   #submit-bug {
     background: var(--500);
     color: var(--100);

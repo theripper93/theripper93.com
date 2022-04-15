@@ -272,7 +272,7 @@ footer.module-page-badge {
 @media (prefers-color-scheme: light) {
   /* Global */
   :root {
-    --accent: #daa107;
+    --accent: #d7b24b;
     --discord: #4d5c93;
     --patreon: #cc4122;
     --free: #26ab69;
