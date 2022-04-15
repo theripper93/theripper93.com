@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import '../styles/items/card-solid.css';
 
 const IssueCard = (props) => {
-  const { title, description, link } = props.issue;
+  const { title, description, link } = props.issue ?? {};
 
   function getDescription(description){
     if(description instanceof Array){
@@ -24,14 +24,10 @@ const IssueCard = (props) => {
           <header className={`paidea-background`}>
             <h4>{title}</h4>
           </header>
-          <article>
-            {getDescription(description)}
+        <article className="report-form">
+            {props.children ?? getDescription(description)}
           </article>
-          <aside>
-            {link && <Link>Link to page</Link>}
-          </aside>
       </div>
-      <Outlet />
     </div >
   )
 }

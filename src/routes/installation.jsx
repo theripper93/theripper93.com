@@ -25,7 +25,7 @@ export default function Installation() {
             </article>
             <article className='card-solid free-border'>
               <details>
-              <summary className='free-background noselect'>Manifest URL</summary>
+              <summary className='free-background noselect'>Manifest</summary>
                 <ol>
                   <li>Select the "Add-on Modules" tab</li>
                   <li>Click the "Install Module" button</li>

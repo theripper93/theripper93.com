@@ -6,9 +6,9 @@ import { useState } from 'react';
 
 import Hamburger from './Hamburger';
 
-import '../styles/navbar.css';
+import '../styles/items/navbar.css';
 
-const Navbar = (props) => {
+const Navbar = () => {
 
   let location = useLocation();
   const [useHamburger, setUseHamburger] = useState(window.innerWidth < 550);
@@ -30,14 +30,15 @@ const Navbar = (props) => {
   };
 
   const faqButtons = () => {
+    const isModPage = detectNavType(location).includes("module/") ? "./faq" : "";
     return (
       <div className='home-buttons'>
         <p> / </p>
-        <HashLink smooth to='./installation'>Installation</HashLink>
+        <HashLink smooth to={`.${isModPage}/installation`}>Installation</HashLink>
         <p> / </p>
-        <HashLink smooth to='./troubleshooting'>Troubleshooting</HashLink>
+        <HashLink smooth to={`.${isModPage}/troubleshooting`}>Troubleshooting</HashLink>
         <p> / </p>
-        <HashLink smooth to='./issues'>Issues</HashLink>
+        <HashLink smooth to={`.${isModPage}/issues`}>Issues</HashLink>
       </div>
     );
   };
@@ -47,13 +48,23 @@ const Navbar = (props) => {
       <div className='links'>
         <div className='landing'>
           <HashLink smooth to='/#'>Home</HashLink>
-          {detectNavType(location) == "" && homeButtons()}
+          {(detectNavType(location) === "/" || !detectNavType(location).includes("/")) && homeButtons()}
         </div>
-        <p>/</p>
+        {!detectNavType(location).includes("module/") && <p>/</p>}
         <div className="subpage">
-          <Link to='/faq'>FAQ</Link>
-          {detectNavType(location) == "faq" && faqButtons()}
+          {!detectNavType(location).includes("module/") && <Link to='/faq'>FAQ</Link>}
+          {(detectNavType(location).includes("faq") || detectNavType(location).includes("module/")) && faqButtons()}
         </div>
+      </div>
+    )
+  };
+
+  const socialsButtons = () => {
+    return (
+      <div className="socials">
+      <a href="https://discord.com/invite/F53gBjR97G" alt="Discord Server Invite" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "discord"]} size="xl" fixedWidth /></a>
+      <a href="https://github.com/theripper93" alt="GitHub Page" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "github"]} size="xl" fixedWidth /></a>
+      <a href="https://www.patreon.com/theripper93" alt="Patreon" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={["fab", "patreon"]} size="xl" fixedWidth /></a>
       </div>
     )
   };
@@ -62,6 +73,7 @@ const Navbar = (props) => {
     return (
       <Hamburger>
         {linkButtons()}
+        {socialsButtons()}
       </Hamburger>
     )
   };
@@ -69,11 +81,7 @@ const Navbar = (props) => {
   return (
     <nav>
       {useHamburger ? hamburgerButtons() : linkButtons()}
-      <div className="socials">
-        <a href="https://discord.com/invite/F53gBjR97G" target="_blank"><FontAwesomeIcon icon={["fab", "discord"]} size="xl" fixedWidth /></a>
-        <a href="https://github.com/theripper93" target="_blank"><FontAwesomeIcon icon={["fab", "github"]} size="xl" fixedWidth /></a>
-        <a href="https://www.patreon.com/theripper93" target="_blank"><FontAwesomeIcon icon={["fab", "patreon"]} size="xl" fixedWidth /></a>
-      </div>
+      {!useHamburger && socialsButtons()}
     </nav>
   )
 }

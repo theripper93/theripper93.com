@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const TroubleshootingCard = (props) => {
   const { title, description, link, state } = props.data;
-  const { setTroubleshootingData, troubleshootingData } = props;
+  const { setTroubleshootingData, troubleshootingData, noarrow } = props;
 
   const toggleState = () => {
     const index = troubleshootingData.findIndex((e) => e.title === title);
@@ -15,7 +15,7 @@ const TroubleshootingCard = (props) => {
 
   return (
     <div className="wrapper" onClick={toggleState}>
-      <FontAwesomeIcon icon="fa-solid fa-arrow-down" className={`connection ${state ? "free" : "inactive"}`}></FontAwesomeIcon>
+      {!noarrow && <FontAwesomeIcon icon="fa-solid fa-arrow-down" className={`connection ${state ? "free" : "inactive"}`}></FontAwesomeIcon>}
       <div className={`card-solid${state ? " free-border" : " paid-border"}`}>
         <header className={`${state ? "free-background" : "paid-background"}`}>
           <FontAwesomeIcon size="2x" className="checkmark" icon={state ? "fas fa-check" : "fas fa-times"} />

@@ -1,5 +1,6 @@
 /* Libraries */
 import React from 'react';
+import { useState } from 'react';
 import { Outlet } from 'react-router';
 import { useLocation } from "react-router-dom";
 
@@ -7,12 +8,16 @@ import { useLocation } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import FaqCard from '../components/FaqCard';
 
-import { faqs } from '../scripts/helpers.js';
+import { locData } from '../scripts/helpers.js';
 
 export default function Info() {
 
   let location = useLocation();
   window.scrollTo(0, 0);
+
+  const [faqs, setFaqs] = useState([]);
+
+  locData().then((d) => setFaqs(d.faqs))
 
   const faqCards = () => {
     return (

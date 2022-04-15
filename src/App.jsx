@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import './App.css';
-import './styles/mainpage.css';
-import './styles/cta.css';
+import './styles/mainpage/mainpage.css';
+import './styles/mainpage/cta.css';
 /* Misc Libraries */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -23,7 +23,9 @@ function App() {
         <video autoPlay muted loop id="video-bg">
           <source src="./src/assets/videobanner.mp4" type="video/mp4" />
         </video>
-        <h0>Heyo, I make Foundry VTT Modules</h0>
+        <div className='hero-wrapper'>
+          <h1>Heyo, I make <a href="https://foundryvtt.com/" rel="noreferrer" target="_blank">Foundry VTT</a> Modules</h1>
+        </div>
         <HashLink smooth to='/#modules'><FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth /></HashLink>
       </header>
       <section className="module list" id="modules">
@@ -82,7 +84,7 @@ function App() {
       <footer className="golden" id="contact">
         <summary>
           <main className='header-wrapper'>
-            <h0>Need to contact me?</h0>
+            <h1>Need to contact me?</h1>
             <h2>I'm open to do paid projects for Foundry VTT</h2>
           </main>
           <main className='skillset'>
@@ -105,7 +107,7 @@ function App() {
           </main>
         </summary>
         <aside>
-          <p id="credit">Site designed and developed with love by <a href="https://www.github.com/casanovasekova" rel="noreferrer" target="_blank">
+          <p id="credit">Site designed and developed with love by <a href="https://www.github.com/apriltaoyvr" rel="noreferrer" target="_blank">
             April Tao </a></p>
         </aside>
       </footer>

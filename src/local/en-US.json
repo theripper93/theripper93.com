@@ -45,31 +45,35 @@
       ],
         "guides": [
         {
-            "title": "Levels Tutorial Part 1",
+            "title": "Tutorial Part 1",
             "url": "https://youtu.be/ELlweNunn4g"
         },
         {
-            "title": "Levels Tutorial Part 2",
+            "title": "Tutorial Part 2",
             "url": "https://youtu.be/_nynikU9_ao"
         },
         {
-            "title": "Levels Tutorial Part 3",
+            "title": "Tutorial Part 3",
             "url": "https://youtu.be/NCg6T7lMrRs"
         },
         {
-            "title": "Levels - The Polygon",
+            "title": "Creating and exporting tiles for Levels with Dungeondraft",
+            "url": "https://youtu.be/STkloDe7NXU"
+        },
+        {
+            "title": "The Polygon",
             "url": "https://youtu.be/HD4CXRmG5ss"
         },
         {
-            "title": "Levels - On Is Basement, Show even when below, Don't hide in the fog",
+            "title": "On Is Basement, Show even when below, Don't hide in the fog",
             "url": "https://youtu.be/2u3QpTa0Ld8"
         },
         {
-            "title": "Levels - On token Height (or LOS Height)",
+            "title": "On token Height (or LOS Height)",
             "url": "https://youtu.be/ToUmTStUER8"
         },
         {
-            "title": "Levels - On the new UI",
+            "title": "On the new UI",
             "url": "https://youtu.be/NUmSFhhQjAI"
         }
       ]
@@ -90,7 +94,13 @@
         "fulldesc": "Show a Solasta inspired combat hud for easy accessibility of actions and bonus actions etc. Replaces a lot of the character sheet functionality during combat so that you don't need to open it. Basically, token action HUD on steroids.",
         "status": "free",
         "media": "https://youtu.be/ODKi0AuDNA8",
-        "link": "https://github.com/theripper93/enhancedcombathud"
+        "link": "https://github.com/theripper93/enhancedcombathud",
+        "guides": [
+            {
+                "title": "Argon Combat HUD Basic Tutorial",
+                "url": "https://youtu.be/W_nHwdf_3kw"
+            }
+        ]
     },
     "automated-evocations": {
         "name": "Automated Evocations",
@@ -99,7 +109,16 @@
         "fulldesc": "A user interface to manage companions with summoning animations and automated summoning for spells.",
         "status": "free",
         "media": "https://youtu.be/lVTvbBXKiSg",
-        "link": "https://github.com/theripper93/automated-evocations"
+        "link": "https://github.com/theripper93/automated-evocations",
+        "guides": [
+            {
+                "title": "Automated Evocations Basic Tutorial",
+                "url": "https://youtu.be/VcAz8t6-lTY"
+            },{
+                "title": "Automated Evocations Tutorial: Advanced Macros and More",
+                "url": "https://youtu.be/umXF2p0O12Y"
+            }
+        ]
     },
     "betterroofs": {
         "name": "Better Roofs",
@@ -362,7 +381,7 @@
         "name": "Quick Doors",
         "icon": "fas fa-door-open",
         "desc": "Create and delete walls, doors, and windows with a single click on existing walls.",
-        "fulldesc": "Very simple, enable the tool, now clicking near a wall will create a door (on the wall itself) while splitting the original wall appropriatelly, you can also snap to grid to auto align everything nicely. Includes hotkeys to swap between grid/nogrid/secret/window",
+        "fulldesc": "Very simple, enable the tool, now clicking near a wall will create a door (on the wall itself) while splitting the original wall appropriately, you can also snap to grid to auto align everything nicely. Includes hotkeys to swap between grid/nogrid/secret/window",
         "status": "paid",
         "media": "https://youtu.be/iWkTeQFGs3U",
         "link": ""
@@ -399,23 +418,23 @@
             "url": "https://youtu.be/h_EZ08wD4c4"
         },
         {
-            "title": "3D Canvas - Full feature showcase and tutorial",
+            "title": "Full feature showcase and tutorial",
             "url": "https://youtu.be/C5Fv8uU0tkc"
         },
         {
-            "title": "3D Canvas - Frequently Asked Questions",
+            "title": "Frequently Asked Questions",
             "url": "https://youtu.be/-eu-zTtRnLQ"
         },
         {
-            "title": "3D Canvas - Converting STLs with Blender",
+            "title": "Converting STLs with Blender",
             "url": "https://youtu.be/j8sZ-VM0FoI"
         },
         {
-            "title": "3D Canvas - How to 3d-ify 2D battlemaps with Blender",
+            "title": "How to 3d-ify 2D battlemaps with Blender",
             "url": "https://youtu.be/n6FVHp3wr0I"
         },
         {
-            "title": "3D Canvas - Easy 3D Dungeons with Blender and the Dungeon Pack",
+            "title": "Easy 3D Dungeons with Blender and the Dungeon Pack",
             "url": "https://youtu.be/wvd7Wm7WvHQ"
         }
       ]
@@ -484,13 +503,13 @@
     "faqs": [
         {
             "question": "How do I install your Free or Premium modules?",
-            "answer": "For installation instructions on how to install the modules, please visit the installation page.",
+            "answer": "For installation instructions, please visit the installation subpage.",
             "link": "",
             "status": "free"
         },
         {
             "question": "I'm having an issue with one of your modules. What should I do?",
-            "answer": "First visit the basic troubleshooting page, then check the module readme (linked in the module page) for instructions on how to resolve the issue. If you still cannot resolve the issue contact me on discord with the informations you aquired from the basic troubleshooting.",
+            "answer": "First visit the basic troubleshooting page, then check the module readme (linked in the module page) for the module you have having issues with. Follow instructions on how to resolve the issue. If you still cannot resolve the issue contact me on discord with the information you acquired from these steps.",
             "link": "",
             "status": "free"
         },
@@ -501,31 +520,37 @@
             "status": "free"
         },
         {
+            "question": "I'm a Patreon, how do I get access to the modules?",
+            "answer": "You can find Download links to all the premium modules in the respective module page on this website. The list of modules is on the front page.",
+            "link": "",
+            "status": "paid"
+        },
+        {
             "question": "How does the Patreon subscription work?",
-            "answer": "You can subscribe to the Supporter tier to get most of my premium modules or to the Early Access tier to get access to 3D Canvas as well (and any other module currently in developement). You will be charged monthly for the subscription. You can cancel your subscription at any time.",
+            "answer": "You can subscribe to the Supporter tier to get most of my premium modules or to the Early Access tier to get access to 3D Canvas (and any other module currently in development) as well. You will be charged monthly for the subscription. You can cancel your subscription at any time.",
             "link": "",
             "status": "paid"
         },
         {
             "question": "What happens when I cancel my subscription?",
-            "answer": "You will keep all the modules you have downloaded but you will not be able to access future updates. Any content you haven't dowloaded will no longer be accessible.",
+            "answer": "You will keep all the modules you have downloaded but you will not be able to access future updates. Any content you haven't downloaded will no longer be accessible.",
             "link": "",
             "status": "paid"
         },
         {
-            "question": "I want to upgrade my subscription. Do i get charged extra?",
+            "question": "I want to upgrade my subscription. Do I get charged extra?",
             "answer": "No, if you upgrade your tier you will only be charged the price difference between the new tier and the old tier.",
             "link": "",
             "status": "paid"
         },
         {
             "question": "I'm a Creator and I want to use Levels/Better Roofs in my commercial products. Can I do that?",
-            "answer": "Yes, but you need to be subscribed to the Creator tier - please read the information in the Creator tier on Patreon to determine how much is the licence to use my modules commercially",
+            "answer": "Yes, but you need to be subscribed to the Creator tier - please read the information in the Creator tier on Patreon to determine how much the licence will be to use my modules commercially",
             "link": "",
             "status": "paid"
         },
         {
-            "question": "I'm a Creator tier Patreon but I no longer want to use your modules commercially. Can I cancel my subscription?",
+            "question": "I'm a Creator tier Patron but I no longer want to use your modules commercially. Can I cancel my subscription?",
             "answer": "Absolutely! If you are a Creator and cancel your subscription you can keep selling any content you published prior to cancelling your subscription. You are not allowed to publish new content after you canceled your subscription.",
             "link": "",
             "status": "paid"
@@ -538,27 +563,27 @@
         },
         {
             "title": "Step 2: Disable all other modules.",
-            "description": "Sometimes the issue can be caused by a conflicting module. Disable all modules except the module you are having issues with and it's dependencies and check if the issue persists. You can use modules like Tidy UI to export your enabled module list to make the process easier and faster. If you determine that a conflict is the reason of your issue, use the 'Find the Coulprit' module to determine what module is conflicting and communicate it to me on discord. I'll make sure to contact the developer and try to get the issue resolved if possible."
+            "description": "Issues can sometimes be caused by a conflicting module. Disable all modules except the module you are having issues with and it's dependencies and check if the issue persists. You can use modules like Tidy UI to export your enabled module list to make the process easier and faster. If you determine that a conflict is the reason of your issue, use the 'Find the Culprit' module to determine what module is conflicting and communicate it to me on discord. I'll make sure to contact the developer and try to get the issue resolved if possible."
         },
         {
-            "title": "Step 3: Check the console for Errors.",
-            "description": "Open the Browser or Foundry App console (F12) and check if you have any errors (Red boxes with long text). If you have any console errors the issue is most likely a Bug, proceed to step 6"
+            "title": "Step 3: Check the console for errors.",
+            "description": "Open the browser or Foundry App console (F12). Check if you have any errors (Red boxes with long text) in the console. If you have any console errors the issue is most likely a bug, proceed to step 6"
         },
         {
             "title": "Step 4: Check the module readme.",
-            "description": "Check the module page on this website for useful information and the module readme (linked in the module page) for instructions on how to use the module."
+            "description": "Check the respective module page on this site for useful information and a link to the module readme (linked in the module page)."
         },
         {
-            "title": "Step 5: Reinstall and Restart.",
+            "title": "Step 5: Reinstall and restart.",
             "description": "If the issue seems to bad to be true, sometimes it can be a broken installation or a caching issue. Reinstall the module and restart the server. You can skip this step if the issue is minor, this is usually reserved to major issues like the module not working at all."
         },
         {
-            "title": "Step 6/a: Contact me on Discord.",
-            "description": "If the issue is still not resolved, please contact me on discord and provide me with the information you aquired from the basic troubleshooting. I'll try to get the issue resolved as soon as possible."
+            "title": "Step 6a: Contact me on Discord.",
+            "description": "If the issue is still not resolved, please contact me on discord and provide me with the information you acquired from the basic troubleshooting. I'll try to get the issue resolved as soon as possible."
         },
         {
-            "title": "Step 6/b: Report the bug.",
-            "description": "If you belive the issue to be a Bug please follow the instruction in the Bug Report page."
+            "title": "Step 6b: Report the bug.",
+            "description": "If you believe the issue to be a Bug please follow the instruction in the Bug Report page."
         }
     ],
     "issues": [
@@ -584,8 +609,43 @@
             ]
         },
         {
-            "title": "BUG REPORT TEMPLATE",
-            "description": "**ALL OTHER MODULES DISABLED?** (true/false)\n\n**Module:** (name and version)\n\n**Conflicting Module (if applicable)**:\n\n**Foundry and System version**: eg. Foundry 0.8.9 DnD5e 1.5.5\n\n**OS, Hosting, Browser (if applicable)**:\n\n**Short Description of bug**:\n\n**Simple steps to reproduce the bug**:\n\n**Screenshots and/or console errors**:"
+          "title": "Bug Report Template",
+          "footer": "Please make sure you completed all the steps and checked the required boxes.",
+          "screenerr": "Screenshots and/or Console Errors",
+          "description": [
+            { 
+                "title": "I have disabled all other modules",
+                "placeholder": false
+            },
+            { 
+                "title": "Bugged Module(s):",
+                "placeholder": "Name and version"
+            },
+            { 
+                "title": "Conflicting Module(s):",
+                "placeholder": "Name and version—if none, leave blank"
+            },
+            {
+                "title": "Foundry and System version:",
+                "placeholder": "e.g. Foundry 0.8.9, DnD5e 1.5.5"
+            },
+            { 
+                "title": "OS, Hosting, Browser (if applicable):",
+                "placeholder": "e.g. Windows 10, The Forge, Chrome"
+            },
+            { 
+                "title": "Short Description of bug:",
+                "placeholder": "e.g. 'I can't place tiles on the map'"
+            },
+            { 
+                "title": "Simple steps to reproduce the bug:",
+                "placeholder": "Be precise and clear"
+            },
+            { 
+                "title": "I will include Screenshots and/or console errors when posting the message or issue",
+                "placeholder": false
+            }
+          ]
         }
     ],
     "free": "Free",

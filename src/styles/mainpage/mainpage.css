@@ -1,37 +1,53 @@
 /** Header and Footer Sections **/
 /* Hero Banner */
 header.hero {
-  display: flex;
   position: relative;
-  overflow: hidden;
 
+  height: 100vh;
   min-height: 100vh;
-  padding: 0;
+  max-height: 100vh;
+  padding: 1rem;
 
+  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-content: center;
   justify-content: center;
-  align-items: center;
   align-self: center;
+  align-items: center;
 
   background: hsla(30, 10%, 16%, 0.75);
 }
 
-header.hero h0 {
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 80%;
+}
+
+header.hero h1 {
   color: var(--100);
+  font-size: 6rem;
+  font-weight: 700;
   text-align: center;
-  padding-top: 30vh;
+}
+
+header.hero a {
+  color: inherit;
+}
+
+header.hero a:hover {
+  color: var(--000);
 }
 
 header.hero svg {
+  justify-self: end;
   color: var(--150);
-  margin-top: 30vh;
-  animation: slide 3s ease-in-out infinite;
+  animation: bob 2s ease-in-out infinite;
 }
 
 header.hero svg:hover {
-  color: var(--accent);
+  color: var(--000);
 }
 
 #video-bg {
@@ -45,7 +61,7 @@ header.hero svg:hover {
 
 /* Contact Footer */
 #contact {
-  padding-bottom: 10rem;
+  padding-top: 2rem;
 }
 #contact main {
   display: flex;
@@ -65,16 +81,11 @@ header.hero svg:hover {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
-#contact h0 {
-  color: var(--500);
-}
-
-#contact main.header-wrapper,
-#contact main.header-wrapper h0,
-#contact main.header-wrapper h4 {
+#contact h1,
+#contact h4 {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
@@ -82,8 +93,8 @@ header.hero svg:hover {
 }
 
 #contact figure .skill-card {
-  width: 179px;
-  height: 52px;
+  width: 11rem;
+  height: 3rem;
 
   display: inline-flex;
   flex-direction: column;
@@ -96,16 +107,12 @@ header.hero svg:hover {
 }
 
 #contact figure .skill-card:hover {
-  border-color: var(--400);
-  color: var(--400);
+  border-color: var(--300);
+  color: var(--300);
   cursor: default;
 }
 
 #contact figure .skill-card h4 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
   font-weight: bold;
 }
 
@@ -116,7 +123,7 @@ header.hero svg:hover {
   align-content: space-between;
   justify-content: space-between;
   align-items: center;
-  gap: 1.875rem;
+  gap: 1rem;
 }
 
 #contact svg {
@@ -131,12 +138,12 @@ header.hero svg:hover {
 #credit {
   font-size: 1rem;
   font-weight: 500;
+  text-align: center;
+  padding: 2rem;
 }
 
 /** Main Content **/
 section .frontpage {
-  min-height: 70vh;
-  padding: 10rem 0.9375rem 1rem 1rem;
   background: var(--500);
 }
 
@@ -146,27 +153,18 @@ section .frontpage {
   section .frontpage {
     background: var(--100);
   }
-  
+
   /* Hero Banner (Light) */
-  header.hero {
-    background: linear-gradient(
-      180deg,
-      hsla(42, 36%, 89%, 0.25) 50%,
-      hsla(42, 36%, 89%, 0.5) 100%
-    );
-  }
-
-  header.hero h0 {
-    color: var(--100);
-    text-shadow: 2px 2px 20px var(--300);
-  }
-
   #contact {
     transform: translateY(-1px);
   }
 }
 
 @media screen and (max-width: 1400px) {
+  header.hero h1 {
+    font-size: 5rem;
+  }
+
   #hub,
   #contact {
     margin-bottom: -2px;
@@ -178,8 +176,8 @@ section .frontpage {
     margin-block-start: 0;
   }
 
-  header.hero h0 {
-    padding-top: 0;
+  header.hero h1 {
+    font-size: 4rem;
   }
 
   header.hero svg {

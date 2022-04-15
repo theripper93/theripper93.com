@@ -22,6 +22,11 @@ section#modules {
   position: relative;
 }
 
+.searchbar input[type='text' i] {
+  width: 90vw;
+  height: 36px;
+}
+
 .searchbar button {
   position: absolute;
   right: 8px;
@@ -50,45 +55,20 @@ section#modules {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
-  gap: 1.875rem;
-  padding-top: 3rem;
   align-content: space-between;
   justify-content: center;
   align-items: center;
   justify-items: center;
   flex-direction: row;
+  padding: 1rem;
+  gap: 1.875rem;
+  padding-top: 3rem;
 }
 
 /* Light Mode */
 @media (prefers-color-scheme: light) {
   section#modules {
     background: var(--100);
-    background: linear-gradient(
-      180deg,
-      hsla(42, 36%, 89%, 0.5) 0%,
-      hsla(42, 36%, 89%, 0.75) 3%,
-      hsla(42, 36%, 89%, 0.9) 5.5%,
-      var(--100) 10%
-    );
-  }
-
-  input[type='text' i] {
-    background: transparent;
-    color: var(--400);
-    border: 2px solid var(--300);
-    width: 78vw;
-    height: 2.25rem;
-    transition: all 0.3s ease-in-out;
-  }
-
-  input:focus-visible {
-    outline-style: none;
-    border-color: var(--500);
-  }
-
-  input::placeholder {
-    color: var(--400);
   }
 
   .searchbar button svg {
