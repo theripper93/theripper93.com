@@ -139,8 +139,14 @@ nav .socials svg:active {
 }
 
 .hamburger-menu .links .landing .home-buttons,
-.hamburger-menu .links .subpage .home-buttons {
-  padding-left: 1.5rem;
+.hamburger-menu .links .subpage .home-buttons,
+.hamburger-menu .socials {
+  padding-left: 1.25rem;
+}
+
+.hamburger-menu .socials {
+  margin-top: 1rem;
+  justify-content: left;
 }
 
 .hamburger-menu.hidden {
@@ -201,4 +207,3 @@ nav .socials svg:active {
     transition: all 0.3s ease-in-out;
   }
 }
-

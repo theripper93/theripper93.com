@@ -100,13 +100,15 @@
   }
 }
 
-@media screen and (max-width: 999px) {
-  .card-hollow {
-    position: relative;
-    height: auto;
-    max-height: 176px;
+@media screen and (max-width: 1020px) {
+  .card-hollow,
+  .module .grid .wrapper {
+    width: 95%;
+  }
 
-    gap: 0.75rem;
+  .module .grid .wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   .card-hollow .icon-wrapper {
@@ -133,18 +135,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .card-hollow {
-    position: relative;
-    height: auto;
-    max-height: 176px;
-
-    gap: 0.75rem;
-      box-shadow: 0.3rem 0.3rem var(--500),
-    0.3rem 0.3rem 0 0.125rem var(--400);
-
-  }
-
+@media screen and (max-width: 768px) {
   .card-hollow .icon-wrapper {
     width: auto;
     height: auto;
@@ -170,10 +161,6 @@
 }
 
 @media screen and (max-width: 450px) {
-  .card-hollow {
-    width: 100%;
-  }
-
   .card-hollow .icon-wrapper .fa-5x {
     font-size: 2.5rem;
   }
