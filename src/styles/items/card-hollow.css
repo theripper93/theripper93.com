@@ -90,8 +90,6 @@
   .card-hollow {
     position: relative;
     max-width: 100%;
-    height: auto;
-    max-height: 176px;
     gap: 0.75rem;
   }
 
