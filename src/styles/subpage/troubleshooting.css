@@ -53,11 +53,11 @@ svg.svg-inline--fa.fa-arrow-down.connection.free {
   align-self: center;
 }
 
-svg {
+.troubleshooting svg {
   opacity: 1;
 }
 
-svg.svg-inline--fa.fa-arrow-down.connection.inactive {
+.troubleshooting svg.svg-inline--fa.fa-arrow-down.connection.inactive {
   opacity: 0;
 }
 
@@ -66,10 +66,10 @@ svg.svg-inline--fa.fa-arrow-down.connection.inactive {
   height: 0;
 }
 
-.paid-background,
-.free-background,
-.paid-border,
-.free-border {
+.troubleshooting .paid-background,
+.troubleshooting .free-background,
+.troubleshooting .paid-border,
+.troubleshooting .free-border {
   transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
 }
 

@@ -347,12 +347,31 @@ footer.module-page-badge {
 }
 
 @media screen and (max-width: 768px) {
-  h0 {
+  h1 {
     font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  p,
+  li {
+    font-size: 1rem;
   }
 }
 
 /* Animation */
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;

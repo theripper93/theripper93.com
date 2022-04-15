@@ -28,10 +28,12 @@ const ModuleCard = (props) => {
           <FontAwesomeIcon icon={props.module.icon.split(" ")} size='5x' />
         </figure>
         <div className="info-wrapper">
+          <hgroup>
             <h4>{props.module.name}</h4>
-          <article>
-            <p>{props.module.desc}</p>
-          </article>
+            <article>
+              <p>{props.module.desc}</p>
+            </article>
+          </hgroup>
           <p className={`status ${props.module.status}`}>{props.module.statusText}</p>
         </div>
       </div>

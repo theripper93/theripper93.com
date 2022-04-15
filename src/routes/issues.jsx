@@ -71,7 +71,7 @@ export default function BugReport() {
           </li>
         </ol>
         <button id="submit-bug" onClick={copyToClipboard} disabled={!issueTemplate.disabled || !issueTemplate.screenshots}>Copy to Clipboard</button>
-        {(!issueTemplate.disabled || !issueTemplate.screenshots) && <label className="paid">{bugReport?.footer}</label>}
+        {(!issueTemplate.disabled || !issueTemplate.screenshots) && <footer className="paid">{bugReport?.footer}</footer>}
       </IssueCard>
     </div>
   )

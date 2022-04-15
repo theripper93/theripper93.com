@@ -23,7 +23,9 @@ function App() {
         <video autoPlay muted loop id="video-bg">
           <source src="./src/assets/videobanner.mp4" type="video/mp4" />
         </video>
-        <h1>Heyo, I make <a href="https://foundryvtt.com/" rel="noreferrer" target="_blank">Foundry VTT</a> Modules</h1>
+        <div className='hero-wrapper'>
+          <h1>Heyo, I make <a href="https://foundryvtt.com/" rel="noreferrer" target="_blank">Foundry VTT</a> Modules</h1>
+        </div>
         <HashLink smooth to='/#modules'><FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth /></HashLink>
       </header>
       <section className="module list" id="modules">

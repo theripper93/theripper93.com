@@ -1,7 +1,8 @@
 /** Module Subpage **/
 /** Page-wide **/
-.subpage {
+.subpage section {
   background-repeat: repeat;
+  padding-top: 1rem;
 }
 
 .subpage.free-wrapper {

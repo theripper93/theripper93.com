@@ -29,24 +29,20 @@ nav .links .subpage {
   align-items: center;
 }
 
-nav a,
-nav a:visited {
-  color: var(--100);
-  font-weight: 400;
-}
-
-nav .links .landing a,
-nav .links .socials svg {
+nav .links a,
+nav .links a:visited nav .links .socials svg {
   color: var(--100);
 }
 
-nav .links .landing a:hover {
+nav .links .landing a:hover,
+nav .links .subpage a:hover {
   cursor: pointer;
   color: var(--000);
   transition: all 0.3s ease-in-out;
 }
 
-nav .links .landing a:active {
+nav .links .landing a:active,
+nav .links .subpage a:active {
   color: var(--000);
   cursor: pointer;
   transform: translateY(0.0625rem);
@@ -104,7 +100,6 @@ nav .socials svg:active {
 .hamburger-menu {
   position: absolute;
   top: -10vh;
-  left: 0;
   width: 100vw;
   height: 100vh;
   padding-top: 12vh;
@@ -138,7 +133,7 @@ nav .socials svg:active {
   padding-left: 0.66rem;
 
   text-align: left;
-  font-size: 5rem;
+  font-size: 2.5rem;
   animation: fadeInAnimation ease 0.5s;
 }
 
@@ -160,30 +155,20 @@ nav .socials svg:active {
   height: 100%;
   display: flex;
   align-items: center;
-  left: 16px;
   transition: all 0.3s ease-in-out;
 }
 
-.hamburger-toggle svg {
-  color: inherit;
+.svg-inline--fa.fa-bars.fa-fw.fa-xl {
+  color: var(--100);
 }
 
-.hamburger-toggle svg:hover {
-  color: var(--200);
-}
-
-.hamburger-toggle svg:active {
-  color: var(--000);
-  transform: translateY(1px);
-}
-
-@media screen and (max-width: 543) {
+@media screen and (max-width: 750px) {
   nav .socials {
-    padding-right: 0.25rem;
+    padding-right: 0.1rem;
   }
 
   .hamburger-toggle {
-    padding-left: 0.25rem;
+    left: 0.25rem;
   }
 }
 
@@ -197,9 +182,12 @@ nav .socials svg:active {
     color: var(--200);
   }
 
+  nav .links a:visited {
+    color: var(--100);
+  }
+
   nav .links .landing a,
   nav .links .subpage a,
-  nav a:visited,
   nav .links .socials svg {
     color: var(--100);
     transition: all 0.3s ease-in-out;

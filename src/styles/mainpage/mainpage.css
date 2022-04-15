@@ -1,29 +1,35 @@
 /** Header and Footer Sections **/
 /* Hero Banner */
 header.hero {
-  display: flex;
   position: relative;
-  overflow: hidden;
 
+  height: 100vh;
   min-height: 100vh;
-  padding: 0;
+  max-height: 100vh;
+  padding: 1rem;
 
+  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  align-content: center;
   justify-content: center;
-  align-items: center;
   align-self: center;
+  align-items: center;
 
   background: hsla(30, 10%, 16%, 0.75);
 }
 
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 80%;
+}
+
 header.hero h1 {
   color: var(--100);
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 700;
   text-align: center;
-  padding-top: 20vh;
 }
 
 header.hero a {
@@ -35,9 +41,9 @@ header.hero a:hover {
 }
 
 header.hero svg {
+  justify-self: end;
   color: var(--150);
-  margin-top: 30vh;
-  animation: slide 3s ease-in-out infinite;
+  animation: bob 2s ease-in-out infinite;
 }
 
 header.hero svg:hover {
@@ -155,6 +161,10 @@ section .frontpage {
 }
 
 @media screen and (max-width: 1400px) {
+  header.hero h1 {
+    font-size: 5rem;
+  }
+
   #hub,
   #contact {
     margin-bottom: -2px;
@@ -166,8 +176,8 @@ section .frontpage {
     margin-block-start: 0;
   }
 
-  header.hero h0 {
-    padding-top: 0;
+  header.hero h1 {
+    font-size: 4rem;
   }
 
   header.hero svg {
