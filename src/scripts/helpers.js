@@ -58,9 +58,10 @@ export const locData = async () => {
     navLocal = _navLocal;
   }
 
+  const defLoc = "en-US";
   if(!_locDefault) {
     try{
-      _locDefault = await import(`../local/en-US.json`)
+      _locDefault = await import(`../local/${defLoc}.json`)
       locDefault = _locDefault;
     }catch(e){
       _locDefault = {};
