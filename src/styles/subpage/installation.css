@@ -123,6 +123,11 @@
 
 /* Screen Sizing */
 @media screen and (max-width: 768px) {
+  .install main {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
   .install li {
     padding: 0.1rem 1.5rem;
     font-size: 1.25rem;
