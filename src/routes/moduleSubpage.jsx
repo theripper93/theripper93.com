@@ -34,7 +34,7 @@ const Subpage = () => {
   return (
     <div className={`subpage ${data.status}-wrapper`}>
       <Navbar></Navbar>
-      <section className={`module-intro${!data.media && " no-video"}`}>
+      <section className={`module-intro${!data.media ? " no-video" : ""}`}>
         <main>
           <article className='card-solid'>
             <div className='content-wrapper'>
