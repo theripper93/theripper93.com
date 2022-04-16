@@ -45,6 +45,10 @@
   padding: 5rem;
 }
 
+.module-intro.no-video main {
+  grid-template-columns: 1fr;
+}
+
 .module-intro main h1 {
   margin-block-end: 0;
   margin-block-start: 0;

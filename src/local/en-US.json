@@ -282,7 +282,7 @@
         "name": "Tile Sort",
         "icon": "fas fa-sort-alpha-down",
         "desc": "A quality of life module for tiles. Includes z-index sorting, vision toggle, and tile highlighting.",
-        "fulldesc": "An easy to use tool to sort the z-index of tiles, includes also a toggle to hide one or more tiles (so you can work on tiles under them) and highlight to tiles on hover (so you can see a tile if it got lost under something). Available for free only in the discord channel.",
+        "fulldesc": "An easy to use tool to sort the z-index of tiles, includes also a toggle to hide one or more tiles (so you can work on tiles under them) and highlight to tiles on hover (so you can see a tile if it got lost under something).",
         "status": "free",
         "media": "https://youtu.be/xQycTn1rZ1g",
         "link": "https://github.com/theripper93/tile-sort"
@@ -302,7 +302,7 @@
         "desc": "A simple module for blocking weather effects on an area of a map. Includes Better Roofs and Levels integration.",
         "fulldesc": "A simple module to block weather effects on a map using drawings. Includes Better Roofs/Levels integration. Works with all systems.",
         "status": "free",
-        "media": "https://www.reddit.com/r/FoundryVTT/comments/npixnk/free_weather_blocker_block_weather_through/",
+        "media": "",
         "link": "https://github.com/theripper93/Weather-Blocker"
     },
     "Taskbar": {
@@ -452,9 +452,9 @@
         "name": "Maxwell's Manual of Malicious Maladies",
         "icon": "fas fa-user-injured",
         "desc": "A module for all your lingering injuries needs.",
-        "fulldesc": "A module for all your lingering injuries needs (dnd5e). 208 lingering injuries all with different severities, durations, and consequences, based on the 13 different damage types. Includes application automation, durations and item creation to keep track of injuries!. Available only on the discord channel! (for free)",
+        "fulldesc": "A module for all your lingering injuries needs (dnd5e). 208 lingering injuries all with different severities, durations, and consequences, based on the 13 different damage types. Includes application automation, durations and item creation to keep track of injuries!",
         "status": "free",
-        "media": "https://www.reddit.com/r/FoundryVTT/comments/q7gc5h/free_maxwells_manual_of_malicious_maladies_a/",
+        "media": "",
         "link": "https://github.com/theripper93/Maxwell-s-Manual-of-Malicious-Maladies"
     },
     "socketmacros": {
@@ -498,6 +498,24 @@
             "desc": "Be sure that you don't have walls under walls set to wrong elevation."
         }
       ]
+    },
+    "canvas3dcompendium": {
+        "name": "3D Canvas Compendium",
+        "icon": "fas fa-book",
+        "desc": "A compendium with 3D Maps and Tokens.",
+        "fulldesc": "A compendium of Premade 3d maps and 3D Tokens ready to use. Also includes Skyboxes and HDRI (exr) files for your scenes!",
+        "status": "free",
+        "media": "",
+        "link": "https://github.com/theripper93/canvas3dcompendium"
+    },
+    "theripper-premium-hub": {
+        "name": "TheRipper93's Module Hub",
+        "icon": "fas fa-code-branch",
+        "desc": "Updates and Notifications for my modules.",
+        "fulldesc": "Automatically check for my premium modules updates and recive notifications for Critical Updates on my Free Modules and new Free and Premium Releases.",
+        "status": "free",
+        "media": "",
+        "link": "https://github.com/theripper93/theripper-premium-hub"
     }
   },
     "faqs": [
