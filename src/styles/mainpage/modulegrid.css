@@ -1,12 +1,10 @@
 /* Modulegrid Section */
 section#modules {
-  min-height: 100vh;
   display: flex;
   padding-top: 2rem;
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   background: var(--500);
   background: linear-gradient(
