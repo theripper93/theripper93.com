@@ -436,6 +436,14 @@
         {
             "title": "Easy 3D Dungeons with Blender and the Dungeon Pack",
             "url": "https://youtu.be/wvd7Wm7WvHQ"
+        },
+        {
+            "title": "Advanced 3D Map Creation",
+            "url": "https://youtu.be/9BFukGHHvnI"
+        },
+        {
+            "title": "3D Canvas Live Gameplay",
+            "url": "https://youtu.be/ioxbrPI1qQ0"
         }
       ]
     },
@@ -480,7 +488,7 @@
         "icon": "fas fa-sticky-note",
         "desc": "Take quick notes on tokens. Great for tracking effects and values during combat, especially if you are not using automation!",
         "fulldesc": "With this simple yet effective module you can take quick notes on tokens. The module is system agnostic and excels at tracking effects durations during combat, especially if you are not using automation!",
-        "status": "paidea",
+        "status": "paid",
         "media": "https://youtu.be/bb6IS7kt490",
         "link": ""
     },
@@ -516,6 +524,21 @@
         "status": "free",
         "media": "",
         "link": "https://github.com/theripper93/theripper-premium-hub"
+    },
+    "levels-layer-effects": {
+        "name": "Levels - Depth Blur",
+        "icon": "fas fa-low-vision",
+        "desc": "Automatic Elevation based Blur effect.",
+        "fulldesc": "Automatically apply a blur effect to your Levels and tokens depending on the current elevation. The farther you are from a level, the more blur you will get.",
+        "status": "paidea",
+        "media": "https://youtu.be/QmEZRmpYLYU",
+        "link": "",
+        "guides": [
+            {
+                "title": "How to use Levels - Depth Blur",
+                "url": "https://youtu.be/EptprFHaSCw"
+            }
+        ]
     }
   },
     "faqs": [
