@@ -4,16 +4,16 @@ import '../styles/items/card-solid.css';
 const FaqCard = (props) => {
   const { question, answer, link, status } = props.faq;
   return (
-    <div>
+    <section className='faq'>
       <details className="card-solid">
         <summary className={` noselect basic-background`}>
-          <h4>{question}</h4>
+          <h3>{question}</h3>
         </summary>
         <article>
           <p>{answer}</p>
         </article>
       </details>
-    </div >
+    </section >
   )
 }
 

@@ -96,6 +96,7 @@
   .card-solid p {
     color: var(--500);
     text-shadow: 0 0 20 var(--400);
+    text-align: center;
   }
 
   .card-solid svg,
@@ -122,6 +123,14 @@
   .card-solid button:active {
     filter: contrast(0.8);
   }
+}
+
+.faq .card-solid p {
+  text-align: center;
+}
+
+.faq .card-solid p {
+  text-align: center;
 }
 
 @media screen and (max-width: 800px) {
