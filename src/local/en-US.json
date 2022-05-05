@@ -539,6 +539,15 @@
                 "url": "https://youtu.be/EptprFHaSCw"
             }
         ]
+    },
+    "three-actor-portrait": {
+        "name": "3D Portraits",
+        "icon": "fas fa-user-circle",
+        "desc": "Use 3D Models as Actor Portraits.",
+        "fulldesc": "Use 3D Models as Actor Portraits or Items. HeroForge integration lets you import your 3D Heros from HeroForge. 3D Portraits is not an officially HeroForge® supported module",
+        "status": "paidea",
+        "media": "https://youtu.be/te1pQ2-5KtQ",
+        "link": ""
     }
   },
     "faqs": [
