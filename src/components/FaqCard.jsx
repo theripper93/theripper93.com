@@ -4,8 +4,8 @@ import '../styles/items/card-solid.css';
 const FaqCard = (props) => {
   const { question, answer, link, status } = props.faq;
   return (
-    <div>
-      <details className="card-solid">
+    <section className='faq'>
+      <details className='card-solid'>
         <summary className={` noselect basic-background`}>
           <h4>{question}</h4>
         </summary>
@@ -13,7 +13,7 @@ const FaqCard = (props) => {
           <p>{answer}</p>
         </article>
       </details>
-    </div >
+    </section >
   )
 }
 
