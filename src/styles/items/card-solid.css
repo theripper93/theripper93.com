@@ -22,7 +22,7 @@
 }
 
 .card-solid header {
-
+  border: 2px solid transparent;
 }
 
 .card-solid h1,
