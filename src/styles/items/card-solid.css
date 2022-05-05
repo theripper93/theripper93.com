@@ -66,6 +66,10 @@
   color: var(--400);
 }
 
+.faq .card-solid p {
+  text-align: center;
+}
+
 @media (prefers-color-scheme: light) {
   .card-solid {
     border-color: var(--500);
