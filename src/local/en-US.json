@@ -547,7 +547,17 @@
         "fulldesc": "Use 3D Models as Actor Portraits or Items. HeroForge integration lets you import your 3D Heros from HeroForge. 3D Portraits is not an officially HeroForge® supported module",
         "status": "paidea",
         "media": "https://youtu.be/te1pQ2-5KtQ",
-        "link": ""
+        "link": "",
+        "troubleshooting": [
+            {
+                "title": "How do I enable the HeroForge integration?",
+                "desc": "To enable the integration, set the Authentication Key in the module settings. You can find further instructions in the setting's description."
+            },
+            {
+                "title": "I cannot see my HeroForge miniatures after enabling the integration.",
+                "desc": "Only miniatures purchased as '3D Digital' will be available."
+            }
+          ]
     }
   },
     "faqs": [
