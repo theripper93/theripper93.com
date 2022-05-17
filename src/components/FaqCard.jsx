@@ -6,8 +6,9 @@ const FaqCard = (props) => {
   return (
     <section className='faq'>
       <details className='card-solid'>
+      <details className="card-solid">
         <summary className={` noselect basic-background`}>
-          <h4>{question}</h4>
+          <h3>{question}</h3>
         </summary>
         <article>
           <p>{answer}</p>

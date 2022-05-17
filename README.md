@@ -1,5 +1,5 @@
 # theripper93.com
-A repo for my [site](https://theripper93.com/) which contains information for all my modules.
+A repo for theripper93's website. This repo is no longer updated as I now have access to the main repo. 
 
 ## Screenshots
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/95392008/163371517-b0a0f070-a4af-406c-8bf3-1ae109ed4852.gif)
@@ -9,5 +9,3 @@ A repo for my [site](https://theripper93.com/) which contains information for al
 
 ## Credits
 Modules and contents by me
-
-Site designed and made with love by [April Tao](https://github.com/apriltaoyvr)
