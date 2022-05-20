@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link, useLocation } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
-import { detectNavType } from '../scripts/helpers.js';
+import { detectNavType } from '../../scripts/helpers.js';
 import { useState } from 'react';
 
 import Hamburger from './Hamburger';

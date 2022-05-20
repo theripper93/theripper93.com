@@ -1,6 +1,6 @@
 import { locData } from '../scripts/helpers.js';
 import { useState } from 'react';
-import TroubleshootingCard from '../components/TroubleshootingCard.jsx';
+import TroubleshootingCard from '../components/Subpage/TroubleshootingCard.jsx';
 
 import '../styles/subpage/troubleshooting.css';
 

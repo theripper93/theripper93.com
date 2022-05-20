@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import '../styles/items/card-solid.css';
+import '../../styles/items/card-solid.css';
 
 const FaqCard = (props) => {
   const { question, answer, link, status } = props.faq;

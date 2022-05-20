@@ -3,12 +3,13 @@ import { HashLink } from 'react-router-hash-link';
 import './App.css';
 import './styles/mainpage/mainpage.css';
 import './styles/mainpage/cta.css';
+
 /* Misc Libraries */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* Components */
 import Navbar from './components/Navbar';
-import SkillCard from './components/SkillCard';
+import SkillCard from './components/Front/SkillCard';
 import Searchbar from './components/Searchbar';
 import ModuleGrid from './components/ModuleGrid';
 
@@ -24,7 +25,7 @@ function App() {
           <source src="./src/assets/videobanner.mp4" type="video/mp4" />
         </video>
         <div className='hero-wrapper'>
-          <h1>Heyo, I make <a href="https://foundryvtt.com/" rel="noreferrer" target="_blank">Foundry VTT</a> Modules</h1>
+          <h1>Heyo, I make <a href="https://foundryvtt.com/">Foundry VTT</a> Modules</h1>
         </div>
         <HashLink smooth to='/#modules'><FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth /></HashLink>
       </header>
@@ -99,15 +100,15 @@ function App() {
           <main className='contact-info'>
             <h3>You can reach me via</h3>
             <main className="links">
-              <a href="https://discordapp.com/users/195152093563191296" rel="noreferrer" target="_blank"><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
-              <a href="mailto:tsplab@gmail.com" rel="noreferrer" target="_blank"><FontAwesomeIcon icon="fa-solid fa-envelope" size="5x" fixedWidth /></a>
+              <a href="https://discordapp.com/users/195152093563191296" ><FontAwesomeIcon icon={["fab", "discord"]} size="5x" fixedWidth /></a>
+              <a href="mailto:tsplab@gmail.com"><FontAwesomeIcon icon="fa-solid fa-envelope" size="5x" fixedWidth /></a>
             </main>
             <br></br>
             <p>For non-business related inquiries, please write a message on my discord server instead.</p>
           </main>
         </summary>
         <aside>
-          <p id="credit">Site designed and developed with love by <a href="https://www.github.com/apriltaoyvr" rel="noreferrer" target="_blank">
+          <p id="credit">Site designed and developed with love by <a href="https://www.github.com/apriltaoyvr">
             April Tao </a></p>
         </aside>
       </footer>
@@ -115,4 +116,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
