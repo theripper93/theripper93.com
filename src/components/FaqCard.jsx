@@ -1,4 +1,3 @@
-import { Link, Outlet } from "react-router-dom";
 import '../styles/items/card-solid.css';
 
 const FaqCard = (props) => {
@@ -6,7 +5,6 @@ const FaqCard = (props) => {
   return (
     <section className='faq'>
       <details className='card-solid'>
-      <details className="card-solid">
         <summary className={` noselect basic-background`}>
           <h3>{question}</h3>
         </summary>
