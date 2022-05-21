@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import './App.css';
+import './styles/App.css';
 import './styles/mainpage/mainpage.css';
 import './styles/mainpage/cta.css';
 /* Misc Libraries */
