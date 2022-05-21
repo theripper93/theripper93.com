@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: 'Neue Montreal', 'Roboto', 'Helvetica', sans-serif;
+  color: var(--100);
+  background: var(--500);
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('./assets/fonts/PPNeueMontreal-Regular.otf') format('opentype');
+}
+
+/* No Select Class */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  cursor: pointer;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0.3125rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--400);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--200);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* SVGs and Icons */
+svg {
+  color: var(--150);
+}
+
+//* Inputs **/
+input {
+  &[type='text' i] {
+    background: transparent;
+    color: var(--150);
+    padding: 0rem 0.3125rem 0 0.625rem;
+    border: 0.125rem solid var(--300);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:focus-visible {
+    outline-style: none;
+    border-color: var(--100);
+  }
+
+  &::placeholder {
+    color: var(--200);
+  }
+}
+
+/* Buttons */
+button {
+  &:hover,
+  &:active {
+    cursor: pointer;
+    filter: brightness(1.1);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+/* Links and Buttons */
+*:-webkit-any-link,
+a:-webkit-any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a,
+svg {
+  &:hover {
+    color: var(--accent);
+    transition: all 0.3s ease-in-out;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+//* Text Styles **/
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-block-start: 0.1rem;
+  margin-block-end: 0.1rem;
+}
+
+li {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+strong {
+  background: -webkit-linear-gradient(0deg, #ffd78a, #ff9659);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Details and Summary Classes*/
+summary {
+  font-weight: bold;
+}

@@ -1,0 +1,56 @@
+:root {
+  --000: #ffcb77;
+  --100: #ede7d9;
+  --150: #c8c5bf;
+  --200: #a49694;
+  --300: #6f6557;
+  --400: #4b4237;
+  --500: #2d2925;
+
+  --accent: #ffcb77;
+  --patreon: #ff8870;
+  --free: #75ffba;
+  --discord: #7c86ff;
+
+  @media (prefers-color-scheme: light) {
+    --accent: #d7b24b;
+    --discord: #4d5c93;
+    --patreon: #cc4122;
+    --free: #26ab69;
+  }
+}
+
+/** Status Colours **/
+.paidea {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.paid {
+  color: var(--patreon);
+  text-decoration-color: var(--patreon);
+}
+
+.free {
+  color: var(--free);
+  text-decoration-color: var(--free);
+}
+
+.paidea-background {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.paid-background {
+  border-color: var(--patreon);
+  background: var(--patreon);
+}
+
+.free-background {
+  border-color: var(--free);
+  background: var(--free);
+}
+
+.github-background {
+  background: var(--discord);
+}
