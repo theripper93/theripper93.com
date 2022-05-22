@@ -140,6 +140,16 @@
         {
             "title": "Vision is getting blocked while it shouldn't",
             "desc": "Be sure that your overhead tiles are not set to 'Roof' occlusion mode."
+        },
+        {
+            "title": "A roof is not showing at all",
+            "desc": "Better roofs uses token vision radius to determine if roofs are visible, if your map is illuminated by lights, Better Roofs will not show the roof."
+        }
+      ],
+      "guides": [
+        {
+            "title": "The Polygon",
+            "url": "https://youtu.be/HD4CXRmG5ss"
         }
       ]
     },
