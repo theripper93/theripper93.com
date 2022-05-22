@@ -46,6 +46,6 @@
 
 @media screen and (max-width: 768px) {
   .subpage section {
-    padding-top: 2rem;
+    padding-top: 0;
   }
 }

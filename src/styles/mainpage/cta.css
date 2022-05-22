@@ -32,26 +32,26 @@
     7px 7px 0 2px var(--400);
 }
 
-.card-cta .patreon:hover {
+.card-cta.patreon:hover {
   cursor: default;
   border: 2px solid var(--patreon);
-  box-shadow: 0 0 3px var(--patreon), 
+  box-shadow: 0 0 2px var(--patreon), 
     7px 7px var(--500),
     7px 7px 0 2px var(--400);
 }
 
-.card-cta .hub:hover {
+.card-cta.hub:hover {
   cursor: default;
   border: 2px solid var(--accent);
-  box-shadow: 0 0 3px var(--accent), 
-    7px 7px var(--400),
+  box-shadow: 0 0 2px var(--accent), 
+    7px 7px var(--500),
     7px 7px 0 2px var(--400);
 }
 
-.card-cta .discord:hover {
+.card-cta.discord:hover {
   cursor: default;
   border: 2px solid var(--discord);
-  box-shadow: 0 0 3px var(--discord), 
+  box-shadow: 0 0 2px var(--discord), 
     7px 7px var(--500),
     7px 7px 0 2px var(--400);
 }
@@ -280,20 +280,21 @@
 }
 
 /** Screen Sizing **/
-@media screen and (max-width: 75rem) {
-  .cta {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: flex-start;
+@media screen and (max-width: 1290px) {
+  #hub {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 9.5rem;
     background-size: cover;
     align-content: center;
   }
+
+  #hub .card-cta {
+    width: 33vw;
+  }
 }
 
-@media screen and (max-width: 62.4375rem) {
+@media screen and (max-width: 999px) {
   .cta {
     display: flex;
     flex-direction: column;
@@ -310,7 +311,7 @@
   }
 }
 
-@media screen and (max-width: 28.125rem) {
+@media screen and (max-width: 450px) {
   .cta {
     display: flex;
     flex-direction: column;

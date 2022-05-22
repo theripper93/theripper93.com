@@ -6,7 +6,7 @@
   align-content: center;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  padding-top: 2rem;
 }
 
 .module-intro .card-solid {
@@ -19,8 +19,8 @@
   height: 100%;
   max-width: 75%;
 
-  border-radius: 4px;
   border-color: var(--300);
+  border-top: none;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
@@ -65,10 +65,6 @@
 .module-intro svg {
   color: var(--100);
   animation: bob 2s infinite linear;
-}
-
-.module-intro .card-solid header {
-  border-radius: 4px 4px 2px 2px;
 }
 
 /* Right-side Content of Module Subpages */

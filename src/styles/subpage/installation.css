@@ -71,7 +71,6 @@
 }
 
 /* Card Styling */
-
 .install .card-solid details {
   width: 100%;
 }
@@ -126,6 +125,11 @@
   .install main {
     flex-direction: column;
     flex-wrap: wrap;
+  }
+
+  .install .card-wrapper {
+    width: 80vw;
+    padding: 1rem;
   }
 
   .install li {

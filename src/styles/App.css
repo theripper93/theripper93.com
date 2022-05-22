@@ -15,6 +15,7 @@
 }
 
 body {
+  margin: 0;
   font-family: 'Neue Montreal', 'Roboto', 'Helvetica', sans-serif;
   color: var(--100);
   background: var(--500);
@@ -355,10 +356,9 @@ footer.module-page-badge {
     font-size: 2rem;
   }
 
-  h4{
+  h4 {
     font-size: 1.25rem;
   }
-
 
   p,
   li {

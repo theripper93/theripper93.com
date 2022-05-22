@@ -638,7 +638,7 @@
             "description": "If the issue seems to bad to be true, sometimes it can be a broken installation or a caching issue. Reinstall the module and restart the server. You can skip this step if the issue is minor, this is usually reserved to major issues like the module not working at all."
         },
         {
-            "title": "Step 6a: Contact me on Discord.",
+            "title": "Step 6a: Contact me.",
             "description": "If the issue is still not resolved, please contact me on discord and provide me with the information you acquired from the basic troubleshooting. I'll try to get the issue resolved as soon as possible."
         },
         {

@@ -14,7 +14,7 @@ dist-ssr
 .gitignore
 
 # Editor directories and files
-.vscode/*
+.vscode
 !.vscode/extensions.json
 .idea
 .DS_Store
@@ -25,4 +25,4 @@ dist-ssr
 *.sw?
 
 # Assets
-/src/assets/*
+/src/assets/fonts
