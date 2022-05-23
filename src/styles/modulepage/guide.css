@@ -6,16 +6,6 @@ section.additional.content {
   align-items: center;
 }
 
-@media (min-width: 1200px) {
-  section.additional.content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 5rem;
-  }
-}
-
 /* Troubleshooting in Module Subpage */
 .module-troubleshooting main {
   max-width: 50vw;
@@ -37,6 +27,7 @@ section.additional.content {
 /* Video Guides */
 .module-guides main {
   display: grid;
+  grid-column-start: span 2 / auto;
   grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-content: center;
@@ -60,9 +51,10 @@ section.additional.content {
 }
 
 .guide-videos h4 {
-  margin-block-start: 0.5rem;
+  margin-block-: 0.5rem;
   margin-block-end: 1rem;
 }
+
 .guide-videos iframe {
   border: none;
   aspect-ratio: 16 / 9;
@@ -89,9 +81,11 @@ section.additional.content {
 @media (min-width: 1200px) {
   section.additional.content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: auto;
     align-items: flex-start;
+    justify-content: center;
     gap: 2rem;
     padding: 5rem;
+    min-width: 80vw;
   }
 }
