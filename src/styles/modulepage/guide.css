@@ -1,11 +1,19 @@
 /* Section-wide styling */
 section.additional.content {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: space-around;
+  flex-direction: column;
+  align-content: center;
   align-items: center;
+}
+
+@media (min-width: 1200px) {
+  section.additional.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 5rem;
+  }
 }
 
 /* Troubleshooting in Module Subpage */
@@ -14,7 +22,7 @@ section.additional.content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .module-troubleshooting .card-solid {
@@ -29,13 +37,9 @@ section.additional.content {
 /* Video Guides */
 .module-guides main {
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  flex-direction: row;
-  flex-wrap: wrap;
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-content: center;
-  justify-items: stretch;
-  align-items: stretch;
 }
 
 .guide-videos {
@@ -43,9 +47,7 @@ section.additional.content {
   flex-direction: column;
   text-align: center;
   align-content: center;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
 
   background: hsla(33, 15%, 25%, 0.25);
   border-radius: 4px;
@@ -54,7 +56,6 @@ section.additional.content {
     1.3px 3.3px 4px -1.7px hsl(34deg 22% 13% / 0.36),
     3px 8px 9.6px -2.5px hsl(34deg 22% 13% / 0.36);
   backdrop-filter: blur(4.5px);
-  -webkit-backdrop-filter: blur(4.5px);
   border: 1px solid var(--400);
 }
 
@@ -85,18 +86,12 @@ section.additional.content {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .module-guides main {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .module-troubleshooting main {
-    max-width: 70vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .module-guides main {
-    grid-template-columns: 1fr;
+@media (min-width: 1200px) {
+  section.additional.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 5rem;
   }
 }
