@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import IssueCard from '../components/IssueCard'
+import IssueCard from '../components/subpage/IssueCard';
 import { locData } from '../scripts/helpers.js';
 import '../styles/subpage/issues.css';
 

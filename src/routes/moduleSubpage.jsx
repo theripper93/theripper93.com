@@ -8,10 +8,10 @@ import '../styles/modulepage/modulepage.css';
 import '../styles/modulepage/intro.css';
 
 /* Components */
-import Video from '../components/Video.jsx';
-import Navbar from '../components/Navbar';
-import FaqCard from '../components/FaqCard';
-import ModuleGuide from '../components/ModuleGuide.jsx';
+import Video from '../components/subpage/Video.jsx';
+import Navbar from '../components/navbar/Navbar';
+import FaqCard from '../components/subpage/FaqCard';
+import ModuleGuide from '../components/subpage/ModuleGuide.jsx';
 
 
 const Subpage = () => {

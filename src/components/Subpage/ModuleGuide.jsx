@@ -1,5 +1,5 @@
 import Video from "./Video";
-import '../styles/modulepage/guide.css'
+import '../../styles/modulepage/guide.css'
 
 const ModuleGuide = (props) => {
   const { url, title } = props;

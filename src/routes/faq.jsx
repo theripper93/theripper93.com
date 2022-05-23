@@ -5,8 +5,8 @@ import { Outlet } from 'react-router';
 import { useLocation } from "react-router-dom";
 
 /* Components */
-import Navbar from '../components/Navbar';
-import FaqCard from '../components/FaqCard';
+import Navbar from '../components/navbar/Navbar';
+import FaqCard from '../components/subpage/FaqCard';
 
 import { locData } from '../scripts/helpers.js';
 

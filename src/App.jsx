@@ -7,10 +7,10 @@ import './styles/mainpage/cta.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* Components */
-import Navbar from './components/Navbar';
-import SkillCard from './components/SkillCard';
-import Searchbar from './components/Searchbar';
-import ModuleGrid from './components/ModuleGrid';
+import Navbar from './components/navbar/Navbar';
+import SkillCard from './components/home/SkillCard';
+import Searchbar from './components/home/Searchbar';
+import ModuleGrid from './components/home/ModuleGrid';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');

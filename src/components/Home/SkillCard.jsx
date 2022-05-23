@@ -1,4 +1,4 @@
-import '../styles/items/button-hollow.css';
+import '../../styles/items/button-hollow.css';
 
 const SkillCard =  (props) => {
   return(

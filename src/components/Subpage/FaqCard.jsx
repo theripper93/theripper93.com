@@ -1,20 +1,19 @@
-import '../styles/items/card-solid.css';
+import '../../styles/items/card-solid.css';
 
 const FaqCard = (props) => {
-  const { question, answer, link, status } = props.faq;
+  const { question, answer } = props.faq;
   return (
     <section className='faq'>
       <details className='card-solid'>
         <summary className={` noselect basic-background`}>
-          <h3>{question}</h3>
+          <h4>{question}</h4>
         </summary>
         <article>
           <p>{answer}</p>
         </article>
       </details>
-    </section >
-  )
-}
+    </section>
+  );
+};
 
-
-export default FaqCard
+export default FaqCard;
