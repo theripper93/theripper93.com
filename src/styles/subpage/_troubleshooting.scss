@@ -1,75 +1,77 @@
-.troubleshooting .card-solid {
-  border-top: none;
-}
+.troubleshooting {
+  h1 {
+    margin-block-end: 0;
+  }
 
-.troubleshooting h1 {
-  margin-block-end: 0;
-}
+  svg {
+    opacity: 1;
 
-.troubleshooting-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
+    &.svg-inline--fa.fa-arrow-down.connection.free {
+      height: 3rem;
+      width: 1rem;
+      position: absolute;
+      top: 100%;
+      left: calc(50% - 0.4rem);
+      align-self: center;
+    }
 
-.troubleshooting-wrapper .wrapper {
-  cursor: pointer;
-  position: relative;
-}
+    &.svg-inline--fa.fa-arrow-down.connection.inactive {
+      opacity: 0;
+    }
+  }
 
-.troubleshooting-wrapper svg {
-  position: absolute;
-  left: 1rem;
-}
+  .card-solid {
+    border-top: none;
+  }
 
-.troubleshooting-container .checkmark {
-  text-align: center;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 
-svg.svg-inline--fa.fa-arrow-down.connection.free {
-  height: 3rem;
-  width: 1rem;
-  position: absolute;
-  top: 100%;
-  left: calc(50% - 0.4rem);
-  align-self: center;
-}
+    svg {
+      position: absolute;
+      left: 1rem;
+    }
 
-.troubleshooting svg {
-  opacity: 1;
-}
+    .wrapper {
+      cursor: pointer;
+      position: relative;
 
-.troubleshooting svg.svg-inline--fa.fa-arrow-down.connection.inactive {
-  opacity: 0;
-}
+      &:last-child .connection {
+        display: none;
+        height: 0;
+      }
+    }
+  }
 
-.troubleshooting-wrapper .wrapper:last-child .connection {
-  display: none;
-  height: 0;
-}
+  &-container .checkmark {
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-.troubleshooting .paid-background,
-.troubleshooting .free-background {
-  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
-}
+  .paid-background,
+  .free-background {
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+  }
 
-.troubleshooting .step6 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 1rem;
-}
+  .step6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
 
-.step6 .card-solid {
-  width: 100%;
-  height: 100%;
+    .card-solid {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -93,6 +95,7 @@ svg.svg-inline--fa.fa-arrow-down.connection.free {
   .troubleshooting h1 {
     font-size: 2rem;
   }
+
   .troubleshooting-wrapper .fa-2x {
     display: none;
   }

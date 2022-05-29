@@ -7,46 +7,52 @@ section#modules {
   flex-wrap: wrap;
   align-items: center;
   background: var(--500);
-  background: linear-gradient(
-    180deg,
-    hsla(30, 10%, 16%, 0.75) 0%,
-    hsla(30, 10%, 16%, 0.8) 3%,
-    hsla(30, 10%, 16%, 0.9) 5.5%,
-    var(--500) 10%
-  );
+  background: linear-gradient(180deg,
+      hsla(30, 10%, 16%, 0.75) 0%,
+      hsla(30, 10%, 16%, 0.8) 3%,
+      hsla(30, 10%, 16%, 0.9) 5.5%,
+      var(--500) 10%);
+
+  @media (prefers-color-scheme: light) {
+    background: var(--100);
+  }
 }
 
 .searchbar {
   position: relative;
-}
 
-.searchbar input[type='text' i] {
-  width: 90vw;
-  height: 36px;
-}
+  input[type='text' i] {
+    width: 90vw;
+    height: 36px;
+  }
 
-.searchbar button {
-  position: absolute;
-  right: 8px;
-  height: 100%;
-  border: 0.0625rem solid transparent;
-  background: transparent;
-}
+  button {
+    position: absolute;
+    right: 8px;
+    height: 100%;
+    border: 0.0625rem solid transparent;
+    background: transparent;
 
-.searchbar button:active {
-  transform: translateY(0.0625rem);
-}
+    &:active {
+      transform: translateY(0.0625rem);
+    }
 
-.searchbar button svg {
-  color: var(--100);
-}
+    svg {
+      color: var(--100);
 
-.searchbar .button-paid svg {
-  color: var(--patreon);
-}
+      @media (prefers-color-scheme: light) {
+        color: var(--400);
+      }
+    }
+  }
 
-.searchbar .button-free svg {
-  color: var(--free);
+  .button-paid svg {
+    color: var(--patreon);
+  }
+
+  .button-free svg {
+    color: var(--free);
+  }
 }
 
 .module .grid {
@@ -61,21 +67,10 @@ section#modules {
   padding: 1rem;
   gap: 1.875rem;
   padding-top: 3rem;
-}
 
-@media (max-width: 768px) {
-  .module .grid .wrapper {
-    width: 100%;
-  }
-}
-
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-  section#modules {
-    background: var(--100);
-  }
-
-  .searchbar button svg {
-    color: var(--400);
+  @media (max-width: 768px) {
+    .wrapper {
+      width: 100%;
+    }
   }
 }

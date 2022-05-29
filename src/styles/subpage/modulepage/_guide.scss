@@ -7,30 +7,40 @@ section.additional.content {
 }
 
 /* Troubleshooting in Module Subpage */
-.module-troubleshooting main {
-  max-width: 50vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 1rem;
-}
+.module-troubleshooting {
+  main {
+    max-width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
 
-.module-troubleshooting .card-solid {
-  color: var(--100);
-  border: 2px solid var(--300);
-}
+  .card-solid {
+    color: var(--100);
+    border: 2px solid var(--300);
 
-.module-troubleshooting .card-solid h4 {
-  color: var(--100);
+    @media (prefers-color-scheme: light) {
+      color: var(--100);
+      border: 2px solid var(--500);
+    }
+
+    h4 {
+      color: var(--100);
+    }
+
+  }
 }
 
 /* Video Guides */
-.module-guides main {
-  display: grid;
-  grid-column-start: span 2 / auto;
-  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  justify-content: center;
+.module-guides {
+  main {
+    display: grid;
+    grid-column-start: span 2 / auto;
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: center;
+  }
 }
 
 .guide-videos {
@@ -48,33 +58,26 @@ section.additional.content {
     3px 8px 9.6px -2.5px hsl(34deg 22% 13% / 0.36);
   backdrop-filter: blur(4.5px);
   border: 1px solid var(--400);
-}
 
-.guide-videos h4 {
-  margin-block-: 0.5rem;
-  margin-block-end: 1rem;
-}
+  h4 {
+    margin-block-: 0.5rem;
+    margin-block-end: 1rem;
+  }
 
-.guide-videos iframe {
-  border: none;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  width: 100%;
-  justify-self: center;
-}
+  iframe {
+    border: none;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    width: 100%;
+    justify-self: center;
+  }
 
-@media (prefers-color-scheme: light) {
-  .guide-videos {
+  @media (prefers-color-scheme: light) {
     background: hsla(42, 36%, 89%, 0.25);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.5px);
     -webkit-backdrop-filter: blur(4.5px);
     border: 1px solid var(--300);
-  }
-
-  .module-troubleshooting .card-solid {
-    color: var(--100);
-    border: 2px solid var(--500);
   }
 }
 

@@ -9,104 +9,97 @@
   gap: 2rem;
 }
 
-div {
-  white-space: pre-line;
-  vertical-align: bottom;
-}
+.issues {
+  li {
+    padding: 0.25rem;
 
-article {
-  text-align: left;
-  width: 100%;
-}
+    &::marker {
+      color: var(--accent);
+    }
+  }
 
-.issues li {
-  padding: 0.25rem;
-}
+  .report-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: left;
 
-.issues li::marker {
-  color: var(--accent);
-}
+    ol {
+      min-width: 80%;
+    }
 
-.report-form {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  text-align: left;
-}
+    li {
+      line-height: 2;
+    }
 
-.report-form ol {
-  min-width: 80%;
-}
+    input[type='text' i] {
+      width: 92%;
+      min-height: 30px;
+      padding-left: 5px;
+      color: var(--150);
+    }
 
-.report-form li {
-  line-height: 2;
-}
+    input[type='checkbox' i] {
+      transform: scale(1.2);
+      margin: 0 0.33rem;
+    }
 
-.report-form textarea {
-  min-height: 250px;
-  min-width: 93.5%;
-  resize: none;
+    footer {
+      text-align: center;
+      padding: 1rem;
+    }
 
-  background: transparent;
-  border-color: var(--300);
-  color: var(--100);
-}
+    textarea {
+      min-height: 250px;
+      min-width: 93.5%;
+      resize: none;
 
-.report-form input[type='text' i] {
-  width: 92%;
-  min-height: 30px;
-  padding-left: 5px;
-  color: var(--150);
-}
+      background: transparent;
+      border-color: var(--300);
+      color: var(--100);
+    }
 
-.report-form input[type='checkbox' i] {
-  transform: scale(1.2);
-  margin: 0 0.33rem;
-}
+    @media (prefers-color-scheme: light) {
+      input[type='text' i] {
+        width: 92%;
+        min-height: 30px;
+        padding-left: 5px;
+        color: var(--500);
+      }
 
-.report-form footer {
-  text-align: center;
-  padding: 1rem;
+      textarea {
+        color: var(--500);
+      }
+
+      footer {
+        color: var(--patreon);
+        background: transparent;
+      }
+    }
+
+  }
 }
 
 #submit-bug {
   min-width: 250px;
   background: var(--accent);
-}
 
-#submit-bug:disabled {
-  background: var(--200);
-}
+  &:disabled {
+    background: var(--200);
 
-#submit-bug:disabled:hover {
-  cursor: not-allowed;
-}
-
-@media (prefers-color-scheme: light) {
-  .report-form input[type='text' i] {
-    width: 92%;
-    min-height: 30px;
-    padding-left: 5px;
-    color: var(--500);
+    &:hover {
+      cursor: not-allowed;
+    }
   }
 
-  .report-form textarea {
-    color: var(--500);
-  }
-
-  .report-form footer {
-    color: var(--patreon);
-    background: transparent;
-  }
-
-  #submit-bug {
+  @media (prefers-color-scheme: light) {
     background: var(--500);
     color: var(--100);
-  }
 
-  #submit-bug:disabled {
-    background: var(--150);
-    color: var(--300);
-    border-color: var(--300);
+    &:disabled {
+      background: var(--150);
+      color: var(--300);
+      border-color: var(--300);
+    }
   }
 }

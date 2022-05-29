@@ -2,123 +2,124 @@
 .install {
   display: flex;
   flex-direction: column;
-}
 
-.subpage-container.install {
-  padding-left: 10vw;
-  padding-right: 10vw;
-  padding-top: 0;
-  padding-bottom: 0;
-  min-height: 100vh;
-}
-
-.install main {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-}
-
-/* Subsections */
-/* Page Header */
-.install .intro {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5vh;
-}
-
-/* Instruction Sections */
-.install .free-installation,
-.install .patreon-installation {
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: auto;
-  align-items: center;
-  width: 50%;
-}
-
-.install .free-installation h2,
-.install .patreon-installation h2 {
-  text-decoration: underline;
-  text-decoration-style: dashed;
-}
-
-.install .free-installation h2 {
-  text-decoration-color: var(--free);
-}
-
-.install .patreon-installation h2 {
-  text-decoration-color: var(--patreon);
-}
-
-.install .card-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  gap: 1rem;
-}
-
-/* Card Styling */
-.install .card-solid details {
-  width: 100%;
-}
-
-.install .card-solid summary {
-  font-size: 1.5rem;
-  color: var(--500);
-}
-
-.install .card-solid summary:hover {
-  cursor: pointer;
-}
-
-.install li {
-  padding: 0.25rem 1.5rem;
-  text-align: left;
-}
-
-.install li::marker {
-  color: var(--300);
-}
-
-.install .card-solid.free-border {
-  border-color: var(--free);
-}
-
-.install .card-solid.paid-border {
-  border-color: var(--patreon);
-}
-
-@media (prefers-color-scheme: light) {
-  .install header {
-    color: var(--500);
-  }
-  .install .card-solid details {
-    color: var(--500);
-  }
-  .install .card-solid summary {
-    color: var(--100);
+  main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
   }
 
-  .install .card-solid .free-background,
-  .install .card-solid .paid-background,
-  .install .card-solid.free-border,
-  .install .card-solid.paid-border {
-    border: 1px solid var(--500);
+  &.subpage-container {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 100vh;
+
   }
-}
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+  }
+
+  .free-installation,
+  .patreon-installation {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    width: 50%;
+
+    h2 {
+      text-decoration: underline;
+      text-decoration-style: dashed;
+    }
+  }
+
+  .free-installation {
+    h2 {
+      text-decoration-color: var(--free);
+    }
+  }
+
+  .patreon-installation {
+    h2 {
+      text-decoration-color: var(--patreon);
+    }
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 1rem;
+  }
+
+  .card-solid {
+    details {
+      width: 100%;
+    }
+
+    summary {
+      font-size: 1.5rem;
+      color: var(--500);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    li {
+      padding: 0.25rem 1.5rem;
+      text-align: left;
+
+      &::marker {
+        color: var(--300);
+      }
+    }
+
+    &.free-border {
+      border-color: var(--free);
+    }
+
+    &.paid-border {
+      border-color: var(--patreon);
+    }
+
+    @media (prefers-color-scheme: light) {
+      header {
+        color: var(--500);
+      }
+
+      summary {
+        color: var(--100);
+      }
+
+      .free-background,
+      .paid-background,
+      &.free-border,
+      &.paid-border {
+        border: 1px solid var(--500);
+      }
+    }
+
+
+  }
 
 /* Screen Sizing */
 @media screen and (max-width: 768px) {
