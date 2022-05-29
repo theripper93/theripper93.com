@@ -58,6 +58,14 @@
     }
   }
 
+  footer {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
   .basic-background {
 
     h1,
