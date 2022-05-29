@@ -17,19 +17,7 @@ body {
 
 /* No Select Class */
 .noselect {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
   user-select: none;
-  /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
   cursor: pointer;
 }
 
@@ -43,6 +31,7 @@ body {
 
   &-thumb {
     background: var(--200);
+
     &:hover {
       background: var(--accent);
     }
@@ -55,6 +44,7 @@ body {
 
     &-thumb {
       background: var(--400);
+
       &:hover {
         background: var(--500);
       }
@@ -90,6 +80,7 @@ input {
   &:focus-visible {
     outline-style: none;
     border-color: var(--100);
+
     @media (prefers-color-scheme: light) {
       outline-style: solid;
       border-color: var(--500);
@@ -98,6 +89,7 @@ input {
 
   &::placeholder {
     color: var(--200);
+
     @media (prefers-color-scheme: light) {
       color: var(--400);
     }
@@ -106,6 +98,7 @@ input {
 
 /* Buttons */
 button {
+
   &:hover,
   &:active {
     cursor: pointer;
@@ -202,6 +195,7 @@ strong {
 }
 
 @media (prefers-color-scheme: light) {
+
   h1,
   h2,
   h3 {

@@ -76,6 +76,18 @@
     }
   }
 
+  .paidea-background {
+    border-color: var(--accent);
+  }
+
+  .paid-background {
+    border-color: var(--patreon);
+  }
+
+  .free-background {
+    border-color: var(--free);
+  }
+
   .faq {
     p {
       text-align: center;

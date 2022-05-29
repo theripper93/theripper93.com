@@ -5,11 +5,7 @@ nav {
   width: 100%;
 
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  align-items: center;
 
   background: hsla(34, 9%, 16%, 0.25);
   color: var(--300);
@@ -20,12 +16,8 @@ nav {
   .links {
     color: var(--100);
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-
+    padding: 6px;
+    width: 100%;
 
     .landing,
     .subpage {
@@ -63,8 +55,6 @@ nav {
       align-content: flex-start;
       justify-content: center;
       align-items: center;
-
-      padding-left: 16px;
     }
   }
 
@@ -76,7 +66,6 @@ nav {
     align-items: center;
 
     width: 100%;
-    padding-right: 16px;
 
     svg {
       color: var(--100);
@@ -92,35 +81,41 @@ nav {
       }
     }
   }
+
 }
 
-/** Hamburger Menu **/
+//* Hamburger Menu
 .home-buttons {
   display: flex;
   align-items: center;
 }
 
+// Hamburger Menu Icon
 .hamburger {
   position: relative;
   z-index: 1000;
+
+  p {
+    display: none;
+  }
 }
 
 .hamburger-menu {
   position: absolute;
-  top: -10vh;
   width: 100vw;
-  height: 92.5vh;
-  padding-top: 15vh;
+  height: 100vh;
+  top: 0;
+  left: 0;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   background: linear-gradient(90deg,
       hsla(30, 10%, 16%, 1) 0%,
       hsla(30, 10%, 16%, 0.75) 75%,
       hsla(30, 10%, 16%, 0.5) 100%);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
 
   .links,
   .links .landing,
@@ -129,8 +124,9 @@ nav {
   .links .subpage .home-buttons {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 0.66rem;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
 
     text-align: left;
     font-size: 3rem;
@@ -141,43 +137,44 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 0.66rem;
 
     text-align: left;
     font-size: 3rem;
     animation: fadeInAnimation ease 0.5s;
+  }
 
-    padding-top: 1rem;
+  .socials {
+    justify-content: center;
+  }
 
-    .landing,
-    .subpage {
-      .home-buttons {
-        padding-left: 1.25rem;
+  &.hidden {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background: hsla(30, 10%, 16%, 0.66);
+
+    .links {
+      p {
+        color: var(--200);
+      }
+
+      a:visited {
+        color: var(--100);
+      }
+
+      .landing a,
+      .subpage a,
+      .socials svg {
+        color: var(--100);
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: var(--200);
+        }
       }
     }
-
-    .landing {
-      padding-left: 0;
-    }
   }
-}
-
-.hamburger-menu .links .landing .home-buttons,
-.hamburger-menu .links .subpage .home-buttons,
-.hamburger-menu .socials {
-  padding-left: 1.25rem;
-}
-
-.hamburger-menu .socials {
-  justify-content: center;
-}
-
-.hamburger-menu.hidden {
-  display: none;
-}
-
-.hamburger p {
-  display: none;
 }
 
 .hamburger-toggle {
@@ -190,43 +187,4 @@ nav {
 
 .svg-inline--fa.fa-bars.fa-fw.fa-xl {
   color: var(--100);
-}
-
-@media screen and (max-width: 750px) {
-  nav .socials {
-    padding-right: 0.1rem;
-  }
-
-  .hamburger-toggle {
-    left: 0.25rem;
-  }
-}
-
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-  nav {
-    background: hsla(30, 10%, 16%, 0.66);
-  }
-
-  nav .links p {
-    color: var(--200);
-  }
-
-  nav .links a:visited {
-    color: var(--100);
-  }
-
-  nav .links .landing a,
-  nav .links .subpage a,
-  nav .links .socials svg {
-    color: var(--100);
-    transition: all 0.3s ease-in-out;
-  }
-
-  nav .links .landing a:hover,
-  nav .links .subpage a:hover,
-  nav .links .socials svg:hover {
-    color: var(--200);
-    transition: all 0.3s ease-in-out;
-  }
 }
