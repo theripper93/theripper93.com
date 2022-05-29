@@ -18,10 +18,12 @@ function App() {
 
   return (
     <div className='App'>
-      <Navbar></Navbar>
+      <Navbar />
       <header className='hero' id=''>
         <video autoPlay muted loop id='video-bg'>
-          <source src='./src/assets/videobanner.mp4' type='video/mp4' />
+          <source 
+          src='./public/video/videobanner.mp4' 
+          type='video/mp4' />
         </video>
         <div className='hero-wrapper'>
           <h1>
@@ -181,4 +183,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

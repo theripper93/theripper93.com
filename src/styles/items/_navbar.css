@@ -15,76 +15,76 @@ nav {
   color: var(--300);
   box-shadow: 0 5px 5px hsla(34, 11%, 12%, 0.25);
   backdrop-filter: blur(1px);
-}
 
-/** Links **/
-/** Navigation links for the site **/
-nav .links,
-nav .links .landing,
-nav .links .subpage {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
+  /** Links **/
+  .links {
+    color: var(--100);
 
-nav .links a,
-nav .links a:visited nav .links .socials svg {
-  color: var(--100);
-}
+    .landing,
+    .subpage {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
 
-nav .links .landing a:hover,
-nav .links .subpage a:hover {
-  cursor: pointer;
-  color: var(--000);
-  transition: all 0.3s ease-in-out;
-}
+      & a:visited,
+      & .socials svg {
+        color: var(--100);
+      }
 
-nav .links .landing a:active,
-nav .links .subpage a:active {
-  color: var(--000);
-  cursor: pointer;
-  transform: translateY(0.0625rem);
-}
+      & a {
+        &:hover {
+          cursor: pointer;
+          color: var(--000);
+          transition: all 0.3s ease-in-out;
+        }
 
-/* Links for the home page */
-nav .links .landing {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  justify-content: center;
-  align-items: center;
+        &:active {
+          color: var(--000);
+          cursor: pointer;
+          transform: translateY(0.0625rem);
+        }
+      }
+    }
 
-  padding-left: 16px;
-}
+    .landing {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: flex-start;
+      justify-content: center;
+      align-items: center;
 
-/* Links to social media */
-nav .socials {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+      padding-left: 16px;
+    }
+  }
 
-  width: 100%;
-  padding-right: 16px;
-}
+  .socials {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 
-nav .socials svg {
-  color: var(--100);
-  padding: 2px;
-}
+    width: 100%;
+    padding-right: 16px;
 
-nav .socials svg:hover {
-  color: var(--000);
-}
+    svg {
+      color: var(--100);
+      padding: 2px;
 
-nav .socials svg:active {
-  color: var(--000);
-  transform: translateY(0.0625rem);
+      &:hover {
+        color: var(--000);
+      }
+
+      &:active {
+        color: var(--000);
+        transform: translateY(0.0625rem);
+      }
+    }
+  }
 }
 
 /** Hamburger Menu **/
@@ -116,29 +116,45 @@ nav .socials svg:active {
     hsla(30, 10%, 16%, 0.5) 100%
   );
   backdrop-filter: blur(1px);
-}
 
-.hamburger-menu .links {
-  padding-top: 1rem;
-}
+  .links,
+  .links .landing,
+  .links .subpage,
+  .links .landing .home-buttons,
+  .links .subpage .home-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0.66rem;
 
-.hamburger-menu .links .landing {
-  padding-left: 0;
-}
+    text-align: left;
+    font-size: 3rem;
+    animation: fadeInAnimation ease 0.5s;
+  }
 
-.hamburger-menu .links,
-.hamburger-menu .links .landing,
-.hamburger-menu .links .subpage,
-.hamburger-menu .links .landing .home-buttons,
-.hamburger-menu .links .subpage .home-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 0.66rem;
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0.66rem;
 
-  text-align: left;
-  font-size: 3rem;
-  animation: fadeInAnimation ease 0.5s;
+    text-align: left;
+    font-size: 3rem;
+    animation: fadeInAnimation ease 0.5s;
+
+    padding-top: 1rem;
+
+    .landing,
+    .subpage {
+      .home-buttons {
+        padding-left: 1.25rem;
+      }
+    }
+
+    .landing {
+      padding-left: 0;
+    }
+  }
 }
 
 .hamburger-menu .links .landing .home-buttons,

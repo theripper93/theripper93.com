@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import IssueCard from '../components/subpage/IssueCard';
-import { locData } from '../scripts/helpers.js';
+import { locData } from '../public/scripts/helpers.js';
 import '../styles/subpage/issues.css';
 
 export default function BugReport() {

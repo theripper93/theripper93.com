@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { locData, premiumMods } from '../scripts/helpers.js';
+import { locData, premiumMods } from '../public/scripts/helpers.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* CSS */

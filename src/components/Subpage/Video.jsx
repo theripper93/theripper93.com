@@ -1,4 +1,4 @@
-import { detectSource } from '../../scripts/helpers.js';
+import { detectSource } from '../../public/scripts/helpers.js';
 
 const Video = (props) => {
   const source = detectSource(props.module.media, props.module.autoplay);

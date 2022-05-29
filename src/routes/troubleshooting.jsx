@@ -1,4 +1,4 @@
-import { locData } from '../scripts/helpers.js';
+import { locData } from '../public/scripts/helpers.js';
 import { useState } from 'react';
 import TroubleshootingCard from '../components/Subpage/TroubleshootingCard.jsx';
 

@@ -23,7 +23,7 @@ body {
 
 @font-face {
   font-family: 'Neue Montreal';
-  src: url('./assets/fonts/PPNeueMontreal-Regular.otf') format('opentype');
+  src: url('./public/fonts/PPNeueMontreal-Regular.otf') format('opentype');
 }
 
 /* Scrollbar */
