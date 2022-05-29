@@ -16,6 +16,12 @@
   background-image: url('/src/public/images/wave.svg');
   background-size: cover;
   background-position: center;
+
+  @media (prefers-color-scheme: light) {
+    background: var(--100);
+    background-image: url('/src/assets/wave.svg');
+    background-size: cover;
+  }
 }
 
 .card-cta {
@@ -33,250 +39,252 @@
   border: 2px solid var(--300);
   box-shadow: 7px 7px var(--500),
     7px 7px 0 2px var(--400);
-}
 
-.card-cta.patreon:hover {
-  cursor: default;
-  border: 2px solid var(--patreon);
-  box-shadow: 0 0 2px var(--patreon),
-    7px 7px var(--500),
-    7px 7px 0 2px var(--400);
-}
-
-.card-cta.hub:hover {
-  cursor: default;
-  border: 2px solid var(--accent);
-  box-shadow: 0 0 2px var(--accent),
-    7px 7px var(--500),
-    7px 7px 0 2px var(--400);
-}
-
-.card-cta.discord:hover {
-  cursor: default;
-  border: 2px solid var(--discord);
-  box-shadow: 0 0 2px var(--discord),
-    7px 7px var(--500),
-    7px 7px 0 2px var(--400);
-}
-
-/* Text */
-.cta summary {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.cta summary ul {
-  max-width: fit-content;
-  align-self: flex-start;
-  font-size: 1.25rem;
-  font-weight: 400;
-  padding-right: .625rem;
-}
-
-.cta summary li {
-  margin: .1rem 0 1.1rem 0;
-}
-
-.cta h2 {
-  @include remove-margin();
-  font-weight: bold;
-  text-align: center;
-  font-size: 3rem;
-}
-
-.cta .patreon h2,
-.cta .patreon summary li::marker {
-  color: var(--patreon);
-}
-
-.cta .discord h2,
-.cta .discord summary li::marker {
-  color: var(--discord);
-}
-
-.cta .hub h2,
-.cta .hub summary li::marker {
-  color: var(--accent);
-}
-
-.cta h4 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  font-weight: 550;
-  text-align: center;
-}
-
-/* Buttons */
-.cta button {
-  color: var(--100);
-  background: var(--500);
-  border: 1px solid transparent;
-
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 1px;
-
-  width: 125px;
-  height: 40px;
-  margin-bottom: 1rem;
-
-  transition: all 0.3s ease-in-out;
-}
-
-.cta .discord button {
-  border: 2px solid var(--discord);
-}
-
-.cta .discord button:hover {
-  color: var(--500);
-  background: var(--discord);
-}
-
-.cta .discord button:active {
-  color: var(--500);
-  background: var(--discord);
-  filter: brightness(1.1);
-  transform: translateY(2px);
-}
-
-.cta .patreon button {
-  border: 2px solid var(--patreon);
-}
-
-.cta .patreon button:hover {
-  color: var(--500);
-  background: var(--patreon);
-}
-
-.cta .patreon button:active {
-  color: var(--500);
-  background: var(--patreon);
-  filter: brightness(1.1);
-  transform: translateY(2px);
-}
-
-.cta .hub button {
-  border: 2px solid var(--accent);
-}
-
-.cta .hub button:hover {
-  color: var(--500);
-  background: var(--accent);
-}
-
-.cta .hub button:active {
-  color: var(--500);
-  background: var(--accent);
-  filter: brightness(1.1);
-  transform: translateY(2px);
-}
-
-/** Media Queries **/
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-
-  /* Body (Light) */
-  #hub {
-    background: var(--100);
-    background-image: url('/src/assets/wave.svg');
-    background-size: cover;
-  }
-
-  .cta .card-cta {
+  @media (prefers-color-scheme: light) {
     background: var(--100);
     box-shadow: 7px 7px var(--100),
       7px 7px 0 .0625rem var(--200);
   }
 
-  .cta .patreon:hover {
-    box-shadow: 0 0 0px var(--patreon),
-      7px 7px 0 var(--100),
-      7px 7px 0 1px var(--patreon);
-    border-color: var(--patreon);
+  h2 {
+    @include remove-margin();
+    font-weight: bold;
+    text-align: center;
+    font-size: 3rem;
   }
 
-  .cta .discord:hover {
-    box-shadow: 0 0 0px var(--discord),
-      7px 7px 0 var(--100),
-      7px 7px 0 1px var(--discord);
-    border-color: var(--discord);
+  h4 {
+    @include remove-margin();
+    font-weight: 550;
+    text-align: center;
   }
 
-  .cta .hub:hover {
-    background: var(--100);
-    box-shadow: 0 0 0 var(--accent),
-      7px 7px 0 var(--100),
-      7px 7px 0 1px var(--accent);
-    border-color: var(--accent);
+  button {
+    color: var(--100);
+    background: var(--500);
+    border: 1px solid transparent;
+
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 1px;
+
+    width: 125px;
+    height: 40px;
+    margin-bottom: 1rem;
+
+    transition: all 0.3s ease-in-out;
+
+    &.patreon {
+      border: 2px solid var(--patreon);
+
+      &:hover {
+        color: var(--500);
+        background: var(--patreon);
+      }
+
+      &:active {
+        color: var(--500);
+        background: var(--patreon);
+        filter: brightness(1.1);
+        transform: translateY(2px);
+      }
+    }
+
+    &.hub {
+      border: 2px solid var(--accent);
+
+      &:hover {
+        color: var(--500);
+        background: var(--accent);
+      }
+
+      &:active {
+        color: var(--500);
+        background: var(--accent);
+        filter: brightness(1.1);
+        transform: translateY(2px);
+      }
+    }
+
+    &.discord {
+      border: 2px solid var(--discord);
+
+      &:hover {
+        color: var(--500);
+        background: var(--discord);
+      }
+
+      &:active {
+        color: var(--500);
+        background: var(--discord);
+        filter: brightness(1.1);
+        transform: translateY(2px);
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      background: var(--100);
+      color: var(--400);
+      border-color: var(--400);
+      box-shadow: 2px 2px 0 var(--400);
+
+      &.patreon {
+        &:hover {
+          background-color: transparent;
+          filter: contrast(1.2);
+          border-color: var(--patreon);
+          box-shadow: 2px 2px 0 var(--patreon);
+        }
+
+        &:active {
+          background-color: transparent;
+          filter: brightness(1);
+          box-shadow: 1px 1px 0 var(--patreon) inset;
+        }
+      }
+
+      &.hub {
+        &:hover {
+          background-color: transparent;
+          filter: brightness(1);
+          border-color: var(--accent);
+          box-shadow: 2px 2px 0 var(--accent);
+        }
+
+        &:active {
+          background-color: transparent;
+          filter: brightness(1);
+          box-shadow: 1px 1px 0 var(--accent) inset;
+        }
+      }
+
+      &.discord {
+        &:hover {
+          background-color: transparent;
+          filter: brightness(1);
+          border-color: var(--discord);
+          box-shadow: 2px 2px 0 var(--discord);
+        }
+
+        &:active {
+          background-color: transparent;
+          filter: brightness(1);
+          box-shadow: 1px 1px 0 var(--discord) inset;
+        }
+      }
+    }
   }
 
-  /* Text (Light) */
-  .cta .patreon h2 {
-    filter: drop-shadow(.125rem .125rem 0rem #eeafa1);
+  summary {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    ul {
+      max-width: fit-content;
+      align-self: flex-start;
+      font-size: 1.25rem;
+      font-weight: 400;
+      padding-right: .625rem;
+    }
+
+    li {
+      margin: .1rem 0 1.1rem 0;
+    }
   }
 
-  .cta .hub h2 {
-    filter: drop-shadow(.125rem .125rem 0rem #e9c359);
+  &.patreon {
+
+    h2,
+    summary li::marker {
+      color: var(--patreon);
+    }
+
+    &:hover {
+      cursor: default;
+      border: 2px solid var(--patreon);
+      box-shadow: 0 0 2px var(--patreon),
+        7px 7px var(--500),
+        7px 7px 0 2px var(--400);
+
+    }
+
+    @media (prefers-color-scheme: light) {
+      h2 {
+        filter: drop-shadow(.125rem .125rem 0rem #eeafa1);
+      }
+
+      &:hover {
+        box-shadow: 0 0 0px var(--patreon),
+          7px 7px 0 var(--100),
+          7px 7px 0 1px var(--patreon);
+        border-color: var(--patreon);
+      }
+    }
+
   }
 
-  .cta .discord h2 {
-    filter: drop-shadow(.125rem .125rem 0rem #a1a9ee);
+  &.hub {
+
+    h2,
+    summary li::marker {
+      color: var(--accent);
+    }
+
+    &:hover {
+      cursor: default;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 2px var(--accent),
+        7px 7px var(--500),
+        7px 7px 0 2px var(--400);
+
+    }
+
+    @media (prefers-color-scheme: light) {
+      h2 {
+        filter: drop-shadow(.125rem .125rem 0rem #e9c359);
+      }
+
+      &:hover {
+        box-shadow: 0 0 0px var(--accent),
+          7px 7px 0 var(--100),
+          7px 7px 0 1px var(--accent);
+        border-color: var(--accent);
+      }
+    }
   }
 
-  /* Buttons (Light) */
-  .cta .card-cta button {
-    background: var(--100);
-    color: var(--400);
+  &.discord {
+
+    h2,
+    summary li::marker {
+      color: var(--discord);
+    }
+
+    &:hover {
+      cursor: default;
+      border: 2px solid var(--discord);
+      box-shadow: 0 0 2px var(--discord),
+        7px 7px var(--500),
+        7px 7px 0 2px var(--400);
+
+    }
   }
 
-  .cta .card-cta button {
-    border-color: var(--400);
-    box-shadow: 2px 2px 0 var(--400);
-  }
+  @media (prefers-color-scheme: light) {
+    h2 {
+      filter: drop-shadow(.125rem .125rem 0rem #a1a9ee);
+    }
 
-  .cta .patreon button:hover {
-    background-color: transparent;
-    filter: contrast(1.2);
-    border-color: var(--patreon);
-    box-shadow: 2px 2px 0 var(--patreon);
-  }
-
-  .cta .discord button:hover {
-    background-color: transparent;
-    filter: brightness(1);
-    border-color: var(--discord);
-    box-shadow: 2px 2px 0 var(--discord);
-  }
-
-  .cta .hub button:hover {
-    background-color: transparent;
-    filter: brightness(1);
-    border-color: var(--accent);
-    box-shadow: 2px 2px 0 var(--accent);
-  }
-
-  .cta .patreon button:active {
-    background-color: transparent;
-    filter: brightness(1);
-    box-shadow: 1px 1px 0 var(--patreon) inset;
-  }
-
-  .cta .discord button:active {
-    background-color: transparent;
-    filter: brightness(1);
-    box-shadow: 1px 1px 0 var(--discord) inset;
-  }
-
-  .cta .hub button:active {
-    background-color: transparent;
-    filter: brightness(1);
-    box-shadow: 1px 1px 0 var(--accent) inset;
+    &:hover {
+      box-shadow: 0 0 0px var(--discord),
+        7px 7px 0 var(--100),
+        7px 7px 0 1px var(--discord);
+      border-color: var(--discord);
+    }
   }
 }
 
