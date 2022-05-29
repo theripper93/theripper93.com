@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../../styles/mainpage/modulegrid.css';
 
 const Searchbar = (props) => {
   const { buttonState, setSearchTerm, setButtonState } = props;

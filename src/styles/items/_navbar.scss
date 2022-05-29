@@ -19,6 +19,13 @@ nav {
   /** Links **/
   .links {
     color: var(--100);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
 
     .landing,
     .subpage {
@@ -109,12 +116,10 @@ nav {
   flex-direction: column;
   justify-content: space-between;
 
-  background: linear-gradient(
-    90deg,
-    hsla(30, 10%, 16%, 1) 0%,
-    hsla(30, 10%, 16%, 0.75) 75%,
-    hsla(30, 10%, 16%, 0.5) 100%
-  );
+  background: linear-gradient(90deg,
+      hsla(30, 10%, 16%, 1) 0%,
+      hsla(30, 10%, 16%, 0.75) 75%,
+      hsla(30, 10%, 16%, 0.5) 100%);
   backdrop-filter: blur(1px);
 
   .links,

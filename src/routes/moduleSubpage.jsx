@@ -2,11 +2,6 @@ import { useState } from 'react';
 import { locData, premiumMods } from '../public/scripts/helpers.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-/* CSS */
-import '../styles/items/card-solid.css';
-import '../styles/modulepage/modulepage.css';
-import '../styles/modulepage/intro.css';
-
 /* Components */
 import Video from '../components/subpage/Video.jsx';
 import Navbar from '../components/navbar/Navbar';

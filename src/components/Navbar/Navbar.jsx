@@ -4,10 +4,6 @@ import { HashLink } from 'react-router-hash-link';
 import { detectNavType } from '../../public/scripts/helpers.js';
 import { useState } from 'react';
 
-import Hamburger from './Hamburger';
-
-import '../../styles/items/navbar.css';
-
 const Navbar = () => {
 
   let location = useLocation();

@@ -11,15 +11,15 @@
 
   min-height: 75vh;
   padding: 192px 16px 16px 16px;
-}
 
-.golden a {
-  color: var(--500);
-}
+  a {
+    color: var(--500);
 
-.golden a:hover {
-  color: var(--300);
-  transition: all 0.3s ease-in-out;
+    &:hover {
+      color: var(--300);
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }
 
 //* Subpage Globals

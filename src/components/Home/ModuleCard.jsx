@@ -9,10 +9,6 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faPatreon, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-/* CSS */
-import '../../styles/items/card-hollow.css';
-
-
 library.add(faDiscord, faPatreon, faGithub, fas);
 
 const ModuleCard = (props) => {

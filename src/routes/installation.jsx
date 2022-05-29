@@ -1,5 +1,3 @@
-import '../styles/App.css';
-import '../styles/subpage/installation.css';
 
 export default function Installation() {
   return (

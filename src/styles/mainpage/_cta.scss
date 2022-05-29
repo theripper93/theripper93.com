@@ -1,3 +1,6 @@
+@use '../helpers/mixins' as *;
+
+
 /* Call to Action / Subscribe */
 #hub {
   display: flex;
@@ -10,7 +13,7 @@
   padding: 160px 0px;
 
   background: var(--500);
-  background-image: url('/src/assets/wave.svg');
+  background-image: url('/src/public/images/wave.svg');
   background-size: cover;
   background-position: center;
 }
@@ -35,7 +38,7 @@
 .card-cta.patreon:hover {
   cursor: default;
   border: 2px solid var(--patreon);
-  box-shadow: 0 0 2px var(--patreon), 
+  box-shadow: 0 0 2px var(--patreon),
     7px 7px var(--500),
     7px 7px 0 2px var(--400);
 }
@@ -43,7 +46,7 @@
 .card-cta.hub:hover {
   cursor: default;
   border: 2px solid var(--accent);
-  box-shadow: 0 0 2px var(--accent), 
+  box-shadow: 0 0 2px var(--accent),
     7px 7px var(--500),
     7px 7px 0 2px var(--400);
 }
@@ -51,7 +54,7 @@
 .card-cta.discord:hover {
   cursor: default;
   border: 2px solid var(--discord);
-  box-shadow: 0 0 2px var(--discord), 
+  box-shadow: 0 0 2px var(--discord),
     7px 7px var(--500),
     7px 7px 0 2px var(--400);
 }
@@ -79,10 +82,7 @@
 }
 
 .cta h2 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  @include remove-margin();
   font-weight: bold;
   text-align: center;
   font-size: 3rem;
@@ -180,6 +180,7 @@
 /** Media Queries **/
 /* Light Mode */
 @media (prefers-color-scheme: light) {
+
   /* Body (Light) */
   #hub {
     background: var(--100);
@@ -194,14 +195,14 @@
   }
 
   .cta .patreon:hover {
-    box-shadow: 0 0 0px var(--patreon), 
+    box-shadow: 0 0 0px var(--patreon),
       7px 7px 0 var(--100),
       7px 7px 0 1px var(--patreon);
     border-color: var(--patreon);
   }
 
   .cta .discord:hover {
-    box-shadow: 0 0 0px var(--discord), 
+    box-shadow: 0 0 0px var(--discord),
       7px 7px 0 var(--100),
       7px 7px 0 1px var(--discord);
     border-color: var(--discord);
@@ -209,7 +210,7 @@
 
   .cta .hub:hover {
     background: var(--100);
-    box-shadow: 0 0 0 var(--accent), 
+    box-shadow: 0 0 0 var(--accent),
       7px 7px 0 var(--100),
       7px 7px 0 1px var(--accent);
     border-color: var(--accent);
