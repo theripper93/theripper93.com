@@ -1,5 +1,3 @@
-import '../../styles/items/card-solid.css';
-
 const IssueCard = (props) => {
   const { title, description } = props.issue ?? {};
 

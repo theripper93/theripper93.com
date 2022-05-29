@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
-import './styles/App.css';
-import './styles/mainpage/mainpage.css';
-import './styles/mainpage/cta.css';
+import './styles/init.css';
 /* Misc Libraries */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -18,10 +16,10 @@ function App() {
 
   return (
     <div className='App'>
-      <Navbar></Navbar>
+      <Navbar />
       <header className='hero' id=''>
         <video autoPlay muted loop id='video-bg'>
-          <source src='./src/assets/videobanner.mp4' type='video/mp4' />
+          <source src='./src/public/video/videobanner.mp4' type='video/mp4' />
         </video>
         <div className='hero-wrapper'>
           <h1>
@@ -181,4 +179,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

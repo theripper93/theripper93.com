@@ -1,0 +1,182 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixins' as *;
+
+/** Header and Footer Sections **/
+/* Hero Banner */
+.hero {
+  position: relative;
+
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+
+  background: hsla(30, 10%, 16%, 0.75);
+
+  a,
+  svg {
+    justify-self: end;
+    color: var(--150);
+    animation: bob 2s ease-in-out infinite;
+
+    &:hover {
+      color: var(--000);
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+
+
+  h1 {
+    color: var(--100);
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 60%;
+  }
+}
+
+#video-bg {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -5;
+}
+
+/* Contact Footer */
+#contact {
+  padding-top: 2rem;
+  color: var(--500);
+
+  h1,
+  h4 {
+    @include remove-margin();
+  }
+
+  svg {
+    color: var(--500);
+
+    &:active,
+    &:hover {
+      color: var(--400);
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    transform: translateY(-1px);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 1.25rem;
+
+    .skill-card {
+      width: 11rem;
+      height: 3rem;
+
+      display: inline-flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      align-content: stretch;
+
+      border: 3px solid var(--500);
+
+      &:hover {
+        border-color: var(--300);
+        color: var(--300);
+        cursor: default;
+      }
+
+      h4 {
+        font-weight: bold;
+      }
+    }
+
+  }
+
+  main.links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+#credit {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 2rem;
+}
+
+/** Main Content **/
+section .frontpage {
+  background: var(--500);
+
+  @media (prefers-color-scheme: light) {
+    background: var(--100);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  header.hero h1 {
+    font-size: 5rem;
+  }
+
+  #hub,
+  #contact {
+    margin-bottom: -2px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header.hero {
+    margin-block-start: 0;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    svg {
+      padding-top: 0;
+    }
+  }
+}

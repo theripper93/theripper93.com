@@ -1,5 +1,3 @@
-import '../../styles/items/button-hollow.css';
-
 const SkillCard =  (props) => {
   return(
     <div className="button-hollow">

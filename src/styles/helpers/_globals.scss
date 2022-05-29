@@ -3,6 +3,11 @@ body {
   font-family: 'Neue Montreal', 'Roboto', 'Helvetica', sans-serif;
   color: var(--100);
   background: var(--500);
+
+  @media (prefers-color-scheme: light) {
+    color: var(--400);
+    background: var(--100);
+  }
 }
 
 @font-face {
@@ -12,12 +17,18 @@ body {
 
 /* No Select Class */
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
   cursor: pointer;
 }
@@ -25,23 +36,39 @@ body {
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 0.3125rem;
-}
 
-::-webkit-scrollbar-track {
-  background: var(--400);
-}
+  &-track {
+    background: var(--400);
+  }
 
-::-webkit-scrollbar-thumb {
-  background: var(--200);
-}
+  &-thumb {
+    background: var(--200);
+    &:hover {
+      background: var(--accent);
+    }
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+  @media (prefers-color-scheme: light) {
+    &-track {
+      background: var(--200);
+    }
+
+    &-thumb {
+      background: var(--400);
+      &:hover {
+        background: var(--500);
+      }
+    }
+  }
 }
 
 /* SVGs and Icons */
 svg {
   color: var(--150);
+
+  @media (prefers-color-scheme: light) {
+    color: var(--400);
+  }
 }
 
 //* Inputs **/
@@ -52,15 +79,28 @@ input {
     padding: 0rem 0.3125rem 0 0.625rem;
     border: 0.125rem solid var(--300);
     transition: all 0.3s ease-in-out;
+
+    @media (prefers-color-scheme: light) {
+      color: var(--400);
+      border: 2px solid var(--300);
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   &:focus-visible {
     outline-style: none;
     border-color: var(--100);
+    @media (prefers-color-scheme: light) {
+      outline-style: solid;
+      border-color: var(--500);
+    }
   }
 
   &::placeholder {
     color: var(--200);
+    @media (prefers-color-scheme: light) {
+      color: var(--400);
+    }
   }
 }
 
@@ -70,6 +110,12 @@ button {
   &:active {
     cursor: pointer;
     filter: brightness(1.1);
+  }
+
+  &:hover {
+    @media (prefers-color-scheme: light) {
+      filter: contrast(1.2);
+    }
   }
 
   &:active {
@@ -94,6 +140,7 @@ svg {
     color: var(--accent);
     transition: all 0.3s ease-in-out;
   }
+
   &:active {
     transform: translateY(1px);
   }
@@ -145,9 +192,38 @@ strong {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+
+  @media (prefers-color-scheme: light) {
+    background: -webkit-linear-gradient(25deg, #e56f44, #d96d3b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
 }
 
-/* Details and Summary Classes*/
-summary {
-  font-weight: bold;
+@media (prefers-color-scheme: light) {
+  h1,
+  h2,
+  h3 {
+    color: var(--500);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  p,
+  li {
+    font-size: 1rem;
+  }
 }

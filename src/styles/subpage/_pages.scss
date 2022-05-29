@@ -11,18 +11,18 @@
 
   min-height: 75vh;
   padding: 192px 16px 16px 16px;
+
+  a {
+    color: var(--500);
+
+    &:hover {
+      color: var(--300);
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }
 
-.golden a {
-  color: var(--500);
-}
-
-.golden a:hover {
-  color: var(--300);
-  transition: all 0.3s ease-in-out;
-}
-
-/* Subpage Globals */
+//* Subpage Globals
 .subpage-container {
   text-align: center;
   padding-top: 5vh;
@@ -37,34 +37,11 @@
   background-repeat: repeat;
 }
 
-//* Module Subpage /
-header.module-page {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: flex-start;
-  align-items: center;
-
-  height: 31.875rem;
-  max-width: 25vw;
-}
-
-/* Module Status Class */
+/* Module Subpage */
+/*  Module Status Class */
 .badge {
   display: flex;
   background: transparent;
   align-self: end;
   padding: 8px;
 }
-
-footer.module-page-badge {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-}
-

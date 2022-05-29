@@ -1,4 +1,3 @@
-import '../../styles/items/card-solid.css';
 
 const FaqCard = (props) => {
   const { question, answer } = props.faq;

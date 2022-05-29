@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import IssueCard from '../components/subpage/IssueCard';
-import { locData } from '../scripts/helpers.js';
-import '../styles/subpage/issues.css';
+import { locData } from '../public/scripts/helpers.js';
 
 export default function BugReport() {
   const [issues, setIssues] = useState([])

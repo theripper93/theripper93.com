@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 import Navbar from '../components/navbar/Navbar';
 import FaqCard from '../components/subpage/FaqCard';
 
-import { locData } from '../scripts/helpers.js';
+import { locData } from '../public/scripts/helpers.js';
 
 export default function Info() {
 

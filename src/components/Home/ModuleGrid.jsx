@@ -1,6 +1,5 @@
-import { locData } from '../../scripts/helpers.js';
+import { locData } from '../../public/scripts/helpers.js';
 import ModuleCard from './ModuleCard';
-import '../../styles/mainpage/modulegrid.css';
 import { useState } from 'react';
 
 const ModuleGrid = (props) => {
