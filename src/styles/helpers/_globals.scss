@@ -98,7 +98,6 @@ input {
 
 /* Buttons */
 button {
-
   &:hover,
   &:active {
     cursor: pointer;
@@ -181,18 +180,25 @@ li {
 }
 
 strong {
-  background: -webkit-linear-gradient(0deg, #ffd78a, #ff9659);
+  background: -webkit-linear-gradient(135deg, #ffd78a, #e2b478);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 
   @media (prefers-color-scheme: light) {
-    background: -webkit-linear-gradient(25deg, #e56f44, #d96d3b);
+    background: -webkit-linear-gradient(135deg, #e56f44, #d96d3b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
 }
+
+bold {
+  color: var(--patreon);
+  background: -webkit-linear-gradient(135deg,  #e2ae90, var(--patreon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;}
 
 @media (prefers-color-scheme: light) {
 

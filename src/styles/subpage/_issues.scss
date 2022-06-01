@@ -44,19 +44,26 @@
       margin: 0 0.33rem;
     }
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-    }
-
+    
     textarea {
       min-height: 250px;
       min-width: 93.5%;
       resize: none;
-
+      
       background: transparent;
       border-color: var(--300);
       color: var(--100);
+    }
+    
+    footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        text-align: center;
+      }
     }
 
     @media (prefers-color-scheme: light) {
@@ -71,7 +78,7 @@
         color: var(--500);
       }
 
-      footer {
+      p {
         color: var(--patreon);
         background: transparent;
       }
@@ -83,6 +90,7 @@
 #submit-bug {
   min-width: 250px;
   background: var(--accent);
+  align-self: center;
 
   &:disabled {
     background: var(--200);

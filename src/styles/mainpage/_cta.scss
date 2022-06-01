@@ -1,25 +1,24 @@
-@use '../helpers/mixins' as *;
-
+@use "../helpers/mixins" as *;
 
 /* Call to Action / Subscribe */
 #hub {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
   align-content: space-between;
   align-items: stretch;
-  justify-content: center;
-  gap: 152px;
+  gap: 1rem;
   padding: 160px 0px;
 
   background: var(--500);
-  background-image: url('/src/public/images/wave.svg');
+  background-image: url("/src/public/images/wave.svg");
   background-size: cover;
   background-position: center;
 
   @media (prefers-color-scheme: light) {
     background: var(--100);
-    background-image: url('/src/assets/wave.svg');
+    background-image: url("/src/assets/wave.svg");
     background-size: cover;
   }
 }
@@ -37,13 +36,11 @@
 
   background: var(--500);
   border: 2px solid var(--300);
-  box-shadow: 7px 7px var(--500),
-    7px 7px 0 2px var(--400);
+  box-shadow: 7px 7px var(--500), 7px 7px 0 2px var(--400);
 
   @media (prefers-color-scheme: light) {
     background: var(--100);
-    box-shadow: 7px 7px var(--100),
-      7px 7px 0 .0625rem var(--200);
+    box-shadow: 7px 7px var(--100), 7px 7px 0 0.0625rem var(--200);
   }
 
   h2 {
@@ -62,7 +59,6 @@
   button {
     color: var(--100);
     background: var(--500);
-    border: 1px solid transparent;
 
     font-size: 1rem;
     font-weight: bold;
@@ -128,7 +124,7 @@
       border-color: var(--400);
       box-shadow: 2px 2px 0 var(--400);
 
-      &.patreon {
+      .patreon {
         &:hover {
           background-color: transparent;
           filter: contrast(1.2);
@@ -143,7 +139,7 @@
         }
       }
 
-      &.hub {
+      .hub {
         &:hover {
           background-color: transparent;
           filter: brightness(1);
@@ -158,7 +154,7 @@
         }
       }
 
-      &.discord {
+      .discord {
         &:hover {
           background-color: transparent;
           filter: brightness(1);
@@ -188,16 +184,15 @@
       align-self: flex-start;
       font-size: 1.25rem;
       font-weight: 400;
-      padding-right: .625rem;
+      padding-right: 0.625rem;
     }
 
     li {
-      margin: .1rem 0 1.1rem 0;
+      margin: 0.1rem 0 1.1rem 0;
     }
   }
 
   &.patreon {
-
     h2,
     summary li::marker {
       color: var(--patreon);
@@ -206,29 +201,24 @@
     &:hover {
       cursor: default;
       border: 2px solid var(--patreon);
-      box-shadow: 0 0 2px var(--patreon),
-        7px 7px var(--500),
+      box-shadow: 0 0 2px var(--patreon), 7px 7px var(--500),
         7px 7px 0 2px var(--400);
-
     }
 
     @media (prefers-color-scheme: light) {
       h2 {
-        filter: drop-shadow(.125rem .125rem 0rem #eeafa1);
+        filter: drop-shadow(0.125rem 0.125rem 0rem #eeafa1);
       }
 
       &:hover {
-        box-shadow: 0 0 0px var(--patreon),
-          7px 7px 0 var(--100),
+        box-shadow: 0 0 0px var(--patreon), 7px 7px 0 var(--100),
           7px 7px 0 1px var(--patreon);
         border-color: var(--patreon);
       }
     }
-
   }
 
   &.hub {
-
     h2,
     summary li::marker {
       color: var(--accent);
@@ -237,20 +227,17 @@
     &:hover {
       cursor: default;
       border: 2px solid var(--accent);
-      box-shadow: 0 0 2px var(--accent),
-        7px 7px var(--500),
+      box-shadow: 0 0 2px var(--accent), 7px 7px var(--500),
         7px 7px 0 2px var(--400);
-
     }
 
     @media (prefers-color-scheme: light) {
       h2 {
-        filter: drop-shadow(.125rem .125rem 0rem #e9c359);
+        filter: drop-shadow(0.125rem 0.125rem 0rem #e9c359);
       }
 
       &:hover {
-        box-shadow: 0 0 0px var(--accent),
-          7px 7px 0 var(--100),
+        box-shadow: 0 0 0px var(--accent), 7px 7px 0 var(--100),
           7px 7px 0 1px var(--accent);
         border-color: var(--accent);
       }
@@ -258,7 +245,6 @@
   }
 
   &.discord {
-
     h2,
     summary li::marker {
       color: var(--discord);
@@ -267,21 +253,18 @@
     &:hover {
       cursor: default;
       border: 2px solid var(--discord);
-      box-shadow: 0 0 2px var(--discord),
-        7px 7px var(--500),
+      box-shadow: 0 0 2px var(--discord), 7px 7px var(--500),
         7px 7px 0 2px var(--400);
-
     }
   }
 
   @media (prefers-color-scheme: light) {
     h2 {
-      filter: drop-shadow(.125rem .125rem 0rem #a1a9ee);
+      filter: drop-shadow(0.125rem 0.125rem 0rem #a1a9ee);
     }
 
     &:hover {
-      box-shadow: 0 0 0px var(--discord),
-        7px 7px 0 var(--100),
+      box-shadow: 0 0 0px var(--discord), 7px 7px 0 var(--100),
         7px 7px 0 1px var(--discord);
       border-color: var(--discord);
     }

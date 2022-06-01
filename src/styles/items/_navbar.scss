@@ -16,8 +16,8 @@ nav {
   .links {
     color: var(--100);
     display: flex;
-    padding: 6px;
-    width: 100%;
+    padding: 0 0.75rem;    width: 100%;
+    align-items: center;
 
     .landing,
     .subpage {
@@ -64,7 +64,7 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-
+    padding: 0 0.75rem;
     width: 100%;
 
     svg {
@@ -94,6 +94,7 @@ nav {
 .hamburger {
   position: relative;
   z-index: 1000;
+  padding: 0 0.5rem;
 
   p {
     display: none;

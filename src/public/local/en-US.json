@@ -410,13 +410,17 @@
             "icon": "fas fa-cube",
             "desc": "Turn your maps into true 3D! Play your games in the glorious third dimension.",
             "fulldesc": "Turn your maps into true 3D, load in 3d models, and play your games in the glorious third dimension. Also support lighting and animated models. If you don't have 3d models don't worry! 3D canvas will turn your 2d tokens into Stand up figures in the 3d mode.",
-            "status": "paidea",
-            "media": "https://youtu.be/hC1QGZFUhcU",
+            "status": "paid",
+            "media": "https://youtu.be/rziXLJEfxqI",
             "link": "",
             "guides": [
                 {
                     "title": "3D Canvas 2.0 Trailer",
                     "url": "https://youtu.be/h_EZ08wD4c4"
+                },
+                {
+                    "title": "3D Canvas 1.0 Trailer",
+                    "url": "https://youtu.be/hC1QGZFUhcU"
                 },
                 {
                     "title": "Full feature showcase and tutorial",
@@ -517,6 +521,15 @@
             "media": "",
             "link": "https://github.com/theripper93/canvas3dcompendium"
         },
+        "canvas3dtokencompendium": {
+            "name": "3D Canvas Token Collection",
+            "icon": "fas fa-book",
+            "desc": "A Collection of 3000+ 3D Miniatures.",
+            "fulldesc": "A Collection of 3000+ 3D Miniatures ready to use in 3D Canvas. Includes 1000+ Heroes and most creatures from every DnD published book. This collection is availeble for free if you wish to use it in other software.",
+            "status": "free",
+            "media": "",
+            "link": "https://github.com/theripper93/canvas3dtokencompendium"
+        },
         "theripper-premium-hub": {
             "name": "TheRipper93's Module Hub",
             "icon": "fas fa-code-branch",
@@ -531,7 +544,7 @@
             "icon": "fas fa-low-vision",
             "desc": "Automatic Elevation based Blur effect.",
             "fulldesc": "Automatically apply a blur effect to your Levels and tokens depending on the current elevation. The farther you are from a level, the more blur you will get.",
-            "status": "paidea",
+            "status": "paid",
             "media": "https://youtu.be/QmEZRmpYLYU",
             "link": "",
             "guides": [
@@ -546,7 +559,7 @@
             "icon": "fas fa-user-circle",
             "desc": "Use 3D Models as Actor Portraits.",
             "fulldesc": "Use 3D Models as Actor Portraits or Items. HeroForge integration lets you import your 3D Heros from HeroForge. 3D Portraits is not an officially HeroForge® supported module",
-            "status": "paidea",
+            "status": "paid",
             "media": "https://youtu.be/te1pQ2-5KtQ",
             "link": "",
             "troubleshooting": [
@@ -588,7 +601,7 @@
         },
         {
             "question": "How does the Patreon subscription work?",
-            "answer": "You can subscribe to the Supporter tier to get most of my premium modules or to the Early Access tier to get access to 3D Canvas (and any other module currently in development) as well. You will be charged monthly for the subscription. You can cancel your subscription at any time.",
+            "answer": "You can subscribe to the Supporter tier to get access to the full premium module collection. You will be charged monthly for the subscription. You can cancel your subscription at any time.",
             "link": "",
             "status": "paid"
         },
@@ -606,13 +619,19 @@
         },
         {
             "question": "I'm a Creator and I want to use Levels/Better Roofs in my commercial products. Can I do that?",
-            "answer": "Yes, but you need to be subscribed to the Creator tier - please read the information in the Creator tier on Patreon to determine how much the licence will be to use my modules commercially",
+            "answer": "Yes, but you will need to subscribe to the commercial tier or provide credit to my work in your releases. \nPlease see the 'Terms of Use' post on Patreon or contact me for details.",
             "link": "",
             "status": "paid"
         },
         {
             "question": "I'm a Creator tier Patron but I no longer want to use your modules commercially. Can I cancel my subscription?",
-            "answer": "Absolutely! If you are a Creator and cancel your subscription you can keep selling any content you published prior to cancelling your subscription. You are not allowed to publish new content after you canceled your subscription.",
+            "answer": "Absolutely! If you are a Creator and cancel your subscription you can keep selling any content you published prior to cancelling your subscription. \nYou will need to provide credit to my work in any future release you make that uses my modules.",
+            "link": "",
+            "status": "paid"
+        },
+        {
+            "question": "I published some commercial content without the Creator tier, but now I'm a Creator Patreon, can i remove the credits from my previews published content?",
+            "answer": "No, any content published while not on an active Creator subscription will need to keep the credits.",
             "link": "",
             "status": "paid"
         }
@@ -710,6 +729,5 @@
         }
     ],
     "free": "Free",
-    "paid": "Patreon",
-    "paidea": "Early Access"
+    "paid": "Premium"
 }
