@@ -7,7 +7,7 @@ const ModuleGrid = (props) => {
   const [moduleData, setModuleData] = useState([]);
   locData().then(data => setModuleData(data.modules))
   return (
-    <main className='module grid'>
+    <main className='grid'>
       {moduleData.filter((module) => {
         return module.name.toLowerCase().includes(searchTerm.toLowerCase());
       }).filter((module) => {

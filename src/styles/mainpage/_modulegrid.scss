@@ -7,14 +7,42 @@ section#modules {
   flex-wrap: wrap;
   align-items: center;
   background: var(--500);
-  background: linear-gradient(180deg,
-      hsla(30, 10%, 16%, 0.75) 0%,
-      hsla(30, 10%, 16%, 0.8) 3%,
-      hsla(30, 10%, 16%, 0.9) 5.5%,
-      var(--500) 10%);
+  background: linear-gradient(
+    180deg,
+    hsla(30, 10%, 16%, 0.75) 0%,
+    hsla(30, 10%, 16%, 0.8) 3%,
+    hsla(30, 10%, 16%, 0.9) 5.5%,
+    var(--500) 10%
+  );
 
   @media (prefers-color-scheme: light) {
     background: var(--100);
+  }
+
+  .grid {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
+    padding: 1rem;
+    gap: 1.875rem;
+    padding-top: 3rem;
+
+    .wrapper {
+      min-height: unset;
+    }
+
+    @media (max-width: 768px) {
+      .wrapper {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -52,25 +80,5 @@ section#modules {
 
   .button-free svg {
     color: var(--free);
-  }
-}
-
-.module .grid {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  flex-direction: row;
-  padding: 1rem;
-  gap: 1.875rem;
-  padding-top: 3rem;
-
-  @media (max-width: 768px) {
-    .wrapper {
-      width: 100%;
-    }
   }
 }

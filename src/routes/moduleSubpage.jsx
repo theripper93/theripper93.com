@@ -28,7 +28,7 @@ const Subpage = () => {
     <div className={`subpage ${data.status}-wrapper`}>
       <Navbar></Navbar>
       <section className={`module`}>
-        <main className={`wrapper`}>
+        <main className={`module wrapper`}>
           <main className={`intro${!data.media ? ' no-video' : ''}`}>
             <article className='card-solid'>
               <div className='content-wrapper'>
@@ -90,7 +90,7 @@ const Subpage = () => {
               {guides.length > 0 && (
                 <section className='guides'>
                   <h2>Guides</h2>
-                  <main className='grid'>
+                  <main className='guides-grid'>
                     {guides.map((guide, index) => (
                       <VideoCard
                         key={index}
