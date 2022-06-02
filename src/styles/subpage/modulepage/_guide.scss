@@ -1,88 +1,11 @@
 /* Section-wide styling */
-section.additional.content {
+.additional {
   display: flex;
   flex-direction: column;
+  justify-items: center;
   align-content: center;
-  align-items: center;
-}
 
-/* Troubleshooting in Module Subpage */
-.module-troubleshooting {
-  main {
-    max-width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 1rem;
-  }
-
-  .card-solid {
-    color: var(--100);
-    border: 2px solid var(--300);
-
-    @media (prefers-color-scheme: light) {
-      color: var(--100);
-      border: 2px solid var(--500);
-    }
-
-    h4 {
-      color: var(--100);
-    }
-
-  }
-}
-
-/* Video Guides */
-.module-guides {
-  main {
-    display: grid;
-    grid-column-start: span 2 / auto;
-    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    justify-content: center;
-  }
-}
-
-.guide-videos {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-content: center;
-  padding: 0.5rem 1rem;
-
-  background: hsla(33, 15%, 25%, 0.25);
-  border-radius: 4px;
-  box-shadow: 0.2px 0.4px 0.5px hsl(34deg 22% 13% / 0.36),
-    0.5px 1.3px 1.6px -0.8px hsl(34deg 22% 13% / 0.36),
-    1.3px 3.3px 4px -1.7px hsl(34deg 22% 13% / 0.36),
-    3px 8px 9.6px -2.5px hsl(34deg 22% 13% / 0.36);
-  backdrop-filter: blur(4.5px);
-  border: 1px solid var(--400);
-
-  h4 {
-    margin-block-: 0.5rem;
-    margin-block-end: 1rem;
-  }
-
-  iframe {
-    border: none;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    width: 100%;
-    justify-self: center;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background: hsla(42, 36%, 89%, 0.25);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur(4.5px);
-    border: 1px solid var(--300);
-  }
-}
-
-@media (min-width: 1200px) {
-  section.additional.content {
+  @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: auto;
     align-items: flex-start;
@@ -90,5 +13,80 @@ section.additional.content {
     gap: 2rem;
     padding: 5rem;
     min-width: 80vw;
+  }
+}
+
+.module {
+  /* Troubleshooting in Module Subpage */
+  .troubleshooting {
+    main {
+      max-width: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+
+    .card-solid {
+      color: var(--100);
+      border: 2px solid var(--300);
+
+      @media (prefers-color-scheme: light) {
+        color: var(--100);
+        border: 2px solid var(--500);
+      }
+
+      h4 {
+        color: var(--100);
+      }
+    }
+  }
+
+  /* Video Guides */
+  .guides {
+    .grid {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+
+      .video {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        padding: 0.5rem 1rem;
+
+        background: hsla(33, 15%, 25%, 0.25);
+        border-radius: 4px;
+        box-shadow: 0.2px 0.4px 0.5px hsl(34deg 22% 13% / 0.36),
+          0.5px 1.3px 1.6px -0.8px hsl(34deg 22% 13% / 0.36),
+          1.3px 3.3px 4px -1.7px hsl(34deg 22% 13% / 0.36),
+          3px 8px 9.6px -2.5px hsl(34deg 22% 13% / 0.36);
+        backdrop-filter: blur(4.5px);
+        border: 1px solid var(--400);
+
+        h4 {
+          margin-block-: 0.5rem;
+          margin-block-end: 1rem;
+        }
+
+        iframe {
+          border: none;
+          aspect-ratio: 16 / 9;
+          height: auto;
+          width: 100%;
+          justify-self: center;
+        }
+
+        @media (prefers-color-scheme: light) {
+          background: hsla(42, 36%, 89%, 0.25);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(4.5px);
+          -webkit-backdrop-filter: blur(4.5px);
+          border: 1px solid var(--300);
+        }
+      }
+    }
   }
 }
