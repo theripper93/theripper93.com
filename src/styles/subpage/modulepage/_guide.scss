@@ -51,6 +51,10 @@
       justify-content: center;
       padding-top: 0;
 
+      @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+      }
+
       .video {
         display: flex;
         flex-direction: column;
