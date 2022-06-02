@@ -3,10 +3,10 @@ import { locData, premiumMods } from '../public/scripts/helpers.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /* Components */
-import Video from '../components/subpage/Video.jsx';
 import Navbar from '../components/navbar/Navbar';
 import FaqCard from '../components/subpage/FaqCard';
-import ModuleGuide from '../components/subpage/ModuleGuide.jsx';
+import VideoCard from '../components/Subpage/VideoCard.jsx';
+import Video from '../components/subpage/Video.jsx';
 
 const Subpage = () => {
   const [premiumData, setPremiumData] = useState(null);
@@ -27,74 +27,82 @@ const Subpage = () => {
   return (
     <div className={`subpage ${data.status}-wrapper`}>
       <Navbar></Navbar>
-      <section className={`module-intro${!data.media ? ' no-video' : ''}`}>
-        <main>
-          <article className='card-solid'>
-            <div className='content-wrapper'>
-              <header className={`${data.status}-background`}>
-                <h1>{data.name}</h1>
-              </header>
-              <p>{data.fulldesc}</p>
-              <a
-                href={premiumData?.downloadURL ?? data.link}
-                rel='noreferrer'
-                target='_blank'
-              >
-                <button className={`${data.status}-background`}>
-                  {premiumData?.downloadURL ? 'Download' : 'GitHub'}
-                </button>
-              </a>
-            </div>
-            <footer className='badge'>
-              <div className={data.status}>{data.statusText}</div>
-            </footer>
-          </article>
-          <aside>{data.media && <Video module={data}></Video>}</aside>
+      <section className={`module`}>
+        <main className={`wrapper`}>
+          <main className={`intro${!data.media ? ' no-video' : ''}`}>
+            <article className='card-solid'>
+              <div className='content-wrapper'>
+                <header className={`${data.status}-background`}>
+                  <h1>{data.name}</h1>
+                </header>
+                <p>{data.fulldesc}</p>
+                <a
+                  href={premiumData?.downloadURL ?? data.link}
+                  rel='noreferrer'
+                  target='_blank'
+                >
+                  <button className={`${data.status}-background`}>
+                    {premiumData?.downloadURL ? 'Download' : 'GitHub'}
+                  </button>
+                </a>
+              </div>
+              <footer className='badge'>
+                <div className={data.status}>{data.statusText}</div>
+              </footer>
+            </article>
+            {data.media && (
+              <aside>
+                <Video module={data}></Video>
+              </aside>
+            )}
+          </main>
         </main>
         {(troubleshooting.length > 0 || guides.length > 0) && (
-          <FontAwesomeIcon
-            onClick={() =>
-              document
-                .getElementById('info')
-                .scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }
-            icon='fa-solid fa-arrow-down'
-            size='5x'
-            fixedWidth
-          />
-        )}
-      </section>
-      <section className='additional content' id='info'>
-        {troubleshooting.length > 0 && (
-          <section className='module-troubleshooting'>
-            <h2>Troubleshooting</h2>
-            <main>
-              {troubleshooting.map((troub, index) => (
-                <FaqCard
-                  key={index}
-                  faq={{
-                    question: troub.title,
-                    answer: troub.desc,
-                    status: 'basic',
-                  }}
-                ></FaqCard>
-              ))}
-            </main>
-          </section>
-        )}
-        {guides.length > 0 && (
-          <section className='module-guides'>
-            <h2>Guides</h2>
-            <main>
-              {guides.map((guide, index) => (
-                <ModuleGuide
-                  key={index}
-                  title={guide.title}
-                  url={guide.url}
-                ></ModuleGuide>
-              ))}
-            </main>
-          </section>
+          <>
+            <FontAwesomeIcon
+              onClick={() =>
+                document
+                  .getElementById('info')
+                  .scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
+              icon='fa-solid fa-arrow-down'
+              size='5x'
+              fixedWidth
+            />
+            <section className='additional' id='info'>
+              {troubleshooting.length > 0 && (
+                <section className='troubleshooting'>
+                  <h2>Troubleshooting</h2>
+                  <main>
+                    {troubleshooting.map((troub, index) => (
+                      <FaqCard
+                        key={index}
+                        faq={{
+                          question: troub.title,
+                          answer: troub.desc,
+                          status: 'basic',
+                        }}
+                      ></FaqCard>
+                    ))}
+                  </main>
+                </section>
+              )}
+              {guides.length > 0 && (
+                <section className='guides'>
+                  <h2>Guides</h2>
+                  <main className='grid'>
+                    {guides.map((guide, index) => (
+                      <VideoCard
+                        key={index}
+                        title={guide.title}
+                        url={guide.url}
+                      />
+                    ))}
+                  </main>
+                </section>
+              )}
+            </section>
+          </>
         )}
       </section>
     </div>

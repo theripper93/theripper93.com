@@ -1,7 +1,6 @@
-@use '../../helpers/variables' as *; 
+@use '../../helpers/variables' as *;
 
-/* Intro (Description and Video) */
-.module-intro {
+.module {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -10,141 +9,158 @@
   justify-content: space-around;
   padding-top: 2rem;
   min-height: 95vh;
-}
 
-.module-intro .card-solid {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
+  svg {
+    color: var(--100);
 
-  height: 100%;
-  max-width: 75%;
+    &:hover {
+      cursor: pointer;
+      color: var(--accent);
+    }
 
-  border-color: var(--300);
-  border-top: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4.5px);
-  -webkit-backdrop-filter: blur(4.5px);
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
 
-  text-shadow: 0 0 12px hsl(30, 10%, 16%, 0.2);
-}
-
-.module-intro .card-solid .content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.module-intro main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  grid-gap: 2rem;
-  padding: 5rem;
-}
-
-.module-intro.no-video main {
-  grid-template-columns: 1fr;
-}
-
-.module-intro main h1 {
-  margin-block-end: 0;
-  margin-block-start: 0;
-  font-size: 3rem;
-}
-
-.module-intro main p {
-  color: var(--100);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  padding: 1rem 2rem;
-}
-
-.module-intro svg {
-  color: var(--100);
-  animation: bob 2s infinite linear;
-
-  &:hover {
-    cursor: pointer;
-    color: var(--accent);
-  }
-}
-
-/* Right-side Content of Module Subpages */
-.module-intro aside {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.module-intro aside iframe {
-  aspect-ratio: 16/9;
-  border: 2px solid var(--300);
-  max-width: 100%;
-  height: 100%;
-}
-
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-  .module-intro main p {
-    color: var(--500);
+    @media (prefers-color-scheme: light) {
+      color: var(--400);
+    }
   }
 
-  .module-intro svg {
-    color: var(--400);
-  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  .module-intro .card-solid,
-  .module-intro .card-solid button {
-    border-color: var(--500);
-    border-left: 2px solid var(--500);
-    border-right: 2px solid var(--500);
-  }
+    // Keep it 'full screen' even on minimal info pages
+    min-height: 80vh;
 
-  .module-intro aside iframe {
-    border: 2px solid var(--500);
-  }
+    .intro {
+      /* Intro (Description and Video) */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      grid-gap: 2rem;
+      padding: 5rem;
 
-  .badge .paid,
-  .badge .paidea,
-  .badge .free {
-    color: var(--500);
-  }
-}
+      @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+      }
 
-@media screen and (max-width: 1280px) {
-  .module-intro main {
-    grid-template-columns: 1fr;
-  }
+      @media (prefers-color-scheme: light) {
+        p {
+          color: var(--500);
+        }
 
-  .module-intro svg {
-    display: none;
-  }
+        .module-intro .card-solid,
+        .module-intro .card-solid button {
+          border-color: var(--500);
+          border-left: 2px solid var(--500);
+          border-right: 2px solid var(--500);
+        }
 
-  .module-intro .card-solid {
-    min-width: 100%;
-  }
+        .badge .paid,
+        .badge .paidea,
+        .badge .free {
+          color: var(--500);
+        }
+      }
 
-  .module-intro aside iframe {
-    aspect-ratio: 16/9;
-  }
-}
+      h1 {
+        margin-block-end: 0;
+        margin-block-start: 0;
+        font-size: 3rem;
+      }
 
-@media screen and (max-width: 768px) {
-  .module-intro main {
-    grid-gap: 2rem;
-    padding: 2rem;
-  }
+      aside {
+        /* Right-side Content of Module Subpages */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
 
-  .module-intro main h1 {
-    font-size: 2rem;
+        iframe {
+          aspect-ratio: 16/9;
+          border: 2px solid var(--300);
+          max-width: 100%;
+          height: 100%;
+
+          @media (prefers-color-scheme: light) {
+            border: 2px solid var(--500);
+          }
+        }
+      }
+
+      &.no-video {
+        grid-template-columns: 1fr;
+        max-width: 50%;
+      }
+
+      .card-solid {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        max-width: 75%;
+
+        border-color: var(--300);
+        border-top: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.5px);
+        -webkit-backdrop-filter: blur(4.5px);
+
+        text-shadow: 0 0 12px hsl(30, 10%, 16%, 0.2);
+
+        .content-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        @media (prefers-color-scheme: light) {
+          border-color: var(--500);
+          border-left: 2px solid var(--500);
+          border-right: 2px solid var(--500);
+
+          button {
+            border-color: var(--500);
+            border-left: 2px solid var(--500);
+            border-right: 2px solid var(--500);
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          & h1 {
+            font-size: 2rem;
+          }
+
+          & p {
+            font-size: 1rem;
+            padding: 1rem;
+          }
+        }
+
+        @media screen and (max-width: 900px) {
+          max-width: unset;
+        }
+      }
+
+      @media screen and (max-width: 1280px) {
+        .card-solid {
+          min-width: 100%;
+        }
+
+        aside iframe {
+          aspect-ratio: 16/9;
+        }
+      }
+    }
   }
 }
