@@ -28,7 +28,7 @@ const Subpage = () => {
     <div className={`subpage ${data.status}-wrapper`}>
       <Navbar></Navbar>
       <section className={`module`}>
-        <main className={`intro ${!data.media ? ' no-video' : ''}`}>
+        <main className={ `intro${!data.media ? ' no-video' : ''}`}>
           <article className='card-solid'>
             <div className='content-wrapper'>
               <header className={`${data.status}-background`}>
@@ -49,8 +49,11 @@ const Subpage = () => {
               <div className={data.status}>{data.statusText}</div>
             </footer>
           </article>
-          {/* TODO: Conditional Rendering */}
-          <aside>{data.media && <Video module={data}></Video>}</aside>
+          {data.media && (
+            <aside>
+              <Video module={data}></Video>
+            </aside>
+          )}
         </main>
         {(troubleshooting.length > 0 || guides.length > 0) && (
           <>

@@ -1,4 +1,3 @@
-
 export default function Installation() {
   return (
     <div className='subpage-container install'>
@@ -13,7 +12,9 @@ export default function Installation() {
           <div className='card-wrapper'>
             <article className='card-solid free-border'>
               <details>
-                <summary className='free-background noselect'>Foundry</summary>
+                <summary className='free-background noselect'>
+                  <h4>Foundry</h4>
+                </summary>
                 <ol>
                   <li>Select the "Add-on Modules" tab</li>
                   <li>Click the "Install Module" button</li>
@@ -27,7 +28,9 @@ export default function Installation() {
             </article>
             <article className='card-solid free-border'>
               <details>
-                <summary className='free-background noselect'>Manifest</summary>
+                <summary className='free-background noselect'>
+                  <h4>Manifest</h4>
+                </summary>
                 <ol>
                   <li>Select the "Add-on Modules" tab</li>
                   <li>Click the "Install Module" button</li>
@@ -56,7 +59,9 @@ export default function Installation() {
           <div className='card-wrapper'>
             <article className='card-solid paid-border'>
               <details>
-                <summary className='paid-background noselect'> Local </summary>
+                <summary className='paid-background noselect'>
+                  <h4>Local</h4>
+                </summary>
                 <ol>
                   <li>
                     Download the ZIP file from the corresponding Patreon post
@@ -96,7 +101,9 @@ export default function Installation() {
             </article>
             <article className='card-solid paid-border'>
               <details>
-                <summary className='paid-background noselect'>Forge</summary>
+                <summary className='paid-background noselect'>
+                  <h4>Forge</h4>
+                </summary>
                 <ol>
                   <li>
                     Download the ZIP file from the corresponding Patreon post
