@@ -10,7 +10,7 @@
   padding-top: 2rem;
   min-height: 95vh;
 
-  svg {
+  .fa-arrow-down {
     color: var(--100);
 
     &:hover {
@@ -18,12 +18,14 @@
       color: var(--accent);
     }
 
-    @media screen and (max-width: 1000px) {
-      display: none;
-    }
-
     @media (prefers-color-scheme: light) {
       color: var(--400);
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .fa-arrow-down {
+      display: none;
     }
   }
 
