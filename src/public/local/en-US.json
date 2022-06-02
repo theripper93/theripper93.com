@@ -409,7 +409,7 @@
             "name": "3D Canvas",
             "icon": "fas fa-cube",
             "desc": "Turn your maps into true 3D! Play your games in the glorious third dimension.",
-            "fulldesc": "Turn your maps into true 3D, load in 3d models, and play your games in the glorious third dimension. Also support lighting and animated models. If you don't have 3d models don't worry! 3D canvas will turn your 2d tokens into Stand up figures in the 3d mode.",
+            "fulldesc": "Turn your maps into true 3D, load in 3D models, and play your games in the glorious third dimension. Supports lighting and animated models. If you don't have 3D models don't worry! 3D canvas will turn your 2D tokens into stand-up figures in 3D mode.",
             "status": "paid",
             "media": "https://youtu.be/rziXLJEfxqI",
             "link": "",
@@ -423,7 +423,7 @@
                     "url": "https://youtu.be/hC1QGZFUhcU"
                 },
                 {
-                    "title": "Full feature showcase and tutorial",
+                    "title": "Feature showcase and tutorial",
                     "url": "https://youtu.be/C5Fv8uU0tkc"
                 },
                 {
@@ -439,7 +439,7 @@
                     "url": "https://youtu.be/n6FVHp3wr0I"
                 },
                 {
-                    "title": "Easy 3D Dungeons with the Dungeon Pack",
+                    "title": "3D Dungeons with the Dungeon Pack",
                     "url": "https://youtu.be/wvd7Wm7WvHQ"
                 },
                 {
@@ -507,8 +507,8 @@
             "link": "https://github.com/theripper93/wall-height",
             "troubleshooting": [
                 {
-                    "title": "Movement is getting blocked while it shouldn't",
-                    "desc": "Be sure that you don't have walls under walls set to wrong elevation."
+                    "title": "Movement is blocked when it shouldn't",
+                    "desc": "Be sure that you don't have walls that are below walls set to the wrong elevation."
                 }
             ]
         },
