@@ -46,9 +46,10 @@
   .guides {
     .grid {
       display: grid;
-      grid-template-rows: auto;
       grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 300px;
       justify-content: center;
+      padding-top: 0;
 
       .video {
         display: flex;

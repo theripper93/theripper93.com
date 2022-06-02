@@ -42,6 +42,7 @@
 
     &.no-video {
       grid-template-columns: 1fr;
+      max-width: 50%;
     }
 
     main {
