@@ -28,32 +28,34 @@ const Subpage = () => {
     <div className={`subpage ${data.status}-wrapper`}>
       <Navbar></Navbar>
       <section className={`module`}>
-        <main className={ `intro${!data.media ? ' no-video' : ''}`}>
-          <article className='card-solid'>
-            <div className='content-wrapper'>
-              <header className={`${data.status}-background`}>
-                <h1>{data.name}</h1>
-              </header>
-              <p>{data.fulldesc}</p>
-              <a
-                href={premiumData?.downloadURL ?? data.link}
-                rel='noreferrer'
-                target='_blank'
-              >
-                <button className={`${data.status}-background`}>
-                  {premiumData?.downloadURL ? 'Download' : 'GitHub'}
-                </button>
-              </a>
-            </div>
-            <footer className='badge'>
-              <div className={data.status}>{data.statusText}</div>
-            </footer>
-          </article>
-          {data.media && (
-            <aside>
-              <Video module={data}></Video>
-            </aside>
-          )}
+        <main className={`wrapper`}>
+          <main className={`intro${!data.media ? ' no-video' : ''}`}>
+            <article className='card-solid'>
+              <div className='content-wrapper'>
+                <header className={`${data.status}-background`}>
+                  <h1>{data.name}</h1>
+                </header>
+                <p>{data.fulldesc}</p>
+                <a
+                  href={premiumData?.downloadURL ?? data.link}
+                  rel='noreferrer'
+                  target='_blank'
+                >
+                  <button className={`${data.status}-background`}>
+                    {premiumData?.downloadURL ? 'Download' : 'GitHub'}
+                  </button>
+                </a>
+              </div>
+              <footer className='badge'>
+                <div className={data.status}>{data.statusText}</div>
+              </footer>
+            </article>
+            {data.media && (
+              <aside>
+                <Video module={data}></Video>
+              </aside>
+            )}
+          </main>
         </main>
         {(troubleshooting.length > 0 || guides.length > 0) && (
           <>
