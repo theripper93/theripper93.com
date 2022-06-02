@@ -306,7 +306,7 @@
             "media": "",
             "link": "https://github.com/theripper93/Weather-Blocker"
         },
-        "Taskbar": {
+        "foundry-taskbar": {
             "name": "Taskbar",
             "icon": "fas fa-tasks",
             "desc": "A Windows-style taskbar for Foundry. Include Start style menu and utility icons.",
