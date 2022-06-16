@@ -46,13 +46,12 @@
   .guides {
     .guides-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 300px;
+      grid-template-columns: repeat(6, 1fr);
       justify-content: center;
       padding-top: 0;
 
       @media screen and (max-width: 1000px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
       }
 
       .video {
@@ -61,6 +60,8 @@
         text-align: center;
         align-content: center;
         padding: 0.5rem 1rem;
+
+        grid-column: span 2;
 
         background: hsla(33, 15%, 25%, 0.25);
         border-radius: 4px;
@@ -71,8 +72,23 @@
         backdrop-filter: blur(4.5px);
         border: 1px solid var(--400);
 
+        /* Dealing with 2 orphan items */
+        &:last-child:nth-child(3n - 1) {
+          grid-column-end: -2;
+        }
+
+        &:nth-last-child(2):nth-child(3n + 1) {
+          grid-column-end: 4;
+        }
+
+        /* Dealing with single orphan */
+
+        &:last-child:nth-child(3n - 2) {
+          grid-column-end: 5;
+        }
+
         h4 {
-          margin-block-: 0.5rem;
+          margin-block-start: 0.5rem;
           margin-block-end: 1rem;
         }
 
