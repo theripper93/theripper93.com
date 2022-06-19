@@ -1,47 +1,48 @@
-@use "../helpers/mixins" as *;
+@use '../helpers/mixins' as *;
 
 /* Call to Action / Subscribe */
 #hub {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
-  align-content: space-between;
-  align-items: stretch;
-  gap: 1rem;
-  padding: 160px 0px;
+  align-content: center;
+  padding: 160px 80px;
+  gap: 2rem;
+
 
   background: var(--500);
-  background-image: url("/src/public/images/wave.svg");
+  background-image: url('/src/public/images/wave.svg');
   background-size: cover;
   background-position: center;
 
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   @media (prefers-color-scheme: light) {
     background: var(--100);
-    background-image: url("/src/assets/wave.svg");
+    background-image: url('/src/assets/wave.svg');
     background-size: cover;
   }
 }
 
 .card-cta {
   display: flex;
-  padding: 12px 26px;
-  min-height: 60vh;
-  min-width: 20%;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-between;
   align-items: center;
 
+  padding: 12px 26px;
+  min-height: 50vh;
+  width: clamp(150px, 400px, 80%);
+
   background: var(--500);
   border: 2px solid var(--300);
   box-shadow: 7px 7px var(--500), 7px 7px 0 2px var(--400);
-
-  @media (prefers-color-scheme: light) {
-    background: var(--100);
-    box-shadow: 7px 7px var(--100), 7px 7px 0 0.0625rem var(--200);
-  }
 
   h2 {
     @include remove-margin();
@@ -259,6 +260,9 @@
   }
 
   @media (prefers-color-scheme: light) {
+    background: var(--100);
+    box-shadow: 7px 7px var(--100), 7px 7px 0 0.0625rem var(--200);
+
     h2 {
       filter: drop-shadow(0.125rem 0.125rem 0rem #a1a9ee);
     }
@@ -268,71 +272,5 @@
         7px 7px 0 1px var(--discord);
       border-color: var(--discord);
     }
-  }
-}
-
-/** Screen Sizing **/
-@media screen and (max-width: 1290px) {
-  #hub {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 9.5rem;
-    background-size: cover;
-    align-content: center;
-  }
-
-  #hub .card-cta {
-    width: 33vw;
-  }
-}
-
-@media screen and (max-width: 999px) {
-  .cta {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 80px;
-    background-size: cover;
-    align-content: center;
-  }
-
-  .card-cta {
-    min-width: 50%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .cta {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 80px;
-    background-size: cover;
-    align-content: center;
-  }
-
-  .card-cta {
-    max-width: 75%;
-  }
-
-  .card-cta h2 {
-    font-size: 40px;
-  }
-
-  .card-cta h4 {
-    font-size: 20px;
-  }
-
-  .cta summary ul {
-    padding-right: 0;
-    padding-left: 16px;
-  }
-
-  .cta summary li {
-    font-size: 17.6px;
   }
 }
