@@ -79,7 +79,7 @@ export default function Installation() {
                   <li>
                     To make sure you located the correct folder you can
                     temporarily open it to check if it contains a file named
-                    manifest (among other files and folders)
+                    module (among other files and folders)
                   </li>
                   <li>Copy or Cut the folder</li>
                   <li>
