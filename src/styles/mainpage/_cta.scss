@@ -8,8 +8,6 @@
   align-content: center;
   padding: 160px 80px;
   gap: 2rem;
-
-
   background: var(--500);
   background-image: url('/src/public/images/wave.svg');
   background-size: cover;
@@ -30,29 +28,28 @@
 
 .card-cta {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   align-content: center;
   justify-content: space-between;
   align-items: center;
-
   padding: 12px 26px;
   min-height: 50vh;
   width: clamp(150px, 400px, 80%);
-
   background: var(--500);
   border: 2px solid var(--300);
   box-shadow: 7px 7px var(--500), 7px 7px 0 2px var(--400);
 
   h2 {
-    @include remove-margin();
+    @include remove-margin;
+
     font-weight: bold;
     text-align: center;
     font-size: 3rem;
   }
 
   h4 {
-    @include remove-margin();
+    @include remove-margin;
+
     font-weight: 550;
     text-align: center;
   }
@@ -60,15 +57,12 @@
   button {
     color: var(--100);
     background: var(--500);
-
     font-size: 1rem;
     font-weight: bold;
     border-radius: 1px;
-
     width: 125px;
     height: 40px;
     margin-bottom: 1rem;
-
     transition: all 0.3s ease-in-out;
 
     &.patreon {
@@ -174,8 +168,7 @@
 
   summary {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -189,7 +182,7 @@
     }
 
     li {
-      margin: 0.1rem 0 1.1rem 0;
+      margin: 0.1rem 0 1.1rem;
     }
   }
 
@@ -208,11 +201,11 @@
 
     @media (prefers-color-scheme: light) {
       h2 {
-        filter: drop-shadow(0.125rem 0.125rem 0rem #eeafa1);
+        filter: drop-shadow(0.125rem 0.125rem 0 #eeafa1);
       }
 
       &:hover {
-        box-shadow: 0 0 0px var(--patreon), 7px 7px 0 var(--100),
+        box-shadow: 0 0 0 var(--patreon), 7px 7px 0 var(--100),
           7px 7px 0 1px var(--patreon);
         border-color: var(--patreon);
       }
@@ -234,11 +227,11 @@
 
     @media (prefers-color-scheme: light) {
       h2 {
-        filter: drop-shadow(0.125rem 0.125rem 0rem #e9c359);
+        filter: drop-shadow(0.125rem 0.125rem 0 #e9c359);
       }
 
       &:hover {
-        box-shadow: 0 0 0px var(--accent), 7px 7px 0 var(--100),
+        box-shadow: 0 0 0 var(--accent), 7px 7px 0 var(--100),
           7px 7px 0 1px var(--accent);
         border-color: var(--accent);
       }
@@ -264,11 +257,11 @@
     box-shadow: 7px 7px var(--100), 7px 7px 0 0.0625rem var(--200);
 
     h2 {
-      filter: drop-shadow(0.125rem 0.125rem 0rem #a1a9ee);
+      filter: drop-shadow(0.125rem 0.125rem 0 #a1a9ee);
     }
 
     &:hover {
-      box-shadow: 0 0 0px var(--discord), 7px 7px 0 var(--100),
+      box-shadow: 0 0 0 var(--discord), 7px 7px 0 var(--100),
         7px 7px 0 1px var(--discord);
       border-color: var(--discord);
     }

@@ -3,61 +3,14 @@ nav {
   z-index: 3;
   min-height: 5%;
   width: 100%;
-
   display: flex;
   justify-content: space-between;
-
-  background: hsla(34, 9%, 16%, 0.25);
+  background: hsl(34deg 9% 16% / 25%);
   color: var(--300);
-  box-shadow: 0 5px 5px hsla(34, 11%, 12%, 0.25);
+  box-shadow: 0 5px 5px hsl(34deg 11% 12% / 25%);
   backdrop-filter: blur(1px);
 
   /** Links **/
-  .links {
-    color: var(--100);
-    display: flex;
-    padding: 0 0.75rem;    width: 100%;
-    align-items: center;
-
-    .landing,
-    .subpage {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
-
-      & a:visited,
-      & .socials svg {
-        color: var(--100);
-      }
-
-      & a {
-        &:hover {
-          cursor: pointer;
-          color: var(--000);
-          transition: all 0.3s ease-in-out;
-        }
-
-        &:active {
-          color: var(--000);
-          cursor: pointer;
-          transform: translateY(0.0625rem);
-        }
-      }
-    }
-
-    .landing {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-content: flex-start;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
   .socials {
     position: relative;
     display: flex;
@@ -82,9 +35,52 @@ nav {
     }
   }
 
+  .links {
+    color: var(--100);
+    display: flex;
+    padding: 0 0.75rem;
+    width: 100%;
+    align-items: center;
+
+    .landing,
+    .subpage {
+      display: flex;
+      flex-flow: row nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+
+      & a {
+        &:hover {
+          cursor: pointer;
+          color: var(--000);
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:active {
+          color: var(--000);
+          cursor: pointer;
+          transform: translateY(0.0625rem);
+        }
+      }
+
+      & a:visited,
+      & .socials svg {
+        color: var(--100);
+      }
+    }
+
+    .landing {
+      display: flex;
+      flex-flow: row nowrap;
+      align-content: flex-start;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
-//* Hamburger Menu
+// * Hamburger Menu
 .home-buttons {
   display: flex;
   align-items: center;
@@ -107,15 +103,15 @@ nav {
   height: 100vh;
   top: 0;
   left: 0;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
-  background: linear-gradient(90deg,
-      hsla(30, 10%, 16%, 1) 0%,
-      hsla(30, 10%, 16%, 0.75) 75%,
-      hsla(30, 10%, 16%, 0.5) 100%);
+  background: linear-gradient(
+    90deg,
+    hsl(30deg 10% 16% / 100%) 0%,
+    hsl(30deg 10% 16% / 75%) 75%,
+    hsl(30deg 10% 16% / 50%) 100%
+  );
   backdrop-filter: blur(2px);
 
   .links,
@@ -128,20 +124,18 @@ nav {
     align-items: center;
     justify-content: center;
     align-self: center;
-
     text-align: left;
     font-size: 3rem;
-    animation: fadeInAnimation ease 0.5s;
+    animation: fade-in ease 0.5s;
   }
 
   .links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     text-align: left;
     font-size: 3rem;
-    animation: fadeInAnimation ease 0.5s;
+    animation: fade-in ease 0.5s;
   }
 
   .socials {
@@ -153,7 +147,7 @@ nav {
   }
 
   @media (prefers-color-scheme: light) {
-    background: hsla(30, 10%, 16%, 0.66);
+    background: hsl(30deg 10% 16% / 66%);
 
     .links {
       p {

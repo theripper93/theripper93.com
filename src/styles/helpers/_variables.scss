@@ -8,7 +8,6 @@
   --300: #6f6557;
   --400: #4b4237;
   --500: #2d2925;
-
   --accent: #ffcb77;
   --patreon: #ff8870;
   --free: #75ffba;
@@ -59,7 +58,6 @@
 
 /* Animation */
 @keyframes bob {
-
   0%,
   100% {
     transform: translateY(0);
@@ -70,7 +68,7 @@
   }
 }
 
-@keyframes fadeInAnimation {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }

@@ -2,17 +2,16 @@
 section#modules {
   display: flex;
   padding-top: 2rem;
-  flex-direction: column;
   align-content: center;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   background: var(--500);
   background: linear-gradient(
     180deg,
-    hsla(30, 10%, 16%, 0.75) 0%,
-    hsla(30, 10%, 16%, 0.8) 3%,
-    hsla(30, 10%, 16%, 0.9) 5.5%,
+    hsl(30deg 10% 16% / 75%) 0%,
+    hsl(30deg 10% 16% / 80%) 3%,
+    hsl(30deg 10% 16% / 90%) 5.5%,
     var(--500) 10%
   );
 
@@ -22,15 +21,12 @@ section#modules {
 
   .grid {
     position: relative;
-
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-content: space-between;
     justify-content: center;
     align-items: center;
     justify-items: center;
-
     padding: 1rem;
     gap: 1.875rem;
     padding-top: 3rem;

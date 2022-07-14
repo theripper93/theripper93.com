@@ -2,28 +2,23 @@
 @use '../helpers/mixins' as *;
 
 /** Header and Footer Sections **/
+
 /* Hero Banner */
 .hero {
   position: relative;
-
   height: 100vh;
   min-height: 100vh;
   max-height: 100vh;
   padding: 1rem;
-
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-self: center;
   align-items: center;
+  background: hsl(30deg 10% 16% / 75%);
 
-  background: hsla(30, 10%, 16%, 0.75);
-
-  a,
-  svg {
+  %interactive {
     justify-self: end;
-    color: var(--150);
     animation: bob 2s ease-in-out infinite;
 
     &:hover {
@@ -31,10 +26,17 @@
     }
   }
 
-  a {
-    color: inherit;
+  svg {
+    @extend %interactive;
+
+    color: var(--150);
   }
 
+  a {
+    @extend %interactive;
+
+    color: inherit;
+  }
 
   h1 {
     color: var(--100);
@@ -67,7 +69,7 @@
 
   h1,
   h4 {
-    @include remove-margin();
+    @include remove-margin;
   }
 
   svg {
@@ -85,8 +87,7 @@
 
   main {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -95,8 +96,7 @@
 
   figure {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -106,14 +106,11 @@
     .skill-card {
       width: 11rem;
       height: 3rem;
-
       display: inline-flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      flex-flow: column wrap;
       justify-content: center;
       text-align: center;
       align-content: stretch;
-
       border: 3px solid var(--500);
 
       &:hover {
@@ -126,13 +123,11 @@
         font-weight: bold;
       }
     }
-
   }
 
   main.links {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-content: space-between;
     justify-content: space-between;
     align-items: center;

@@ -6,24 +6,19 @@
   main {
     position: relative;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     align-content: center;
     justify-content: center;
   }
 
   &.subpage-container {
-    padding-left: 10vw;
-    padding-right: 10vw;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0 10vw;
     min-height: 100vh;
   }
 
   .intro {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -34,8 +29,7 @@
   .patreon-installation {
     display: flex;
     align-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-flow: column wrap;
     height: auto;
     align-items: center;
     width: 50%;
@@ -60,8 +54,7 @@
 
   .card-wrapper {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -124,8 +117,7 @@
 /* Screen Sizing */
 @media screen and (max-width: 768px) {
   .install main {
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
   }
 
   .install .card-wrapper {

@@ -1,12 +1,9 @@
 .card-solid {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  flex-wrap: nowrap;
-
-  background: hsla(30, 10%, 16%, 0.15);
+  flex-flow: column nowrap;
+  background: hsl(30deg 10% 16% / 15%);
   backdrop-filter: blur(5px);
-
   border: 2px solid var(--300);
 
   header,
@@ -39,14 +36,11 @@
 
   button {
     border: 1px solid transparent;
-
     font-size: 1rem;
     font-weight: bold;
-
     width: 7.8125rem;
     height: 2.5rem;
     margin: 0.5rem;
-
     transition: all 0.3s ease-in-out;
   }
 
@@ -67,7 +61,6 @@
   }
 
   .basic-background {
-
     h1,
     h2,
     h3,
@@ -97,7 +90,7 @@
   @media (prefers-color-scheme: light) {
     border-color: var(--500);
     color: var(--500);
-    background: hsla(42, 36%, 89%, 0.15);
+    background: hsl(42deg 36% 89% / 15%);
 
     header,
     summary {
@@ -107,7 +100,7 @@
     }
 
     summary {
-      padding: 2rem 0rem;
+      padding: 2rem 0;
     }
 
     h1,

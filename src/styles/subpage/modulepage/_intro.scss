@@ -2,8 +2,7 @@
 
 .module {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: column nowrap;
   align-content: center;
   align-items: center;
   justify-content: space-around;
@@ -105,19 +104,15 @@
       .card-solid {
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
+  flex-flow: column nowrap;
         justify-content: space-between;
         align-items: center;
-
         max-width: 75%;
-
         border-color: var(--300);
         border-top: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
         backdrop-filter: blur(4.5px);
-        -webkit-backdrop-filter: blur(4.5px);
-
-        text-shadow: 0 0 12px hsl(30, 10%, 16%, 0.2);
+        text-shadow: 0 0 12px hsl(30deg 10% 16% / 20%);
 
         .content-wrapper {
           display: flex;

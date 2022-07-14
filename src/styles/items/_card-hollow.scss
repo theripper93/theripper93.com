@@ -4,14 +4,11 @@
   width: 480px;
   height: 176px;
   max-height: 176px;
-
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   align-content: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-
+  flex-flow: row nowrap;
   gap: 0.75rem;
   border: 0.125rem solid var(--300);
   box-shadow: 0.4375rem 0.4375rem var(--500),
@@ -48,7 +45,6 @@
   }
 
   @media (prefers-color-scheme: light) {
-
     & svg,
     & h4 {
       color: var(--400);
@@ -137,7 +133,6 @@
     }
   }
 
-
   @media screen and (max-width: 768px) {
     .card-hollow {
       h4 {
@@ -165,7 +160,6 @@
     }
   }
 
-
   @media screen and (max-width: 450px) {
     .card-hollow {
       h4 {
@@ -187,7 +181,6 @@
       .status {
         font-size: 0.9rem;
       }
-
     }
   }
 }

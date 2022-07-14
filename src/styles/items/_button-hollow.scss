@@ -3,14 +3,11 @@
 .button-hollow {
   width: 179px;
   height: 52px;
-
   display: inline-flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   justify-content: center;
   text-align: center;
   align-content: stretch;
-
   border: 3px solid var(--500);
 
   &:hover {
@@ -20,7 +17,8 @@
   }
 
   h4 {
-    @include remove-margin();
+    @include remove-margin;
+
     font-weight: bold;
   }
 }

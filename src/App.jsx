@@ -81,7 +81,7 @@ function App() {
             <ul>
               <li>
                 Download and use all 20+ of my premium modules
-                for <bold>$6.50</bold>/<bold>€5</bold>
+                for <strong>$6.50</strong>/<strong>€5</strong>
               </li>
               <li>Access priority support for questions and troubleshooting</li>
               <li>Support the development of my free modules</li>
