@@ -2,7 +2,7 @@ body {
   margin: 0;
   background: var(--500);
   color: var(--100);
-  font-family: 'Neue Montreal', Roboto, Helvetica, sans-serif;
+  font-family: "Neue Montreal", Roboto, Helvetica, sans-serif;
 
   @media (prefers-color-scheme: light) {
     background: var(--100);
@@ -11,8 +11,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Neue Montreal';
-  src: url('./assets/fonts/PPNeueMontreal-Regular.otf') format('opentype');
+  font-family: "Neue Montreal";
+  src: url("./assets/fonts/PPNeueMontreal-Regular.otf") format("opentype");
 }
 
 /* Scrollbar */
@@ -75,7 +75,7 @@ input {
     }
   }
 
-  &[type='text' i] {
+  &[type="text" i] {
     transition: all 0.3s ease-in-out;
     border: 0.125rem solid var(--300);
     background: transparent;
@@ -132,7 +132,6 @@ a:hover {
   cursor: pointer;
 }
 
-
 // * Text Styles **/
 h1 {
   text-align: center;
@@ -175,13 +174,16 @@ li {
 }
 
 strong {
-  background: linear-gradient(135deg, #ffd78a, #e2b478);
+  background: linear-gradient(135deg, #ffd78a, #dfaf71);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 
   @media (prefers-color-scheme: light) {
-    background: linear-gradient(135deg, #e56f44, #d96d3b);
+    background: transparent;
+    background-clip: unset;
+    color: var(--400);
+    -webkit-text-fill-color: var(--400);
   }
 }
 
