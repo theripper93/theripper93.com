@@ -9,4 +9,5 @@ A repo my website, theripper93.com. This site contains information about my modu
 
 ## Credits
 Modules and contents by theripper93
+
 Website design by apriltaoyvr
