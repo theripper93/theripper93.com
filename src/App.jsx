@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import './styles/init.css';
+
 /* Misc Libraries */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -15,26 +16,26 @@ function App() {
   const [buttonState, setButtonState] = useState(0);
 
   return (
-    <div className="App">
+    <div className='App'>
       <Navbar />
-      <header className="hero" id="">
-        <video autoPlay muted loop id="video-bg">
-          <source src="./src/public/video/videobanner.mp4" type="video/mp4" />
+      <header className='hero' id=''>
+        <video autoPlay muted loop id='video-bg'>
+          <source src='./src/public/video/videobanner.mp4' type='video/mp4' />
         </video>
-        <div className="hero-wrapper">
+        <div className='hero-wrapper'>
           <h1>
-            Heyo, I make{" "}
-            <a href="https://foundryvtt.com/" rel="noreferrer" target="_blank">
+            Heyo, I make
+            <a href='https://foundryvtt.com/' rel='noreferrer' target='_blank'>
               Foundry VTT
-            </a>{" "}
+            </a>
             Modules
           </h1>
         </div>
-        <HashLink smooth to="/#modules">
-          <FontAwesomeIcon icon="fa-solid fa-arrow-down" size="5x" fixedWidth />
+        <HashLink smooth to='/#modules'>
+          <FontAwesomeIcon icon='fa-solid fa-arrow-down' size='5x' fixedWidth />
         </HashLink>
       </header>
-      <section className="module list" id="modules">
+      <section className='module list' id='modules'>
         <h1>Modules</h1>
         <Searchbar
           searchTerm={searchTerm}
@@ -47,8 +48,8 @@ function App() {
           searchTerm={searchTerm}
         ></ModuleGrid>
       </section>
-      <section className="cta" id="hub">
-        <div className="card-cta status hub">
+      <section className='cta' id='hub'>
+        <div className='card-cta status hub'>
           <summary>
             <header>
               <h2>Hub</h2>
@@ -61,18 +62,20 @@ function App() {
               <li>Notifications directly in Foundry</li>
               <li>Premium module updates in one place</li>
               <li>Works automagically between updates</li>
-              <li>It's <strong>free</strong></li>
+              <li>
+                It's <strong>free</strong>
+              </li>
             </ul>
           </summary>
           <a
-            href="https://www.foundryvtt-hub.com/package/theripper-premium-hub/"
-            rel="noreferrer"
-            target="_blank"
+            href='https://www.foundryvtt-hub.com/package/theripper-premium-hub/'
+            rel='noreferrer'
+            target='_blank'
           >
-            <button className="hub">Download</button>
+            <button className='hub'>Download</button>
           </a>
         </div>
-        <div className="card-cta status patreon">
+        <div className='card-cta status patreon'>
           <summary>
             <header>
               <h2>Patreon</h2>
@@ -80,22 +83,22 @@ function App() {
             </header>
             <ul>
               <li>
-                Download and use all 20+ of my premium modules
-                for <strong>$6.50</strong>/<strong>€5</strong>
+                Download and use all 20+ of my premium modules for{' '}
+                <strong>$6.50</strong>/<strong>€5</strong>
               </li>
               <li>Access priority support for questions and troubleshooting</li>
               <li>Support the development of my free modules</li>
             </ul>
           </summary>
           <a
-            href="https://www.patreon.com/theripper93"
-            rel="noreferrer"
-            target="_blank"
+            href='https://www.patreon.com/theripper93'
+            rel='noreferrer'
+            target='_blank'
           >
-            <button className="patreon">View</button>
+            <button className='patreon'>View</button>
           </a>
         </div>
-        <div className="card-cta status discord">
+        <div className='card-cta status discord'>
           <summary>
             <header>
               <h2>Discord</h2>
@@ -109,51 +112,51 @@ function App() {
             </ul>
           </summary>
           <a
-            href="https://discord.com/invite/F53gBjR97G"
-            rel="noreferrer"
-            target="_blank"
+            href='https://discord.com/invite/F53gBjR97G'
+            rel='noreferrer'
+            target='_blank'
           >
-            <button className="discord">Join</button>
+            <button className='discord'>Join</button>
           </a>
         </div>
       </section>
-      <footer className="golden" id="contact">
+      <footer className='golden' id='contact'>
         <summary>
-          <main className="header-wrapper">
+          <main className='header-wrapper'>
             <h1>Need to contact me?</h1>
             <h2>I'm open to do paid projects for Foundry VTT</h2>
           </main>
-          <main className="skillset">
+          <main className='skillset'>
             <h3>My skills are in</h3>
             <figure>
-              <SkillCard name="Javascript"></SkillCard>
-              <SkillCard name="ThreeJS"></SkillCard>
-              <SkillCard name="Foundry API"></SkillCard>
-              <SkillCard name="HTML/CSS"></SkillCard>
+              <SkillCard name='Javascript'></SkillCard>
+              <SkillCard name='ThreeJS'></SkillCard>
+              <SkillCard name='Foundry API'></SkillCard>
+              <SkillCard name='HTML/CSS'></SkillCard>
             </figure>
           </main>
-          <main className="contact-info">
+          <main className='contact-info'>
             <h3>You can reach me via</h3>
-            <main className="links">
+            <main className='links'>
               <a
-                href="https://discordapp.com/users/195152093563191296"
-                rel="noreferrer"
-                target="_blank"
+                href='https://discordapp.com/users/195152093563191296'
+                rel='noreferrer'
+                target='_blank'
               >
                 <FontAwesomeIcon
-                  icon={["fab", "discord"]}
-                  size="5x"
+                  icon={['fab', 'discord']}
+                  size='5x'
                   fixedWidth
                 />
               </a>
               <a
-                href="mailto:tsplab@gmail.com"
-                rel="noreferrer"
-                target="_blank"
+                href='mailto:tsplab@gmail.com'
+                rel='noreferrer'
+                target='_blank'
               >
                 <FontAwesomeIcon
-                  icon="fa-solid fa-envelope"
-                  size="5x"
+                  icon='fa-solid fa-envelope'
+                  size='5x'
                   fixedWidth
                 />
               </a>
@@ -166,9 +169,9 @@ function App() {
           </main>
         </summary>
         <aside>
-          <p id="credit">
-            Site designed and developed with love by{" "}
-            <a href="https://apriltao.art">April Tao </a>
+          <p id='credit'>
+            Site designed and developed with love by
+            <a href='https://apriltao.art'>April Tao </a>
           </p>
         </aside>
       </footer>
