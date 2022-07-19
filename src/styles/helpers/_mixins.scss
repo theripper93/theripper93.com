@@ -1,6 +1,32 @@
 @mixin remove-margin() {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+@mixin cta-status($status, $colour, $filter-color) {
+  &.#{$status} {
+    &:hover {
+      border: 2px solid $colour;
+      box-shadow: 0 0 2px $colour, 7px 7px var(--500), 7px 7px 0 2px var(--400);
+      cursor: default;
+    }
+
+    h2,
+    summary li::marker {
+      color: $colour;
+    }
+
+    @media (prefers-color-scheme: light) {
+      &:hover {
+        border-color: $colour;
+        box-shadow: 0 0 0 $colour, 7px 7px 0 var(--100), 7px 7px 0 1px $colour;
+      }
+
+      h2 {
+        filter: drop-shadow(0.125rem 0.125rem 0 $filter-color);
+      }
+    }
+  }
 }
