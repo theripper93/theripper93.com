@@ -170,8 +170,7 @@ function App() {
         </summary>
         <aside>
           <p id='credit'>
-            Site designed and developed with love by
-            <a href='https://apriltao.art'>April Tao </a>
+            Site designed and developed with love by <a href='https://apriltao.art'> April Tao </a>
           </p>
         </aside>
       </footer>
