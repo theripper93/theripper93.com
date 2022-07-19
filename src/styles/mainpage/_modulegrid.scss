@@ -1,9 +1,8 @@
 /* Modulegrid Section */
 section#modules {
   display: flex;
-  padding-top: 2rem;
-  align-content: center;
   flex-flow: column wrap;
+  align-content: center;
   align-items: center;
   justify-content: center;
   background: var(--500);
@@ -14,21 +13,18 @@ section#modules {
     hsl(30deg 10% 16% / 90%) 5.5%,
     var(--500) 10%
   );
-
-  @media (prefers-color-scheme: light) {
-    background: var(--100);
-  }
+  padding-top: 2rem;
 
   .grid {
-    position: relative;
     display: flex;
+    position: relative;
     flex-flow: row wrap;
+    gap: 1.875rem;
     align-content: space-between;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     justify-items: center;
     padding: 1rem;
-    gap: 1.875rem;
     padding-top: 3rem;
 
     .wrapper {
@@ -40,6 +36,10 @@ section#modules {
         width: 100%;
       }
     }
+  }
+
+  @media (prefers-color-scheme: light) {
+    background: var(--100);
   }
 }
 
@@ -54,9 +54,9 @@ section#modules {
   button {
     position: absolute;
     right: 8px;
-    height: 100%;
     border: 0.0625rem solid transparent;
     background: transparent;
+    height: 100%;
 
     &:active {
       transform: translateY(0.0625rem);

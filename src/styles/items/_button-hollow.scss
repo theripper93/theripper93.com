@@ -1,19 +1,19 @@
 @use '../helpers/mixins' as *;
 
 .button-hollow {
-  width: 179px;
-  height: 52px;
   display: inline-flex;
   flex-flow: column wrap;
-  justify-content: center;
-  text-align: center;
   align-content: stretch;
+  justify-content: center;
   border: 3px solid var(--500);
+  width: 179px;
+  height: 52px;
+  text-align: center;
 
   &:hover {
     border-color: var(--400);
-    color: var(--400);
     cursor: default;
+    color: var(--400);
   }
 
   h4 {

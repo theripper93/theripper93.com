@@ -1,26 +1,19 @@
 /* Hollow Card used in Module Grid */
 .card-hollow {
-  position: relative;
-  width: 480px;
-  height: 176px;
-  max-height: 176px;
   display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-content: center;
+  position: relative;
   flex-flow: row nowrap;
   gap: 0.75rem;
+  align-content: center;
+  align-items: stretch;
+  justify-content: flex-start;
+  transition: all 0.1s ease-in-out;
   border: 0.125rem solid var(--300);
   box-shadow: 0.4375rem 0.4375rem var(--500),
     0.4375rem 0.4375rem 0 0.125rem var(--400);
-  transition: all 0.1s ease-in-out;
-
-  @media (prefers-color-scheme: light) {
-    background: var(--100);
-    box-shadow: 0.4375rem 0.4375rem var(--100),
-      0.4375rem 0.4375rem 0 0.125rem var(--200);
-    transition: all 0.3s ease-in-out;
-  }
+  width: 480px;
+  height: 176px;
+  max-height: 176px;
 
   &:hover {
     border-color: var(--200);
@@ -28,11 +21,11 @@
   }
 
   h4 {
+    padding-top: 20px;
+    color: var(--100);
+    font-size: 1.5rem;
     margin-block-start: 0;
     margin-block-end: 0.25rem;
-    padding-top: 20px;
-    font-size: 1.5rem;
-    color: var(--100);
   }
 
   p {
@@ -42,13 +35,6 @@
   svg {
     align-self: center;
     color: var(--100);
-  }
-
-  @media (prefers-color-scheme: light) {
-    & svg,
-    & h4 {
-      color: var(--400);
-    }
   }
 
   article {
@@ -65,20 +51,20 @@
   }
 
   .info-wrapper {
-    position: relative;
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .status {
+    padding: 0 0.75rem 0.5rem 0;
     text-align: right;
     font-size: 1rem;
     font-weight: 500;
-    padding: 0 0.75rem 0.5rem 0;
   }
 
   footer {
@@ -86,14 +72,28 @@
     align-items: flex-end;
     width: 100%;
   }
+
+  @media (prefers-color-scheme: light) {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0.4375rem 0.4375rem var(--100),
+      0.4375rem 0.4375rem 0 0.125rem var(--200);
+    background: var(--100);
+  }
+
+  @media (prefers-color-scheme: light) {
+    & svg,
+    & h4 {
+      color: var(--400);
+    }
+  }
 }
 
 /** Screen Sizing **/
 @media screen and (max-width: 1200px) {
   .card-hollow {
     position: relative;
-    max-width: 100%;
     gap: 0.75rem;
+    max-width: 100%;
   }
 }
 
@@ -118,10 +118,10 @@
     }
 
     .icon-wrapper {
-      width: auto;
-      height: auto;
       margin: 0;
       padding: 2rem;
+      width: auto;
+      height: auto;
 
       .fa-5x {
         font-size: 3.5rem;
@@ -144,10 +144,10 @@
       }
 
       .icon-wrapper {
-        width: auto;
-        height: auto;
         margin: 0;
         padding: 1rem;
+        width: auto;
+        height: auto;
       }
 
       .fa-5x {

@@ -1,24 +1,18 @@
 body {
   margin: 0;
-  font-family: 'Neue Montreal', Roboto, Helvetica, sans-serif;
-  color: var(--100);
   background: var(--500);
+  color: var(--100);
+  font-family: 'Neue Montreal', Roboto, Helvetica, sans-serif;
 
   @media (prefers-color-scheme: light) {
-    color: var(--400);
     background: var(--100);
+    color: var(--400);
   }
 }
 
 @font-face {
   font-family: 'Neue Montreal';
   src: url('./assets/fonts/PPNeueMontreal-Regular.otf') format('opentype');
-}
-
-/* No Select Class */
-.noselect {
-  user-select: none;
-  cursor: pointer;
 }
 
 /* Scrollbar */
@@ -61,19 +55,13 @@ svg {
   }
 }
 
-// * Inputs **/
+/** Inputs **/
 input {
-  &[type='text' i] {
-    background: transparent;
-    color: var(--150);
-    padding: 0 0.3125rem 0 0.625rem;
-    border: 0.125rem solid var(--300);
-    transition: all 0.3s ease-in-out;
+  &::placeholder {
+    color: var(--200);
 
     @media (prefers-color-scheme: light) {
       color: var(--400);
-      border: 2px solid var(--300);
-      transition: all 0.3s ease-in-out;
     }
   }
 
@@ -87,10 +75,16 @@ input {
     }
   }
 
-  &::placeholder {
-    color: var(--200);
+  &[type='text' i] {
+    transition: all 0.3s ease-in-out;
+    border: 0.125rem solid var(--300);
+    background: transparent;
+    padding: 0 0.3125rem 0 0.625rem;
+    color: var(--150);
 
     @media (prefers-color-scheme: light) {
+      transition: all 0.3s ease-in-out;
+      border: 2px solid var(--300);
       color: var(--400);
     }
   }
@@ -116,21 +110,11 @@ button {
 }
 
 /* Links and Buttons */
-*:any-link,
-a:any-link {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  cursor: pointer;
-}
-
 a,
 svg {
   &:hover {
-    color: var(--accent);
     transition: all 0.3s ease-in-out;
+    color: var(--accent);
   }
 
   &:active {
@@ -138,17 +122,28 @@ svg {
   }
 }
 
+*:any-link,
+a:any-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+
 // * Text Styles **/
 h1 {
+  text-align: center;
   font-size: 3.5rem;
   font-weight: 700;
-  text-align: center;
 }
 
 h2 {
+  text-align: center;
   font-size: 2.75rem;
   font-weight: 700;
-  text-align: center;
 }
 
 h3 {
@@ -175,8 +170,8 @@ p {
 }
 
 li {
-  font-size: 1.2rem;
   text-align: left;
+  font-size: 1.2rem;
 }
 
 strong {
@@ -190,6 +185,12 @@ strong {
   }
 }
 
+.noselect {
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Media Queries */
 @media (prefers-color-scheme: light) {
   h1,
   h2,

@@ -1,17 +1,16 @@
 @use './mixins' as *;
 
 :root {
-  --000: #ffcb77;
-  --100: #ede7d9;
-  --150: #c8c5bf;
-  --200: #a49694;
-  --300: #6f6557;
-  --400: #4b4237;
-  --500: #2d2925;
-  --accent: #ffcb77;
-  --patreon: #ff8870;
-  --free: #75ffba;
-  --discord: #7c86ff;
+  --100: hsl(42deg 36% 89%);
+  --150: hsl(40deg 8% 77%);
+  --200: hsl(7deg 8% 61%);
+  --300: hsl(35deg 12% 39%);
+  --400: hsl(33deg 15% 25%);
+  --500: hsl(30deg 10% 16%);
+  --accent: hsl(37deg 100% 73%);
+  --patreon: hsl(10deg 100% 72%);
+  --free: hsl(150deg 100% 73%);
+  --discord: hsl(235deg 100% 74%);
 
   @media (prefers-color-scheme: light) {
     --accent: #d7b24b;

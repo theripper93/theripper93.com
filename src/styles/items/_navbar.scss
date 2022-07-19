@@ -25,11 +25,11 @@ nav {
       padding: 2px;
 
       &:hover {
-        color: var(--000);
+        color: var(--accent);
       }
 
       &:active {
-        color: var(--000);
+        color: var(--accent);
         transform: translateY(0.0625rem);
       }
     }
@@ -53,12 +53,12 @@ nav {
       & a {
         &:hover {
           cursor: pointer;
-          color: var(--000);
+          color: var(--accent);
           transition: all 0.3s ease-in-out;
         }
 
         &:active {
-          color: var(--000);
+          color: var(--accent);
           cursor: pointer;
           transform: translateY(0.0625rem);
         }
@@ -180,6 +180,8 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
+/* stylelint-disable */
 .svg-inline--fa.fa-bars.fa-fw.fa-xl {
   color: var(--100);
 }
+/* stylelint-enable */
