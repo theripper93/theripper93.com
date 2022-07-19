@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 /* CSS */
 import App from './App';
@@ -16,27 +12,28 @@ import Installation from './routes/installation';
 import Troubleshooting from './routes/troubleshooting';
 import Issues from './routes/issues';
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 ReactDOM.render(
   <Router>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="module" element={< ModuleSubpage />} >
-        <Route path=":moduleId" element={< ModuleSubpage />} />
+      <Route path='/' element={<App />} />
+      <Route path='module' element={<ModuleSubpage />}>
+        <Route path=':moduleId' element={<ModuleSubpage />} />
       </Route>
-      <Route path="faq" element={<Faq/>} >
-        <Route path="troubleshooting" element={<Troubleshooting/>} />
-        <Route path="installation" element={<Installation />} />
-        <Route path="issues" element={<Issues />} />
+      <Route path='faq' element={<Faq />}>
+        <Route path='troubleshooting' element={<Troubleshooting />} />
+        <Route path='installation' element={<Installation />} />
+        <Route path='issues' element={<Issues />} />
       </Route>
       <Route
-        path="*"
+        path='*'
         element={
           <section className='golden missing'>
             <h1>Nothing here</h1>
           </section>
-        }></Route>
+        }
+      ></Route>
     </Routes>
   </Router>,
   rootElement
-)
+);

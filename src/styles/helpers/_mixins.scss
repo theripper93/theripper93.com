@@ -5,6 +5,7 @@
   margin-inline-end: 0;
 }
 
+// For mainpage/_cta.scss
 @mixin cta-status($status, $colour, $filter-color) {
   &.#{$status} {
     &:hover {
