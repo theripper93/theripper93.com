@@ -7,12 +7,12 @@
     opacity: 1;
 
     &.svg-inline--fa.fa-arrow-down.connection.free {
-      height: 3rem;
-      width: 1rem;
       position: absolute;
       top: 100%;
       left: calc(50% - 0.4rem);
       align-self: center;
+      width: 1rem;
+      height: 3rem;
     }
 
     &.svg-inline--fa.fa-arrow-down.connection.inactive {
@@ -35,8 +35,8 @@
     }
 
     .wrapper {
-      cursor: pointer;
       position: relative;
+      cursor: pointer;
 
       &:last-child .connection {
         display: none;
@@ -46,11 +46,11 @@
   }
 
   &-container .checkmark {
-    text-align: center;
-    padding: 5vh 10vw;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 5vh 10vw;
+    text-align: center;
   }
 
   .paid-background,
@@ -60,8 +60,8 @@
 
   .step6 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 
     .card-solid {

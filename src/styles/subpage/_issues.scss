@@ -1,9 +1,9 @@
 .subpage-container {
-  text-align: center;
-  padding: 5vh 10vw;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 5vh 10vw;
+  text-align: center;
 }
 
 .issues {
@@ -30,9 +30,9 @@
     }
 
     input[type='text' i] {
+      padding-left: 5px;
       width: 92%;
       min-height: 30px;
-      padding-left: 5px;
       color: var(--150);
     }
 
@@ -43,19 +43,19 @@
 
     
     textarea {
-      min-height: 250px;
-      min-width: 93.5%;
-      resize: none;
-      background: transparent;
       border-color: var(--300);
+      background: transparent;
+      min-width: 93.5%;
+      min-height: 250px;
+      resize: none;
       color: var(--100);
     }
     
     footer {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
 
       p {
         text-align: center;
@@ -64,9 +64,9 @@
 
     @media (prefers-color-scheme: light) {
       input[type='text' i] {
+        padding-left: 5px;
         width: 92%;
         min-height: 30px;
-        padding-left: 5px;
         color: var(--500);
       }
 
@@ -75,8 +75,8 @@
       }
 
       p {
-        color: var(--patreon);
         background: transparent;
+        color: var(--patreon);
       }
     }
 
@@ -84,9 +84,9 @@
 }
 
 #submit-bug {
-  min-width: 250px;
-  background: var(--accent);
   align-self: center;
+  background: var(--accent);
+  min-width: 250px;
 
   &:disabled {
     background: var(--200);
@@ -101,9 +101,9 @@
     color: var(--100);
 
     &:disabled {
+      border-color: var(--300);
       background: var(--150);
       color: var(--300);
-      border-color: var(--300);
     }
   }
 }
