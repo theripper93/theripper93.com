@@ -14,19 +14,62 @@
       cursor: default;
     }
 
-    h2,
+    h2 {
+      color: $colour;
+    }
+
     summary li::marker {
       color: $colour;
     }
 
     @media (prefers-color-scheme: light) {
       &:hover {
-        border-color: $colour;
-        box-shadow: 0 0 0 $colour, 7px 7px 0 var(--100), 7px 7px 0 1px $colour;
+        border-color: var(--500);
+        box-shadow: 0 0 0 var(--500), 7px 7px 0 var(--100), 7px 7px 0 1px var(--300);
       }
 
       h2 {
-        filter: drop-shadow(0.125rem 0.125rem 0 $filter-color);
+        color: var(--400);
+        filter: drop-shadow(3px 3px 0 $filter-color);
+      }
+    }
+  }
+}
+
+@mixin cta-button($status, $colour) {
+  &.#{$status} {
+    border: 2px solid $colour;
+
+    &:hover {
+      background: $colour;
+      color: var(--500);
+    }
+
+    &:active {
+      transform: translateY(2px);
+      background: $colour;
+      color: var(--500);
+      filter: brightness(1.1);
+    }
+  }
+}
+
+@mixin cta-buttonlight($status, $colour, $color-light) {
+  @media (prefers-color-scheme: light) {
+    &.#{$status} {
+      border-color: var(--300);
+      box-shadow: 2px 2px 0 $color-light;
+
+      &:hover {
+        border-color: var(--400);
+        background-color: transparent;
+        filter: contrast(1);
+      }
+
+      &:active {
+        box-shadow: 2px 2px 0 $colour inset;
+        background-color: transparent;
+        filter: brightness(1);
       }
     }
   }

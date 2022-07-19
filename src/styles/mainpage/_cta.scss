@@ -1,4 +1,4 @@
-@use '../helpers/mixins' as *;
+@use "../helpers/mixins" as *;
 
 /* Call to Action / Subscribe */
 #hub {
@@ -8,10 +8,9 @@
   align-content: center;
   justify-content: space-around;
   background: var(--500);
-  background-image: url('/src/public/images/wave.svg');
-  background-position: center;
+  background-image: url("/src/public/images/wave.svg");
   background-size: cover;
-  padding: 160px 80px;
+  padding: 10rem 5rem;
 
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -21,28 +20,28 @@
 
   @media (prefers-color-scheme: light) {
     background: var(--100);
-    background-image: url('/src/assets/wave.svg');
+    background-image: url("/src/public/images/wave-light.svg");
     background-size: cover;
   }
 }
 
 .card-cta {
-
-  @include cta-status('patreon', var(--patreon), #eeafa1);
-  @include cta-status('hub', var(--accent), #e9c359);
-  @include cta-status('discord', var(--discord), #a1a9ee);
+  @include cta-status("patreon", var(--patreon), #eeafa1);
+  @include cta-status("hub", var(--accent), #e9c359);
+  @include cta-status("discord", var(--discord), #a1a9ee);
 
   display: flex;
   flex-flow: column wrap;
   align-content: center;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.3s ease-in-out;
   border: 2px solid var(--300);
   box-shadow: 7px 7px var(--500), 7px 7px 0 2px var(--400);
   background: var(--500);
   padding: 12px 26px;
   width: clamp(150px, 400px, 80%);
-  min-height: 50vh;
+  height: 50vh;
 
   h2 {
     @include remove-margin;
@@ -60,6 +59,10 @@
   }
 
   button {
+    @include cta-button("patreon", var(--patreon),);
+    @include cta-button("hub", var(--accent));
+    @include cta-button("discord", var(--discord));
+    
     transition: all 0.3s ease-in-out;
     margin-bottom: 1rem;
     border-radius: 1px;
@@ -69,105 +72,15 @@
     color: var(--100);
     font-size: 1rem;
     font-weight: bold;
-
-    &.patreon {
-      border: 2px solid var(--patreon);
-
-      &:hover {
-        background: var(--patreon);
-        color: var(--500);
-      }
-
-      &:active {
-        transform: translateY(2px);
-        background: var(--patreon);
-        color: var(--500);
-        filter: brightness(1.1);
-      }
-    }
-
-    &.hub {
-      border: 2px solid var(--accent);
-
-      &:hover {
-        background: var(--accent);
-        color: var(--500);
-      }
-
-      &:active {
-        transform: translateY(2px);
-        background: var(--accent);
-        color: var(--500);
-        filter: brightness(1.1);
-      }
-    }
-
-    &.discord {
-      border: 2px solid var(--discord);
-
-      &:hover {
-        background: var(--discord);
-        color: var(--500);
-      }
-
-      &:active {
-        transform: translateY(2px);
-        background: var(--discord);
-        color: var(--500);
-        filter: brightness(1.1);
-      }
-    }
-
+    
     @media (prefers-color-scheme: light) {
+      @include cta-buttonlight("patreon", var(--patreon), #eeafa1);
+      @include cta-buttonlight("hub", var(--accent), #e9c359);
+      @include cta-buttonlight("discord", var(--discord), #a1a9ee);
+      
       border-color: var(--400);
-      box-shadow: 2px 2px 0 var(--400);
-      background: var(--100);
+      background: transparent;
       color: var(--400);
-
-      .patreon {
-        &:hover {
-          border-color: var(--patreon);
-          box-shadow: 2px 2px 0 var(--patreon);
-          background-color: transparent;
-          filter: contrast(1.2);
-        }
-
-        &:active {
-          box-shadow: 1px 1px 0 var(--patreon) inset;
-          background-color: transparent;
-          filter: brightness(1);
-        }
-      }
-
-      .hub {
-        &:hover {
-          border-color: var(--accent);
-          box-shadow: 2px 2px 0 var(--accent);
-          background-color: transparent;
-          filter: brightness(1);
-        }
-
-        &:active {
-          box-shadow: 1px 1px 0 var(--accent) inset;
-          background-color: transparent;
-          filter: brightness(1);
-        }
-      }
-
-      .discord {
-        &:hover {
-          border-color: var(--discord);
-          box-shadow: 2px 2px 0 var(--discord);
-          background-color: transparent;
-          filter: brightness(1);
-        }
-
-        &:active {
-          box-shadow: 1px 1px 0 var(--discord) inset;
-          background-color: transparent;
-          filter: brightness(1);
-        }
-      }
     }
   }
 
@@ -189,5 +102,12 @@
     li {
       margin: 0.1rem 0 1.1rem;
     }
+  }
+
+  @media (prefers-color-scheme: light) {
+    border-color: var(--300);
+    box-shadow: 0 0 0 var(--200), 7px 7px 0 var(--100),
+      7px 7px 0 1px var(--200);
+    background: var(--100);
   }
 }
